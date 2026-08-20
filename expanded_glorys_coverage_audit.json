@@ -1,0 +1,888 @@
+{
+  "provider": "COPERNICUS_MARINE",
+  "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+  "depth_m": 0.494025,
+  "temporal_representation": "DAILY_MEAN",
+  "cache": {
+    "partitions": 26,
+    "dates": [
+      "2012-02-21",
+      "2018-07-22",
+      "2018-11-27",
+      "2019-10-21",
+      "2021-08-03",
+      "2021-12-28",
+      "2022-03-12",
+      "2022-09-05",
+      "2022-09-06",
+      "2022-09-30",
+      "2023-02-18",
+      "2023-04-29",
+      "2023-08-25",
+      "2023-11-20",
+      "2024-01-02",
+      "2024-01-06",
+      "2024-10-01",
+      "2025-01-07",
+      "2025-05-06",
+      "2025-08-31",
+      "2025-10-03",
+      "2025-11-29",
+      "2026-03-13",
+      "2026-05-17",
+      "2026-05-18",
+      "2026-06-12"
+    ],
+    "netcdf_bytes": 180752,
+    "total_bytes_with_metadata": 219518,
+    "validation": [
+      {
+        "date": "2012-02-21",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2018-07-22",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2018-11-27",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2019-10-21",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2021-08-03",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2021-12-28",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2022-03-12",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2022-09-05",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2022-09-06",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2022-09-30",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2023-02-18",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2023-04-29",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2023-08-25",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2023-11-20",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2024-01-02",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2024-01-06",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2024-10-01",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2025-01-07",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2025-05-06",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2025-08-31",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2025-10-03",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2025-11-29",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2026-03-13",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2026-05-17",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2026-05-18",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      },
+      {
+        "date": "2026-06-12",
+        "checksum_valid": true,
+        "temporal_representation": "DAILY_MEAN",
+        "depth_m": 0.49402499198913574,
+        "grid_shape": [
+          22,
+          33
+        ],
+        "valid_vectors": 595,
+        "masked_vectors": 131,
+        "latitude_resolution_degrees": 0.08333396911621094,
+        "longitude_resolution_degrees": 0.08333587646484375,
+        "actual_extent": {
+          "latitude_min": 16.91666603088379,
+          "latitude_max": 18.66666603088379,
+          "longitude_min": -78.58333587646484,
+          "longitude_max": -75.91666412353516
+        },
+        "units": {
+          "u": "m s-1",
+          "v": "m s-1"
+        }
+      }
+    ]
+  },
+  "historical_occurrence_baseline": {
+    "records": 54,
+    "unique_dates": 43,
+    "occupied_cells": 15,
+    "records_with_cached_dates": 36,
+    "records_with_valid_direct_currents": 20,
+    "records_masked": 16,
+    "records_without_cached_dates": 18,
+    "unique_dates_with_valid_currents": 13,
+    "unique_cells_with_valid_currents": 6
+  },
+  "evaluation_domain": {
+    "records": 32,
+    "unique_dates": 26,
+    "occupied_cells": 7,
+    "records_with_cached_dates": 32,
+    "records_with_valid_direct_currents": 16,
+    "records_masked": 16,
+    "unique_dates_with_valid_currents": 13,
+    "unique_cells_with_valid_currents": 6
+  },
+  "masked_source_cells": [
+    {
+      "grid_cell_id": "184:-772",
+      "records": 16,
+      "dates": [
+        "2021-08-03",
+        "2021-12-28",
+        "2022-03-12",
+        "2022-09-05",
+        "2023-04-29",
+        "2023-11-20",
+        "2024-10-01",
+        "2025-01-07",
+        "2025-05-06",
+        "2025-08-31",
+        "2026-03-13",
+        "2026-05-18",
+        "2026-06-12"
+      ],
+      "coordinates": [
+        [
+          18.4285297003,
+          -77.1531136706
+        ],
+        [
+          18.4339367554,
+          -77.167150185
+        ],
+        [
+          18.4341962944,
+          -77.1674169081
+        ],
+        [
+          18.4342241787,
+          -77.1675567305
+        ],
+        [
+          18.4342346267,
+          -77.1673791586
+        ],
+        [
+          18.4343956008,
+          -77.1674533222
+        ],
+        [
+          18.4344443322,
+          -77.1679529927
+        ],
+        [
+          18.4346133411,
+          -77.1674732928
+        ],
+        [
+          18.4357806187,
+          -77.1667042579
+        ],
+        [
+          18.4422624006,
+          -77.181383614
+        ],
+        [
+          18.4422924682,
+          -77.1813052765
+        ],
+        [
+          18.4423144764,
+          -77.1813906406
+        ],
+        [
+          18.4425247711,
+          -77.1905432269
+        ]
+      ],
+      "nearest_valid_distance_km": {
+        "minimum": 6.599707243784875,
+        "median": 7.293048200470404,
+        "maximum": 8.074631635774594
+      }
+    }
+  ],
+  "candidate_windows": [
+    {
+      "cutoff": "2016-12-31",
+      "evaluation_start": "2017-01-01",
+      "evaluation_end": "2018-12-31",
+      "source_records": 1,
+      "unique_source_dates": 1,
+      "unique_source_cells": 1,
+      "maximum_records_from_one_source_cell": 1,
+      "sources_with_cached_dates": 1,
+      "sources_with_valid_direct_currents": 1,
+      "valid_source_dates": 1,
+      "valid_source_cells": 1,
+      "future_records": 2,
+      "future_occupied_cells": 2,
+      "future_new_cells": 2,
+      "future_new_cell_ids": [
+        "183:-784",
+        "186:-781"
+      ]
+    },
+    {
+      "cutoff": "2017-12-31",
+      "evaluation_start": "2018-01-01",
+      "evaluation_end": "2019-12-31",
+      "source_records": 1,
+      "unique_source_dates": 1,
+      "unique_source_cells": 1,
+      "maximum_records_from_one_source_cell": 1,
+      "sources_with_cached_dates": 1,
+      "sources_with_valid_direct_currents": 1,
+      "valid_source_dates": 1,
+      "valid_source_cells": 1,
+      "future_records": 3,
+      "future_occupied_cells": 3,
+      "future_new_cells": 2,
+      "future_new_cell_ids": [
+        "183:-784",
+        "186:-781"
+      ]
+    },
+    {
+      "cutoff": "2019-12-31",
+      "evaluation_start": "2020-01-01",
+      "evaluation_end": "2021-12-31",
+      "source_records": 4,
+      "unique_source_dates": 4,
+      "unique_source_cells": 3,
+      "maximum_records_from_one_source_cell": 2,
+      "sources_with_cached_dates": 4,
+      "sources_with_valid_direct_currents": 4,
+      "valid_source_dates": 4,
+      "valid_source_cells": 3,
+      "future_records": 2,
+      "future_occupied_cells": 1,
+      "future_new_cells": 1,
+      "future_new_cell_ids": [
+        "184:-772"
+      ]
+    },
+    {
+      "cutoff": "2020-12-31",
+      "evaluation_start": "2021-01-01",
+      "evaluation_end": "2022-12-31",
+      "source_records": 4,
+      "unique_source_dates": 4,
+      "unique_source_cells": 3,
+      "maximum_records_from_one_source_cell": 2,
+      "sources_with_cached_dates": 4,
+      "sources_with_valid_direct_currents": 4,
+      "valid_source_dates": 4,
+      "valid_source_cells": 3,
+      "future_records": 8,
+      "future_occupied_cells": 3,
+      "future_new_cells": 3,
+      "future_new_cell_ids": [
+        "184:-770",
+        "184:-772",
+        "185:-778"
+      ]
+    },
+    {
+      "cutoff": "2021-12-31",
+      "evaluation_start": "2022-01-01",
+      "evaluation_end": "2023-12-31",
+      "source_records": 6,
+      "unique_source_dates": 6,
+      "unique_source_cells": 4,
+      "maximum_records_from_one_source_cell": 2,
+      "sources_with_cached_dates": 6,
+      "sources_with_valid_direct_currents": 4,
+      "valid_source_dates": 4,
+      "valid_source_cells": 3,
+      "future_records": 10,
+      "future_occupied_cells": 4,
+      "future_new_cells": 3,
+      "future_new_cell_ids": [
+        "184:-769",
+        "184:-770",
+        "185:-778"
+      ]
+    },
+    {
+      "cutoff": "2022-12-31",
+      "evaluation_start": "2023-01-01",
+      "evaluation_end": "2024-12-31",
+      "source_records": 12,
+      "unique_source_dates": 10,
+      "unique_source_cells": 6,
+      "maximum_records_from_one_source_cell": 6,
+      "sources_with_cached_dates": 12,
+      "sources_with_valid_direct_currents": 6,
+      "valid_source_dates": 6,
+      "valid_source_cells": 5,
+      "future_records": 9,
+      "future_occupied_cells": 4,
+      "future_new_cells": 1,
+      "future_new_cell_ids": [
+        "184:-769"
+      ]
+    }
+  ]
+}

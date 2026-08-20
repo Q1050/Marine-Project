@@ -1,0 +1,5 @@
+species,taxon_id,obis_total,clean_records,within_10km,within_25km,within_50km,within_100km,nearest_km,past_1yr,past_5yr,unique_locations,unique_days,distance_score,density_score,recency_score,independence_score,familiarity_score,anomaly_score,regional_status
+Pterois volitans,159559,57,41,18,26,29,41,1.6943272138851424,11,32,27,34,1.0,0.8962,1.0,1.0,0.9689,0.0311,STRONG_REGIONAL_EVIDENCE
+Sparisoma viride,273780,283,250,31,69,119,250,1.689446115236909,7,40,66,45,1.0,1.0,1.0,1.0,1.0,0.0,STRONG_REGIONAL_EVIDENCE
+Acanthurus coeruleus,159581,355,306,50,96,157,306,1.689446115236909,9,60,73,59,1.0,1.0,1.0,1.0,1.0,0.0,STRONG_REGIONAL_EVIDENCE
+Amphiprion ocellaris,278400,0,0,0,0,0,0,,0,0,0,0,0.0,0.0,0.0,0.0,0.0,1.0,REGIONALLY_UNUSUAL

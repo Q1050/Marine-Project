@@ -1,0 +1,43 @@
+{
+  "provider": "HYCOM",
+  "product": "GOFS 3.1 GLBy0.08",
+  "dataset_id": "GLBy0.08/expt_93.0",
+  "product_version": "experiment 93.0",
+  "source_file": "hycom_glby_930_2018120412_t000_uv3z.nc",
+  "access_url": "https://ncss.hycom.org/thredds/ncss/grid/datasets/GLBy0.08/expt_93.0/data/hindcasts/2018/hycom_glby_930_2018120412_t000_uv3z.nc?var=water_u&var=water_v&north=18.7&south=16.9&east=-75.9&west=-78.6&horizStride=1&vertCoord=0&addLatLon=true&accept=netcdf",
+  "requested_extent": {
+    "latitude_min": 16.9,
+    "latitude_max": 18.7,
+    "longitude_min": -78.6,
+    "longitude_max": -75.9
+  },
+  "actual_returned_extent": {
+    "latitude_min": 16.920000076293945,
+    "latitude_max": 18.719999313354492,
+    "longitude_min": -78.6400146484375,
+    "longitude_max": -75.91998291015625
+  },
+  "requested_date": "2018-12-04",
+  "actual_timestamp": "2018-12-04T12:00:00+00:00",
+  "source_depth_m": 0.0,
+  "depth_index": 0,
+  "variables": [
+    "water_u",
+    "water_v"
+  ],
+  "canonical_variables": [
+    "u",
+    "v"
+  ],
+  "u_units": "m/s",
+  "v_units": "m/s",
+  "source_coordinate_convention": "longitude 0..360; normalized cache -180..180",
+  "downloaded_at": "2026-08-16T16:06:59.955052+00:00",
+  "request_seconds": 1.3941064999962691,
+  "valid_ocean_cells": 1310,
+  "masked_or_missing_cells": 300,
+  "cache_file": "current_data/hycom/gofs3.1/expt_93.0/daily/2018/12/hycom_gofs3.1_2018-12-04_depth-0m_jamaica.nc",
+  "checksum_algorithm": "SHA-256",
+  "checksum": "3ab7a794230c1010fdf7e4fe5501611e50fc88c0e14fd3663d082add7ba65651",
+  "file_size_bytes": 14140
+}

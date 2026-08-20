@@ -1,0 +1,2002 @@
+[
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0001.jpg",
+    "filename": "acanthurus_bahianus_0001.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0003.jpg",
+    "filename": "acanthurus_bahianus_0003.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0004.jpg",
+    "filename": "acanthurus_bahianus_0004.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0005.jpg",
+    "filename": "acanthurus_bahianus_0005.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0010.jpg",
+    "filename": "acanthurus_bahianus_0010.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0011.jpg",
+    "filename": "acanthurus_bahianus_0011.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0012.jpg",
+    "filename": "acanthurus_bahianus_0012.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0013.jpg",
+    "filename": "acanthurus_bahianus_0013.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0014.jpg",
+    "filename": "acanthurus_bahianus_0014.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0017.jpg",
+    "filename": "acanthurus_bahianus_0017.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0019.jpg",
+    "filename": "acanthurus_bahianus_0019.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0020.jpg",
+    "filename": "acanthurus_bahianus_0020.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0021.jpg",
+    "filename": "acanthurus_bahianus_0021.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0022.jpg",
+    "filename": "acanthurus_bahianus_0022.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0023.jpg",
+    "filename": "acanthurus_bahianus_0023.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0024.jpg",
+    "filename": "acanthurus_bahianus_0024.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0025.jpg",
+    "filename": "acanthurus_bahianus_0025.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0026.jpg",
+    "filename": "acanthurus_bahianus_0026.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0027.jpg",
+    "filename": "acanthurus_bahianus_0027.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0028.jpg",
+    "filename": "acanthurus_bahianus_0028.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0029.jpg",
+    "filename": "acanthurus_bahianus_0029.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0030.jpg",
+    "filename": "acanthurus_bahianus_0030.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0031.jpg",
+    "filename": "acanthurus_bahianus_0031.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0032.jpg",
+    "filename": "acanthurus_bahianus_0032.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0033.jpg",
+    "filename": "acanthurus_bahianus_0033.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0034.jpg",
+    "filename": "acanthurus_bahianus_0034.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0036.jpg",
+    "filename": "acanthurus_bahianus_0036.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0037.jpg",
+    "filename": "acanthurus_bahianus_0037.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0038.jpg",
+    "filename": "acanthurus_bahianus_0038.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0039.jpg",
+    "filename": "acanthurus_bahianus_0039.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0040.jpg",
+    "filename": "acanthurus_bahianus_0040.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0042.jpg",
+    "filename": "acanthurus_bahianus_0042.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0043.jpg",
+    "filename": "acanthurus_bahianus_0043.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0044.jpg",
+    "filename": "acanthurus_bahianus_0044.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0045.jpg",
+    "filename": "acanthurus_bahianus_0045.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0046.jpg",
+    "filename": "acanthurus_bahianus_0046.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0047.jpg",
+    "filename": "acanthurus_bahianus_0047.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0048.jpg",
+    "filename": "acanthurus_bahianus_0048.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0049.jpg",
+    "filename": "acanthurus_bahianus_0049.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_bahianus\\acanthurus_bahianus_0050.jpg",
+    "filename": "acanthurus_bahianus_0050.jpg",
+    "species_label": "acanthurus_bahianus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0001.jpg",
+    "filename": "acanthurus_coeruleus_0001.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0002.jpg",
+    "filename": "acanthurus_coeruleus_0002.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0003.jpg",
+    "filename": "acanthurus_coeruleus_0003.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0004.jpg",
+    "filename": "acanthurus_coeruleus_0004.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0005.jpg",
+    "filename": "acanthurus_coeruleus_0005.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0007.jpg",
+    "filename": "acanthurus_coeruleus_0007.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0009.jpg",
+    "filename": "acanthurus_coeruleus_0009.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0010.jpg",
+    "filename": "acanthurus_coeruleus_0010.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0011.jpg",
+    "filename": "acanthurus_coeruleus_0011.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0012.jpg",
+    "filename": "acanthurus_coeruleus_0012.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0013.jpg",
+    "filename": "acanthurus_coeruleus_0013.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0014.jpg",
+    "filename": "acanthurus_coeruleus_0014.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0015.jpg",
+    "filename": "acanthurus_coeruleus_0015.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0016.jpg",
+    "filename": "acanthurus_coeruleus_0016.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0017.jpg",
+    "filename": "acanthurus_coeruleus_0017.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0018.jpg",
+    "filename": "acanthurus_coeruleus_0018.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0020.jpg",
+    "filename": "acanthurus_coeruleus_0020.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0021.jpg",
+    "filename": "acanthurus_coeruleus_0021.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0022.jpg",
+    "filename": "acanthurus_coeruleus_0022.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0023.jpg",
+    "filename": "acanthurus_coeruleus_0023.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0026.jpg",
+    "filename": "acanthurus_coeruleus_0026.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0027.jpg",
+    "filename": "acanthurus_coeruleus_0027.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0028.jpg",
+    "filename": "acanthurus_coeruleus_0028.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0029.jpg",
+    "filename": "acanthurus_coeruleus_0029.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0030.jpg",
+    "filename": "acanthurus_coeruleus_0030.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0031.jpg",
+    "filename": "acanthurus_coeruleus_0031.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0032.jpg",
+    "filename": "acanthurus_coeruleus_0032.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0033.jpg",
+    "filename": "acanthurus_coeruleus_0033.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0034.jpg",
+    "filename": "acanthurus_coeruleus_0034.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0038.jpg",
+    "filename": "acanthurus_coeruleus_0038.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0039.jpg",
+    "filename": "acanthurus_coeruleus_0039.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0042.jpg",
+    "filename": "acanthurus_coeruleus_0042.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0043.jpg",
+    "filename": "acanthurus_coeruleus_0043.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0044.jpg",
+    "filename": "acanthurus_coeruleus_0044.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0045.jpg",
+    "filename": "acanthurus_coeruleus_0045.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0046.jpg",
+    "filename": "acanthurus_coeruleus_0046.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0047.jpg",
+    "filename": "acanthurus_coeruleus_0047.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0048.jpg",
+    "filename": "acanthurus_coeruleus_0048.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0049.jpg",
+    "filename": "acanthurus_coeruleus_0049.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\acanthurus_coeruleus\\acanthurus_coeruleus_0050.jpg",
+    "filename": "acanthurus_coeruleus_0050.jpg",
+    "species_label": "acanthurus_coeruleus"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0001.jpg",
+    "filename": "diodon_hystrix_0001.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0002.jpg",
+    "filename": "diodon_hystrix_0002.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0003.jpg",
+    "filename": "diodon_hystrix_0003.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0004.jpg",
+    "filename": "diodon_hystrix_0004.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0005.jpg",
+    "filename": "diodon_hystrix_0005.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0006.jpg",
+    "filename": "diodon_hystrix_0006.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0007.jpg",
+    "filename": "diodon_hystrix_0007.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0008.jpg",
+    "filename": "diodon_hystrix_0008.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0009.jpg",
+    "filename": "diodon_hystrix_0009.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0010.jpg",
+    "filename": "diodon_hystrix_0010.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0011.jpg",
+    "filename": "diodon_hystrix_0011.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0012.jpg",
+    "filename": "diodon_hystrix_0012.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0013.jpg",
+    "filename": "diodon_hystrix_0013.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0015.jpg",
+    "filename": "diodon_hystrix_0015.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0016.jpg",
+    "filename": "diodon_hystrix_0016.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0017.jpg",
+    "filename": "diodon_hystrix_0017.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0018.jpg",
+    "filename": "diodon_hystrix_0018.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0019.jpg",
+    "filename": "diodon_hystrix_0019.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0020.jpg",
+    "filename": "diodon_hystrix_0020.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0022.jpg",
+    "filename": "diodon_hystrix_0022.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0023.jpg",
+    "filename": "diodon_hystrix_0023.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0024.jpg",
+    "filename": "diodon_hystrix_0024.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0025.jpg",
+    "filename": "diodon_hystrix_0025.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0027.jpg",
+    "filename": "diodon_hystrix_0027.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0028.jpg",
+    "filename": "diodon_hystrix_0028.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0029.jpg",
+    "filename": "diodon_hystrix_0029.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0031.jpg",
+    "filename": "diodon_hystrix_0031.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0033.jpg",
+    "filename": "diodon_hystrix_0033.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0034.jpg",
+    "filename": "diodon_hystrix_0034.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0035.jpg",
+    "filename": "diodon_hystrix_0035.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0036.jpg",
+    "filename": "diodon_hystrix_0036.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0038.jpg",
+    "filename": "diodon_hystrix_0038.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0039.jpg",
+    "filename": "diodon_hystrix_0039.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0040.jpg",
+    "filename": "diodon_hystrix_0040.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0041.jpg",
+    "filename": "diodon_hystrix_0041.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0043.jpg",
+    "filename": "diodon_hystrix_0043.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0044.jpg",
+    "filename": "diodon_hystrix_0044.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0047.jpg",
+    "filename": "diodon_hystrix_0047.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0048.jpg",
+    "filename": "diodon_hystrix_0048.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\diodon_hystrix\\diodon_hystrix_0049.jpg",
+    "filename": "diodon_hystrix_0049.jpg",
+    "species_label": "diodon_hystrix"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0002.jpg",
+    "filename": "gymnothorax_funebris_0002.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0003.jpg",
+    "filename": "gymnothorax_funebris_0003.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0004.jpg",
+    "filename": "gymnothorax_funebris_0004.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0005.jpg",
+    "filename": "gymnothorax_funebris_0005.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0006.jpg",
+    "filename": "gymnothorax_funebris_0006.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0008.jpg",
+    "filename": "gymnothorax_funebris_0008.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0009.jpg",
+    "filename": "gymnothorax_funebris_0009.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0010.jpg",
+    "filename": "gymnothorax_funebris_0010.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0013.jpg",
+    "filename": "gymnothorax_funebris_0013.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0014.jpg",
+    "filename": "gymnothorax_funebris_0014.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0015.jpg",
+    "filename": "gymnothorax_funebris_0015.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0016.jpg",
+    "filename": "gymnothorax_funebris_0016.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0018.jpg",
+    "filename": "gymnothorax_funebris_0018.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0019.jpg",
+    "filename": "gymnothorax_funebris_0019.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0020.jpg",
+    "filename": "gymnothorax_funebris_0020.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0021.jpg",
+    "filename": "gymnothorax_funebris_0021.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0022.jpg",
+    "filename": "gymnothorax_funebris_0022.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0023.jpg",
+    "filename": "gymnothorax_funebris_0023.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0024.jpg",
+    "filename": "gymnothorax_funebris_0024.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0025.jpg",
+    "filename": "gymnothorax_funebris_0025.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0026.jpg",
+    "filename": "gymnothorax_funebris_0026.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0027.jpg",
+    "filename": "gymnothorax_funebris_0027.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0028.jpg",
+    "filename": "gymnothorax_funebris_0028.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0029.jpg",
+    "filename": "gymnothorax_funebris_0029.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0031.jpg",
+    "filename": "gymnothorax_funebris_0031.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0032.jpg",
+    "filename": "gymnothorax_funebris_0032.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0034.jpg",
+    "filename": "gymnothorax_funebris_0034.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0035.jpg",
+    "filename": "gymnothorax_funebris_0035.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0036.jpg",
+    "filename": "gymnothorax_funebris_0036.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0037.jpg",
+    "filename": "gymnothorax_funebris_0037.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0038.jpg",
+    "filename": "gymnothorax_funebris_0038.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0039.jpg",
+    "filename": "gymnothorax_funebris_0039.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0040.jpg",
+    "filename": "gymnothorax_funebris_0040.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0042.jpg",
+    "filename": "gymnothorax_funebris_0042.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0043.jpg",
+    "filename": "gymnothorax_funebris_0043.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0044.jpg",
+    "filename": "gymnothorax_funebris_0044.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0046.jpg",
+    "filename": "gymnothorax_funebris_0046.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0048.jpg",
+    "filename": "gymnothorax_funebris_0048.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0049.jpg",
+    "filename": "gymnothorax_funebris_0049.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\gymnothorax_funebris\\gymnothorax_funebris_0050.jpg",
+    "filename": "gymnothorax_funebris_0050.jpg",
+    "species_label": "gymnothorax_funebris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0001.jpg",
+    "filename": "holacanthus_ciliaris_0001.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0003.jpg",
+    "filename": "holacanthus_ciliaris_0003.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0004.jpg",
+    "filename": "holacanthus_ciliaris_0004.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0006.jpg",
+    "filename": "holacanthus_ciliaris_0006.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0007.jpg",
+    "filename": "holacanthus_ciliaris_0007.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0009.jpg",
+    "filename": "holacanthus_ciliaris_0009.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0010.jpg",
+    "filename": "holacanthus_ciliaris_0010.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0011.jpg",
+    "filename": "holacanthus_ciliaris_0011.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0012.jpg",
+    "filename": "holacanthus_ciliaris_0012.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0013.jpg",
+    "filename": "holacanthus_ciliaris_0013.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0014.jpg",
+    "filename": "holacanthus_ciliaris_0014.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0017.jpg",
+    "filename": "holacanthus_ciliaris_0017.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0018.jpg",
+    "filename": "holacanthus_ciliaris_0018.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0019.jpg",
+    "filename": "holacanthus_ciliaris_0019.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0020.jpg",
+    "filename": "holacanthus_ciliaris_0020.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0021.jpg",
+    "filename": "holacanthus_ciliaris_0021.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0023.jpg",
+    "filename": "holacanthus_ciliaris_0023.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0024.jpg",
+    "filename": "holacanthus_ciliaris_0024.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0025.jpg",
+    "filename": "holacanthus_ciliaris_0025.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0026.jpg",
+    "filename": "holacanthus_ciliaris_0026.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0027.jpg",
+    "filename": "holacanthus_ciliaris_0027.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0028.jpg",
+    "filename": "holacanthus_ciliaris_0028.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0030.jpg",
+    "filename": "holacanthus_ciliaris_0030.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0031.jpg",
+    "filename": "holacanthus_ciliaris_0031.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0032.jpg",
+    "filename": "holacanthus_ciliaris_0032.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0033.jpg",
+    "filename": "holacanthus_ciliaris_0033.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0035.jpg",
+    "filename": "holacanthus_ciliaris_0035.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0036.jpg",
+    "filename": "holacanthus_ciliaris_0036.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0037.jpg",
+    "filename": "holacanthus_ciliaris_0037.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0039.jpg",
+    "filename": "holacanthus_ciliaris_0039.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0040.jpg",
+    "filename": "holacanthus_ciliaris_0040.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0041.jpg",
+    "filename": "holacanthus_ciliaris_0041.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0042.jpg",
+    "filename": "holacanthus_ciliaris_0042.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0043.jpg",
+    "filename": "holacanthus_ciliaris_0043.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0044.jpg",
+    "filename": "holacanthus_ciliaris_0044.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0045.jpg",
+    "filename": "holacanthus_ciliaris_0045.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0046.jpg",
+    "filename": "holacanthus_ciliaris_0046.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0047.jpg",
+    "filename": "holacanthus_ciliaris_0047.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0048.jpg",
+    "filename": "holacanthus_ciliaris_0048.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\holacanthus_ciliaris\\holacanthus_ciliaris_0049.jpg",
+    "filename": "holacanthus_ciliaris_0049.jpg",
+    "species_label": "holacanthus_ciliaris"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0001.jpg",
+    "filename": "lactophrys_triqueter_0001.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0002.jpg",
+    "filename": "lactophrys_triqueter_0002.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0003.jpg",
+    "filename": "lactophrys_triqueter_0003.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0004.jpg",
+    "filename": "lactophrys_triqueter_0004.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0005.jpg",
+    "filename": "lactophrys_triqueter_0005.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0006.jpg",
+    "filename": "lactophrys_triqueter_0006.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0008.jpg",
+    "filename": "lactophrys_triqueter_0008.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0010.jpg",
+    "filename": "lactophrys_triqueter_0010.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0011.jpg",
+    "filename": "lactophrys_triqueter_0011.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0012.jpg",
+    "filename": "lactophrys_triqueter_0012.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0014.jpg",
+    "filename": "lactophrys_triqueter_0014.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0015.jpg",
+    "filename": "lactophrys_triqueter_0015.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0017.jpg",
+    "filename": "lactophrys_triqueter_0017.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0018.jpg",
+    "filename": "lactophrys_triqueter_0018.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0019.jpg",
+    "filename": "lactophrys_triqueter_0019.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0020.jpg",
+    "filename": "lactophrys_triqueter_0020.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0021.jpg",
+    "filename": "lactophrys_triqueter_0021.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0023.jpg",
+    "filename": "lactophrys_triqueter_0023.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0024.jpg",
+    "filename": "lactophrys_triqueter_0024.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0025.jpg",
+    "filename": "lactophrys_triqueter_0025.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0026.jpg",
+    "filename": "lactophrys_triqueter_0026.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0027.jpg",
+    "filename": "lactophrys_triqueter_0027.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0030.jpg",
+    "filename": "lactophrys_triqueter_0030.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0031.jpg",
+    "filename": "lactophrys_triqueter_0031.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0032.jpg",
+    "filename": "lactophrys_triqueter_0032.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0033.jpg",
+    "filename": "lactophrys_triqueter_0033.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0034.jpg",
+    "filename": "lactophrys_triqueter_0034.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0036.jpg",
+    "filename": "lactophrys_triqueter_0036.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0037.jpg",
+    "filename": "lactophrys_triqueter_0037.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0038.jpg",
+    "filename": "lactophrys_triqueter_0038.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0039.jpg",
+    "filename": "lactophrys_triqueter_0039.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0040.jpg",
+    "filename": "lactophrys_triqueter_0040.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0041.jpg",
+    "filename": "lactophrys_triqueter_0041.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0042.jpg",
+    "filename": "lactophrys_triqueter_0042.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0043.jpg",
+    "filename": "lactophrys_triqueter_0043.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0044.jpg",
+    "filename": "lactophrys_triqueter_0044.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0045.jpg",
+    "filename": "lactophrys_triqueter_0045.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0048.jpg",
+    "filename": "lactophrys_triqueter_0048.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0049.jpg",
+    "filename": "lactophrys_triqueter_0049.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\lactophrys_triqueter\\lactophrys_triqueter_0050.jpg",
+    "filename": "lactophrys_triqueter_0050.jpg",
+    "species_label": "lactophrys_triqueter"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0001.jpg",
+    "filename": "pomacanthus_paru_0001.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0002.jpg",
+    "filename": "pomacanthus_paru_0002.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0003.jpg",
+    "filename": "pomacanthus_paru_0003.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0005.jpg",
+    "filename": "pomacanthus_paru_0005.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0006.jpg",
+    "filename": "pomacanthus_paru_0006.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0007.jpg",
+    "filename": "pomacanthus_paru_0007.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0008.jpg",
+    "filename": "pomacanthus_paru_0008.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0009.jpg",
+    "filename": "pomacanthus_paru_0009.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0010.jpg",
+    "filename": "pomacanthus_paru_0010.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0012.jpg",
+    "filename": "pomacanthus_paru_0012.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0013.jpg",
+    "filename": "pomacanthus_paru_0013.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0014.jpg",
+    "filename": "pomacanthus_paru_0014.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0015.jpg",
+    "filename": "pomacanthus_paru_0015.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0016.jpg",
+    "filename": "pomacanthus_paru_0016.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0017.jpg",
+    "filename": "pomacanthus_paru_0017.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0018.jpg",
+    "filename": "pomacanthus_paru_0018.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0019.jpg",
+    "filename": "pomacanthus_paru_0019.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0020.jpg",
+    "filename": "pomacanthus_paru_0020.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0022.jpg",
+    "filename": "pomacanthus_paru_0022.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0023.jpg",
+    "filename": "pomacanthus_paru_0023.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0024.jpg",
+    "filename": "pomacanthus_paru_0024.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0025.jpg",
+    "filename": "pomacanthus_paru_0025.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0026.jpg",
+    "filename": "pomacanthus_paru_0026.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0027.jpg",
+    "filename": "pomacanthus_paru_0027.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0028.jpg",
+    "filename": "pomacanthus_paru_0028.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0029.jpg",
+    "filename": "pomacanthus_paru_0029.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0030.jpg",
+    "filename": "pomacanthus_paru_0030.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0032.jpg",
+    "filename": "pomacanthus_paru_0032.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0035.jpg",
+    "filename": "pomacanthus_paru_0035.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0036.jpg",
+    "filename": "pomacanthus_paru_0036.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0037.jpg",
+    "filename": "pomacanthus_paru_0037.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0039.jpg",
+    "filename": "pomacanthus_paru_0039.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0040.jpg",
+    "filename": "pomacanthus_paru_0040.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0041.jpg",
+    "filename": "pomacanthus_paru_0041.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0042.jpg",
+    "filename": "pomacanthus_paru_0042.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0043.jpg",
+    "filename": "pomacanthus_paru_0043.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0044.jpg",
+    "filename": "pomacanthus_paru_0044.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0045.jpg",
+    "filename": "pomacanthus_paru_0045.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0046.jpg",
+    "filename": "pomacanthus_paru_0046.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pomacanthus_paru\\pomacanthus_paru_0049.jpg",
+    "filename": "pomacanthus_paru_0049.jpg",
+    "species_label": "pomacanthus_paru"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0001.jpg",
+    "filename": "pterois_volitans_0001.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0002.jpg",
+    "filename": "pterois_volitans_0002.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0003.jpg",
+    "filename": "pterois_volitans_0003.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0004.jpg",
+    "filename": "pterois_volitans_0004.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0006.jpg",
+    "filename": "pterois_volitans_0006.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0007.jpg",
+    "filename": "pterois_volitans_0007.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0008.jpg",
+    "filename": "pterois_volitans_0008.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0010.jpg",
+    "filename": "pterois_volitans_0010.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0012.jpg",
+    "filename": "pterois_volitans_0012.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0013.jpg",
+    "filename": "pterois_volitans_0013.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0014.jpg",
+    "filename": "pterois_volitans_0014.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0015.jpg",
+    "filename": "pterois_volitans_0015.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0018.jpg",
+    "filename": "pterois_volitans_0018.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0020.jpg",
+    "filename": "pterois_volitans_0020.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0021.jpg",
+    "filename": "pterois_volitans_0021.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0022.jpg",
+    "filename": "pterois_volitans_0022.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0025.jpg",
+    "filename": "pterois_volitans_0025.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0026.jpg",
+    "filename": "pterois_volitans_0026.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0027.jpg",
+    "filename": "pterois_volitans_0027.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0028.jpg",
+    "filename": "pterois_volitans_0028.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0030.jpg",
+    "filename": "pterois_volitans_0030.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0031.jpg",
+    "filename": "pterois_volitans_0031.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0032.jpg",
+    "filename": "pterois_volitans_0032.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0034.jpg",
+    "filename": "pterois_volitans_0034.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0035.jpg",
+    "filename": "pterois_volitans_0035.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0036.jpg",
+    "filename": "pterois_volitans_0036.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0037.jpg",
+    "filename": "pterois_volitans_0037.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0038.jpg",
+    "filename": "pterois_volitans_0038.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0039.jpg",
+    "filename": "pterois_volitans_0039.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0040.jpg",
+    "filename": "pterois_volitans_0040.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0041.jpg",
+    "filename": "pterois_volitans_0041.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0042.jpg",
+    "filename": "pterois_volitans_0042.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0043.jpg",
+    "filename": "pterois_volitans_0043.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0044.jpg",
+    "filename": "pterois_volitans_0044.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0045.jpg",
+    "filename": "pterois_volitans_0045.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0046.jpg",
+    "filename": "pterois_volitans_0046.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0047.jpg",
+    "filename": "pterois_volitans_0047.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0048.jpg",
+    "filename": "pterois_volitans_0048.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0049.jpg",
+    "filename": "pterois_volitans_0049.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\pterois_volitans\\pterois_volitans_0050.jpg",
+    "filename": "pterois_volitans_0050.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0002.jpg",
+    "filename": "sparisoma_viride_0002.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0004.jpg",
+    "filename": "sparisoma_viride_0004.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0006.jpg",
+    "filename": "sparisoma_viride_0006.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0007.jpg",
+    "filename": "sparisoma_viride_0007.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0009.jpg",
+    "filename": "sparisoma_viride_0009.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0011.jpg",
+    "filename": "sparisoma_viride_0011.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0012.jpg",
+    "filename": "sparisoma_viride_0012.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0013.jpg",
+    "filename": "sparisoma_viride_0013.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0014.jpg",
+    "filename": "sparisoma_viride_0014.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0015.jpg",
+    "filename": "sparisoma_viride_0015.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0016.jpg",
+    "filename": "sparisoma_viride_0016.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0017.jpg",
+    "filename": "sparisoma_viride_0017.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0018.jpg",
+    "filename": "sparisoma_viride_0018.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0019.jpg",
+    "filename": "sparisoma_viride_0019.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0020.jpg",
+    "filename": "sparisoma_viride_0020.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0021.jpg",
+    "filename": "sparisoma_viride_0021.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0022.jpg",
+    "filename": "sparisoma_viride_0022.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0023.jpg",
+    "filename": "sparisoma_viride_0023.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0024.jpg",
+    "filename": "sparisoma_viride_0024.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0025.jpg",
+    "filename": "sparisoma_viride_0025.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0026.jpg",
+    "filename": "sparisoma_viride_0026.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0027.jpg",
+    "filename": "sparisoma_viride_0027.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0029.jpg",
+    "filename": "sparisoma_viride_0029.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0030.jpg",
+    "filename": "sparisoma_viride_0030.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0031.jpg",
+    "filename": "sparisoma_viride_0031.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0032.jpg",
+    "filename": "sparisoma_viride_0032.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0033.jpg",
+    "filename": "sparisoma_viride_0033.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0034.jpg",
+    "filename": "sparisoma_viride_0034.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0037.jpg",
+    "filename": "sparisoma_viride_0037.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0038.jpg",
+    "filename": "sparisoma_viride_0038.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0039.jpg",
+    "filename": "sparisoma_viride_0039.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0040.jpg",
+    "filename": "sparisoma_viride_0040.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0041.jpg",
+    "filename": "sparisoma_viride_0041.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0042.jpg",
+    "filename": "sparisoma_viride_0042.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0043.jpg",
+    "filename": "sparisoma_viride_0043.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0044.jpg",
+    "filename": "sparisoma_viride_0044.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0045.jpg",
+    "filename": "sparisoma_viride_0045.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0047.jpg",
+    "filename": "sparisoma_viride_0047.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0048.jpg",
+    "filename": "sparisoma_viride_0048.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sparisoma_viride\\sparisoma_viride_0049.jpg",
+    "filename": "sparisoma_viride_0049.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0001.jpg",
+    "filename": "sphyraena_barracuda_0001.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0002.jpg",
+    "filename": "sphyraena_barracuda_0002.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0004.jpg",
+    "filename": "sphyraena_barracuda_0004.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0005.jpg",
+    "filename": "sphyraena_barracuda_0005.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0006.jpg",
+    "filename": "sphyraena_barracuda_0006.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0007.jpg",
+    "filename": "sphyraena_barracuda_0007.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0008.jpg",
+    "filename": "sphyraena_barracuda_0008.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0009.jpg",
+    "filename": "sphyraena_barracuda_0009.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0010.jpg",
+    "filename": "sphyraena_barracuda_0010.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0011.jpg",
+    "filename": "sphyraena_barracuda_0011.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0012.jpg",
+    "filename": "sphyraena_barracuda_0012.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0014.jpg",
+    "filename": "sphyraena_barracuda_0014.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0016.jpg",
+    "filename": "sphyraena_barracuda_0016.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0017.jpg",
+    "filename": "sphyraena_barracuda_0017.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0018.jpg",
+    "filename": "sphyraena_barracuda_0018.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0019.jpg",
+    "filename": "sphyraena_barracuda_0019.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0021.jpg",
+    "filename": "sphyraena_barracuda_0021.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0022.jpg",
+    "filename": "sphyraena_barracuda_0022.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0024.jpg",
+    "filename": "sphyraena_barracuda_0024.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0026.jpg",
+    "filename": "sphyraena_barracuda_0026.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0027.jpg",
+    "filename": "sphyraena_barracuda_0027.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0028.jpg",
+    "filename": "sphyraena_barracuda_0028.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0029.jpg",
+    "filename": "sphyraena_barracuda_0029.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0032.jpg",
+    "filename": "sphyraena_barracuda_0032.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0033.jpg",
+    "filename": "sphyraena_barracuda_0033.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0034.jpg",
+    "filename": "sphyraena_barracuda_0034.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0035.jpg",
+    "filename": "sphyraena_barracuda_0035.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0036.jpg",
+    "filename": "sphyraena_barracuda_0036.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0037.jpg",
+    "filename": "sphyraena_barracuda_0037.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0038.jpg",
+    "filename": "sphyraena_barracuda_0038.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0039.jpg",
+    "filename": "sphyraena_barracuda_0039.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0040.jpg",
+    "filename": "sphyraena_barracuda_0040.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0041.jpg",
+    "filename": "sphyraena_barracuda_0041.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0043.jpg",
+    "filename": "sphyraena_barracuda_0043.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0044.jpg",
+    "filename": "sphyraena_barracuda_0044.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0045.jpg",
+    "filename": "sphyraena_barracuda_0045.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0046.jpg",
+    "filename": "sphyraena_barracuda_0046.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0048.jpg",
+    "filename": "sphyraena_barracuda_0048.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0049.jpg",
+    "filename": "sphyraena_barracuda_0049.jpg",
+    "species_label": "sphyraena_barracuda"
+  },
+  {
+    "image_path": "data\\ground_species_dataset\\split\\reference\\sphyraena_barracuda\\sphyraena_barracuda_0050.jpg",
+    "filename": "sphyraena_barracuda_0050.jpg",
+    "species_label": "sphyraena_barracuda"
+  }
+]

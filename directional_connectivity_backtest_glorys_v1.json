@@ -1,0 +1,2311 @@
+{
+  "experiment": "read-only historical directional-connectivity backtest",
+  "current_data": {
+    "provider": "COPERNICUS_MARINE",
+    "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+    "depth_m": 0.494025,
+    "temporal_representation": "DAILY_MEAN",
+    "nearest_valid_fallback": false
+  },
+  "randomized_bearing_control": {
+    "seed": 20260816,
+    "permutations": 500
+  },
+  "interpretation": "Tests alignment with historical environmental surface-current direction; not organism movement, transport, spread, or occurrence probability.",
+  "windows": [
+    {
+      "cutoff": "2016-12-31",
+      "evaluation_start": "2017-01-01",
+      "evaluation_end": "2018-12-31",
+      "source_cohort": [
+        {
+          "occurrence_id": 2505,
+          "date": "2012-02-21T15:14:00",
+          "grid_cell_id": "182:-784",
+          "latitude": 18.2971652199,
+          "longitude": -78.3445357289,
+          "lookup_status": "VALID",
+          "represented_date": "2012-02-21",
+          "temporal_representation": "DAILY_MEAN",
+          "u": -0.07385478913784027,
+          "v": -0.23316141963005066,
+          "speed": 0.24457877561737737,
+          "toward_bearing_degrees": 197.5758012774649,
+          "sampling_method": "NEAREST_GRID_POINT",
+          "lookup_distance_km": 4.1919634365119745
+        }
+      ],
+      "excluded_sources": [],
+      "future_records": 2,
+      "future_occupied_cells": [
+        "183:-784",
+        "186:-781"
+      ],
+      "future_new_cells": [
+        "183:-784",
+        "186:-781"
+      ],
+      "eligible_candidates": 390,
+      "metrics": {
+        "suitability": {
+          "future_cell_ranks": {
+            "183:-784": 5,
+            "186:-781": 133
+          },
+          "median_future_cell_rank": 69.0,
+          "mean_future_cell_rank": 69.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.2,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 2
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.12,
+              "recall": 1.0,
+              "matched_future_cells": 2
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 0.0,
+              "186:-781": 30.644610842162027
+            },
+            "top_20": {
+              "183:-784": 0.0,
+              "186:-781": 15.320182909640305
+            },
+            "top_50": {
+              "183:-784": 0.0,
+              "186:-781": 15.320182909640305
+            }
+          }
+        },
+        "evidence": {
+          "future_cell_ranks": {
+            "183:-784": 1,
+            "186:-781": 95
+          },
+          "median_future_cell_rank": 48.0,
+          "mean_future_cell_rank": 48.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.5,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.18,
+              "recall": 1.0,
+              "matched_future_cells": 2
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 0.0,
+              "186:-781": 30.644610842162027
+            },
+            "top_20": {
+              "183:-784": 0.0,
+              "186:-781": 30.644610842162027
+            },
+            "top_50": {
+              "183:-784": 0.0,
+              "186:-781": 10.535619236210547
+            }
+          }
+        },
+        "combined": {
+          "future_cell_ranks": {
+            "183:-784": 1,
+            "186:-781": 120
+          },
+          "median_future_cell_rank": 60.5,
+          "mean_future_cell_rank": 60.5,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.2,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 2
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.14,
+              "recall": 1.0,
+              "matched_future_cells": 2
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 0.0,
+              "186:-781": 30.644610842162027
+            },
+            "top_20": {
+              "183:-784": 0.0,
+              "186:-781": 15.320182909640305
+            },
+            "top_50": {
+              "183:-784": 0.0,
+              "186:-781": 15.320182909640305
+            }
+          }
+        },
+        "d1": {
+          "future_cell_ranks": {
+            "183:-784": 320,
+            "186:-781": 385
+          },
+          "median_future_cell_rank": 352.5,
+          "mean_future_cell_rank": 352.5,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 34.99103376016465,
+              "186:-781": 78.95165807020759
+            },
+            "top_20": {
+              "183:-784": 34.99103376016465,
+              "186:-781": 78.95165807020759
+            },
+            "top_50": {
+              "183:-784": 22.239016046706613,
+              "186:-781": 63.976532545855804
+            }
+          }
+        },
+        "d2": {
+          "future_cell_ranks": {
+            "183:-784": 68,
+            "186:-781": 90
+          },
+          "median_future_cell_rank": 79.0,
+          "mean_future_cell_rank": 79.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 34.99103376016465,
+              "186:-781": 78.95165807020759
+            },
+            "top_20": {
+              "183:-784": 22.239016046706613,
+              "186:-781": 63.976532545855804
+            },
+            "top_50": {
+              "183:-784": 15.332863800298682,
+              "186:-781": 59.46746982675485
+            }
+          }
+        },
+        "speed_weighted": {
+          "future_cell_ranks": {
+            "183:-784": 320,
+            "186:-781": 385
+          },
+          "median_future_cell_rank": 352.5,
+          "mean_future_cell_rank": 352.5,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 34.99103376016465,
+              "186:-781": 78.95165807020759
+            },
+            "top_20": {
+              "183:-784": 34.99103376016465,
+              "186:-781": 78.95165807020759
+            },
+            "top_50": {
+              "183:-784": 22.239016046706613,
+              "186:-781": 63.976532545855804
+            }
+          }
+        },
+        "random_candidate": {
+          "permutations": 500,
+          "seed": 20260816,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.066,
+              "precision": 0.006600000000000001,
+              "recall": 0.033
+            },
+            "at_20": {
+              "hit_rate": 0.124,
+              "precision": 0.006200000000000001,
+              "recall": 0.062
+            },
+            "at_50": {
+              "hit_rate": 0.262,
+              "precision": 0.0054800000000000005,
+              "recall": 0.137
+            }
+          },
+          "tolerance": {
+            "at_10": {
+              "hit_rate": 0.284,
+              "precision": 0.0322,
+              "recall": 0.151
+            },
+            "at_20": {
+              "hit_rate": 0.488,
+              "precision": 0.030100000000000002,
+              "recall": 0.271
+            },
+            "at_50": {
+              "hit_rate": 0.826,
+              "precision": 0.02976,
+              "recall": 0.561
+            }
+          },
+          "mean_of_median_future_cell_rank": 192.103
+        }
+      },
+      "future_cell_results": [
+        {
+          "grid_cell_id": "183:-784",
+          "latitude": 18.35,
+          "longitude": -78.35,
+          "ranks": {
+            "suitability": 5,
+            "evidence": 1,
+            "combined": 1,
+            "d1": 320,
+            "d2": 68,
+            "speed_weighted": 320
+          },
+          "d1_winning_connection": {
+            "source_occurrence_id": 2505,
+            "source_date": "2012-02-21T15:14:00",
+            "source_coordinate": [
+              18.2971652199,
+              -78.3445357289
+            ],
+            "destination_coordinate": [
+              18.35,
+              -78.35
+            ],
+            "distance_km": 5.90321386155683,
+            "u": -0.07385478913784027,
+            "v": -0.23316141963005066,
+            "current_speed": 0.24457877561737737,
+            "current_toward_bearing_degrees": 197.5758012774649,
+            "source_to_destination_bearing_degrees": 354.3936450308438,
+            "angular_difference_degrees": 156.8178437533789,
+            "alignment": -0.919257980894002,
+            "downstream_alignment": 0.0,
+            "speed_weighted_alignment": 0.0,
+            "provider": "COPERNICUS_MARINE",
+            "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+            "represented_date": "2012-02-21",
+            "temporal_representation": "DAILY_MEAN",
+            "current_depth_m": 0.49402499198913574,
+            "current_sampling_method": "NEAREST_GRID_POINT"
+          },
+          "d2_winning_connection": {
+            "source_occurrence_id": 2505,
+            "source_date": "2012-02-21T15:14:00",
+            "source_coordinate": [
+              18.2971652199,
+              -78.3445357289
+            ],
+            "destination_coordinate": [
+              18.35,
+              -78.35
+            ],
+            "distance_km": 5.90321386155683,
+            "u": -0.07385478913784027,
+            "v": -0.23316141963005066,
+            "current_speed": 0.24457877561737737,
+            "current_toward_bearing_degrees": 197.5758012774649,
+            "source_to_destination_bearing_degrees": 354.3936450308438,
+            "angular_difference_degrees": 156.8178437533789,
+            "alignment": -0.919257980894002,
+            "downstream_alignment": 0.0,
+            "speed_weighted_alignment": 0.0,
+            "provider": "COPERNICUS_MARINE",
+            "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+            "represented_date": "2012-02-21",
+            "temporal_representation": "DAILY_MEAN",
+            "current_depth_m": 0.49402499198913574,
+            "current_sampling_method": "NEAREST_GRID_POINT"
+          }
+        },
+        {
+          "grid_cell_id": "186:-781",
+          "latitude": 18.65,
+          "longitude": -78.05,
+          "ranks": {
+            "suitability": 133,
+            "evidence": 95,
+            "combined": 120,
+            "d1": 385,
+            "d2": 90,
+            "speed_weighted": 385
+          },
+          "d1_winning_connection": {
+            "source_occurrence_id": 2505,
+            "source_date": "2012-02-21T15:14:00",
+            "source_coordinate": [
+              18.2971652199,
+              -78.3445357289
+            ],
+            "destination_coordinate": [
+              18.65,
+              -78.05
+            ],
+            "distance_km": 50.041872101837335,
+            "u": -0.07385478913784027,
+            "v": -0.23316141963005066,
+            "current_speed": 0.24457877561737737,
+            "current_toward_bearing_degrees": 197.5758012774649,
+            "source_to_destination_bearing_degrees": 38.32399317132126,
+            "angular_difference_degrees": 159.25180810614364,
+            "alignment": -0.9351463897263005,
+            "downstream_alignment": 0.0,
+            "speed_weighted_alignment": 0.0,
+            "provider": "COPERNICUS_MARINE",
+            "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+            "represented_date": "2012-02-21",
+            "temporal_representation": "DAILY_MEAN",
+            "current_depth_m": 0.49402499198913574,
+            "current_sampling_method": "NEAREST_GRID_POINT"
+          },
+          "d2_winning_connection": {
+            "source_occurrence_id": 2505,
+            "source_date": "2012-02-21T15:14:00",
+            "source_coordinate": [
+              18.2971652199,
+              -78.3445357289
+            ],
+            "destination_coordinate": [
+              18.65,
+              -78.05
+            ],
+            "distance_km": 50.041872101837335,
+            "u": -0.07385478913784027,
+            "v": -0.23316141963005066,
+            "current_speed": 0.24457877561737737,
+            "current_toward_bearing_degrees": 197.5758012774649,
+            "source_to_destination_bearing_degrees": 38.32399317132126,
+            "angular_difference_degrees": 159.25180810614364,
+            "alignment": -0.9351463897263005,
+            "downstream_alignment": 0.0,
+            "speed_weighted_alignment": 0.0,
+            "provider": "COPERNICUS_MARINE",
+            "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+            "represented_date": "2012-02-21",
+            "temporal_representation": "DAILY_MEAN",
+            "current_depth_m": 0.49402499198913574,
+            "current_sampling_method": "NEAREST_GRID_POINT"
+          }
+        }
+      ],
+      "alignment_distributions": {
+        "future_new": {
+          "count": 2,
+          "mean": 0.0,
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "other_candidates": {
+          "count": 388,
+          "mean": 0.35235293902610687,
+          "median": 0.2557190909676518,
+          "q1": 0.0,
+          "q3": 0.6494179337728015
+        },
+        "exploratory_comparison": {
+          "test": "Mann-Whitney U, exploratory",
+          "statistic": 119.0,
+          "two_sided_p_value": 0.08646469784515064
+        }
+      },
+      "distance_band_results": {
+        "0-10": {
+          "future_cell_ranks": {
+            "183:-784": 1,
+            "186:-781": 385
+          },
+          "median_future_cell_rank": 193.0,
+          "mean_future_cell_rank": 193.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 0.0,
+              "186:-781": 45.973260302552866
+            },
+            "top_20": {
+              "183:-784": 0.0,
+              "186:-781": 45.973260302552866
+            },
+            "top_50": {
+              "183:-784": 0.0,
+              "186:-781": 45.973260302552866
+            }
+          }
+        },
+        ">10-25": {
+          "future_cell_ranks": {
+            "183:-784": 324,
+            "186:-781": 385
+          },
+          "median_future_cell_rank": 354.5,
+          "mean_future_cell_rank": 354.5,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.5,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.25,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 10.554093206365662,
+              "186:-781": 30.644610842162027
+            },
+            "top_20": {
+              "183:-784": 10.554093206365662,
+              "186:-781": 30.644610842162027
+            },
+            "top_50": {
+              "183:-784": 10.554093206365662,
+              "186:-781": 30.644610842162027
+            }
+          }
+        },
+        ">25-50": {
+          "future_cell_ranks": {
+            "183:-784": 331,
+            "186:-781": 390
+          },
+          "median_future_cell_rank": 360.5,
+          "mean_future_cell_rank": 360.5,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.06,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 30.669910206007664,
+              "186:-781": 69.97652890027504
+            },
+            "top_20": {
+              "183:-784": 23.852475192064208,
+              "186:-781": 11.119508023352953
+            },
+            "top_50": {
+              "183:-784": 22.239016046706613,
+              "186:-781": 10.535619236210547
+            }
+          }
+        },
+        ">50-100": {
+          "future_cell_ranks": {
+            "183:-784": 330,
+            "186:-781": 56
+          },
+          "median_future_cell_rank": 193.0,
+          "mean_future_cell_rank": 193.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 56.59324111150991,
+              "186:-781": 98.47549446625592
+            },
+            "top_20": {
+              "183:-784": 56.593241111509656,
+              "186:-781": 91.42888986841152
+            },
+            "top_50": {
+              "183:-784": 47.694072851051864,
+              "186:-781": 15.320182909640305
+            }
+          }
+        },
+        ">100": {
+          "future_cell_ranks": {
+            "183:-784": 362,
+            "186:-781": 385
+          },
+          "median_future_cell_rank": 373.5,
+          "mean_future_cell_rank": 373.5,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 111.69766458751921,
+              "186:-781": 150.61549617244253
+            },
+            "top_20": {
+              "183:-784": 111.1950802335327,
+              "186:-781": 146.09266045847016
+            },
+            "top_50": {
+              "183:-784": 108.65763046723063,
+              "186:-781": 133.85225332835503
+            }
+          }
+        }
+      },
+      "randomized_bearing_control": {
+        "seed": 20260816,
+        "permutations": 500,
+        "d1": {
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.3,
+              "precision": 0.032799999999999996,
+              "recall": 0.164
+            },
+            "at_20": {
+              "hit_rate": 0.388,
+              "precision": 0.0294,
+              "recall": 0.294
+            },
+            "at_50": {
+              "hit_rate": 0.408,
+              "precision": 0.01264,
+              "recall": 0.316
+            }
+          },
+          "tolerance": {
+            "at_10": {
+              "hit_rate": 0.552,
+              "precision": 0.18480000000000002,
+              "recall": 0.341
+            },
+            "at_20": {
+              "hit_rate": 0.568,
+              "precision": 0.1666,
+              "recall": 0.433
+            },
+            "at_50": {
+              "hit_rate": 0.602,
+              "precision": 0.076,
+              "recall": 0.462
+            }
+          },
+          "median_future_rank_distribution": {
+            "count": 500,
+            "mean": 234.123,
+            "median": 329.0,
+            "q1": 50.25,
+            "q3": 355.5
+          },
+          "per_future_cell_rank": {
+            "183:-784": {
+              "count": 500,
+              "mean": 212.316,
+              "median": 319.0,
+              "q1": 12.0,
+              "q3": 352.75,
+              "real_rank": 320,
+              "real_better_than_random_median": false,
+              "empirical_fraction_random_rank_as_good_or_better": 0.536
+            },
+            "186:-781": {
+              "count": 500,
+              "mean": 255.93,
+              "median": 385.0,
+              "q1": 20.0,
+              "q3": 385.0,
+              "real_rank": 385,
+              "real_better_than_random_median": false,
+              "empirical_fraction_random_rank_as_good_or_better": 0.804
+            }
+          },
+          "real_median_future_rank": 352.5,
+          "empirical_fraction_random_median_rank_as_good_or_better": 0.624
+        },
+        "d2": {
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.3,
+              "precision": 0.032799999999999996,
+              "recall": 0.164
+            },
+            "at_20": {
+              "hit_rate": 0.454,
+              "precision": 0.033,
+              "recall": 0.33
+            },
+            "at_50": {
+              "hit_rate": 0.536,
+              "precision": 0.017160000000000005,
+              "recall": 0.429
+            }
+          },
+          "tolerance": {
+            "at_10": {
+              "hit_rate": 0.626,
+              "precision": 0.19779999999999998,
+              "recall": 0.378
+            },
+            "at_20": {
+              "hit_rate": 0.672,
+              "precision": 0.1965,
+              "recall": 0.516
+            },
+            "at_50": {
+              "hit_rate": 0.778,
+              "precision": 0.10288,
+              "recall": 0.609
+            }
+          },
+          "median_future_rank_distribution": {
+            "count": 500,
+            "mean": 52.821,
+            "median": 60.0,
+            "q1": 15.0,
+            "q3": 79.5
+          },
+          "per_future_cell_rank": {
+            "183:-784": {
+              "count": 500,
+              "mean": 46.914,
+              "median": 67.0,
+              "q1": 12.0,
+              "q3": 73.0,
+              "real_rank": 68,
+              "real_better_than_random_median": false,
+              "empirical_fraction_random_rank_as_good_or_better": 0.592
+            },
+            "186:-781": {
+              "count": 500,
+              "mean": 58.728,
+              "median": 90.0,
+              "q1": 17.0,
+              "q3": 90.0,
+              "real_rank": 90,
+              "real_better_than_random_median": false,
+              "empirical_fraction_random_rank_as_good_or_better": 0.804
+            }
+          },
+          "real_median_future_rank": 79.0,
+          "empirical_fraction_random_median_rank_as_good_or_better": 0.72
+        }
+      }
+    },
+    {
+      "cutoff": "2020-12-31",
+      "evaluation_start": "2021-01-01",
+      "evaluation_end": "2022-12-31",
+      "source_cohort": [
+        {
+          "occurrence_id": 2505,
+          "date": "2012-02-21T15:14:00",
+          "grid_cell_id": "182:-784",
+          "latitude": 18.2971652199,
+          "longitude": -78.3445357289,
+          "lookup_status": "VALID",
+          "represented_date": "2012-02-21",
+          "temporal_representation": "DAILY_MEAN",
+          "u": -0.07385478913784027,
+          "v": -0.23316141963005066,
+          "speed": 0.24457877561737737,
+          "toward_bearing_degrees": 197.5758012774649,
+          "sampling_method": "NEAREST_GRID_POINT",
+          "lookup_distance_km": 4.1919634365119745
+        },
+        {
+          "occurrence_id": 2479,
+          "date": "2018-07-22T12:46:00",
+          "grid_cell_id": "186:-781",
+          "latitude": 18.6477565923,
+          "longitude": -78.0242031119,
+          "lookup_status": "VALID",
+          "represented_date": "2018-07-22",
+          "temporal_representation": "DAILY_MEAN",
+          "u": -0.06103701889514923,
+          "v": -0.025025177747011185,
+          "speed": 0.06596800131030428,
+          "toward_bearing_degrees": 247.7063708403059,
+          "sampling_method": "NEAREST_GRID_POINT",
+          "lookup_distance_km": 3.3049601100853305
+        },
+        {
+          "occurrence_id": 591,
+          "date": "2018-11-27T21:37:00",
+          "grid_cell_id": "183:-784",
+          "latitude": 18.3193700925,
+          "longitude": -78.3709867077,
+          "lookup_status": "VALID",
+          "represented_date": "2018-11-27",
+          "temporal_representation": "DAILY_MEAN",
+          "u": 0.010986663401126862,
+          "v": 0.14648884534835815,
+          "speed": 0.1469002674748581,
+          "toward_bearing_degrees": 4.289153328818998,
+          "sampling_method": "NEAREST_GRID_POINT",
+          "lookup_distance_km": 4.266798003387922
+        },
+        {
+          "occurrence_id": 2471,
+          "date": "2019-10-21T18:28:35",
+          "grid_cell_id": "182:-784",
+          "latitude": 18.2736992937,
+          "longitude": -78.3665534109,
+          "lookup_status": "VALID",
+          "represented_date": "2019-10-21",
+          "temporal_representation": "DAILY_MEAN",
+          "u": 0.025635547935962677,
+          "v": -0.29847103357315063,
+          "speed": 0.2995699237243316,
+          "toward_bearing_degrees": 175.09093804425993,
+          "sampling_method": "NEAREST_GRID_POINT",
+          "lookup_distance_km": 4.387223974065183
+        }
+      ],
+      "excluded_sources": [],
+      "future_records": 8,
+      "future_occupied_cells": [
+        "184:-770",
+        "184:-772",
+        "185:-778"
+      ],
+      "future_new_cells": [
+        "184:-770",
+        "184:-772",
+        "185:-778"
+      ],
+      "eligible_candidates": 388,
+      "metrics": {
+        "suitability": {
+          "future_cell_ranks": {
+            "184:-770": 3,
+            "184:-772": 1,
+            "185:-778": 5
+          },
+          "median_future_cell_rank": 3.0,
+          "mean_future_cell_rank": 3.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.06,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            },
+            "top_20": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            },
+            "top_50": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            }
+          }
+        },
+        "evidence": {
+          "future_cell_ranks": {
+            "184:-770": 364,
+            "184:-772": 92,
+            "185:-778": 38
+          },
+          "median_future_cell_rank": 92.0,
+          "mean_future_cell_rank": 164.66666666666666,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.3333333333333333,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.3333333333333333,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.3333333333333333,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 107.73813112646395,
+              "184:-772": 87.21729354915563,
+              "185:-778": 23.83068624853003
+            },
+            "top_20": {
+              "184:-770": 97.44769053538855,
+              "184:-772": 77.07085824871764,
+              "185:-778": 15.320182909640305
+            },
+            "top_50": {
+              "184:-770": 67.04651815045827,
+              "184:-772": 47.67228379585011,
+              "185:-778": 0.0
+            }
+          }
+        },
+        "combined": {
+          "future_cell_ranks": {
+            "184:-770": 4,
+            "184:-772": 2,
+            "185:-778": 5
+          },
+          "median_future_cell_rank": 4.0,
+          "mean_future_cell_rank": 3.6666666666666665,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.06,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            },
+            "top_20": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            },
+            "top_50": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            }
+          }
+        },
+        "d1": {
+          "future_cell_ranks": {
+            "184:-770": 357,
+            "184:-772": 350,
+            "185:-778": 275
+          },
+          "median_future_cell_rank": 350.0,
+          "mean_future_cell_rank": 327.3333333333333,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 148.04627450129215,
+              "184:-772": 127.02607686345348,
+              "185:-778": 63.25082763030242
+            },
+            "top_20": {
+              "184:-770": 137.53352305312646,
+              "184:-772": 116.52537477394795,
+              "185:-778": 52.70903047331828
+            },
+            "top_50": {
+              "184:-770": 137.53352305312646,
+              "184:-772": 116.52537477394795,
+              "185:-778": 52.70903047331828
+            }
+          }
+        },
+        "d2": {
+          "future_cell_ranks": {
+            "184:-770": 364,
+            "184:-772": 93,
+            "185:-778": 90
+          },
+          "median_future_cell_rank": 93.0,
+          "mean_future_cell_rank": 182.33333333333334,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 137.53352305312646,
+              "184:-772": 116.52537477394795,
+              "185:-778": 52.70903047331828
+            },
+            "top_20": {
+              "184:-770": 137.53352305312646,
+              "184:-772": 116.52537477394795,
+              "185:-778": 52.70903047331828
+            },
+            "top_50": {
+              "184:-770": 127.02607686345483,
+              "184:-772": 106.03342414813214,
+              "185:-778": 42.16722925372658
+            }
+          }
+        },
+        "speed_weighted": {
+          "future_cell_ranks": {
+            "184:-770": 369,
+            "184:-772": 360,
+            "185:-778": 317
+          },
+          "median_future_cell_rank": 360.0,
+          "mean_future_cell_rank": 348.6666666666667,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 151.51720465580337,
+              "184:-772": 131.00365996271842,
+              "185:-778": 77.38391272114934
+            },
+            "top_20": {
+              "184:-770": 151.51720465580337,
+              "184:-772": 131.00365996271842,
+              "185:-778": 77.38391272114934
+            },
+            "top_50": {
+              "184:-770": 151.51720465580337,
+              "184:-772": 131.00365996271842,
+              "185:-778": 77.38391272114934
+            }
+          }
+        },
+        "random_candidate": {
+          "permutations": 500,
+          "seed": 20260816,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.072,
+              "precision": 0.007200000000000001,
+              "recall": 0.024
+            },
+            "at_20": {
+              "hit_rate": 0.168,
+              "precision": 0.0092,
+              "recall": 0.06133333333333333
+            },
+            "at_50": {
+              "hit_rate": 0.332,
+              "precision": 0.00812,
+              "recall": 0.1353333333333333
+            }
+          },
+          "tolerance": {
+            "at_10": {
+              "hit_rate": 0.284,
+              "precision": 0.032799999999999996,
+              "recall": 0.112
+            },
+            "at_20": {
+              "hit_rate": 0.512,
+              "precision": 0.0355,
+              "recall": 0.22666666666666668
+            },
+            "at_50": {
+              "hit_rate": 0.85,
+              "precision": 0.03484,
+              "recall": 0.47933333333333333
+            }
+          },
+          "mean_of_median_future_cell_rank": 194.752
+        }
+      },
+      "future_cell_results": [
+        {
+          "grid_cell_id": "184:-770",
+          "latitude": 18.45,
+          "longitude": -76.95,
+          "ranks": {
+            "suitability": 3,
+            "evidence": 364,
+            "combined": 4,
+            "d1": 357,
+            "d2": 364,
+            "speed_weighted": 369
+          },
+          "d1_winning_connection": {
+            "source_occurrence_id": 591,
+            "source_date": "2018-11-27T21:37:00",
+            "source_coordinate": [
+              18.3193700925,
+              -78.3709867077
+            ],
+            "destination_coordinate": [
+              18.45,
+              -76.95
+            ],
+            "distance_km": 150.64361876966342,
+            "u": 0.010986663401126862,
+            "v": 0.14648884534835815,
+            "current_speed": 0.1469002674748581,
+            "current_toward_bearing_degrees": 4.289153328818998,
+            "source_to_destination_bearing_degrees": 84.24301482488767,
+            "angular_difference_degrees": 79.95386149606867,
+            "alignment": 0.17444115624242384,
+            "downstream_alignment": 0.17444115624242384,
+            "speed_weighted_alignment": 0.025625452510635575,
+            "provider": "COPERNICUS_MARINE",
+            "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+            "represented_date": "2018-11-27",
+            "temporal_representation": "DAILY_MEAN",
+            "current_depth_m": 0.49402499198913574,
+            "current_sampling_method": "NEAREST_GRID_POINT"
+          },
+          "d2_winning_connection": null
+        },
+        {
+          "grid_cell_id": "184:-772",
+          "latitude": 18.45,
+          "longitude": -77.15,
+          "ranks": {
+            "suitability": 1,
+            "evidence": 92,
+            "combined": 2,
+            "d1": 350,
+            "d2": 93,
+            "speed_weighted": 360
+          },
+          "d1_winning_connection": {
+            "source_occurrence_id": 591,
+            "source_date": "2018-11-27T21:37:00",
+            "source_coordinate": [
+              18.3193700925,
+              -78.3709867077
+            ],
+            "destination_coordinate": [
+              18.45,
+              -77.15
+            ],
+            "distance_km": 129.654122329843,
+            "u": 0.010986663401126862,
+            "v": 0.14648884534835815,
+            "current_speed": 0.1469002674748581,
+            "current_toward_bearing_degrees": 4.289153328818998,
+            "source_to_destination_bearing_degrees": 83.37524175418076,
+            "angular_difference_degrees": 79.08608842536177,
+            "alignment": 0.18933385972049252,
+            "downstream_alignment": 0.18933385972049252,
+            "speed_weighted_alignment": 0.027813194634987614,
+            "provider": "COPERNICUS_MARINE",
+            "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+            "represented_date": "2018-11-27",
+            "temporal_representation": "DAILY_MEAN",
+            "current_depth_m": 0.49402499198913574,
+            "current_sampling_method": "NEAREST_GRID_POINT"
+          },
+          "d2_winning_connection": {
+            "source_occurrence_id": 2479,
+            "source_date": "2018-07-22T12:46:00",
+            "source_coordinate": [
+              18.6477565923,
+              -78.0242031119
+            ],
+            "destination_coordinate": [
+              18.45,
+              -77.15
+            ],
+            "distance_km": 94.74441969427389,
+            "u": -0.06103701889514923,
+            "v": -0.025025177747011185,
+            "current_speed": 0.06596800131030428,
+            "current_toward_bearing_degrees": 247.7063708403059,
+            "source_to_destination_bearing_degrees": 103.28102466436656,
+            "angular_difference_degrees": 144.42534617593935,
+            "alignment": -0.813358197675346,
+            "downstream_alignment": 0.0,
+            "speed_weighted_alignment": 0.0,
+            "provider": "COPERNICUS_MARINE",
+            "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+            "represented_date": "2018-07-22",
+            "temporal_representation": "DAILY_MEAN",
+            "current_depth_m": 0.49402499198913574,
+            "current_sampling_method": "NEAREST_GRID_POINT"
+          }
+        },
+        {
+          "grid_cell_id": "185:-778",
+          "latitude": 18.55,
+          "longitude": -77.75,
+          "ranks": {
+            "suitability": 5,
+            "evidence": 38,
+            "combined": 5,
+            "d1": 275,
+            "d2": 90,
+            "speed_weighted": 317
+          },
+          "d1_winning_connection": {
+            "source_occurrence_id": 591,
+            "source_date": "2018-11-27T21:37:00",
+            "source_coordinate": [
+              18.3193700925,
+              -78.3709867077
+            ],
+            "destination_coordinate": [
+              18.55,
+              -77.75
+            ],
+            "distance_km": 70.34811890462717,
+            "u": 0.010986663401126862,
+            "v": 0.14648884534835815,
+            "current_speed": 0.1469002674748581,
+            "current_toward_bearing_degrees": 4.289153328818998,
+            "source_to_destination_bearing_degrees": 68.52258620146233,
+            "angular_difference_degrees": 64.23343287264333,
+            "alignment": 0.43470567696369966,
+            "downstream_alignment": 0.43470567696369966,
+            "speed_weighted_alignment": 0.06385838021880674,
+            "provider": "COPERNICUS_MARINE",
+            "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+            "represented_date": "2018-11-27",
+            "temporal_representation": "DAILY_MEAN",
+            "current_depth_m": 0.49402499198913574,
+            "current_sampling_method": "NEAREST_GRID_POINT"
+          },
+          "d2_winning_connection": {
+            "source_occurrence_id": 591,
+            "source_date": "2018-11-27T21:37:00",
+            "source_coordinate": [
+              18.3193700925,
+              -78.3709867077
+            ],
+            "destination_coordinate": [
+              18.55,
+              -77.75
+            ],
+            "distance_km": 70.34811890462717,
+            "u": 0.010986663401126862,
+            "v": 0.14648884534835815,
+            "current_speed": 0.1469002674748581,
+            "current_toward_bearing_degrees": 4.289153328818998,
+            "source_to_destination_bearing_degrees": 68.52258620146233,
+            "angular_difference_degrees": 64.23343287264333,
+            "alignment": 0.43470567696369966,
+            "downstream_alignment": 0.43470567696369966,
+            "speed_weighted_alignment": 0.06385838021880674,
+            "provider": "COPERNICUS_MARINE",
+            "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+            "represented_date": "2018-11-27",
+            "temporal_representation": "DAILY_MEAN",
+            "current_depth_m": 0.49402499198913574,
+            "current_sampling_method": "NEAREST_GRID_POINT"
+          }
+        }
+      ],
+      "alignment_distributions": {
+        "future_new": {
+          "count": 3,
+          "mean": 0.2661602309755387,
+          "median": 0.18933385972049252,
+          "q1": 0.1818875079814582,
+          "q3": 0.3120197683420961
+        },
+        "other_candidates": {
+          "count": 385,
+          "mean": 0.6271516248613869,
+          "median": 0.6314293990718789,
+          "q1": 0.3913122069466944,
+          "q3": 0.9239342920980284
+        },
+        "exploratory_comparison": {
+          "test": "Mann-Whitney U, exploratory",
+          "statistic": 179.0,
+          "two_sided_p_value": 0.03495328588837558
+        }
+      },
+      "distance_band_results": {
+        "0-10": {
+          "future_cell_ranks": {
+            "184:-770": 332,
+            "184:-772": 333,
+            "185:-778": 356
+          },
+          "median_future_cell_rank": 333.0,
+          "mean_future_cell_rank": 340.3333333333333,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 107.73813112646395,
+              "184:-772": 87.21729354915563,
+              "185:-778": 23.83068624853003
+            },
+            "top_20": {
+              "184:-770": 107.73813112646395,
+              "184:-772": 87.21729354915563,
+              "185:-778": 23.83068624853003
+            },
+            "top_50": {
+              "184:-770": 107.73813112646395,
+              "184:-772": 87.21729354915563,
+              "185:-778": 23.83068624853003
+            }
+          }
+        },
+        ">10-25": {
+          "future_cell_ranks": {
+            "184:-770": 341,
+            "184:-772": 342,
+            "185:-778": 361
+          },
+          "median_future_cell_rank": 342.0,
+          "mean_future_cell_rank": 348.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.3333333333333333,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.3333333333333333,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 127.02607686345483,
+              "184:-772": 106.03342414813214,
+              "185:-778": 42.16722925372658
+            },
+            "top_20": {
+              "184:-770": 97.44769053538855,
+              "184:-772": 77.07085824871764,
+              "185:-778": 15.320182909640305
+            },
+            "top_50": {
+              "184:-770": 97.44769053538855,
+              "184:-772": 77.07085824871764,
+              "185:-778": 15.320182909640305
+            }
+          }
+        },
+        ">25-50": {
+          "future_cell_ranks": {
+            "184:-770": 351,
+            "184:-772": 352,
+            "185:-778": 35
+          },
+          "median_future_cell_rank": 351.0,
+          "mean_future_cell_rank": 246.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.3333333333333333,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.08,
+              "recall": 0.3333333333333333,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 137.53352305312646,
+              "184:-772": 116.52537477394795,
+              "185:-778": 52.70903047331828
+            },
+            "top_20": {
+              "184:-770": 137.12328256694977,
+              "184:-772": 116.02746374635151,
+              "185:-778": 52.70903047331828
+            },
+            "top_50": {
+              "184:-770": 67.04651815045827,
+              "184:-772": 47.67228379585011,
+              "185:-778": 0.0
+            }
+          }
+        },
+        ">50-100": {
+          "future_cell_ranks": {
+            "184:-770": 352,
+            "184:-772": 81,
+            "185:-778": 75
+          },
+          "median_future_cell_rank": 81.0,
+          "mean_future_cell_rank": 169.33333333333334,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 167.19183387703046,
+              "184:-772": 147.67117668875883,
+              "185:-778": 85.08874130336064
+            },
+            "top_20": {
+              "184:-770": 157.9146342997827,
+              "184:-772": 139.9110651699956,
+              "185:-778": 85.08874130336064
+            },
+            "top_50": {
+              "184:-770": 122.90982553786979,
+              "184:-772": 107.38805404851632,
+              "185:-778": 77.11213220772792
+            }
+          }
+        },
+        ">100": {
+          "future_cell_ranks": {
+            "184:-770": 295,
+            "184:-772": 288,
+            "185:-778": 371
+          },
+          "median_future_cell_rank": 295.0,
+          "mean_future_cell_rank": 318.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 184.07004682674653,
+              "184:-772": 168.8425526637804,
+              "185:-778": 143.53403608876977
+            },
+            "top_20": {
+              "184:-770": 176.30325750109594,
+              "184:-772": 161.73029967704687,
+              "185:-778": 139.98203376433497
+            },
+            "top_50": {
+              "184:-770": 146.38277867479715,
+              "184:-772": 133.59360648643437,
+              "185:-778": 122.77088634359252
+            }
+          }
+        }
+      },
+      "randomized_bearing_control": {
+        "seed": 20260816,
+        "permutations": 500,
+        "d1": {
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.06,
+              "precision": 0.007,
+              "recall": 0.02333333333333333
+            },
+            "at_20": {
+              "hit_rate": 0.142,
+              "precision": 0.008600000000000002,
+              "recall": 0.057333333333333326
+            },
+            "at_50": {
+              "hit_rate": 0.322,
+              "precision": 0.01,
+              "recall": 0.16666666666666666
+            }
+          },
+          "tolerance": {
+            "at_10": {
+              "hit_rate": 0.254,
+              "precision": 0.0442,
+              "recall": 0.09666666666666665
+            },
+            "at_20": {
+              "hit_rate": 0.378,
+              "precision": 0.0482,
+              "recall": 0.168
+            },
+            "at_50": {
+              "hit_rate": 0.494,
+              "precision": 0.05164,
+              "recall": 0.312
+            }
+          },
+          "median_future_rank_distribution": {
+            "count": 500,
+            "mean": 193.028,
+            "median": 190.5,
+            "q1": 71.5,
+            "q3": 324.0
+          },
+          "per_future_cell_rank": {
+            "184:-770": {
+              "count": 500,
+              "mean": 193.084,
+              "median": 192.5,
+              "q1": 69.0,
+              "q3": 325.0,
+              "real_rank": 357,
+              "real_better_than_random_median": false,
+              "empirical_fraction_random_rank_as_good_or_better": 0.95
+            },
+            "184:-772": {
+              "count": 500,
+              "mean": 192.544,
+              "median": 192.0,
+              "q1": 69.0,
+              "q3": 324.25,
+              "real_rank": 350,
+              "real_better_than_random_median": false,
+              "empirical_fraction_random_rank_as_good_or_better": 0.918
+            },
+            "185:-778": {
+              "count": 500,
+              "mean": 195.562,
+              "median": 184.0,
+              "q1": 64.0,
+              "q3": 324.25,
+              "real_rank": 275,
+              "real_better_than_random_median": false,
+              "empirical_fraction_random_rank_as_good_or_better": 0.622
+            }
+          },
+          "real_median_future_rank": 350.0,
+          "empirical_fraction_random_median_rank_as_good_or_better": 0.92
+        },
+        "d2": {
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.162,
+              "precision": 0.017400000000000002,
+              "recall": 0.057999999999999996
+            },
+            "at_20": {
+              "hit_rate": 0.306,
+              "precision": 0.0177,
+              "recall": 0.118
+            },
+            "at_50": {
+              "hit_rate": 0.586,
+              "precision": 0.01492,
+              "recall": 0.24866666666666665
+            }
+          },
+          "tolerance": {
+            "at_10": {
+              "hit_rate": 0.338,
+              "precision": 0.07740000000000001,
+              "recall": 0.12333333333333331
+            },
+            "at_20": {
+              "hit_rate": 0.472,
+              "precision": 0.0833,
+              "recall": 0.188
+            },
+            "at_50": {
+              "hit_rate": 0.678,
+              "precision": 0.06860000000000001,
+              "recall": 0.294
+            }
+          },
+          "median_future_rank_distribution": {
+            "count": 500,
+            "mean": 77.54,
+            "median": 92.0,
+            "q1": 67.75,
+            "q3": 94.0
+          },
+          "per_future_cell_rank": {
+            "184:-770": {
+              "count": 500,
+              "mean": 364.0,
+              "median": 364.0,
+              "q1": 364.0,
+              "q3": 364.0,
+              "real_rank": 364,
+              "real_better_than_random_median": false,
+              "empirical_fraction_random_rank_as_good_or_better": 1.0
+            },
+            "184:-772": {
+              "count": 500,
+              "mean": 75.826,
+              "median": 90.0,
+              "q1": 64.0,
+              "q3": 94.0,
+              "real_rank": 93,
+              "real_better_than_random_median": false,
+              "empirical_fraction_random_rank_as_good_or_better": 0.712
+            },
+            "185:-778": {
+              "count": 500,
+              "mean": 45.472,
+              "median": 41.0,
+              "q1": 18.0,
+              "q3": 74.25,
+              "real_rank": 90,
+              "real_better_than_random_median": false,
+              "empirical_fraction_random_rank_as_good_or_better": 0.938
+            }
+          },
+          "real_median_future_rank": 93.0,
+          "empirical_fraction_random_median_rank_as_good_or_better": 0.694
+        }
+      }
+    }
+  ]
+}

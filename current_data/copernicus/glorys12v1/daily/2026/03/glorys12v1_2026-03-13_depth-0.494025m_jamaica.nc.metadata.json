@@ -1,0 +1,47 @@
+{
+  "provider": "COPERNICUS_MARINE",
+  "product": "Global Ocean Physics Reanalysis (GLORYS12V1)",
+  "product_id": "GLOBAL_MULTIYEAR_PHY_001_030",
+  "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+  "product_version": "202311",
+  "represented_date": "2026-03-13",
+  "temporal_representation": "DAILY_MEAN",
+  "requested_extent": {
+    "latitude_min": 16.9,
+    "latitude_max": 18.7,
+    "longitude_min": -78.6,
+    "longitude_max": -75.9
+  },
+  "actual_returned_extent": {
+    "latitude_min": 16.91666603088379,
+    "latitude_max": 18.66666603088379,
+    "longitude_min": -78.58333587646484,
+    "longitude_max": -75.91666412353516
+  },
+  "requested_depth_m": 0.494025,
+  "source_depth_m": 0.49402499198913574,
+  "variables": [
+    "uo",
+    "vo"
+  ],
+  "canonical_variables": [
+    "u",
+    "v"
+  ],
+  "u_units": "m s-1",
+  "v_units": "m s-1",
+  "source_coordinate_convention": "longitude -180..180, degrees_east",
+  "downloaded_at": "2026-08-16T17:14:32.722747+00:00",
+  "valid_ocean_cells": 595,
+  "masked_or_missing_cells": 131,
+  "grid_shape": [
+    22,
+    33
+  ],
+  "latitude_resolution_degrees": 0.08333396911621094,
+  "longitude_resolution_degrees": 0.08333587646484375,
+  "cache_file": "current_data/copernicus/glorys12v1/daily/2026/03/glorys12v1_2026-03-13_depth-0.494025m_jamaica.nc",
+  "checksum_algorithm": "SHA-256",
+  "checksum": "1e616c015e0b788b4a756aabc6988cbd29789a02a1e74266557efee371211b49",
+  "file_size_bytes": 6952
+}

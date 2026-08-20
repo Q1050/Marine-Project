@@ -1,0 +1,3 @@
+export default function PlaceholderPage({ eyebrow = "Jamaica workspace", title, description, emptyTitle, emptyText }) {
+  return <div className="mx-auto max-w-5xl"><p className="text-xs font-bold uppercase tracking-[.15em] text-teal-700">{eyebrow}</p><h1 className="mt-1 text-3xl font-bold">{title}</h1><p className="mt-2 text-app-muted">{description}</p><div className="mt-8 rounded-2xl border border-dashed border-app-border bg-white p-12 text-center"><span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-teal-100 text-xl text-teal-700">≋</span><h2 className="mt-4 text-lg font-bold">{emptyTitle}</h2><p className="mx-auto mt-2 max-w-xl text-sm leading-6 text-app-muted">{emptyText}</p></div></div>;
+}

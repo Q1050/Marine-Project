@@ -1,0 +1,4498 @@
+{
+  "experiment": "read-only next-area-v1 diagnostic audit",
+  "production_formula": "0.55 * suitability_score + 0.45 * max(1.0 * recency_weight * distance_weight)",
+  "historical_verification_adaptation": "uniform 1.0 for each unique OBIS occurrence",
+  "data": {
+    "raw_dated_records": 2957,
+    "deduplicated_records": 2957,
+    "duplicate_coordinate_date_records_removed": 0,
+    "jamaica_domain_records": 32,
+    "jamaica_domain_dates": 26,
+    "jamaica_domain_cells": 7,
+    "future_new_cell_overlap_between_windows": {
+      "2017-01-01__2021-01-01": [],
+      "2017-01-01__2023-01-01": [],
+      "2021-01-01__2023-01-01": []
+    }
+  },
+  "windows": [
+    {
+      "cutoff": "2016-12-31",
+      "evaluation_start": "2017-01-01",
+      "evaluation_end": "2018-12-31",
+      "future_new_cells": [
+        "183:-784",
+        "186:-781"
+      ],
+      "sample": {
+        "historical_records": 1,
+        "unique_historical_dates": 1,
+        "unique_historical_cells": 1,
+        "repeated_records_by_cell": {
+          "182:-784": 1
+        },
+        "future_records": 2,
+        "future_new_cell_count": 2
+      },
+      "reproduction": {
+        "suitability": {
+          "future_cell_ranks": {
+            "183:-784": 5,
+            "186:-781": 133
+          },
+          "median_future_cell_rank": 69.0,
+          "mean_future_cell_rank": 69.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.2,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 2
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.12,
+              "recall": 1.0,
+              "matched_future_cells": 2
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 0.0,
+              "186:-781": 30.644610842162027
+            },
+            "top_20": {
+              "183:-784": 0.0,
+              "186:-781": 15.320182909640305
+            },
+            "top_50": {
+              "183:-784": 0.0,
+              "186:-781": 15.320182909640305
+            }
+          }
+        },
+        "evidence": {
+          "future_cell_ranks": {
+            "183:-784": 1,
+            "186:-781": 95
+          },
+          "median_future_cell_rank": 48.0,
+          "mean_future_cell_rank": 48.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.5,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.18,
+              "recall": 1.0,
+              "matched_future_cells": 2
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 0.0,
+              "186:-781": 30.644610842162027
+            },
+            "top_20": {
+              "183:-784": 0.0,
+              "186:-781": 30.644610842162027
+            },
+            "top_50": {
+              "183:-784": 0.0,
+              "186:-781": 10.535619236210547
+            }
+          }
+        },
+        "combined": {
+          "future_cell_ranks": {
+            "183:-784": 1,
+            "186:-781": 120
+          },
+          "median_future_cell_rank": 60.5,
+          "mean_future_cell_rank": 60.5,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.2,
+              "recall": 0.5,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 2
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.14,
+              "recall": 1.0,
+              "matched_future_cells": 2
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "183:-784": 0.0,
+              "186:-781": 30.644610842162027
+            },
+            "top_20": {
+              "183:-784": 0.0,
+              "186:-781": 15.320182909640305
+            },
+            "top_50": {
+              "183:-784": 0.0,
+              "186:-781": 15.320182909640305
+            }
+          }
+        },
+        "random": {
+          "permutations": 500,
+          "seed": 20260816,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.066,
+              "precision": 0.006600000000000001,
+              "recall": 0.033
+            },
+            "at_20": {
+              "hit_rate": 0.124,
+              "precision": 0.006200000000000001,
+              "recall": 0.062
+            },
+            "at_50": {
+              "hit_rate": 0.262,
+              "precision": 0.0054800000000000005,
+              "recall": 0.137
+            }
+          },
+          "tolerance": {
+            "at_10": {
+              "hit_rate": 0.284,
+              "precision": 0.0322,
+              "recall": 0.151
+            },
+            "at_20": {
+              "hit_rate": 0.488,
+              "precision": 0.030100000000000002,
+              "recall": 0.271
+            },
+            "at_50": {
+              "hit_rate": 0.826,
+              "precision": 0.02976,
+              "recall": 0.561
+            }
+          },
+          "mean_of_median_future_cell_rank": 192.103
+        }
+      },
+      "future_cell_explainability": [
+        {
+          "grid_cell_id": "183:-784",
+          "latitude": 18.35,
+          "longitude": -78.35,
+          "suitability_score": 0.8539176161274329,
+          "suitability_rank": 5,
+          "evidence_score": 0.1,
+          "evidence_rank": 1,
+          "combined_score": 0.5146546888700881,
+          "combined_rank": 1,
+          "suitability_contribution": 0.4696546888700881,
+          "evidence_contribution": 0.045000000000000005,
+          "suitability_contribution_percent": 91.2562731918762,
+          "evidence_contribution_percent": 8.743726808123796,
+          "combined_minus_suitability_rank": -4,
+          "combined_minus_evidence_rank": 0,
+          "nearest_historical_source_distance_km": 5.90321386155683,
+          "nearest_historical_source": {
+            "source_occurrence_id": 2505,
+            "source_date": "2012-02-21T15:14:00",
+            "source_cell": "182:-784",
+            "source_coordinate": [
+              18.2971652199,
+              -78.3445357289
+            ],
+            "distance_km": 5.90321386155683,
+            "verification_weight": 1.0,
+            "recency_weight": 0.1,
+            "recency_band": ">365_days",
+            "distance_weight": 1.0,
+            "contribution": 0.1
+          },
+          "winning_historical_source": {
+            "source_occurrence_id": 2505,
+            "source_date": "2012-02-21T15:14:00",
+            "source_cell": "182:-784",
+            "source_coordinate": [
+              18.2971652199,
+              -78.3445357289
+            ],
+            "distance_km": 5.90321386155683,
+            "verification_weight": 1.0,
+            "recency_weight": 0.1,
+            "recency_band": ">365_days",
+            "distance_weight": 1.0,
+            "contribution": 0.1
+          },
+          "classification_flags": [
+            "SUITABILITY_DOMINATES",
+            "BOTH_AGREE_TOP_50"
+          ]
+        },
+        {
+          "grid_cell_id": "186:-781",
+          "latitude": 18.65,
+          "longitude": -78.05,
+          "suitability_score": 0.020740468727843075,
+          "suitability_rank": 133,
+          "evidence_score": 0.020000000000000004,
+          "evidence_rank": 95,
+          "combined_score": 0.020407257800313695,
+          "combined_rank": 120,
+          "suitability_contribution": 0.011407257800313693,
+          "evidence_contribution": 0.009000000000000003,
+          "suitability_contribution_percent": 55.898043293883134,
+          "evidence_contribution_percent": 44.101956706116866,
+          "combined_minus_suitability_rank": -13,
+          "combined_minus_evidence_rank": 25,
+          "nearest_historical_source_distance_km": 50.041872101837335,
+          "nearest_historical_source": {
+            "source_occurrence_id": 2505,
+            "source_date": "2012-02-21T15:14:00",
+            "source_cell": "182:-784",
+            "source_coordinate": [
+              18.2971652199,
+              -78.3445357289
+            ],
+            "distance_km": 50.041872101837335,
+            "verification_weight": 1.0,
+            "recency_weight": 0.1,
+            "recency_band": ">365_days",
+            "distance_weight": 0.2,
+            "contribution": 0.020000000000000004
+          },
+          "winning_historical_source": {
+            "source_occurrence_id": 2505,
+            "source_date": "2012-02-21T15:14:00",
+            "source_cell": "182:-784",
+            "source_coordinate": [
+              18.2971652199,
+              -78.3445357289
+            ],
+            "distance_km": 50.041872101837335,
+            "verification_weight": 1.0,
+            "recency_weight": 0.1,
+            "recency_band": ">365_days",
+            "distance_weight": 0.2,
+            "contribution": 0.020000000000000004
+          },
+          "classification_flags": [
+            "SUITABILITY_DOMINATES",
+            "EVIDENCE_HELPS_SUITABILITY_HURTS"
+          ]
+        }
+      ],
+      "rank_displacement": {
+        "future_cells": [
+          {
+            "grid_cell_id": "183:-784",
+            "combined_minus_suitability": -4,
+            "combined_minus_evidence": 0
+          },
+          {
+            "grid_cell_id": "186:-781",
+            "combined_minus_suitability": -13,
+            "combined_minus_evidence": 25
+          }
+        ],
+        "top_set_changes": {
+          "top_10": {
+            "combined_vs_suitability": {
+              "overlap": 10,
+              "entered": 0,
+              "left": 0
+            },
+            "combined_vs_evidence": {
+              "overlap": 3,
+              "entered": 7,
+              "left": 7
+            }
+          },
+          "top_20": {
+            "combined_vs_suitability": {
+              "overlap": 20,
+              "entered": 0,
+              "left": 0
+            },
+            "combined_vs_evidence": {
+              "overlap": 4,
+              "entered": 16,
+              "left": 16
+            }
+          },
+          "top_50": {
+            "combined_vs_suitability": {
+              "overlap": 46,
+              "entered": 4,
+              "left": 4
+            },
+            "combined_vs_evidence": {
+              "overlap": 18,
+              "entered": 32,
+              "left": 32
+            }
+          }
+        }
+      },
+      "error_analysis": {
+        "high_priority_without_subsequent_record": [
+          {
+            "grid_cell_id": "181:-782",
+            "suitability_score": 0.8848852241142217,
+            "evidence_score": 0.05,
+            "combined_score": 0.509186873262822,
+            "suitability_contribution": 0.48668687326282195,
+            "evidence_contribution": 0.022500000000000003,
+            "nearest_source_distance_km": 26.26668369244656,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "184:-772",
+            "suitability_score": 0.9063586505329324,
+            "evidence_score": 0.0,
+            "combined_score": 0.4984972577931129,
+            "suitability_contribution": 0.4984972577931129,
+            "evidence_contribution": 0.0,
+            "nearest_source_distance_km": 127.19533923674445,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "182:-767",
+            "suitability_score": 0.8914015061794694,
+            "evidence_score": 0.0,
+            "combined_score": 0.4902708283987082,
+            "suitability_contribution": 0.4902708283987082,
+            "evidence_contribution": 0.0,
+            "nearest_source_distance_km": 178.9980399726913,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "184:-770",
+            "suitability_score": 0.8872024747158331,
+            "evidence_score": 0.0,
+            "combined_score": 0.48796136109370825,
+            "suitability_contribution": 0.48796136109370825,
+            "evidence_contribution": 0.0,
+            "nearest_source_distance_km": 148.13811366115704,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "185:-778",
+            "suitability_score": 0.7845687271289544,
+            "evidence_score": 0.020000000000000004,
+            "combined_score": 0.44051279992092496,
+            "suitability_contribution": 0.43151279992092495,
+            "evidence_contribution": 0.009000000000000003,
+            "nearest_source_distance_km": 68.73366947063211,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "181:-783",
+            "suitability_score": 0.6924037941301514,
+            "evidence_score": 0.08000000000000002,
+            "combined_score": 0.41682208677158333,
+            "suitability_contribution": 0.3808220867715833,
+            "evidence_contribution": 0.03600000000000001,
+            "nearest_source_distance_km": 19.169652388671754,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "184:-783",
+            "suitability_score": 0.6744007994324621,
+            "evidence_score": 0.08000000000000002,
+            "combined_score": 0.40692043968785424,
+            "suitability_contribution": 0.3709204396878542,
+            "evidence_contribution": 0.03600000000000001,
+            "nearest_source_distance_km": 19.70617208388102,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "178:-767",
+            "suitability_score": 0.6913010321491612,
+            "evidence_score": 0.0,
+            "combined_score": 0.3802155676820387,
+            "suitability_contribution": 0.3802155676820387,
+            "evidence_contribution": 0.0,
+            "nearest_source_distance_km": 185.89881647217783,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "178:-765",
+            "suitability_score": 0.6482155713774801,
+            "evidence_score": 0.0,
+            "combined_score": 0.3565185642576141,
+            "suitability_contribution": 0.3565185642576141,
+            "evidence_contribution": 0.0,
+            "nearest_source_distance_km": 206.34744032261136,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          }
+        ],
+        "missed_future_new_cells": [
+          {
+            "grid_cell_id": "186:-781",
+            "latitude": 18.65,
+            "longitude": -78.05,
+            "suitability_score": 0.020740468727843075,
+            "suitability_rank": 133,
+            "evidence_score": 0.020000000000000004,
+            "evidence_rank": 95,
+            "combined_score": 0.020407257800313695,
+            "combined_rank": 120,
+            "suitability_contribution": 0.011407257800313693,
+            "evidence_contribution": 0.009000000000000003,
+            "suitability_contribution_percent": 55.898043293883134,
+            "evidence_contribution_percent": 44.101956706116866,
+            "combined_minus_suitability_rank": -13,
+            "combined_minus_evidence_rank": 25,
+            "nearest_historical_source_distance_km": 50.041872101837335,
+            "nearest_historical_source": {
+              "source_occurrence_id": 2505,
+              "source_date": "2012-02-21T15:14:00",
+              "source_cell": "182:-784",
+              "source_coordinate": [
+                18.2971652199,
+                -78.3445357289
+              ],
+              "distance_km": 50.041872101837335,
+              "verification_weight": 1.0,
+              "recency_weight": 0.1,
+              "recency_band": ">365_days",
+              "distance_weight": 0.2,
+              "contribution": 0.020000000000000004
+            },
+            "winning_historical_source": {
+              "source_occurrence_id": 2505,
+              "source_date": "2012-02-21T15:14:00",
+              "source_cell": "182:-784",
+              "source_coordinate": [
+                18.2971652199,
+                -78.3445357289
+              ],
+              "distance_km": 50.041872101837335,
+              "verification_weight": 1.0,
+              "recency_weight": 0.1,
+              "recency_band": ">365_days",
+              "distance_weight": 0.2,
+              "contribution": 0.020000000000000004
+            },
+            "classification_flags": [
+              "SUITABILITY_DOMINATES",
+              "EVIDENCE_HELPS_SUITABILITY_HURTS"
+            ]
+          }
+        ]
+      },
+      "weight_sensitivity": [
+        {
+          "suitability_weight": 1,
+          "evidence_weight": 0,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 5,
+              "186:-781": 133
+            },
+            "median_future_cell_rank": 69.0,
+            "mean_future_cell_rank": 69.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.12,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.9,
+          "evidence_weight": 0.1,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 5,
+              "186:-781": 137
+            },
+            "median_future_cell_rank": 71.0,
+            "mean_future_cell_rank": 71.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.12,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.8,
+          "evidence_weight": 0.2,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 5,
+              "186:-781": 129
+            },
+            "median_future_cell_rank": 67.0,
+            "mean_future_cell_rank": 67.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.12,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.7,
+          "evidence_weight": 0.3,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 3,
+              "186:-781": 122
+            },
+            "median_future_cell_rank": 62.5,
+            "mean_future_cell_rank": 62.5,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.12,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.6,
+          "evidence_weight": 0.4,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 1,
+              "186:-781": 121
+            },
+            "median_future_cell_rank": 61.0,
+            "mean_future_cell_rank": 61.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.12,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.55,
+          "evidence_weight": 0.45,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 1,
+              "186:-781": 120
+            },
+            "median_future_cell_rank": 60.5,
+            "mean_future_cell_rank": 60.5,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.14,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.5,
+          "evidence_weight": 0.5,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 1,
+              "186:-781": 117
+            },
+            "median_future_cell_rank": 59.0,
+            "mean_future_cell_rank": 59.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.14,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.4,
+          "evidence_weight": 0.6,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 1,
+              "186:-781": 104
+            },
+            "median_future_cell_rank": 52.5,
+            "mean_future_cell_rank": 52.5,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.16,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 11.119508023352953
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.3,
+          "evidence_weight": 0.7,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 1,
+              "186:-781": 98
+            },
+            "median_future_cell_rank": 49.5,
+            "mean_future_cell_rank": 49.5,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.18,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 15.320182909640305
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 11.119508023352953
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.2,
+          "evidence_weight": 0.8,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 1,
+              "186:-781": 91
+            },
+            "median_future_cell_rank": 46.0,
+            "mean_future_cell_rank": 46.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.18,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 11.119508023352953
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.1,
+          "evidence_weight": 0.9,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 1,
+              "186:-781": 79
+            },
+            "median_future_cell_rank": 40.0,
+            "mean_future_cell_rank": 40.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 10.535619236210547
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0,
+          "evidence_weight": 1,
+          "metrics": {
+            "future_cell_ranks": {
+              "183:-784": 1,
+              "186:-781": 95
+            },
+            "median_future_cell_rank": 48.0,
+            "mean_future_cell_rank": 48.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.5,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 0.5,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.18,
+                "recall": 1.0,
+                "matched_future_cells": 2
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_20": {
+                "183:-784": 0.0,
+                "186:-781": 30.644610842162027
+              },
+              "top_50": {
+                "183:-784": 0.0,
+                "186:-781": 10.535619236210547
+              }
+            }
+          }
+        }
+      ],
+      "rank_stability": [
+        {
+          "suitability_weight": 1,
+          "evidence_weight": 0,
+          "spearman_vs_55_45": 0.9681365426465657,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 46
+        },
+        {
+          "suitability_weight": 0.9,
+          "evidence_weight": 0.1,
+          "spearman_vs_55_45": 0.9837524850970041,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 46
+        },
+        {
+          "suitability_weight": 0.8,
+          "evidence_weight": 0.2,
+          "spearman_vs_55_45": 0.9920462735050602,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 46
+        },
+        {
+          "suitability_weight": 0.7,
+          "evidence_weight": 0.3,
+          "spearman_vs_55_45": 0.9973490949973371,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 46
+        },
+        {
+          "suitability_weight": 0.6,
+          "evidence_weight": 0.4,
+          "spearman_vs_55_45": 0.9994817140860178,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 47
+        },
+        {
+          "suitability_weight": 0.55,
+          "evidence_weight": 0.45,
+          "spearman_vs_55_45": 0.9999999999999999,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 50
+        },
+        {
+          "suitability_weight": 0.5,
+          "evidence_weight": 0.5,
+          "spearman_vs_55_45": 0.9997837440897553,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 50
+        },
+        {
+          "suitability_weight": 0.4,
+          "evidence_weight": 0.6,
+          "spearman_vs_55_45": 0.9969687759035486,
+          "top_10_overlap": 10,
+          "top_20_overlap": 19,
+          "top_50_overlap": 47
+        },
+        {
+          "suitability_weight": 0.3,
+          "evidence_weight": 0.7,
+          "spearman_vs_55_45": 0.9913928529343489,
+          "top_10_overlap": 10,
+          "top_20_overlap": 19,
+          "top_50_overlap": 42
+        },
+        {
+          "suitability_weight": 0.2,
+          "evidence_weight": 0.8,
+          "spearman_vs_55_45": 0.9830723612707715,
+          "top_10_overlap": 9,
+          "top_20_overlap": 18,
+          "top_50_overlap": 39
+        },
+        {
+          "suitability_weight": 0.1,
+          "evidence_weight": 0.9,
+          "spearman_vs_55_45": 0.9705849479615251,
+          "top_10_overlap": 7,
+          "top_20_overlap": 12,
+          "top_50_overlap": 32
+        },
+        {
+          "suitability_weight": 0,
+          "evidence_weight": 1,
+          "spearman_vs_55_45": 0.02988954056745429,
+          "top_10_overlap": 3,
+          "top_20_overlap": 4,
+          "top_50_overlap": 18
+        }
+      ],
+      "distance_diagnostic": {
+        "winning_distance_weight_counts": {
+          "0.0": 295,
+          "0.2": 56,
+          "0.5": 28,
+          "0.8": 10,
+          "1.0": 1
+        },
+        "evidence_score_ties": {
+          "0.0": 295,
+          "0.020000000000000004": 56,
+          "0.05": 28,
+          "0.08000000000000002": 10,
+          "0.1": 1
+        },
+        "unique_evidence_scores": 5,
+        "largest_tie_group": 295
+      },
+      "recency_diagnostic": {
+        "winning_recency_band_counts": {
+          "NO_QUALIFYING_SOURCE": 295,
+          ">365_days": 95
+        }
+      },
+      "max_evidence_diagnostic": {
+        "candidate_cells_by_qualifying_source_count": {
+          "0": 295,
+          "1": 95
+        },
+        "cells_with_one_qualifying_source": 95,
+        "cells_with_multiple_qualifying_sources": 0,
+        "cells_where_multiple_sources_reduce_to_one_winner": 0,
+        "adjacent_candidate_pairs": 700,
+        "adjacent_pairs_with_winner_change": 19,
+        "winner_change_percent": 2.7142857142857144
+      }
+    },
+    {
+      "cutoff": "2020-12-31",
+      "evaluation_start": "2021-01-01",
+      "evaluation_end": "2022-12-31",
+      "future_new_cells": [
+        "184:-770",
+        "184:-772",
+        "185:-778"
+      ],
+      "sample": {
+        "historical_records": 4,
+        "unique_historical_dates": 4,
+        "unique_historical_cells": 3,
+        "repeated_records_by_cell": {
+          "182:-784": 2,
+          "186:-781": 1,
+          "183:-784": 1
+        },
+        "future_records": 8,
+        "future_new_cell_count": 3
+      },
+      "reproduction": {
+        "suitability": {
+          "future_cell_ranks": {
+            "184:-770": 3,
+            "184:-772": 1,
+            "185:-778": 5
+          },
+          "median_future_cell_rank": 3.0,
+          "mean_future_cell_rank": 3.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.06,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            },
+            "top_20": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            },
+            "top_50": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            }
+          }
+        },
+        "evidence": {
+          "future_cell_ranks": {
+            "184:-770": 364,
+            "184:-772": 92,
+            "185:-778": 38
+          },
+          "median_future_cell_rank": 92.0,
+          "mean_future_cell_rank": 164.66666666666666,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 0.3333333333333333,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 0.3333333333333333,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 0.3333333333333333,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 107.73813112646395,
+              "184:-772": 87.21729354915563,
+              "185:-778": 23.83068624853003
+            },
+            "top_20": {
+              "184:-770": 97.44769053538855,
+              "184:-772": 77.07085824871764,
+              "185:-778": 15.320182909640305
+            },
+            "top_50": {
+              "184:-770": 67.04651815045827,
+              "184:-772": 47.67228379585011,
+              "185:-778": 0.0
+            }
+          }
+        },
+        "combined": {
+          "future_cell_ranks": {
+            "184:-770": 4,
+            "184:-772": 2,
+            "185:-778": 5
+          },
+          "median_future_cell_rank": 4.0,
+          "mean_future_cell_rank": 3.6666666666666665,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.06,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.15,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 1.0,
+              "matched_future_cells": 3
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            },
+            "top_20": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            },
+            "top_50": {
+              "184:-770": 0.0,
+              "184:-772": 0.0,
+              "185:-778": 0.0
+            }
+          }
+        },
+        "random": {
+          "permutations": 500,
+          "seed": 20260816,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.072,
+              "precision": 0.007200000000000001,
+              "recall": 0.024
+            },
+            "at_20": {
+              "hit_rate": 0.168,
+              "precision": 0.0092,
+              "recall": 0.06133333333333333
+            },
+            "at_50": {
+              "hit_rate": 0.332,
+              "precision": 0.00812,
+              "recall": 0.1353333333333333
+            }
+          },
+          "tolerance": {
+            "at_10": {
+              "hit_rate": 0.284,
+              "precision": 0.032799999999999996,
+              "recall": 0.112
+            },
+            "at_20": {
+              "hit_rate": 0.512,
+              "precision": 0.0355,
+              "recall": 0.22666666666666668
+            },
+            "at_50": {
+              "hit_rate": 0.85,
+              "precision": 0.03484,
+              "recall": 0.47933333333333333
+            }
+          },
+          "mean_of_median_future_cell_rank": 194.752
+        }
+      },
+      "future_cell_explainability": [
+        {
+          "grid_cell_id": "184:-770",
+          "latitude": 18.45,
+          "longitude": -76.95,
+          "suitability_score": 0.8872024747158331,
+          "suitability_rank": 3,
+          "evidence_score": 0.0,
+          "evidence_rank": 364,
+          "combined_score": 0.48796136109370825,
+          "combined_rank": 4,
+          "suitability_contribution": 0.48796136109370825,
+          "evidence_contribution": 0.0,
+          "suitability_contribution_percent": 100.0,
+          "evidence_contribution_percent": 0.0,
+          "combined_minus_suitability_rank": 1,
+          "combined_minus_evidence_rank": -360,
+          "nearest_historical_source_distance_km": 115.35619917651381,
+          "nearest_historical_source": {
+            "source_occurrence_id": 2479,
+            "source_date": "2018-07-22T12:46:00",
+            "source_cell": "186:-781",
+            "source_coordinate": [
+              18.6477565923,
+              -78.0242031119
+            ],
+            "distance_km": 115.35619917651381,
+            "verification_weight": 1.0,
+            "recency_weight": 0.1,
+            "recency_band": ">365_days",
+            "distance_weight": 0.0,
+            "contribution": 0.0
+          },
+          "winning_historical_source": null,
+          "classification_flags": [
+            "SUITABILITY_DOMINATES",
+            "SUITABILITY_HELPS_EVIDENCE_HURTS"
+          ]
+        },
+        {
+          "grid_cell_id": "184:-772",
+          "latitude": 18.45,
+          "longitude": -77.15,
+          "suitability_score": 0.9063586505329324,
+          "suitability_rank": 1,
+          "evidence_score": 0.020000000000000004,
+          "evidence_rank": 92,
+          "combined_score": 0.5074972577931128,
+          "combined_rank": 2,
+          "suitability_contribution": 0.4984972577931129,
+          "evidence_contribution": 0.009000000000000003,
+          "suitability_contribution_percent": 98.2265914028507,
+          "evidence_contribution_percent": 1.7734085971492988,
+          "combined_minus_suitability_rank": 1,
+          "combined_minus_evidence_rank": -90,
+          "nearest_historical_source_distance_km": 94.74441969427389,
+          "nearest_historical_source": {
+            "source_occurrence_id": 2479,
+            "source_date": "2018-07-22T12:46:00",
+            "source_cell": "186:-781",
+            "source_coordinate": [
+              18.6477565923,
+              -78.0242031119
+            ],
+            "distance_km": 94.74441969427389,
+            "verification_weight": 1.0,
+            "recency_weight": 0.1,
+            "recency_band": ">365_days",
+            "distance_weight": 0.2,
+            "contribution": 0.020000000000000004
+          },
+          "winning_historical_source": {
+            "source_occurrence_id": 2479,
+            "source_date": "2018-07-22T12:46:00",
+            "source_cell": "186:-781",
+            "source_coordinate": [
+              18.6477565923,
+              -78.0242031119
+            ],
+            "distance_km": 94.74441969427389,
+            "verification_weight": 1.0,
+            "recency_weight": 0.1,
+            "recency_band": ">365_days",
+            "distance_weight": 0.2,
+            "contribution": 0.020000000000000004
+          },
+          "classification_flags": [
+            "SUITABILITY_DOMINATES",
+            "SUITABILITY_HELPS_EVIDENCE_HURTS"
+          ]
+        },
+        {
+          "grid_cell_id": "185:-778",
+          "latitude": 18.55,
+          "longitude": -77.75,
+          "suitability_score": 0.7845687271289544,
+          "suitability_rank": 5,
+          "evidence_score": 0.05,
+          "evidence_rank": 38,
+          "combined_score": 0.45401279992092497,
+          "combined_rank": 5,
+          "suitability_contribution": 0.43151279992092495,
+          "evidence_contribution": 0.022500000000000003,
+          "suitability_contribution_percent": 95.04419258577758,
+          "evidence_contribution_percent": 4.955807414222421,
+          "combined_minus_suitability_rank": 0,
+          "combined_minus_evidence_rank": -33,
+          "nearest_historical_source_distance_km": 30.874483925264638,
+          "nearest_historical_source": {
+            "source_occurrence_id": 2479,
+            "source_date": "2018-07-22T12:46:00",
+            "source_cell": "186:-781",
+            "source_coordinate": [
+              18.6477565923,
+              -78.0242031119
+            ],
+            "distance_km": 30.874483925264638,
+            "verification_weight": 1.0,
+            "recency_weight": 0.1,
+            "recency_band": ">365_days",
+            "distance_weight": 0.5,
+            "contribution": 0.05
+          },
+          "winning_historical_source": {
+            "source_occurrence_id": 2479,
+            "source_date": "2018-07-22T12:46:00",
+            "source_cell": "186:-781",
+            "source_coordinate": [
+              18.6477565923,
+              -78.0242031119
+            ],
+            "distance_km": 30.874483925264638,
+            "verification_weight": 1.0,
+            "recency_weight": 0.1,
+            "recency_band": ">365_days",
+            "distance_weight": 0.5,
+            "contribution": 0.05
+          },
+          "classification_flags": [
+            "SUITABILITY_DOMINATES",
+            "BOTH_AGREE_TOP_50"
+          ]
+        }
+      ],
+      "rank_displacement": {
+        "future_cells": [
+          {
+            "grid_cell_id": "184:-770",
+            "combined_minus_suitability": 1,
+            "combined_minus_evidence": -360
+          },
+          {
+            "grid_cell_id": "184:-772",
+            "combined_minus_suitability": 1,
+            "combined_minus_evidence": -90
+          },
+          {
+            "grid_cell_id": "185:-778",
+            "combined_minus_suitability": 0,
+            "combined_minus_evidence": -33
+          }
+        ],
+        "top_set_changes": {
+          "top_10": {
+            "combined_vs_suitability": {
+              "overlap": 10,
+              "entered": 0,
+              "left": 0
+            },
+            "combined_vs_evidence": {
+              "overlap": 1,
+              "entered": 9,
+              "left": 9
+            }
+          },
+          "top_20": {
+            "combined_vs_suitability": {
+              "overlap": 20,
+              "entered": 0,
+              "left": 0
+            },
+            "combined_vs_evidence": {
+              "overlap": 3,
+              "entered": 17,
+              "left": 17
+            }
+          },
+          "top_50": {
+            "combined_vs_suitability": {
+              "overlap": 44,
+              "entered": 6,
+              "left": 6
+            },
+            "combined_vs_evidence": {
+              "overlap": 22,
+              "entered": 28,
+              "left": 28
+            }
+          }
+        }
+      },
+      "error_analysis": {
+        "high_priority_without_subsequent_record": [
+          {
+            "grid_cell_id": "181:-782",
+            "suitability_score": 0.8848852241142217,
+            "evidence_score": 0.05,
+            "combined_score": 0.509186873262822,
+            "suitability_contribution": 0.48668687326282195,
+            "evidence_contribution": 0.022500000000000003,
+            "nearest_source_distance_km": 26.26668369244656,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "182:-767",
+            "suitability_score": 0.8914015061794694,
+            "evidence_score": 0.0,
+            "combined_score": 0.4902708283987082,
+            "suitability_contribution": 0.4902708283987082,
+            "evidence_contribution": 0.0,
+            "nearest_source_distance_km": 151.54825845477757,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "181:-783",
+            "suitability_score": 0.6924037941301514,
+            "evidence_score": 0.08000000000000002,
+            "combined_score": 0.41682208677158333,
+            "suitability_contribution": 0.3808220867715833,
+            "evidence_contribution": 0.03600000000000001,
+            "nearest_source_distance_km": 18.459491572572805,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "184:-783",
+            "suitability_score": 0.6744007994324621,
+            "evidence_score": 0.08000000000000002,
+            "combined_score": 0.40692043968785424,
+            "suitability_contribution": 0.3709204396878542,
+            "evidence_contribution": 0.03600000000000001,
+            "nearest_source_distance_km": 19.338312799009927,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "178:-767",
+            "suitability_score": 0.6913010321491612,
+            "evidence_score": 0.0,
+            "combined_score": 0.3802155676820387,
+            "suitability_contribution": 0.3802155676820387,
+            "evidence_contribution": 0.0,
+            "nearest_source_distance_km": 170.08215548596422,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "178:-765",
+            "suitability_score": 0.6482155713774801,
+            "evidence_score": 0.0,
+            "combined_score": 0.3565185642576141,
+            "suitability_contribution": 0.3565185642576141,
+            "evidence_contribution": 0.0,
+            "nearest_source_distance_km": 188.42450197560103,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "178:-766",
+            "suitability_score": 0.6260348934984257,
+            "evidence_score": 0.0,
+            "combined_score": 0.34431919142413414,
+            "suitability_contribution": 0.34431919142413414,
+            "evidence_contribution": 0.0,
+            "nearest_source_distance_km": 179.17687714062353,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          }
+        ],
+        "missed_future_new_cells": []
+      },
+      "weight_sensitivity": [
+        {
+          "suitability_weight": 1,
+          "evidence_weight": 0,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 3,
+              "184:-772": 1,
+              "185:-778": 5
+            },
+            "median_future_cell_rank": 3.0,
+            "mean_future_cell_rank": 3.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.9,
+          "evidence_weight": 0.1,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 4,
+              "184:-772": 1,
+              "185:-778": 5
+            },
+            "median_future_cell_rank": 4.0,
+            "mean_future_cell_rank": 3.3333333333333335,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.8,
+          "evidence_weight": 0.2,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 4,
+              "184:-772": 1,
+              "185:-778": 5
+            },
+            "median_future_cell_rank": 4.0,
+            "mean_future_cell_rank": 3.3333333333333335,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.7,
+          "evidence_weight": 0.3,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 4,
+              "184:-772": 1,
+              "185:-778": 5
+            },
+            "median_future_cell_rank": 4.0,
+            "mean_future_cell_rank": 3.3333333333333335,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.6,
+          "evidence_weight": 0.4,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 4,
+              "184:-772": 1,
+              "185:-778": 5
+            },
+            "median_future_cell_rank": 4.0,
+            "mean_future_cell_rank": 3.3333333333333335,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.55,
+          "evidence_weight": 0.45,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 4,
+              "184:-772": 2,
+              "185:-778": 5
+            },
+            "median_future_cell_rank": 4.0,
+            "mean_future_cell_rank": 3.6666666666666665,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.5,
+          "evidence_weight": 0.5,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 4,
+              "184:-772": 2,
+              "185:-778": 5
+            },
+            "median_future_cell_rank": 4.0,
+            "mean_future_cell_rank": 3.6666666666666665,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.12,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.4,
+          "evidence_weight": 0.6,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 4,
+              "184:-772": 2,
+              "185:-778": 5
+            },
+            "median_future_cell_rank": 4.0,
+            "mean_future_cell_rank": 3.6666666666666665,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.3,
+          "evidence_weight": 0.7,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 5,
+              "184:-772": 2,
+              "185:-778": 3
+            },
+            "median_future_cell_rank": 3.0,
+            "mean_future_cell_rank": 3.3333333333333335,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.2,
+          "evidence_weight": 0.8,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 7,
+              "184:-772": 4,
+              "185:-778": 5
+            },
+            "median_future_cell_rank": 5.0,
+            "mean_future_cell_rank": 5.333333333333333,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.1,
+          "evidence_weight": 0.9,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 13,
+              "184:-772": 7,
+              "185:-778": 5
+            },
+            "median_future_cell_rank": 7.0,
+            "mean_future_cell_rank": 8.333333333333334,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.6666666666666666,
+                "matched_future_cells": 2
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.06,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 0.6666666666666666,
+                "matched_future_cells": 2
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.12,
+                "recall": 1.0,
+                "matched_future_cells": 3
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 21.0959338774642,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_20": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              },
+              "top_50": {
+                "184:-770": 0.0,
+                "184:-772": 0.0,
+                "185:-778": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0,
+          "evidence_weight": 1,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-770": 364,
+              "184:-772": 92,
+              "185:-778": 38
+            },
+            "median_future_cell_rank": 92.0,
+            "mean_future_cell_rank": 164.66666666666666,
+            "exact": {
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 0.3333333333333333,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 0.3333333333333333,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 0.3333333333333333,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-770": 107.73813112646395,
+                "184:-772": 87.21729354915563,
+                "185:-778": 23.83068624853003
+              },
+              "top_20": {
+                "184:-770": 97.44769053538855,
+                "184:-772": 77.07085824871764,
+                "185:-778": 15.320182909640305
+              },
+              "top_50": {
+                "184:-770": 67.04651815045827,
+                "184:-772": 47.67228379585011,
+                "185:-778": 0.0
+              }
+            }
+          }
+        }
+      ],
+      "rank_stability": [
+        {
+          "suitability_weight": 1,
+          "evidence_weight": 0,
+          "spearman_vs_55_45": 0.9659745124710403,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 44
+        },
+        {
+          "suitability_weight": 0.9,
+          "evidence_weight": 0.1,
+          "spearman_vs_55_45": 0.9832852496642566,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 45
+        },
+        {
+          "suitability_weight": 0.8,
+          "evidence_weight": 0.2,
+          "spearman_vs_55_45": 0.9920048188444427,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 45
+        },
+        {
+          "suitability_weight": 0.7,
+          "evidence_weight": 0.3,
+          "spearman_vs_55_45": 0.9973917100508529,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 45
+        },
+        {
+          "suitability_weight": 0.6,
+          "evidence_weight": 0.4,
+          "spearman_vs_55_45": 0.9994777667729416,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 47
+        },
+        {
+          "suitability_weight": 0.55,
+          "evidence_weight": 0.45,
+          "spearman_vs_55_45": 0.9999999999999999,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 50
+        },
+        {
+          "suitability_weight": 0.5,
+          "evidence_weight": 0.5,
+          "spearman_vs_55_45": 0.9997499772473131,
+          "top_10_overlap": 10,
+          "top_20_overlap": 19,
+          "top_50_overlap": 48
+        },
+        {
+          "suitability_weight": 0.4,
+          "evidence_weight": 0.6,
+          "spearman_vs_55_45": 0.9971205267858188,
+          "top_10_overlap": 9,
+          "top_20_overlap": 19,
+          "top_50_overlap": 45
+        },
+        {
+          "suitability_weight": 0.3,
+          "evidence_weight": 0.7,
+          "spearman_vs_55_45": 0.9923610550426013,
+          "top_10_overlap": 9,
+          "top_20_overlap": 19,
+          "top_50_overlap": 41
+        },
+        {
+          "suitability_weight": 0.2,
+          "evidence_weight": 0.8,
+          "spearman_vs_55_45": 0.9855434666712684,
+          "top_10_overlap": 8,
+          "top_20_overlap": 18,
+          "top_50_overlap": 40
+        },
+        {
+          "suitability_weight": 0.1,
+          "evidence_weight": 0.9,
+          "spearman_vs_55_45": 0.9734230128173126,
+          "top_10_overlap": 5,
+          "top_20_overlap": 10,
+          "top_50_overlap": 34
+        },
+        {
+          "suitability_weight": 0,
+          "evidence_weight": 1,
+          "spearman_vs_55_45": 0.10187307513810315,
+          "top_10_overlap": 1,
+          "top_20_overlap": 3,
+          "top_50_overlap": 22
+        }
+      ],
+      "distance_diagnostic": {
+        "winning_distance_weight_counts": {
+          "0.0": 287,
+          "0.2": 53,
+          "0.5": 28,
+          "0.8": 17,
+          "1.0": 3
+        },
+        "evidence_score_ties": {
+          "0.0": 287,
+          "0.020000000000000004": 53,
+          "0.05": 28,
+          "0.08000000000000002": 17,
+          "0.1": 3
+        },
+        "unique_evidence_scores": 5,
+        "largest_tie_group": 287
+      },
+      "recency_diagnostic": {
+        "winning_recency_band_counts": {
+          "NO_QUALIFYING_SOURCE": 287,
+          ">365_days": 101
+        }
+      },
+      "max_evidence_diagnostic": {
+        "candidate_cells_by_qualifying_source_count": {
+          "0": 287,
+          "1": 8,
+          "2": 4,
+          "3": 31,
+          "4": 58
+        },
+        "cells_with_one_qualifying_source": 8,
+        "cells_with_multiple_qualifying_sources": 93,
+        "cells_where_multiple_sources_reduce_to_one_winner": 93,
+        "adjacent_candidate_pairs": 695,
+        "adjacent_pairs_with_winner_change": 34,
+        "winner_change_percent": 4.892086330935252
+      }
+    },
+    {
+      "cutoff": "2022-12-31",
+      "evaluation_start": "2023-01-01",
+      "evaluation_end": "2024-12-31",
+      "future_new_cells": [
+        "184:-769"
+      ],
+      "sample": {
+        "historical_records": 12,
+        "unique_historical_dates": 10,
+        "unique_historical_cells": 6,
+        "repeated_records_by_cell": {
+          "182:-784": 2,
+          "186:-781": 1,
+          "183:-784": 1,
+          "184:-772": 6,
+          "184:-770": 1,
+          "185:-778": 1
+        },
+        "future_records": 9,
+        "future_new_cell_count": 1
+      },
+      "reproduction": {
+        "suitability": {
+          "future_cell_ranks": {
+            "184:-769": 33
+          },
+          "median_future_cell_rank": 33.0,
+          "mean_future_cell_rank": 33.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 1.0,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.04,
+              "recall": 1.0,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-769": 30.661518765359016
+            },
+            "top_20": {
+              "184:-769": 30.661518765359016
+            },
+            "top_50": {
+              "184:-769": 0.0
+            }
+          }
+        },
+        "evidence": {
+          "future_cell_ranks": {
+            "184:-769": 1
+          },
+          "median_future_cell_rank": 1.0,
+          "mean_future_cell_rank": 1.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.1,
+              "recall": 1.0,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.05,
+              "recall": 1.0,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 1.0,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 1.0,
+              "precision": 0.3,
+              "recall": 1.0,
+              "matched_future_cells": 1
+            },
+            "at_20": {
+              "hit_rate": 1.0,
+              "precision": 0.2,
+              "recall": 1.0,
+              "matched_future_cells": 1
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.12,
+              "recall": 1.0,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-769": 0.0
+            },
+            "top_20": {
+              "184:-769": 0.0
+            },
+            "top_50": {
+              "184:-769": 0.0
+            }
+          }
+        },
+        "combined": {
+          "future_cell_ranks": {
+            "184:-769": 24
+          },
+          "median_future_cell_rank": 24.0,
+          "mean_future_cell_rank": 24.0,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.02,
+              "recall": 1.0,
+              "matched_future_cells": 1
+            }
+          },
+          "tolerance": {
+            "distance_km": 16.0,
+            "at_10": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_20": {
+              "hit_rate": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "matched_future_cells": 0
+            },
+            "at_50": {
+              "hit_rate": 1.0,
+              "precision": 0.08,
+              "recall": 1.0,
+              "matched_future_cells": 1
+            }
+          },
+          "distance_from_future_cells_to_recommendations_km": {
+            "top_10": {
+              "184:-769": 30.661518765359016
+            },
+            "top_20": {
+              "184:-769": 30.661518765359016
+            },
+            "top_50": {
+              "184:-769": 0.0
+            }
+          }
+        },
+        "random": {
+          "permutations": 500,
+          "seed": 20260816,
+          "exact": {
+            "at_10": {
+              "hit_rate": 0.042,
+              "precision": 0.0042000000000000015,
+              "recall": 0.042
+            },
+            "at_20": {
+              "hit_rate": 0.06,
+              "precision": 0.003,
+              "recall": 0.06
+            },
+            "at_50": {
+              "hit_rate": 0.138,
+              "precision": 0.00276,
+              "recall": 0.138
+            }
+          },
+          "tolerance": {
+            "at_10": {
+              "hit_rate": 0.152,
+              "precision": 0.015399999999999999,
+              "recall": 0.152
+            },
+            "at_20": {
+              "hit_rate": 0.278,
+              "precision": 0.015,
+              "recall": 0.278
+            },
+            "at_50": {
+              "hit_rate": 0.57,
+              "precision": 0.015239999999999998,
+              "recall": 0.57
+            }
+          },
+          "mean_of_median_future_cell_rank": 191.06
+        }
+      },
+      "future_cell_explainability": [
+        {
+          "grid_cell_id": "184:-769",
+          "latitude": 18.45,
+          "longitude": -76.85,
+          "suitability_score": 0.14627510791293236,
+          "suitability_rank": 33,
+          "evidence_score": 0.2,
+          "evidence_rank": 1,
+          "combined_score": 0.1704513093521128,
+          "combined_rank": 24,
+          "suitability_contribution": 0.0804513093521128,
+          "evidence_contribution": 0.09000000000000001,
+          "suitability_contribution_percent": 47.19899756587911,
+          "evidence_contribution_percent": 52.801002434120896,
+          "combined_minus_suitability_rank": -9,
+          "combined_minus_evidence_rank": 23,
+          "nearest_historical_source_distance_km": 15.28958589115293,
+          "nearest_historical_source": {
+            "source_occurrence_id": 3354,
+            "source_date": "2022-09-06T13:04:00",
+            "source_cell": "184:-770",
+            "source_coordinate": [
+              18.4080223666,
+              -76.988016081
+            ],
+            "distance_km": 15.28958589115293,
+            "verification_weight": 1.0,
+            "recency_weight": 0.25,
+            "recency_band": "91-365_days",
+            "distance_weight": 0.8,
+            "contribution": 0.2
+          },
+          "winning_historical_source": {
+            "source_occurrence_id": 3354,
+            "source_date": "2022-09-06T13:04:00",
+            "source_cell": "184:-770",
+            "source_coordinate": [
+              18.4080223666,
+              -76.988016081
+            ],
+            "distance_km": 15.28958589115293,
+            "verification_weight": 1.0,
+            "recency_weight": 0.25,
+            "recency_band": "91-365_days",
+            "distance_weight": 0.8,
+            "contribution": 0.2
+          },
+          "classification_flags": [
+            "EVIDENCE_DOMINATES",
+            "EVIDENCE_HELPS_SUITABILITY_HURTS",
+            "BOTH_AGREE_TOP_50"
+          ]
+        }
+      ],
+      "rank_displacement": {
+        "future_cells": [
+          {
+            "grid_cell_id": "184:-769",
+            "combined_minus_suitability": -9,
+            "combined_minus_evidence": 23
+          }
+        ],
+        "top_set_changes": {
+          "top_10": {
+            "combined_vs_suitability": {
+              "overlap": 10,
+              "entered": 0,
+              "left": 0
+            },
+            "combined_vs_evidence": {
+              "overlap": 0,
+              "entered": 10,
+              "left": 10
+            }
+          },
+          "top_20": {
+            "combined_vs_suitability": {
+              "overlap": 18,
+              "entered": 2,
+              "left": 2
+            },
+            "combined_vs_evidence": {
+              "overlap": 4,
+              "entered": 16,
+              "left": 16
+            }
+          },
+          "top_50": {
+            "combined_vs_suitability": {
+              "overlap": 40,
+              "entered": 10,
+              "left": 10
+            },
+            "combined_vs_evidence": {
+              "overlap": 25,
+              "entered": 25,
+              "left": 25
+            }
+          }
+        }
+      },
+      "error_analysis": {
+        "high_priority_without_subsequent_record": [
+          {
+            "grid_cell_id": "182:-767",
+            "suitability_score": 0.8914015061794694,
+            "evidence_score": 0.125,
+            "combined_score": 0.5465208283987082,
+            "suitability_contribution": 0.4902708283987082,
+            "evidence_contribution": 0.05625,
+            "nearest_source_distance_km": 39.77098050393767,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "181:-782",
+            "suitability_score": 0.8848852241142217,
+            "evidence_score": 0.05,
+            "combined_score": 0.509186873262822,
+            "suitability_contribution": 0.48668687326282195,
+            "evidence_contribution": 0.022500000000000003,
+            "nearest_source_distance_km": 26.26668369244656,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "181:-783",
+            "suitability_score": 0.6924037941301514,
+            "evidence_score": 0.08000000000000002,
+            "combined_score": 0.41682208677158333,
+            "suitability_contribution": 0.3808220867715833,
+            "evidence_contribution": 0.03600000000000001,
+            "nearest_source_distance_km": 18.459491572572805,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "184:-783",
+            "suitability_score": 0.6744007994324621,
+            "evidence_score": 0.08000000000000002,
+            "combined_score": 0.40692043968785424,
+            "suitability_contribution": 0.3709204396878542,
+            "evidence_contribution": 0.03600000000000001,
+            "nearest_source_distance_km": 19.338312799009927,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "178:-767",
+            "suitability_score": 0.6913010321491612,
+            "evidence_score": 0.05,
+            "combined_score": 0.4027155676820387,
+            "suitability_contribution": 0.3802155676820387,
+            "evidence_contribution": 0.022500000000000003,
+            "nearest_source_distance_km": 71.59622070595032,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "178:-765",
+            "suitability_score": 0.6482155713774801,
+            "evidence_score": 0.05,
+            "combined_score": 0.3790185642576141,
+            "suitability_contribution": 0.3565185642576141,
+            "evidence_contribution": 0.022500000000000003,
+            "nearest_source_distance_km": 84.15799963290867,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "178:-766",
+            "suitability_score": 0.6260348934984257,
+            "evidence_score": 0.05,
+            "combined_score": 0.36681919142413416,
+            "suitability_contribution": 0.34431919142413414,
+            "evidence_contribution": 0.022500000000000003,
+            "nearest_source_distance_km": 77.41203353234069,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "178:-763",
+            "suitability_score": 0.6231284314152487,
+            "evidence_score": 0.05,
+            "combined_score": 0.36522063727838683,
+            "suitability_contribution": 0.3427206372783868,
+            "evidence_contribution": 0.022500000000000003,
+            "nearest_source_distance_km": 99.66185345812765,
+            "reason_codes": [
+              "HIGH_HABITAT_SUITABILITY",
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "178:-778",
+            "suitability_score": 0.5960665136451085,
+            "evidence_score": 0.05,
+            "combined_score": 0.35033658250480976,
+            "suitability_contribution": 0.32783658250480974,
+            "evidence_contribution": 0.022500000000000003,
+            "nearest_source_distance_km": 74.65751308452336,
+            "reason_codes": [
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          },
+          {
+            "grid_cell_id": "179:-769",
+            "suitability_score": 0.5647749019454653,
+            "evidence_score": 0.05,
+            "combined_score": 0.333126196070006,
+            "suitability_contribution": 0.31062619607000597,
+            "evidence_contribution": 0.022500000000000003,
+            "nearest_source_distance_km": 52.975874395734735,
+            "reason_codes": [
+              "HISTORICAL_EVIDENCE_WITHIN_100_KM"
+            ],
+            "subsequent_occurrence_status": "NO_RECORDED_OCCURRENCE_IN_EVALUATION_PERIOD"
+          }
+        ],
+        "missed_future_new_cells": []
+      },
+      "weight_sensitivity": [
+        {
+          "suitability_weight": 1,
+          "evidence_weight": 0,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 33
+            },
+            "median_future_cell_rank": 33.0,
+            "mean_future_cell_rank": 33.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.04,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 30.661518765359016
+              },
+              "top_20": {
+                "184:-769": 30.661518765359016
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.9,
+          "evidence_weight": 0.1,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 32
+            },
+            "median_future_cell_rank": 32.0,
+            "mean_future_cell_rank": 32.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.04,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 30.661518765359016
+              },
+              "top_20": {
+                "184:-769": 30.661518765359016
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.8,
+          "evidence_weight": 0.2,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 29
+            },
+            "median_future_cell_rank": 29.0,
+            "mean_future_cell_rank": 29.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.04,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 30.661518765359016
+              },
+              "top_20": {
+                "184:-769": 30.661518765359016
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.7,
+          "evidence_weight": 0.3,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 27
+            },
+            "median_future_cell_rank": 27.0,
+            "mean_future_cell_rank": 27.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.04,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 30.661518765359016
+              },
+              "top_20": {
+                "184:-769": 30.661518765359016
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.6,
+          "evidence_weight": 0.4,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 25
+            },
+            "median_future_cell_rank": 25.0,
+            "mean_future_cell_rank": 25.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.08,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 30.661518765359016
+              },
+              "top_20": {
+                "184:-769": 30.661518765359016
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.55,
+          "evidence_weight": 0.45,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 24
+            },
+            "median_future_cell_rank": 24.0,
+            "mean_future_cell_rank": 24.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.08,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 30.661518765359016
+              },
+              "top_20": {
+                "184:-769": 30.661518765359016
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.5,
+          "evidence_weight": 0.5,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 24
+            },
+            "median_future_cell_rank": 24.0,
+            "mean_future_cell_rank": 24.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.08,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 30.661518765359016
+              },
+              "top_20": {
+                "184:-769": 30.661518765359016
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.4,
+          "evidence_weight": 0.6,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 21
+            },
+            "median_future_cell_rank": 21.0,
+            "mean_future_cell_rank": 21.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.08,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 30.661518765359016
+              },
+              "top_20": {
+                "184:-769": 30.661518765359016
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.3,
+          "evidence_weight": 0.7,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 14
+            },
+            "median_future_cell_rank": 14.0,
+            "mean_future_cell_rank": 14.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 0.0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "matched_future_cells": 0
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.08,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 30.661518765359016
+              },
+              "top_20": {
+                "184:-769": 0.0
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.2,
+          "evidence_weight": 0.8,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 7
+            },
+            "median_future_cell_rank": 7.0,
+            "mean_future_cell_rank": 7.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 0.0
+              },
+              "top_20": {
+                "184:-769": 0.0
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0.1,
+          "evidence_weight": 0.9,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 4
+            },
+            "median_future_cell_rank": 4.0,
+            "mean_future_cell_rank": 4.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.15,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.12,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 0.0
+              },
+              "top_20": {
+                "184:-769": 0.0
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        },
+        {
+          "suitability_weight": 0,
+          "evidence_weight": 1,
+          "metrics": {
+            "future_cell_ranks": {
+              "184:-769": 1
+            },
+            "median_future_cell_rank": 1.0,
+            "mean_future_cell_rank": 1.0,
+            "exact": {
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.1,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.05,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.02,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "tolerance": {
+              "distance_km": 16.0,
+              "at_10": {
+                "hit_rate": 1.0,
+                "precision": 0.3,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_20": {
+                "hit_rate": 1.0,
+                "precision": 0.2,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              },
+              "at_50": {
+                "hit_rate": 1.0,
+                "precision": 0.12,
+                "recall": 1.0,
+                "matched_future_cells": 1
+              }
+            },
+            "distance_from_future_cells_to_recommendations_km": {
+              "top_10": {
+                "184:-769": 0.0
+              },
+              "top_20": {
+                "184:-769": 0.0
+              },
+              "top_50": {
+                "184:-769": 0.0
+              }
+            }
+          }
+        }
+      ],
+      "rank_stability": [
+        {
+          "suitability_weight": 1,
+          "evidence_weight": 0,
+          "spearman_vs_55_45": 0.95330205739856,
+          "top_10_overlap": 10,
+          "top_20_overlap": 18,
+          "top_50_overlap": 40
+        },
+        {
+          "suitability_weight": 0.9,
+          "evidence_weight": 0.1,
+          "spearman_vs_55_45": 0.983413170378844,
+          "top_10_overlap": 10,
+          "top_20_overlap": 18,
+          "top_50_overlap": 41
+        },
+        {
+          "suitability_weight": 0.8,
+          "evidence_weight": 0.2,
+          "spearman_vs_55_45": 0.9931469113787766,
+          "top_10_overlap": 10,
+          "top_20_overlap": 19,
+          "top_50_overlap": 43
+        },
+        {
+          "suitability_weight": 0.7,
+          "evidence_weight": 0.3,
+          "spearman_vs_55_45": 0.9974953317407981,
+          "top_10_overlap": 10,
+          "top_20_overlap": 19,
+          "top_50_overlap": 44
+        },
+        {
+          "suitability_weight": 0.6,
+          "evidence_weight": 0.4,
+          "spearman_vs_55_45": 0.999664390014131,
+          "top_10_overlap": 10,
+          "top_20_overlap": 19,
+          "top_50_overlap": 49
+        },
+        {
+          "suitability_weight": 0.55,
+          "evidence_weight": 0.45,
+          "spearman_vs_55_45": 1.0,
+          "top_10_overlap": 10,
+          "top_20_overlap": 20,
+          "top_50_overlap": 50
+        },
+        {
+          "suitability_weight": 0.5,
+          "evidence_weight": 0.5,
+          "spearman_vs_55_45": 0.9997739469080142,
+          "top_10_overlap": 9,
+          "top_20_overlap": 20,
+          "top_50_overlap": 49
+        },
+        {
+          "suitability_weight": 0.4,
+          "evidence_weight": 0.6,
+          "spearman_vs_55_45": 0.9981326963192247,
+          "top_10_overlap": 9,
+          "top_20_overlap": 20,
+          "top_50_overlap": 47
+        },
+        {
+          "suitability_weight": 0.3,
+          "evidence_weight": 0.7,
+          "spearman_vs_55_45": 0.9954629567323867,
+          "top_10_overlap": 8,
+          "top_20_overlap": 17,
+          "top_50_overlap": 43
+        },
+        {
+          "suitability_weight": 0.2,
+          "evidence_weight": 0.8,
+          "spearman_vs_55_45": 0.9914781138550568,
+          "top_10_overlap": 5,
+          "top_20_overlap": 8,
+          "top_50_overlap": 38
+        },
+        {
+          "suitability_weight": 0.1,
+          "evidence_weight": 0.9,
+          "spearman_vs_55_45": 0.9841195074355696,
+          "top_10_overlap": 1,
+          "top_20_overlap": 7,
+          "top_50_overlap": 31
+        },
+        {
+          "suitability_weight": 0,
+          "evidence_weight": 1,
+          "spearman_vs_55_45": 0.7135846342776394,
+          "top_10_overlap": 0,
+          "top_20_overlap": 4,
+          "top_50_overlap": 25
+        }
+      ],
+      "distance_diagnostic": {
+        "winning_distance_weight_counts": {
+          "0.0": 196,
+          "0.2": 113,
+          "0.5": 47,
+          "0.8": 27,
+          "1.0": 2
+        },
+        "evidence_score_ties": {
+          "0.0": 196,
+          "0.020000000000000004": 26,
+          "0.05": 110,
+          "0.08000000000000002": 12,
+          "0.1": 2,
+          "0.125": 24,
+          "0.2": 15
+        },
+        "unique_evidence_scores": 7,
+        "largest_tie_group": 196
+      },
+      "recency_diagnostic": {
+        "winning_recency_band_counts": {
+          "NO_QUALIFYING_SOURCE": 196,
+          ">365_days": 63,
+          "91-365_days": 126
+        }
+      },
+      "max_evidence_diagnostic": {
+        "candidate_cells_by_qualifying_source_count": {
+          "0": 196,
+          "1": 22,
+          "2": 3,
+          "3": 23,
+          "4": 8,
+          "5": 40,
+          "6": 4,
+          "7": 51,
+          "8": 12,
+          "9": 7,
+          "10": 4,
+          "11": 8,
+          "12": 7
+        },
+        "cells_with_one_qualifying_source": 22,
+        "cells_with_multiple_qualifying_sources": 167,
+        "cells_where_multiple_sources_reduce_to_one_winner": 167,
+        "adjacent_candidate_pairs": 690,
+        "adjacent_pairs_with_winner_change": 76,
+        "winner_change_percent": 11.014492753623188
+      }
+    }
+  ],
+  "limitations": [
+    "Presence-only records do not establish absence in unrecorded cells.",
+    "Suitability-v3 is not temporally independent of these evaluation windows.",
+    "Weight sweep is diagnostic and must not be used as optimization."
+  ]
+}

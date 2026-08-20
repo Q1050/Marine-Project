@@ -1,0 +1,162 @@
+[
+  {
+    "image_path": "data\\split\\reference\\pterois_miles\\pterois_miles_003.jpg",
+    "filename": "pterois_miles_003.jpg",
+    "species_label": "pterois_miles"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_miles\\pterois_miles_004.jpg",
+    "filename": "pterois_miles_004.jpg",
+    "species_label": "pterois_miles"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_miles\\pterois_miles_005.jpg",
+    "filename": "pterois_miles_005.jpg",
+    "species_label": "pterois_miles"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_miles\\pterois_miles_006.jpg",
+    "filename": "pterois_miles_006.jpg",
+    "species_label": "pterois_miles"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_miles\\pterois_miles_007.jpg",
+    "filename": "pterois_miles_007.jpg",
+    "species_label": "pterois_miles"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_miles\\pterois_miles_008.jpg",
+    "filename": "pterois_miles_008.jpg",
+    "species_label": "pterois_miles"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_miles\\pterois_miles_009.jpg",
+    "filename": "pterois_miles_009.jpg",
+    "species_label": "pterois_miles"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_miles\\pterois_miles_010.jpg",
+    "filename": "pterois_miles_010.jpg",
+    "species_label": "pterois_miles"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_volitans\\pterois_volitans_001.jpg",
+    "filename": "pterois_volitans_001.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_volitans\\pterois_volitans_002.jpg",
+    "filename": "pterois_volitans_002.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_volitans\\pterois_volitans_003.jpg",
+    "filename": "pterois_volitans_003.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_volitans\\pterois_volitans_004.jpg",
+    "filename": "pterois_volitans_004.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_volitans\\pterois_volitans_005.jpg",
+    "filename": "pterois_volitans_005.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_volitans\\pterois_volitans_006.jpg",
+    "filename": "pterois_volitans_006.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_volitans\\pterois_volitans_008.jpg",
+    "filename": "pterois_volitans_008.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\split\\reference\\pterois_volitans\\pterois_volitans_009.jpg",
+    "filename": "pterois_volitans_009.jpg",
+    "species_label": "pterois_volitans"
+  },
+  {
+    "image_path": "data\\split\\reference\\scorpaena_plumieri\\scorpaena_plumieri_001.jpg",
+    "filename": "scorpaena_plumieri_001.jpg",
+    "species_label": "scorpaena_plumieri"
+  },
+  {
+    "image_path": "data\\split\\reference\\scorpaena_plumieri\\scorpaena_plumieri_002.jpg",
+    "filename": "scorpaena_plumieri_002.jpg",
+    "species_label": "scorpaena_plumieri"
+  },
+  {
+    "image_path": "data\\split\\reference\\scorpaena_plumieri\\scorpaena_plumieri_003.jpg",
+    "filename": "scorpaena_plumieri_003.jpg",
+    "species_label": "scorpaena_plumieri"
+  },
+  {
+    "image_path": "data\\split\\reference\\scorpaena_plumieri\\scorpaena_plumieri_005.jpg",
+    "filename": "scorpaena_plumieri_005.jpg",
+    "species_label": "scorpaena_plumieri"
+  },
+  {
+    "image_path": "data\\split\\reference\\scorpaena_plumieri\\scorpaena_plumieri_006.jpg",
+    "filename": "scorpaena_plumieri_006.jpg",
+    "species_label": "scorpaena_plumieri"
+  },
+  {
+    "image_path": "data\\split\\reference\\scorpaena_plumieri\\scorpaena_plumieri_007.jpg",
+    "filename": "scorpaena_plumieri_007.jpg",
+    "species_label": "scorpaena_plumieri"
+  },
+  {
+    "image_path": "data\\split\\reference\\scorpaena_plumieri\\scorpaena_plumieri_008.jpg",
+    "filename": "scorpaena_plumieri_008.jpg",
+    "species_label": "scorpaena_plumieri"
+  },
+  {
+    "image_path": "data\\split\\reference\\scorpaena_plumieri\\scorpaena_plumieri_010.jpg",
+    "filename": "scorpaena_plumieri_010.jpg",
+    "species_label": "scorpaena_plumieri"
+  },
+  {
+    "image_path": "data\\split\\reference\\sparisoma_viride\\sparisoma_viride_001.jpg",
+    "filename": "sparisoma_viride_001.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\split\\reference\\sparisoma_viride\\sparisoma_viride_002.jpg",
+    "filename": "sparisoma_viride_002.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\split\\reference\\sparisoma_viride\\sparisoma_viride_003.jpg",
+    "filename": "sparisoma_viride_003.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\split\\reference\\sparisoma_viride\\sparisoma_viride_004.jpg",
+    "filename": "sparisoma_viride_004.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\split\\reference\\sparisoma_viride\\sparisoma_viride_005.jpg",
+    "filename": "sparisoma_viride_005.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\split\\reference\\sparisoma_viride\\sparisoma_viride_008.jpg",
+    "filename": "sparisoma_viride_008.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\split\\reference\\sparisoma_viride\\sparisoma_viride_009.jpg",
+    "filename": "sparisoma_viride_009.jpg",
+    "species_label": "sparisoma_viride"
+  },
+  {
+    "image_path": "data\\split\\reference\\sparisoma_viride\\sparisoma_viride_010.jpg",
+    "filename": "sparisoma_viride_010.jpg",
+    "species_label": "sparisoma_viride"
+  }
+]

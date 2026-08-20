@@ -1,0 +1,21 @@
+species,taxon_id,obis_total,clean_records,within_10km,within_25km,within_50km,within_100km,nearest_km,past_1yr,past_5yr,unique_locations,unique_days
+Sparisoma viride,273780,283,250,31,69,119,250,1.689446115236909,7,40,66,45
+Acanthurus coeruleus,159581,355,306,50,96,157,306,1.689446115236909,9,60,73,59
+Acanthurus bahianus,159578,231,198,30,75,127,198,1.689446115236909,0,0,47,19
+Holacanthus ciliaris,276012,3,1,0,0,0,1,66.99904757052484,0,0,1,0
+Pomacanthus paru,276025,67,52,30,38,42,52,1.8756131176078146,5,47,27,38
+Diodon hystrix,127403,39,26,9,11,14,26,2.7661448375903643,5,23,20,19
+Gymnothorax funebris,158583,11,4,0,1,1,4,24.947574769139216,0,2,4,2
+Sphyraena barracuda,159812,77,32,4,10,19,32,1.8756131176078146,5,22,28,23
+Pterois volitans,159559,57,41,18,26,29,41,1.6943272138851424,11,32,27,34
+Pterois miles,218077,0,0,0,0,0,0,,0,0,0,0
+Amphiprion ocellaris,278400,0,0,0,0,0,0,,0,0,0,0
+Amphiprion clarkii,212783,0,0,0,0,0,0,,0,0,0,0
+Zebrasoma flavescens,219683,0,0,0,0,0,0,,0,0,0,0
+Paracanthurus hepatus,219676,3,0,0,0,0,0,,0,0,0,0
+Pterapogon kauderni,282494,0,0,0,0,0,0,,0,0,0,0
+Acanthurus japonicus,272962,0,0,0,0,0,0,,0,0,0,0
+Chaetodon auriga,218730,0,0,0,0,0,0,,0,0,0,0
+Chromis viridis,212811,0,0,0,0,0,0,,0,0,0,0
+Zanclus cornutus,220083,0,0,0,0,0,0,,0,0,0,0
+Siganus vulpinus,273929,0,0,0,0,0,0,,0,0,0,0

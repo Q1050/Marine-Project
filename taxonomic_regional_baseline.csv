@@ -1,0 +1,21 @@
+species,genus,family,species_10km,species_50km,species_100km,species_nearest_km,species_locations,genus_10km,genus_50km,genus_100km,genus_nearest_km,genus_locations,family_10km,family_50km,family_100km,family_nearest_km,family_locations
+Sparisoma viride,Sparisoma,Scaridae,31,119,250,1.689446115236909,66,137,481,862,1.689446115236909,103,221,796,1407,1.689446115236909,121
+Acanthurus coeruleus,Acanthurus,Acanthuridae,50,157,306,1.689446115236909,73,155,426,699,1.689446115236909,101,155,426,699,1.689446115236909,101
+Acanthurus bahianus,Acanthurus,Acanthuridae,30,127,198,1.689446115236909,47,155,426,699,1.689446115236909,101,155,426,699,1.689446115236909,101
+Holacanthus ciliaris,Holacanthus,Pomacanthidae,0,0,1,66.99904757052484,1,2,17,37,2.5772327298007225,18,33,62,93,1.8756131176078146,46
+Pomacanthus paru,Pomacanthus,Pomacanthidae,30,42,52,1.8756131176078146,27,31,44,55,1.8756131176078146,29,33,62,93,1.8756131176078146,46
+Diodon hystrix,Diodon,Diodontidae,9,14,26,2.7661448375903643,20,43,73,104,2.257695822522931,61,47,78,119,2.257695822522931,64
+Gymnothorax funebris,Gymnothorax,Muraenidae,0,1,4,24.947574769139216,4,9,23,40,2.957058718533446,25,21,49,77,2.957058718533446,37
+Sphyraena barracuda,Sphyraena,Sphyraenidae,4,19,32,1.8756131176078146,28,4,19,32,1.8756131176078146,28,4,19,32,1.8756131176078146,28
+Pterois volitans,Pterois,Scorpaenidae,18,29,41,1.6943272138851424,27,23,53,92,1.635583987619273,67,33,71,124,1.635583987619273,88
+Pterois miles,Pterois,Scorpaenidae,0,0,0,,0,23,53,92,1.635583987619273,67,33,71,124,1.635583987619273,88
+Amphiprion ocellaris,Amphiprion,Pomacentridae,0,0,0,,0,0,0,0,,0,258,392,595,1.689446115236909,129
+Amphiprion clarkii,Amphiprion,Pomacentridae,0,0,0,,0,0,0,0,,0,258,392,595,1.689446115236909,129
+Zebrasoma flavescens,Zebrasoma,Acanthuridae,0,0,0,,0,0,0,0,,0,155,426,699,1.689446115236909,101
+Paracanthurus hepatus,Paracanthurus,Acanthuridae,0,0,0,,0,0,0,0,,0,155,426,699,1.689446115236909,101
+Pterapogon kauderni,Pterapogon,Apogonidae,0,0,0,,0,0,0,0,,0,9,71,127,3.887728634438867,27
+Acanthurus japonicus,Acanthurus,Acanthuridae,0,0,0,,0,155,426,699,1.689446115236909,101,155,426,699,1.689446115236909,101
+Chaetodon auriga,Chaetodon,Chaetodontidae,0,0,0,,0,55,84,125,1.8199551627615824,58,55,87,130,1.8199551627615824,61
+Chromis viridis,Chromis,Pomacentridae,0,0,0,,0,0,0,0,,0,258,392,595,1.689446115236909,129
+Zanclus cornutus,Zanclus,Zanclidae,0,0,0,,0,0,0,0,,0,0,0,0,,0
+Siganus vulpinus,Siganus,Siganidae,0,0,0,,0,0,0,0,,0,0,0,0,,0
