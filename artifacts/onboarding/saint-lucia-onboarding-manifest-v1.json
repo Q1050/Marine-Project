@@ -1,0 +1,16 @@
+{
+  "manifest_version": "saint-lucia-onboarding-manifest-v1",
+  "jurisdiction": {"canonical_name":"Saint Lucia","canonical_identifier_scheme":"ISO_3166_1_ALPHA_2","canonical_identifier":"LC","jurisdiction_type":"SOVEREIGN_STATE"},
+  "region": "caribbean",
+  "inventory_version": "caribbean-jurisdiction-candidates-v1",
+  "boundary_artifact_reference": "artifacts/onboarding/saint-lucia-boundary-marine-regions-eez-v12.json",
+  "boundary_source_artifact_sha256": "48b1970dd5152b2aae33799e560fdbf0e13c344719d685e5b4c0e7f2abcef46e",
+  "boundary_geometry_sha256": "9fb6d31d25aa73364c88c3312f75b63ddd9aa0a91efec727e122f64428361e0d",
+  "provider": "Marine Regions / VLIZ", "provider_version": "Maritime Boundaries Geodatabase EEZ v12 (2023-10-25)",
+  "expected_actions": ["CREATE_JURISDICTION","CREATE_ACTIVE_MARINE_MONITORING_BOUNDARY"],
+  "expected_post_state": "GEOGRAPHICALLY_CONFIGURED_SCIENTIFICALLY_UNCONFIGURED",
+  "scientific_configuration_expected": false,
+  "approval_state": "READY_FOR_REVIEW",
+  "limitations": ["Candidate only; live apply is not authorized."],
+  "manifest_fingerprint": "3c6da4debefef3c5016072bbed930ac666f2840665805501a2ed76e2fe8bc560"
+}

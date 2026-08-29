@@ -1,0 +1,43 @@
+{
+  "acquired_at": "2026-08-21T22:26:58.867487+00:00",
+  "acquisition_uri": "https://geo.vliz.be/geoserver/MarineRegions/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=MarineRegions%3Aeez&cql_filter=mrgid%3D8416&outputFormat=application%2Fjson&srsName=EPSG%3A4326",
+  "artifact_version": "saint-lucia-boundary-marine-regions-eez-v12-v1",
+  "boundary_type": "MARINE_MONITORING",
+  "crs": "EPSG:4326",
+  "feature_selection": {
+    "iso_ter1": "LCA",
+    "mrgid": 8416,
+    "pol_type": "200NM",
+    "territory2": null
+  },
+  "geometry_bounds": [
+    -62.86401493,
+    13.24323763,
+    -59.99972222,
+    14.2725
+  ],
+  "geometry_sha256": "9fb6d31d25aa73364c88c3312f75b63ddd9aa0a91efec727e122f64428361e0d",
+  "geometry_transformation": "NONE",
+  "geometry_type": "MultiPolygon",
+  "geometry_valid": true,
+  "inventory_version": "caribbean-jurisdiction-candidates-v1",
+  "jurisdiction": {
+    "canonical_identifier": "LC",
+    "canonical_identifier_scheme": "ISO_3166_1_ALPHA_2",
+    "canonical_name": "Saint Lucia",
+    "jurisdiction_type": "SOVEREIGN_STATE",
+    "parent_region_identifier": "caribbean"
+  },
+  "limitations": [
+    "Operational marine-monitoring boundary; not scientific evidence.",
+    "Shared/joint-regime features are excluded unless separately approved.",
+    "Provider legal and cartographic limitations apply."
+  ],
+  "provider": "Marine Regions / VLIZ",
+  "provider_boundary_identifier": "8416",
+  "provider_record_reference": "https://www.marineregions.org/gazetteer.php?id=8416&p=details",
+  "provider_version": "Maritime Boundaries Geodatabase EEZ v12 (2023-10-25)",
+  "source_artifact_reference": "data/jurisdiction_boundaries/marine-regions-v12-saint-lucia-wfs-source.geojson",
+  "source_artifact_sha256": "48b1970dd5152b2aae33799e560fdbf0e13c344719d685e5b4c0e7f2abcef46e",
+  "source_reference": "https://doi.org/10.14284/632"
+}

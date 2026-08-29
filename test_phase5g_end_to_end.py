@@ -156,11 +156,6 @@ def test_jamaica_end_to_end_lifecycle_isolated(tmp_path, monkeypatch):
     api.app.dependency_overrides[get_db] = override_db
     monkeypatch.setattr(api, "UPLOAD_DIRECTORY", isolated_observations)
     monkeypatch.setattr(api, "service", _ControlledObservationService())
-    upload_mount = next(route for route in api.app.routes if getattr(route, "path", None) == "/uploads")
-    original_static = (upload_mount.app.directory, list(upload_mount.app.all_directories), upload_mount.app.config_checked)
-    upload_mount.app.directory = str(isolated_upload_root)
-    upload_mount.app.all_directories = [str(isolated_upload_root)]
-    upload_mount.app.config_checked = False
 
     report = {"inference": "DETERMINISTIC_TEST_DOUBLE; NOT A MODEL-ACCURACY TEST"}
     try:
@@ -262,10 +257,9 @@ def test_jamaica_end_to_end_lifecycle_isolated(tmp_path, monkeypatch):
         stored_path = isolated_observations / stored_filename
         assert stored_path.is_file() and stored_path.stat().st_size == image_path.stat().st_size
         detail = client.get(f"/observations/{observation_id}")
-        assert detail.status_code == 200 and detail.json()["observation"]["image_url"]
-        static = client.get(detail.json()["observation"]["image_url"])
-        assert static.status_code == 200 and static.content == stored_path.read_bytes()
-        report["image"] = {"stored": True, "detail_url": detail.json()["observation"]["image_url"], "static_status": static.status_code}
+        assert detail.status_code == 200 and detail.json()["observation"]["image_url"] is None
+        assert client.get(f"/uploads/observations/{stored_filename}").status_code == 404
+        report["image"] = {"stored_private": True, "public_url": None, "legacy_static_status": 404}
 
         jamaica_map = client.get("/observations/map?region_slug=caribbean&jurisdiction_slug=jamaica").json()
         marker = next(item for item in jamaica_map["markers"] if item["id"] == observation_id)
@@ -418,5 +412,4 @@ def test_jamaica_end_to_end_lifecycle_isolated(tmp_path, monkeypatch):
         print("PHASE5G_REPORT=" + json.dumps(report, default=str, sort_keys=True))
     finally:
         api.app.dependency_overrides.clear()
-        upload_mount.app.directory, upload_mount.app.all_directories, upload_mount.app.config_checked = original_static
         engine.dispose()

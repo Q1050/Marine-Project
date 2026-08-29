@@ -35,6 +35,8 @@ from models import (
     PredictionSampleEnvironmentalFeature,
     ScientificDataset,
 )
+from scientific_applicability_domain import EvidenceRole
+from scientific_dataset_applicability import dataset_is_jurisdiction_compatible
 
 
 # Accepted Phase 10C dataset_type values for occurrence training inputs.
@@ -221,20 +223,16 @@ def _validate_occurrence_scope(
                 )
         elif spec.geographic_scope == "JURISDICTION":
             if allow_region_to_jurisdiction_relaxation:
-                if record.region_id is None or spec.region_id is None:
-                    raise ValueError(
-                        f"ScientificDataset {record.id} region-scoped "
-                        "use for a jurisdiction-scoped spec requires "
-                        "both dataset and spec to identify a region"
-                    )
-                if record.region_id != spec.region_id:
+                from models import Jurisdiction
+                jurisdiction = db.get(Jurisdiction, spec.jurisdiction_id)
+                if not dataset_is_jurisdiction_compatible(
+                    db, record, jurisdiction, EvidenceRole.ENVIRONMENTAL_COVARIATE
+                ):
                     raise ValueError(
                         f"ScientificDataset {record.id} is region-scoped "
-                        f"(region_id={record.region_id}); spec is "
-                        f"jurisdiction-scoped with region_id={spec.region_id}. "
-                        "Region-to-jurisdiction relaxation only succeeds "
-                        "when the dataset's region_id matches the spec's "
-                        "region_id."
+                        "and lacks explicit ENVIRONMENTAL_COVARIATE applicability "
+                        f"for jurisdiction_id={spec.jurisdiction_id}; dataset "
+                        f"region_id={record.region_id}."
                     )
             else:
                 raise ValueError(
@@ -265,9 +263,9 @@ def _allow_region_dataset_for_jurisdiction_spec(
     This can be further refined in a future phase when a region
     definition model is added.
     """
-    if spec.region_id is None:
-        return False
-    return record.region_id == spec.region_id
+    # Retained only for import compatibility. Authorization now requires a
+    # database-backed role-specific applicability assertion in validation.
+    return False
 
 
 # ----------------------------------------------------------------------

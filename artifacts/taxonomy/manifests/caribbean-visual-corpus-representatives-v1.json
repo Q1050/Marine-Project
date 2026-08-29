@@ -1,0 +1,24 @@
+{
+  "manifest_id": "caribbean-visual-corpus-representatives",
+  "manifest_version": "1",
+  "lifecycle_state": "READY_FOR_REVIEW",
+  "purpose": "Small cross-group taxonomy candidate set for future governed identification-corpus expansion",
+  "authority": {
+    "provider": "World Register of Marine Species",
+    "api": "https://www.marinespecies.org/rest/",
+    "verified_at": "2026-08-28"
+  },
+  "semantics": "Authoritative taxon identity candidates only; not jurisdiction presence, ecology, media rights, or corpus approval.",
+  "candidates": [
+    {"group": "FISH", "scientific_name": "Pterois volitans", "aphia_id": 159559, "rank": "Species", "status": "accepted"},
+    {"group": "CRUSTACEANS", "scientific_name": "Panulirus argus", "aphia_id": 382891, "rank": "Species", "status": "accepted"},
+    {"group": "MOLLUSCS", "scientific_name": "Perna viridis", "aphia_id": 367822, "rank": "Species", "status": "accepted"},
+    {"group": "CNIDARIANS", "scientific_name": "Tubastraea coccinea", "aphia_id": 291251, "rank": "Species", "status": "accepted"},
+    {"group": "ECHINODERMS", "scientific_name": "Diadema antillarum", "aphia_id": 124332, "rank": "Species", "status": "accepted"},
+    {"group": "ALGAE_SEAWEED", "scientific_name": "Caulerpa taxifolia", "aphia_id": 144476, "rank": "Species", "status": "accepted"}
+  ],
+  "limitations": [
+    "Candidates require explicit regional taxonomy review before registry application.",
+    "No media source, occurrence evidence, or jurisdiction applicability is implied."
+  ]
+}

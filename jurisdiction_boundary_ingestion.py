@@ -5,6 +5,7 @@ from pathlib import Path
 from shapely.geometry import mapping, shape
 
 from models import Jurisdiction, JurisdictionBoundary, Region
+from jurisdiction_boundary_registry import BoundaryRegistration, JurisdictionBoundaryRegistry, sha256_bytes
 
 
 JAMAICA_MRGID = 8459
@@ -75,46 +76,34 @@ def load_bahamas_geometry(source_path):
     return geometry, matches[0].get("properties", {})
 
 
-def _activate_boundary(db, region_slug, jurisdiction_slug, geometry, properties):
-    geometry_json = canonical_geometry_json(geometry)
-    geometry_hash = geometry_sha256(geometry_json)
+def _activate_boundary(db, region_slug, jurisdiction_slug, geometry, properties, source_path=None):
     jurisdiction = (
         db.query(Jurisdiction)
         .join(Region)
         .filter(Region.slug == region_slug, Jurisdiction.slug == jurisdiction_slug)
         .one()
     )
-    active = db.query(JurisdictionBoundary).filter(
-        JurisdictionBoundary.jurisdiction_id == jurisdiction.id,
-        JurisdictionBoundary.boundary_type == BOUNDARY_TYPE,
-        JurisdictionBoundary.status == "ACTIVE",
-    ).all()
-    matching = next((item for item in active if item.geometry_hash == geometry_hash), None)
-    if matching and len(active) == 1:
-        return matching, False, properties
-    for item in active:
-        item.status = "SUPERSEDED"
-    boundary = JurisdictionBoundary(
-        jurisdiction_id=jurisdiction.id,
-        boundary_type=BOUNDARY_TYPE,
-        geometry_json=geometry_json,
-        source=SOURCE,
-        source_version=SOURCE_VERSION,
-        source_reference=SOURCE_REFERENCE,
-        geometry_hash=geometry_hash,
-        status="ACTIVE",
+    request = BoundaryRegistration(
+        jurisdiction_id=jurisdiction.id, boundary_type=BOUNDARY_TYPE,
+        provider=SOURCE, provider_version=SOURCE_VERSION,
+        provider_boundary_identifier=str(properties["mrgid"]),
+        source_reference=SOURCE_REFERENCE, crs="EPSG:4326",
+        geometry=mapping(geometry),
+        source_artifact_reference=None if source_path is None else str(Path(source_path)),
+        source_artifact_sha256=None if source_path is None else sha256_bytes(Path(source_path).read_bytes()),
+        acquisition_metadata={"provider_properties": properties},
     )
-    db.add(boundary)
+    boundary, inserted = JurisdictionBoundaryRegistry(db).register_and_activate(request)
     db.commit()
     db.refresh(boundary)
-    return boundary, True, properties
+    return boundary, inserted, properties
 
 
 def activate_jamaica_boundary(db, source_path):
     geometry, properties = load_jamaica_geometry(source_path)
-    return _activate_boundary(db, "caribbean", "jamaica", geometry, properties)
+    return _activate_boundary(db, "caribbean", "jamaica", geometry, properties, source_path)
 
 
 def activate_bahamas_boundary(db, source_path):
     geometry, properties = load_bahamas_geometry(source_path)
-    return _activate_boundary(db, "caribbean", "bahamas", geometry, properties)
+    return _activate_boundary(db, "caribbean", "bahamas", geometry, properties, source_path)

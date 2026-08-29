@@ -17,7 +17,9 @@ export default function AppShell({ scope, viewportJurisdiction, children }) {
     roles.some((role) => ["VIEWER", "REVIEWER", "MANAGER"].includes(role));
   const navigation = (NAVIGATION[scope] || NAVIGATION.public).map((item) => scope === "country" ? { ...item, to: `/region/${activeRegion}/${activeJurisdiction}/${item.id}` } : item).filter(
     (item) => (item.id !== "review" || canReview) &&
-      (item.id !== "investigations" || canViewInvestigations),
+      (item.id !== "investigations" || canViewInvestigations) &&
+      (item.id !== "observation-operations" || user?.is_platform_admin || user?.operational_review?.enabled) &&
+      (item.id !== "scientific-early-warning" || user?.is_platform_admin || user?.scientific_review?.enabled),
   );
   const isMapPage = location.pathname === "/region/caribbean" || (scope === "country" && location.pathname.endsWith("/map"));
   const context = shellContext(scope, viewportJurisdiction, jurisdiction);

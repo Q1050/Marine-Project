@@ -1,0 +1,7 @@
+# Generated ML checkpoints belong in external artifact storage. Existing files
+# already tracked by Git remain tracked; this prevents new large binaries from
+# entering normal history (for example the local 1.63 GB fine-tuned checkpoint).
+/models/*.pt
+/models/*.pth
+/models/checkpoints/
+/training_artifacts/

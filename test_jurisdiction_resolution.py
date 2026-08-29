@@ -1,4 +1,5 @@
 from datetime import datetime, timezone
+import base64
 import json
 import sys
 import types
@@ -31,6 +32,11 @@ import api  # noqa: E402
 from database import Base, get_db  # noqa: E402
 from jurisdiction_resolution_service import JurisdictionResolutionService  # noqa: E402
 from models import Jurisdiction, JurisdictionBoundary, Observation, Region  # noqa: E402
+
+
+VALID_PNG = base64.b64decode(
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
+)
 
 
 @pytest.fixture
@@ -129,7 +135,7 @@ def test_submission_resolves_server_side_and_persists_device_metadata(environmen
     response = client.post(
         "/observations/analyze",
         data={"latitude": "1", "longitude": "1", "jurisdiction_id": str(second.id), "location_accuracy_m": "12.5", "location_captured_at": "2026-08-17T12:00:00Z", "location_source": "DEVICE_GEOLOCATION"},
-        files={"image": ("test.jpg", b"test-image", "image/jpeg")},
+        files={"image": ("test.png", VALID_PNG, "image/png")},
     )
     assert response.status_code == 200, response.text
     observation = db.query(Observation).one()
@@ -142,7 +148,7 @@ def test_submission_resolves_server_side_and_persists_device_metadata(environmen
 def test_manual_location_is_distinguished_and_accuracy_not_invented(environment):
     db, client, first, _ = environment
     add_boundary(db, first, [[0, 0], [2, 0], [2, 2], [0, 2], [0, 0]])
-    response = client.post("/observations/analyze", data={"latitude": "1", "longitude": "1", "location_accuracy_m": "99", "location_source": "MANUAL"}, files={"image": ("test.jpg", b"test-image", "image/jpeg")})
+    response = client.post("/observations/analyze", data={"latitude": "1", "longitude": "1", "location_accuracy_m": "99", "location_source": "MANUAL"}, files={"image": ("test.png", VALID_PNG, "image/png")})
     assert response.status_code == 200
     observation = db.query(Observation).one()
     assert observation.location_source == "MANUAL"
@@ -160,7 +166,7 @@ def test_map_selected_location_clears_device_metadata(environment):
             "location_captured_at": "2026-08-17T12:00:00Z",
             "location_source": "MAP_SELECTED",
         },
-        files={"image": ("test.jpg", b"map-image", "image/jpeg")},
+        files={"image": ("test.png", VALID_PNG, "image/png")},
     )
     assert response.status_code == 200
     observation = db.query(Observation).one()
@@ -173,9 +179,9 @@ def test_unresolved_submission_does_not_default_or_run_inference(environment, mo
     db, client, _, _ = environment
     calls = []
     monkeypatch.setattr(api.service, "analyze", lambda **kwargs: calls.append(1))
-    response = client.post("/observations/analyze", data={"latitude": "1", "longitude": "1", "location_source": "MANUAL"}, files={"image": ("test.jpg", b"test-image", "image/jpeg")})
+    response = client.post("/observations/analyze", data={"latitude": "1", "longitude": "1", "location_source": "MANUAL"}, files={"image": ("test.png", VALID_PNG, "image/png")})
     assert response.status_code == 422
-    assert response.json()["detail"]["status"] == "NO_CONFIGURED_JURISDICTION"
+    assert response.json()["error"]["message"]["status"] == "NO_CONFIGURED_JURISDICTION"
     assert db.query(Observation).count() == 0
     assert calls == []
 
@@ -187,9 +193,9 @@ def test_ambiguous_submission_is_not_persisted(environment):
     response = client.post(
         "/observations/analyze",
         data={"latitude": "1", "longitude": "1", "location_source": "MANUAL"},
-        files={"image": ("test.jpg", b"test-image", "image/jpeg")},
+        files={"image": ("test.png", VALID_PNG, "image/png")},
     )
     assert response.status_code == 422
-    assert response.json()["detail"]["status"] == "AMBIGUOUS"
-    assert len(response.json()["detail"]["resolution"]["candidates"]) == 2
+    assert response.json()["error"]["message"]["status"] == "AMBIGUOUS"
+    assert len(response.json()["error"]["message"]["resolution"]["candidates"]) == 2
     assert db.query(Observation).count() == 0

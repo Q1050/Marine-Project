@@ -1,0 +1,44 @@
+Marine observation service starting on: cuda
+Loaded 400 reference embeddings.
+Loading BioCLIP 2...
+BioCLIP loaded.
+INFO:     127.0.0.1:54131 - "GET /health/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54132 - "GET /health/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54132 - "GET /health/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54132 - "GET /health/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54138 - "GET /health/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54138 - "GET /health/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54138 - "GET /admin/system/status HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57103 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57104 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57105 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57106 - "GET /admin/system/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57108 - "GET /admin/system/status HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57109 - "GET /admin/jurisdictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57110 - "GET /admin/jurisdictions/1/scientific-readiness HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57111 - "GET /admin/observations/queue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /scientific-review/early-warning HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /admin/observations/queue HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57114 - "GET /scientific-review/early-warning HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57115 - "GET /admin/system/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59902 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59903 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59904 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59905 - "GET /admin/system/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59906 - "GET /admin/system/status HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:59907 - "GET /admin/jurisdictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59908 - "GET /admin/jurisdictions/1/scientific-readiness HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /admin/observations/queue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59910 - "GET /scientific-review/early-warning HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59911 - "GET /admin/observations/queue HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:59912 - "GET /scientific-review/early-warning HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:59913 - "GET /admin/system/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53841 - "GET /regions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53841 - "GET /jurisdictions/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53841 - "GET /jurisdictions/1/marine-species HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53841 - "GET /jurisdictions/1/invasive-species HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53841 - "GET /jurisdictions/1/species/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53841 - "GET /predictions/species/Pterois%20volitans/suitability/summary?model_version=pterois-volitans-suitability-v3 HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:60702 - "GET /predictions/species/Pterois%20volitans/suitability/summary?model_version=pterois-volitans-suitability-v3&region_slug=caribbean&jurisdiction_slug=jamaica HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51689 - "GET /health/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /health/ready HTTP/1.1" 200 OK

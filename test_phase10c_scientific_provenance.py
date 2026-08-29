@@ -610,11 +610,12 @@ def test_geographic_scope_values_for_region_and_jurisdiction(environment):
     canonical = SessionLocal()
     try:
         region_ds = canonical.query(ScientificDataset).filter(ScientificDataset.geographic_scope_type == 'REGION').one()
-        jurisdiction_ds = canonical.query(ScientificDataset).filter(ScientificDataset.geographic_scope_type == 'JURISDICTION').one()
+        jurisdiction_datasets = canonical.query(ScientificDataset).filter(ScientificDataset.geographic_scope_type == 'JURISDICTION').all()
         assert region_ds.region_id is not None
         assert region_ds.jurisdiction_id is None
-        assert jurisdiction_ds.region_id is not None
-        assert jurisdiction_ds.jurisdiction_id is not None
+        assert jurisdiction_datasets
+        assert all(dataset.region_id is not None for dataset in jurisdiction_datasets)
+        assert all(dataset.jurisdiction_id is not None for dataset in jurisdiction_datasets)
     finally:
         canonical.close()
 

@@ -1,0 +1,16 @@
+{
+  "manifest_version": "antigua-and-barbuda-onboarding-manifest-v1",
+  "jurisdiction": {"canonical_name":"Antigua and Barbuda","canonical_identifier_scheme":"ISO_3166_1_ALPHA_2","canonical_identifier":"AG","jurisdiction_type":"SOVEREIGN_STATE"},
+  "region": "caribbean",
+  "inventory_version": "caribbean-jurisdiction-candidates-v1",
+  "boundary_artifact_reference": "artifacts/onboarding/antigua-and-barbuda-boundary-marine-regions-eez-v12.json",
+  "boundary_source_artifact_sha256": "e3d768b2fb67fa839b439f1443feb1cd3a9b97961ae32d7a118440eaa298591a",
+  "boundary_geometry_sha256": "0e30d45fc785475d52e9dee235da28a8562811012151baa4c9954e385a025a21",
+  "provider": "Marine Regions / VLIZ", "provider_version": "Maritime Boundaries Geodatabase EEZ v12 (2023-10-25)",
+  "expected_actions": ["CREATE_JURISDICTION","CREATE_ACTIVE_MARINE_MONITORING_BOUNDARY"],
+  "expected_post_state": "GEOGRAPHICALLY_CONFIGURED_SCIENTIFICALLY_UNCONFIGURED",
+  "scientific_configuration_expected": false,
+  "approval_state": "READY_FOR_REVIEW",
+  "limitations": ["Candidate only; live apply is not authorized."],
+  "manifest_fingerprint": "266422806d3a9f20ae1ea4f194e261c3b2a1e33d33f35a3acafa9e90429aa7e1"
+}

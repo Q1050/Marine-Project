@@ -96,9 +96,9 @@ def test_observation_detail_is_self_contained(db):
 
     result = get_observation(observation.id, db)
 
-    assert result["observation"]["image_url"] == (
-        "/uploads/observations/test-review.jpg"
-    )
+    # Private reporter media is intentionally omitted from ordinary detail
+    # payloads and is available only through the authorized reviewer endpoint.
+    assert result["observation"]["image_url"] is None
     assert result["is_possible_duplicate"] is True
     assert result["duplicate_of_observation_id"] == 42
     assert result["verification"]["verified_at"] is None
@@ -183,7 +183,7 @@ def test_verification_transitions_and_timestamp(db):
         assert result["verification"]["verified_at"] is not None
 
 
-def test_static_observation_image_route_serves_existing_upload():
+def test_static_observation_image_route_does_not_expose_private_upload():
     uploads = Path("uploads/observations")
     image = next(uploads.iterdir(), None)
     if image is None:
@@ -193,5 +193,4 @@ def test_static_observation_image_route_serves_existing_upload():
         f"/uploads/observations/{image.name}"
     )
 
-    assert response.status_code == 200
-    assert response.content
+    assert response.status_code == 404

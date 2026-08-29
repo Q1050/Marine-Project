@@ -1,0 +1,38 @@
+{
+  "artifact_version": "barbados-boundary-marine-regions-eez-v12-v1",
+  "inventory_version": "caribbean-jurisdiction-candidates-v1",
+  "jurisdiction": {
+    "canonical_name": "Barbados",
+    "canonical_identifier_scheme": "ISO_3166_1_ALPHA_2",
+    "canonical_identifier": "BB",
+    "jurisdiction_type": "SOVEREIGN_STATE",
+    "parent_region_identifier": "caribbean"
+  },
+  "boundary_type": "MARINE_MONITORING",
+  "provider": "Marine Regions / VLIZ",
+  "provider_version": "Maritime Boundaries Geodatabase EEZ v12 (2023-10-25)",
+  "provider_boundary_identifier": "8418",
+  "source_reference": "https://doi.org/10.14284/632",
+  "provider_record_reference": "https://www.marineregions.org/gazetteer.php?id=8418&p=details",
+  "acquisition_uri": "https://geo.vliz.be/geoserver/MarineRegions/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=MarineRegions%3Aeez&cql_filter=mrgid%3D8418&outputFormat=application%2Fjson&srsName=EPSG%3A4326",
+  "acquired_at": "2026-08-21T22:19:00.3227112Z",
+  "crs": "EPSG:4326",
+  "source_artifact_reference": "data/jurisdiction_boundaries/marine-regions-v12-barbados-wfs-source.geojson",
+  "source_artifact_sha256": "5b42df93f1163857566e070c7df24340d8475663bd72f3748771ce019600e947",
+  "geometry_sha256": "1ee8e235f559e5c907e7957b3b60dfcd6e6ad9adc72aedcbac6d879fe7849226",
+  "geometry_type": "MultiPolygon",
+  "geometry_bounds": [-60.3815781, 10.69334932, -56.00158003, 16.0192335],
+  "geometry_valid": true,
+  "geometry_transformation": "NONE",
+  "feature_selection": {
+    "mrgid": 8418,
+    "iso_ter1": "BRB",
+    "pol_type": "200NM",
+    "territory2": null
+  },
+  "limitations": [
+    "Operational marine-monitoring boundary; not a scientific occurrence baseline.",
+    "The separate Barbados/Guyana joint-regime feature MRGID 48969 is excluded.",
+    "Provider designations and maritime limits retain the provider's legal and cartographic limitations."
+  ]
+}

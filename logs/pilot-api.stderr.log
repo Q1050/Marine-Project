@@ -1,0 +1,57 @@
+Parsing model identifier. Schema: hf-hub, Identifier: imageomics/bioclip-2
+Attempting to load config from HF Hub: imageomics/bioclip-2
+HTTP Request: HEAD https://huggingface.co/imageomics/bioclip-2/resolve/main/open_clip_config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/imageomics/bioclip-2/2957b322090f9cb17ae72c71981c7218a28d81e0/open_clip_config.json "HTTP/1.1 200 OK"
+Loaded model config from HF Hub: imageomics/bioclip-2
+HTTP Request: HEAD https://huggingface.co/imageomics/bioclip-2/resolve/main/open_clip_model.safetensors "HTTP/1.1 302 Found"
+Found default weights file on HF Hub: C:\Users\romar\.cache\huggingface\hub\models--imageomics--bioclip-2\snapshots\2957b322090f9cb17ae72c71981c7218a28d81e0\open_clip_model.safetensors
+Instantiating model architecture: CLIP
+Loading full pretrained weights from: C:\Users\romar\.cache\huggingface\hub\models--imageomics--bioclip-2\snapshots\2957b322090f9cb17ae72c71981c7218a28d81e0\open_clip_model.safetensors
+Final image preprocessing configuration set: {'size': (224, 224), 'mode': 'RGB', 'mean': [0.48145466, 0.4578275, 0.40821073], 'std': [0.26862954, 0.26130258, 0.27577711], 'interpolation': 'bicubic', 'resize_mode': 'shortest', 'fill_color': 0}
+Model hf-hub:imageomics/bioclip-2 creation process complete.
+INFO:     Started server process [25356]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+{"event":"request_completed","correlation_id":"c6af36da36434dc0b90c82d6e50d0f3a","method":"GET","route":"/health/live","status":200,"duration_ms":3.89}
+{"event":"request_completed","correlation_id":"b5a52806be4e4b9d8cc2d356cca5dac1","method":"GET","route":"/health/live","status":200,"duration_ms":0.9}
+{"event":"request_completed","correlation_id":"d22e1e37029b4ff38cd49a7454982d0f","method":"GET","route":"/health/live","status":200,"duration_ms":0.84}
+{"event":"request_completed","correlation_id":"bb1148b9c34d469aaf5b5ac3923e46f6","method":"GET","route":"/health/ready","status":200,"duration_ms":177.21}
+{"event":"request_completed","correlation_id":"deafa57ae79c4fc4890aa561e2771f96","method":"GET","route":"/health/live","status":200,"duration_ms":0.92}
+{"event":"request_completed","correlation_id":"3ad22bf82a924b8bad38a23d21a6ca1e","method":"GET","route":"/health/ready","status":200,"duration_ms":26.24}
+{"event":"request_completed","correlation_id":"6adc284ec6834a2aa898b66924bf377e","method":"GET","route":"/admin/system/status","status":401,"duration_ms":2.2}
+{"event":"request_completed","correlation_id":"d992051fc7e1466ea99e3908e12e9790","method":"POST","route":"/auth/login","status":200,"duration_ms":250.96}
+{"event":"request_completed","correlation_id":"a7c31947179a47a682ef5af208594695","method":"POST","route":"/auth/login","status":200,"duration_ms":81.66}
+{"event":"request_completed","correlation_id":"e9b9e064f9804d78a1bff8690858d062","method":"POST","route":"/auth/login","status":200,"duration_ms":77.81}
+{"event":"request_completed","correlation_id":"9a040f633f694f19aee59ff3d55bb617","method":"GET","route":"/admin/system/status","status":200,"duration_ms":76.27}
+{"event":"request_completed","correlation_id":"bb545912c38645f4a6ac33b7ec859981","method":"GET","route":"/admin/system/status","status":403,"duration_ms":11.22}
+{"event":"request_completed","correlation_id":"0de2eb126a304599b06d9a53b20188ef","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":65.83}
+{"event":"request_completed","correlation_id":"4dd6e4238fc640fead30c75572567f40","method":"GET","route":"/admin/jurisdictions/1/scientific-readiness","status":200,"duration_ms":83.86}
+{"event":"request_completed","correlation_id":"c9cf76cd4a6b4a70a0253cfba758156a","method":"GET","route":"/admin/observations/queue","status":200,"duration_ms":87.74}
+{"event":"request_completed","correlation_id":"1faf1b5c4bb4495fadc7079251bf4729","method":"GET","route":"/scientific-review/early-warning","status":200,"duration_ms":17.17}
+{"event":"request_completed","correlation_id":"64237eaeca1b472c8f831958f1222ecb","method":"GET","route":"/admin/observations/queue","status":403,"duration_ms":28.36}
+{"event":"request_completed","correlation_id":"e1fad814d9b24c4dbe9ed332915068a9","method":"GET","route":"/scientific-review/early-warning","status":403,"duration_ms":12.18}
+{"event":"request_completed","correlation_id":"1824748b2b9847a2ada38f6d73dd92e1","method":"GET","route":"/admin/system/status","status":200,"duration_ms":51.84}
+{"event":"request_completed","correlation_id":"cb3ca3c8096549bebdf6787d35ef32b4","method":"POST","route":"/auth/login","status":200,"duration_ms":73.87}
+{"event":"request_completed","correlation_id":"d2417a5fdd6c4c619658ca90b8146381","method":"POST","route":"/auth/login","status":200,"duration_ms":79.36}
+{"event":"request_completed","correlation_id":"00503e6b638d400792e6ee60cdb70fec","method":"POST","route":"/auth/login","status":200,"duration_ms":81.98}
+{"event":"request_completed","correlation_id":"921679d3bbf7402b8ef877670c37eb3b","method":"GET","route":"/admin/system/status","status":200,"duration_ms":53.89}
+{"event":"request_completed","correlation_id":"be0d27f70755478dad3aba06255b916d","method":"GET","route":"/admin/system/status","status":403,"duration_ms":9.74}
+{"event":"request_completed","correlation_id":"69038df7662348d192d8d9d97446e665","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":49.73}
+{"event":"request_completed","correlation_id":"de6445e3f8c349ddabd30947395d89fc","method":"GET","route":"/admin/jurisdictions/1/scientific-readiness","status":200,"duration_ms":36.83}
+{"event":"request_completed","correlation_id":"fdf6c6dc4e17426ab56f16f37f00b9a0","method":"GET","route":"/admin/observations/queue","status":200,"duration_ms":60.47}
+{"event":"request_completed","correlation_id":"88836d081dd2445095e7c1022f5cd940","method":"GET","route":"/scientific-review/early-warning","status":200,"duration_ms":46.04}
+{"event":"request_completed","correlation_id":"9f1318c2b89a4ef38728599cbe5998e5","method":"GET","route":"/admin/observations/queue","status":403,"duration_ms":13.39}
+{"event":"request_completed","correlation_id":"53aabce606694b06942079c28a49de1b","method":"GET","route":"/scientific-review/early-warning","status":403,"duration_ms":9.81}
+{"event":"request_completed","correlation_id":"90017c509849412aace001620e65b932","method":"GET","route":"/admin/system/status","status":200,"duration_ms":37.57}
+{"event":"request_completed","correlation_id":"8a5c30a1d9394b4fa70bd06c4928a39a","method":"GET","route":"/regions","status":200,"duration_ms":10.01}
+{"event":"request_completed","correlation_id":"faa27539d95e406f92def8f3395b6df6","method":"GET","route":"/jurisdictions/1","status":200,"duration_ms":19.19}
+{"event":"request_completed","correlation_id":"010d660ab8bf442893a2696232998aba","method":"GET","route":"/jurisdictions/1/marine-species","status":200,"duration_ms":10.14}
+{"event":"request_completed","correlation_id":"e1f5464622d0457899f30760f8945e7a","method":"GET","route":"/jurisdictions/1/invasive-species","status":200,"duration_ms":9.48}
+{"event":"request_completed","correlation_id":"5ef541d5add64cc38643594eeeb31010","method":"GET","route":"/jurisdictions/1/species/1","status":200,"duration_ms":28.02}
+{"event":"request_completed","correlation_id":"2a2519e397d74bcea483e6f30f2203c9","method":"GET","route":"/predictions/species/Pterois volitans/suitability/summary","status":400,"duration_ms":2.2}
+{"event":"request_completed","correlation_id":"65965ff6ec12444e9975b85d4f1f9719","method":"GET","route":"/predictions/species/Pterois volitans/suitability/summary","status":200,"duration_ms":33.72}
+{"event":"request_completed","correlation_id":"6942ffb11126451ab870e085d293d3ee","method":"GET","route":"/health/ready","status":200,"duration_ms":149.28}
+{"event":"request_completed","correlation_id":"a5e8efdf99a04ee6a0074619f604b80c","method":"GET","route":"/health/ready","status":200,"duration_ms":24.07}

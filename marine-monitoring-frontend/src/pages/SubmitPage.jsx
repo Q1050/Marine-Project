@@ -1,9 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import {
   analyzeObservation,
   getImageUrl,
   resolveJurisdiction,
+  getPublicJurisdiction,
+  getPublicSpeciesDetail,
 } from "../services/api";
 import SightingLocationPicker from "../components/SightingLocationPicker";
 import { adjustedLocation, confirmedLocation, deviceLocationProposal } from "../utils/sightingLocation";
@@ -21,6 +24,11 @@ function readableLabel(value) {
 }
 
 export default function SubmitPage({ onObservationCreated }) {
+  const [searchParams] = useSearchParams();
+  const suggestedTaxonId = searchParams.get("taxon_id");
+  const expectedJurisdictionId = searchParams.get("jurisdiction_id");
+  const [reportingContext,setReportingContext]=useState(null);
+  useEffect(()=>{if(!expectedJurisdictionId)return; Promise.all([getPublicJurisdiction(expectedJurisdictionId),suggestedTaxonId?getPublicSpeciesDetail(expectedJurisdictionId,suggestedTaxonId):Promise.resolve(null)]).then(([jurisdiction,taxon])=>setReportingContext({jurisdiction,taxon})).catch(()=>setReportingContext(null));},[expectedJurisdictionId,suggestedTaxonId]);
   const [image, setImage] = useState(null);
 
   const preview = useMemo(
@@ -192,6 +200,8 @@ export default function SubmitPage({ onObservationCreated }) {
         locationAccuracy,
         locationCapturedAt,
         locationSource,
+        expectedJurisdictionId,
+        reporterSuggestedTaxonId: suggestedTaxonId,
       });
 
       setResult(data);
@@ -219,6 +229,7 @@ export default function SubmitPage({ onObservationCreated }) {
           <h2>Submit observation</h2>
 
           <p>Upload a marine sighting and provide the observation location.</p>
+          {expectedJurisdictionId && <div className="mt-2 rounded-lg bg-teal-50 p-3 text-sm text-teal-900"><p><strong>Reporting in:</strong> {reportingContext?.jurisdiction?.name||"Validating jurisdiction…"}</p><p><strong>Suggested species:</strong> {reportingContext?.taxon?`${reportingContext.taxon.scientific_name}${reportingContext.taxon.common_name?` · ${reportingContext.taxon.common_name}`:""}`:"Not specified"}</p><p className="mt-1 text-xs">This suggestion does not determine the final identification.</p></div>}
         </div>
 
         <form onSubmit={handleSubmit} className="observation-form">
@@ -355,8 +366,11 @@ function ResultPanel({ result }) {
   return (
     <div className="submit-result-panel">
       <span className="observation-id">
-        Observation #{result.observation.id}
+        Report {result.submission_reference || "received"}
       </span>
+
+      <p className="reason-box">{result.submission_message || "Your report was received and may be reviewed by an authorized jurisdiction team. Initial AI identification is not final expert verification."}</p>
+      {result.reporter_status_token && <a className="inline-block rounded bg-teal-700 px-4 py-2 font-bold text-white" href={`/reporter/status/${result.reporter_status_token}`}>View private report status</a>}
 
       <h2>{displaySpecies}</h2>
 

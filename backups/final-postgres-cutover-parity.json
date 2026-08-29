@@ -1,0 +1,1025 @@
+{
+  "completed_at": "2026-08-28T18:34:07.092812+00:00",
+  "critical_tables_verified": [
+    "anomaly_assessments",
+    "anomaly_configurations",
+    "ecological_status_assertions",
+    "governed_occurrence_evidence",
+    "habitat_suitability_v3_grid_cells",
+    "historical_occurrences",
+    "jurisdiction_boundaries",
+    "jurisdictions",
+    "observation_operational_events",
+    "observations",
+    "platform_audit_events",
+    "regional_taxon_registry",
+    "scientific_dataset_applicabilities",
+    "scientific_datasets",
+    "scientific_domain_events",
+    "species",
+    "suitability_deployments"
+  ],
+  "dry_run": false,
+  "foreign_keys": {
+    "status": "PASS",
+    "unvalidated_constraints": 0
+  },
+  "integrity": "PASS",
+  "sequence_resets": [
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "anomaly_assessments_id_seq",
+      "table": "anomaly_assessments"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "anomaly_configurations_id_seq",
+      "table": "anomaly_configurations"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "anomaly_review_assignments_id_seq",
+      "table": "anomaly_review_assignments"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "anomaly_review_events_id_seq",
+      "table": "anomaly_review_events"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "anomaly_signals_id_seq",
+      "table": "anomaly_signals"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "anomaly_synthesis_snapshots_id_seq",
+      "table": "anomaly_synthesis_snapshots"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "artifact_references_id_seq",
+      "table": "artifact_references"
+    },
+    {
+      "column": "id",
+      "maximum": 2,
+      "sequence": "auth_sessions_id_seq",
+      "table": "auth_sessions"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "backup_records_id_seq",
+      "table": "backup_records"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "ecological_status_assertions_id_seq",
+      "table": "ecological_status_assertions"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "ecological_status_candidates_id_seq",
+      "table": "ecological_status_candidates"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "ecological_status_ingestion_reviews_id_seq",
+      "table": "ecological_status_ingestion_reviews"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "ecological_status_ingestion_rows_id_seq",
+      "table": "ecological_status_ingestion_rows"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "ecological_status_ingestion_runs_id_seq",
+      "table": "ecological_status_ingestion_runs"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "ecological_status_preparations_id_seq",
+      "table": "ecological_status_preparations"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "ecological_status_source_registrations_id_seq",
+      "table": "ecological_status_source_registrations"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "field_observations_id_seq",
+      "table": "field_observations"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "field_visits_id_seq",
+      "table": "field_visits"
+    },
+    {
+      "column": "id",
+      "maximum": 5,
+      "sequence": "governed_occurrence_evidence_id_seq",
+      "table": "governed_occurrence_evidence"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "governed_public_media_id_seq",
+      "table": "governed_public_media"
+    },
+    {
+      "column": "id",
+      "maximum": 391,
+      "sequence": "habitat_suitability_grid_cells_id_seq",
+      "table": "habitat_suitability_grid_cells"
+    },
+    {
+      "column": "id",
+      "maximum": 3,
+      "sequence": "habitat_suitability_models_id_seq",
+      "table": "habitat_suitability_models"
+    },
+    {
+      "column": "id",
+      "maximum": 391,
+      "sequence": "habitat_suitability_v3_grid_cells_id_seq",
+      "table": "habitat_suitability_v3_grid_cells"
+    },
+    {
+      "column": "id",
+      "maximum": 54,
+      "sequence": "historical_environmental_features_id_seq",
+      "table": "historical_environmental_features"
+    },
+    {
+      "column": "id",
+      "maximum": 54,
+      "sequence": "historical_occurrences_id_seq",
+      "table": "historical_occurrences"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "investigations_id_seq",
+      "table": "investigations"
+    },
+    {
+      "column": "id",
+      "maximum": 3,
+      "sequence": "jurisdiction_boundaries_id_seq",
+      "table": "jurisdiction_boundaries"
+    },
+    {
+      "column": "id",
+      "maximum": 2,
+      "sequence": "jurisdiction_onboarding_preparations_id_seq",
+      "table": "jurisdiction_onboarding_preparations"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "jurisdiction_onboarding_records_id_seq",
+      "table": "jurisdiction_onboarding_records"
+    },
+    {
+      "column": "id",
+      "maximum": 3,
+      "sequence": "jurisdictions_id_seq",
+      "table": "jurisdictions"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "local_taxon_candidates_id_seq",
+      "table": "local_taxon_candidates"
+    },
+    {
+      "column": "id",
+      "maximum": 390,
+      "sequence": "next_area_prediction_cells_id_seq",
+      "table": "next_area_prediction_cells"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "next_area_prediction_generations_id_seq",
+      "table": "next_area_prediction_generations"
+    },
+    {
+      "column": "id",
+      "maximum": 780,
+      "sequence": "next_area_snapshot_cells_id_seq",
+      "table": "next_area_snapshot_cells"
+    },
+    {
+      "column": "id",
+      "maximum": 2,
+      "sequence": "next_area_snapshot_generations_id_seq",
+      "table": "next_area_snapshot_generations"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "observation_notification_events_id_seq",
+      "table": "observation_notification_events"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "observation_operational_cases_id_seq",
+      "table": "observation_operational_cases"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "observation_operational_events_id_seq",
+      "table": "observation_operational_events"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "observation_reviewer_grants_id_seq",
+      "table": "observation_reviewer_grants"
+    },
+    {
+      "column": "id",
+      "maximum": 12,
+      "sequence": "observations_id_seq",
+      "table": "observations"
+    },
+    {
+      "column": "id",
+      "maximum": 3,
+      "sequence": "occurrence_acquisition_preparations_id_seq",
+      "table": "occurrence_acquisition_preparations"
+    },
+    {
+      "column": "id",
+      "maximum": 243,
+      "sequence": "occurrence_candidate_records_id_seq",
+      "table": "occurrence_candidate_records"
+    },
+    {
+      "column": "id",
+      "maximum": 91,
+      "sequence": "occurrence_candidate_reviews_id_seq",
+      "table": "occurrence_candidate_reviews"
+    },
+    {
+      "column": "id",
+      "maximum": 54,
+      "sequence": "occurrence_legacy_links_id_seq",
+      "table": "occurrence_legacy_links"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "occurrence_source_registrations_id_seq",
+      "table": "occurrence_source_registrations"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "organization_jurisdictions_id_seq",
+      "table": "organization_jurisdictions"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "organization_memberships_id_seq",
+      "table": "organization_memberships"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "organizations_id_seq",
+      "table": "organizations"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "pilot_feedback_id_seq",
+      "table": "pilot_feedback"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "platform_audit_events_id_seq",
+      "table": "platform_audit_events"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "prediction_model_dataset_audits_id_seq",
+      "table": "prediction_model_dataset_audits"
+    },
+    {
+      "column": "id",
+      "maximum": 2,
+      "sequence": "prediction_model_dataset_generations_id_seq",
+      "table": "prediction_model_dataset_generations"
+    },
+    {
+      "column": "id",
+      "maximum": 6006,
+      "sequence": "prediction_model_samples_id_seq",
+      "table": "prediction_model_samples"
+    },
+    {
+      "column": "id",
+      "maximum": 25674,
+      "sequence": "prediction_sample_environmental_features_id_seq",
+      "table": "prediction_sample_environmental_features"
+    },
+    {
+      "column": "id",
+      "maximum": 3840,
+      "sequence": "prediction_training_environmental_features_id_seq",
+      "table": "prediction_training_environmental_features"
+    },
+    {
+      "column": "id",
+      "maximum": 3840,
+      "sequence": "prediction_training_occurrences_id_seq",
+      "table": "prediction_training_occurrences"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "regional_taxon_manifest_items_id_seq",
+      "table": "regional_taxon_manifest_items"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "regional_taxon_manifest_runs_id_seq",
+      "table": "regional_taxon_manifest_runs"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "regional_taxon_registry_id_seq",
+      "table": "regional_taxon_registry"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "regions_id_seq",
+      "table": "regions"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "reporter_access_tokens_id_seq",
+      "table": "reporter_access_tokens"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "reporter_additional_information_id_seq",
+      "table": "reporter_additional_information"
+    },
+    {
+      "column": "id",
+      "maximum": 2,
+      "sequence": "scientific_dataset_applicabilities_id_seq",
+      "table": "scientific_dataset_applicabilities"
+    },
+    {
+      "column": "id",
+      "maximum": 2,
+      "sequence": "scientific_dataset_deployments_id_seq",
+      "table": "scientific_dataset_deployments"
+    },
+    {
+      "column": "id",
+      "maximum": 3,
+      "sequence": "scientific_datasets_id_seq",
+      "table": "scientific_datasets"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "scientific_domain_events_id_seq",
+      "table": "scientific_domain_events"
+    },
+    {
+      "column": "id",
+      "maximum": null,
+      "sequence": "scientific_reviewer_grants_id_seq",
+      "table": "scientific_reviewer_grants"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "species_id_seq",
+      "table": "species"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "species_jurisdiction_status_id_seq",
+      "table": "species_jurisdiction_status"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "species_programs_id_seq",
+      "table": "species_programs"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "suitability_deployments_id_seq",
+      "table": "suitability_deployments"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "taxonomy_preparations_id_seq",
+      "table": "taxonomy_preparations"
+    },
+    {
+      "column": "id",
+      "maximum": 2,
+      "sequence": "training_run_datasets_id_seq",
+      "table": "training_run_datasets"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "training_runs_id_seq",
+      "table": "training_runs"
+    },
+    {
+      "column": "id",
+      "maximum": 1,
+      "sequence": "users_id_seq",
+      "table": "users"
+    }
+  ],
+  "source_sha256": "db5694227f0dded2c3fb3c1d80cc003552c5fd1ae1cd2e13950e890788287c8b",
+  "started_at": "2026-08-28T18:33:51.840757+00:00",
+  "tables": {
+    "anomaly_assessments": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "anomaly_configurations": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "anomaly_review_assignments": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "anomaly_review_events": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "anomaly_signals": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "anomaly_synthesis_snapshots": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifact_references": {
+      "source_count": 1,
+      "source_fingerprint": "de39abbc5c0baf06d22f01cd9060d8d0d9f1dee38757b6462794ba97c49f0286",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "de39abbc5c0baf06d22f01cd9060d8d0d9f1dee38757b6462794ba97c49f0286"
+    },
+    "auth_sessions": {
+      "source_count": 2,
+      "source_fingerprint": "e7b9d0235ff653c7b8f95a6b189a28774630546b972770aa65ce646b014b3cb7",
+      "status": "MATCH",
+      "target_count": 2,
+      "target_fingerprint": "e7b9d0235ff653c7b8f95a6b189a28774630546b972770aa65ce646b014b3cb7"
+    },
+    "backup_records": {
+      "source_count": 1,
+      "source_fingerprint": "5d96cf5d73c2a2625c611ae42625960e8690fbbab0207f1473600ed40f2d45c2",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "5d96cf5d73c2a2625c611ae42625960e8690fbbab0207f1473600ed40f2d45c2"
+    },
+    "bathymetry_grid_cells": {
+      "source_count": 26965,
+      "source_fingerprint": "bbebed036101dcd71b1df4fd7c7dc9c6d76b2f469b876b8893c569063a3a8a2e",
+      "status": "MATCH",
+      "target_count": 26965,
+      "target_fingerprint": "bbebed036101dcd71b1df4fd7c7dc9c6d76b2f469b876b8893c569063a3a8a2e"
+    },
+    "ecological_status_assertions": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ecological_status_candidates": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ecological_status_ingestion_reviews": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ecological_status_ingestion_rows": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ecological_status_ingestion_runs": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ecological_status_preparations": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ecological_status_source_registrations": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "field_observations": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "field_visits": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "governed_occurrence_evidence": {
+      "source_count": 5,
+      "source_fingerprint": "1616780a551a574d0b1f77d3d48815cc440cc7b53ac2fcbfb05bc1a228676093",
+      "status": "MATCH",
+      "target_count": 5,
+      "target_fingerprint": "1616780a551a574d0b1f77d3d48815cc440cc7b53ac2fcbfb05bc1a228676093"
+    },
+    "governed_public_media": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "habitat_suitability_grid_cells": {
+      "source_count": 391,
+      "source_fingerprint": "cfe1ea526fa7fb469df86ffb9bd62d611e629510334c80b9f769df635d260fc2",
+      "status": "MATCH",
+      "target_count": 391,
+      "target_fingerprint": "cfe1ea526fa7fb469df86ffb9bd62d611e629510334c80b9f769df635d260fc2"
+    },
+    "habitat_suitability_models": {
+      "source_count": 3,
+      "source_fingerprint": "0fc56d0b7a0def7a05cad5890f34d039fa61e8e4321c8716fe779ca5b53e8178",
+      "status": "MATCH",
+      "target_count": 3,
+      "target_fingerprint": "0fc56d0b7a0def7a05cad5890f34d039fa61e8e4321c8716fe779ca5b53e8178"
+    },
+    "habitat_suitability_v3_grid_cells": {
+      "source_count": 391,
+      "source_fingerprint": "e47cacac23aef992ded0d835cb1f57501c804418a01f519d52aa60f39ba2a45c",
+      "status": "MATCH",
+      "target_count": 391,
+      "target_fingerprint": "e47cacac23aef992ded0d835cb1f57501c804418a01f519d52aa60f39ba2a45c"
+    },
+    "historical_environmental_features": {
+      "source_count": 54,
+      "source_fingerprint": "6519b888ab2146aa680bb0d36a0beb2007582de5fdc42e657c7774cb11f04d8e",
+      "status": "MATCH",
+      "target_count": 54,
+      "target_fingerprint": "6519b888ab2146aa680bb0d36a0beb2007582de5fdc42e657c7774cb11f04d8e"
+    },
+    "historical_occurrences": {
+      "source_count": 54,
+      "source_fingerprint": "66182f90f96e70b23f8fcd8a4f8bf7e16c51c83ab7296e3b879e728e01c81bb4",
+      "status": "MATCH",
+      "target_count": 54,
+      "target_fingerprint": "66182f90f96e70b23f8fcd8a4f8bf7e16c51c83ab7296e3b879e728e01c81bb4"
+    },
+    "investigations": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "jurisdiction_boundaries": {
+      "source_count": 3,
+      "source_fingerprint": "3f98092a96fa08f572d70d11e240a940ecc0749f107a041ba97769b31a60e4f3",
+      "status": "MATCH",
+      "target_count": 3,
+      "target_fingerprint": "3f98092a96fa08f572d70d11e240a940ecc0749f107a041ba97769b31a60e4f3"
+    },
+    "jurisdiction_onboarding_preparations": {
+      "source_count": 2,
+      "source_fingerprint": "f8adcbd3366867d6ad6236b61f7ac091ba4e35a35ee5631b0b5d3c2cd1f485e5",
+      "status": "MATCH",
+      "target_count": 2,
+      "target_fingerprint": "f8adcbd3366867d6ad6236b61f7ac091ba4e35a35ee5631b0b5d3c2cd1f485e5"
+    },
+    "jurisdiction_onboarding_records": {
+      "source_count": 1,
+      "source_fingerprint": "dd66f0e0b5a194c1d9b535fb46019d9ea2752a8f5451cc8d01e1376701d03859",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "dd66f0e0b5a194c1d9b535fb46019d9ea2752a8f5451cc8d01e1376701d03859"
+    },
+    "jurisdictions": {
+      "source_count": 3,
+      "source_fingerprint": "3d075891a3c6a15bf569117cd49d92dea8bec9d6b8b5437eeed47a9b9fd9101e",
+      "status": "MATCH",
+      "target_count": 3,
+      "target_fingerprint": "3d075891a3c6a15bf569117cd49d92dea8bec9d6b8b5437eeed47a9b9fd9101e"
+    },
+    "local_taxon_candidates": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "next_area_prediction_cells": {
+      "source_count": 390,
+      "source_fingerprint": "f119bcd9bb4623aac14c4a20d9842863217ed4d35fbe79bfe18f831b53082af1",
+      "status": "MATCH",
+      "target_count": 390,
+      "target_fingerprint": "f119bcd9bb4623aac14c4a20d9842863217ed4d35fbe79bfe18f831b53082af1"
+    },
+    "next_area_prediction_generations": {
+      "source_count": 1,
+      "source_fingerprint": "15e753969a806a8ced04a25b0a361fc8765762f73b66e673f6de060de31ce0f8",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "15e753969a806a8ced04a25b0a361fc8765762f73b66e673f6de060de31ce0f8"
+    },
+    "next_area_snapshot_cells": {
+      "source_count": 780,
+      "source_fingerprint": "ba73b3c195367b03f080a384e86471797127a492d03c2753b026e374688e09f7",
+      "status": "MATCH",
+      "target_count": 780,
+      "target_fingerprint": "ba73b3c195367b03f080a384e86471797127a492d03c2753b026e374688e09f7"
+    },
+    "next_area_snapshot_generations": {
+      "source_count": 2,
+      "source_fingerprint": "12d8f36cb273e208e341b7081bae01353aad2b2587b90717861221ef0498b0d0",
+      "status": "MATCH",
+      "target_count": 2,
+      "target_fingerprint": "12d8f36cb273e208e341b7081bae01353aad2b2587b90717861221ef0498b0d0"
+    },
+    "observation_notification_events": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "observation_operational_cases": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "observation_operational_events": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "observation_reviewer_grants": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "observations": {
+      "source_count": 12,
+      "source_fingerprint": "f17afe87b8c89e1378f1ff8205a4cb796ac5ceadc73f0fee013bd52ccf0d50bb",
+      "status": "MATCH",
+      "target_count": 12,
+      "target_fingerprint": "f17afe87b8c89e1378f1ff8205a4cb796ac5ceadc73f0fee013bd52ccf0d50bb"
+    },
+    "occurrence_acquisition_preparations": {
+      "source_count": 3,
+      "source_fingerprint": "c118a59b1280d8912173302cb0ae7d5bc80c84a4773b2080a12bf071957f8019",
+      "status": "MATCH",
+      "target_count": 3,
+      "target_fingerprint": "c118a59b1280d8912173302cb0ae7d5bc80c84a4773b2080a12bf071957f8019"
+    },
+    "occurrence_candidate_records": {
+      "source_count": 243,
+      "source_fingerprint": "3e5ef99ed559f68f1965b6bdfb262f750af5c7e2ae84ab1bd01bfabfb3a58339",
+      "status": "MATCH",
+      "target_count": 243,
+      "target_fingerprint": "3e5ef99ed559f68f1965b6bdfb262f750af5c7e2ae84ab1bd01bfabfb3a58339"
+    },
+    "occurrence_candidate_reviews": {
+      "source_count": 91,
+      "source_fingerprint": "ca3e59cab6655874a23b61ba94aea72d070f3ce7bcd3fb9cf4a6a34f7dfb664e",
+      "status": "MATCH",
+      "target_count": 91,
+      "target_fingerprint": "ca3e59cab6655874a23b61ba94aea72d070f3ce7bcd3fb9cf4a6a34f7dfb664e"
+    },
+    "occurrence_legacy_links": {
+      "source_count": 54,
+      "source_fingerprint": "6a38f0f2e1ccdff4a344308b43adf174197b37e198bb5e48cd13fd51071e9ec5",
+      "status": "MATCH",
+      "target_count": 54,
+      "target_fingerprint": "6a38f0f2e1ccdff4a344308b43adf174197b37e198bb5e48cd13fd51071e9ec5"
+    },
+    "occurrence_source_registrations": {
+      "source_count": 1,
+      "source_fingerprint": "c2b1b1fe7ba5951b1d44923ed2211473b18b4b50cf646c7158c5895cc1c1c69e",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "c2b1b1fe7ba5951b1d44923ed2211473b18b4b50cf646c7158c5895cc1c1c69e"
+    },
+    "organization_jurisdictions": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "organization_memberships": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "organizations": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pilot_feedback": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "platform_audit_events": {
+      "source_count": 1,
+      "source_fingerprint": "7db0a0fb555db5025c82865f73745e3a1b8238d22a42f3f31d0e3c8b56cd25ad",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "7db0a0fb555db5025c82865f73745e3a1b8238d22a42f3f31d0e3c8b56cd25ad"
+    },
+    "prediction_model_dataset_audits": {
+      "source_count": 1,
+      "source_fingerprint": "dafb44479c2a5fa2fc72ef9c3a7a64906fed5e52302fb214d6f3f6e412a1519f",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "dafb44479c2a5fa2fc72ef9c3a7a64906fed5e52302fb214d6f3f6e412a1519f"
+    },
+    "prediction_model_dataset_generations": {
+      "source_count": 2,
+      "source_fingerprint": "5bcf1890c0582a83e17ae6c2b1c27e3ca58c742de9438e8c32afe6c27ceaa8cb",
+      "status": "MATCH",
+      "target_count": 2,
+      "target_fingerprint": "5bcf1890c0582a83e17ae6c2b1c27e3ca58c742de9438e8c32afe6c27ceaa8cb"
+    },
+    "prediction_model_samples": {
+      "source_count": 6006,
+      "source_fingerprint": "6a5559d484634823dcd3c1b85fffec0a3c3974173089ff6cdf5ccf68b2cf0f32",
+      "status": "MATCH",
+      "target_count": 6006,
+      "target_fingerprint": "6a5559d484634823dcd3c1b85fffec0a3c3974173089ff6cdf5ccf68b2cf0f32"
+    },
+    "prediction_sample_environmental_features": {
+      "source_count": 25674,
+      "source_fingerprint": "4f73f3d0cfbaaaf03dadb05e3b65a2b8f292e864c38c412025c018a6227cc3d2",
+      "status": "MATCH",
+      "target_count": 25674,
+      "target_fingerprint": "4f73f3d0cfbaaaf03dadb05e3b65a2b8f292e864c38c412025c018a6227cc3d2"
+    },
+    "prediction_training_environmental_features": {
+      "source_count": 3840,
+      "source_fingerprint": "dba640680631936a8684cbffd6c2796e1a5c395b90e493825e9d7d125afb82bd",
+      "status": "MATCH",
+      "target_count": 3840,
+      "target_fingerprint": "dba640680631936a8684cbffd6c2796e1a5c395b90e493825e9d7d125afb82bd"
+    },
+    "prediction_training_occurrences": {
+      "source_count": 3840,
+      "source_fingerprint": "1ef36861a10f0100f71644318bf9fb87048885edd0d890bed1f255acb049f942",
+      "status": "MATCH",
+      "target_count": 3840,
+      "target_fingerprint": "1ef36861a10f0100f71644318bf9fb87048885edd0d890bed1f255acb049f942"
+    },
+    "regional_taxon_manifest_items": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "regional_taxon_manifest_runs": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "regional_taxon_registry": {
+      "source_count": 1,
+      "source_fingerprint": "50fb672cf66064c9c46713366f44132a3f8f65d3c71c1841c2a87dfb44874829",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "50fb672cf66064c9c46713366f44132a3f8f65d3c71c1841c2a87dfb44874829"
+    },
+    "regions": {
+      "source_count": 1,
+      "source_fingerprint": "6983864df0a6cbd09fba55cadfd41bf26c7d1eb205e221473624dd4dcff68ff2",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "6983864df0a6cbd09fba55cadfd41bf26c7d1eb205e221473624dd4dcff68ff2"
+    },
+    "reporter_access_tokens": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reporter_additional_information": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "schema_migrations": {
+      "source_count": 1,
+      "source_fingerprint": "0f3a788db1e18505b77f086174da5a1448f6931725c0fc2c82381830dbb492b9",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "0f3a788db1e18505b77f086174da5a1448f6931725c0fc2c82381830dbb492b9"
+    },
+    "scientific_dataset_applicabilities": {
+      "source_count": 2,
+      "source_fingerprint": "e0994a5a5171234781d9e8f0fb242b842f39a0dd095b3e729a668576f773fa9e",
+      "status": "MATCH",
+      "target_count": 2,
+      "target_fingerprint": "e0994a5a5171234781d9e8f0fb242b842f39a0dd095b3e729a668576f773fa9e"
+    },
+    "scientific_dataset_deployments": {
+      "source_count": 2,
+      "source_fingerprint": "633e0a4efb659f65acf4ca34d98b56122ef3e5acdc3fefda515a6b459978edf7",
+      "status": "MATCH",
+      "target_count": 2,
+      "target_fingerprint": "633e0a4efb659f65acf4ca34d98b56122ef3e5acdc3fefda515a6b459978edf7"
+    },
+    "scientific_datasets": {
+      "source_count": 3,
+      "source_fingerprint": "daff66048a049e335e456fe80f72c3d16479be2be115d403b588490cf7e17470",
+      "status": "MATCH",
+      "target_count": 3,
+      "target_fingerprint": "daff66048a049e335e456fe80f72c3d16479be2be115d403b588490cf7e17470"
+    },
+    "scientific_domain_events": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "scientific_reviewer_grants": {
+      "source_count": 0,
+      "source_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "MATCH",
+      "target_count": 0,
+      "target_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "species": {
+      "source_count": 1,
+      "source_fingerprint": "fdde8d345ee8181c52bf83c9eadc9526c372e6a3160d9c8f9866f8495580e8d2",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "fdde8d345ee8181c52bf83c9eadc9526c372e6a3160d9c8f9866f8495580e8d2"
+    },
+    "species_jurisdiction_status": {
+      "source_count": 1,
+      "source_fingerprint": "128cbb9ea814c6eb7d5d1159219d84c0eb345ffe740e422d93cb599ab41fca7a",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "128cbb9ea814c6eb7d5d1159219d84c0eb345ffe740e422d93cb599ab41fca7a"
+    },
+    "species_programs": {
+      "source_count": 1,
+      "source_fingerprint": "44729462a10342524e239f630a3665114f08e6f952f92afe8edcf2b4aab202d9",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "44729462a10342524e239f630a3665114f08e6f952f92afe8edcf2b4aab202d9"
+    },
+    "suitability_deployments": {
+      "source_count": 1,
+      "source_fingerprint": "d2dd4cc26cd0051cb3137e2133beb5e73543d8e4cc0826e128695458c7115278",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "d2dd4cc26cd0051cb3137e2133beb5e73543d8e4cc0826e128695458c7115278"
+    },
+    "taxonomy_preparations": {
+      "source_count": 1,
+      "source_fingerprint": "b1d87213731c38477bc4c11100644d2baa06daa117f74e89819c473ce18b1a1b",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "b1d87213731c38477bc4c11100644d2baa06daa117f74e89819c473ce18b1a1b"
+    },
+    "training_run_datasets": {
+      "source_count": 2,
+      "source_fingerprint": "4d4217a3dff7b6281f8ba489697969c523cb64bc714148ae6f578043277a3897",
+      "status": "MATCH",
+      "target_count": 2,
+      "target_fingerprint": "4d4217a3dff7b6281f8ba489697969c523cb64bc714148ae6f578043277a3897"
+    },
+    "training_runs": {
+      "source_count": 1,
+      "source_fingerprint": "76f8ba4651772f65689ebf55047de498ae328728d36561aa7e34681efc5c5cda",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "76f8ba4651772f65689ebf55047de498ae328728d36561aa7e34681efc5c5cda"
+    },
+    "users": {
+      "source_count": 1,
+      "source_fingerprint": "9f791696246cc5d3a323d0d64b37f2239ae4acab3c72eec94557992a66c662bb",
+      "status": "MATCH",
+      "target_count": 1,
+      "target_fingerprint": "9f791696246cc5d3a323d0d64b37f2239ae4acab3c72eec94557992a66c662bb"
+    }
+  },
+  "target": "postgresql://127.0.0.1:5432/marine_monitoring_pilot",
+  "tool_version": "sqlite-postgres-migration-v1"
+}

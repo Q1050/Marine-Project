@@ -9,6 +9,10 @@ that may need to resolve BioCLIP reference labels.
 import sys
 import types
 
+import pytest
+
+from production_operations import rate_limiter
+
 
 _SCIENTIFIC_NAMES = {
     "acanthurus_bahianus": "Acanthurus bahianus",
@@ -45,3 +49,13 @@ def _ensure_stub():
 
 # Run at import time so all test modules see a consistent stub.
 _ensure_stub()
+
+
+@pytest.fixture(autouse=True)
+def isolate_process_local_rate_limits():
+    """Rate-limit state is request-process state, not cross-test state."""
+    with rate_limiter.lock:
+        rate_limiter.data.clear()
+    yield
+    with rate_limiter.lock:
+        rate_limiter.data.clear()

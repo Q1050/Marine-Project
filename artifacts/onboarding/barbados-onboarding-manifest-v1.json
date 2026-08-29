@@ -1,0 +1,24 @@
+{
+  "manifest_version": "barbados-onboarding-manifest-v1",
+  "jurisdiction": {
+    "canonical_name": "Barbados",
+    "canonical_identifier_scheme": "ISO_3166_1_ALPHA_2",
+    "canonical_identifier": "BB",
+    "jurisdiction_type": "SOVEREIGN_STATE"
+  },
+  "region": "caribbean",
+  "inventory_version": "caribbean-jurisdiction-candidates-v1",
+  "boundary_artifact_reference": "artifacts/onboarding/barbados-boundary-marine-regions-eez-v12.json",
+  "boundary_source_artifact_sha256": "5b42df93f1163857566e070c7df24340d8475663bd72f3748771ce019600e947",
+  "boundary_geometry_sha256": "1ee8e235f559e5c907e7957b3b60dfcd6e6ad9adc72aedcbac6d879fe7849226",
+  "provider": "Marine Regions / VLIZ",
+  "provider_version": "Maritime Boundaries Geodatabase EEZ v12 (2023-10-25)",
+  "expected_actions": ["CREATE_JURISDICTION", "CREATE_ACTIVE_MARINE_MONITORING_BOUNDARY"],
+  "expected_pre_state": {"regions": 1, "jurisdictions": 2, "boundaries": 2},
+  "expected_post_state": {"regions": 1, "jurisdictions": 3, "boundaries": 3},
+  "scientific_configuration_expected": false,
+  "approval_state": "APPROVED_FOR_CONTROLLED_PHASE_12A_4_APPLY",
+  "approved_by": "USER_PHASE_12A_4_PROMPT",
+  "limitations": ["Geographic onboarding only; no scientific authorization or evidence."],
+  "manifest_fingerprint": "f536e77d272204bf9e7175817c9207ecd96f4813b0ee56cc8fa30e64f36ba14a"
+}

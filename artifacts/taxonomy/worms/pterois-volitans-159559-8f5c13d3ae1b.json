@@ -1,0 +1,119 @@
+{
+  "canonical_content_fingerprint": "8f5c13d3ae1bb18cbcffb5e4f207857e7c6f69562c48169aa5c554baf5759107",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=159559",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1821,
+          "child": {
+            "AphiaID": 146419,
+            "child": {
+              "AphiaID": 1828,
+              "child": {
+                "AphiaID": 152352,
+                "child": {
+                  "AphiaID": 10194,
+                  "child": {
+                    "AphiaID": 843664,
+                    "child": {
+                      "AphiaID": 293496,
+                      "child": {
+                        "AphiaID": 11014,
+                        "child": {
+                          "AphiaID": 154247,
+                          "child": {
+                            "AphiaID": 125595,
+                            "child": {
+                              "AphiaID": 154410,
+                              "child": {
+                                "AphiaID": 204051,
+                                "child": {
+                                  "AphiaID": 159559,
+                                  "child": null,
+                                  "rank": "Species",
+                                  "scientificname": "Pterois volitans"
+                                },
+                                "rank": "Genus",
+                                "scientificname": "Pterois"
+                              },
+                              "rank": "Subfamily",
+                              "scientificname": "Pteroinae"
+                            },
+                            "rank": "Family",
+                            "scientificname": "Scorpaenidae"
+                          },
+                          "rank": "Suborder",
+                          "scientificname": "Scorpaenoidei"
+                        },
+                        "rank": "Order",
+                        "scientificname": "Perciformes"
+                      },
+                      "rank": "Class",
+                      "scientificname": "Teleostei"
+                    },
+                    "rank": "Superclass",
+                    "scientificname": "Actinopteri"
+                  },
+                  "rank": "Gigaclass",
+                  "scientificname": "Actinopterygii"
+                },
+                "rank": "Parvphylum",
+                "scientificname": "Osteichthyes"
+              },
+              "rank": "Infraphylum",
+              "scientificname": "Gnathostomata"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Vertebrata"
+          },
+          "rank": "Phylum",
+          "scientificname": "Chordata"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 159559,
+      "authority": "(Linnaeus, 1758)",
+      "citation": "Froese, R. and D. Pauly. Editors. (2026). FishBase. Pterois volitans (Linnaeus, 1758). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=159559 on 2026-08-25",
+      "class": "Teleostei",
+      "family": "Scorpaenidae",
+      "genus": "Pterois",
+      "isBrackish": 0,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:159559",
+      "match_type": "exact",
+      "modified": "2009-06-09T07:13:02.347Z",
+      "order": "Perciformes",
+      "originalNameUsageID": 301175,
+      "parentNameUsageID": 204051,
+      "phylum": "Chordata",
+      "rank": "Species",
+      "scientificname": "Pterois volitans",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=159559",
+      "valid_AphiaID": 159559,
+      "valid_authority": "(Linnaeus, 1758)",
+      "valid_name": "Pterois volitans"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "159559",
+    "scientific_name": "Pterois volitans"
+  },
+  "retrieved_at": "2026-08-25T16:44:40.071563+00:00"
+}

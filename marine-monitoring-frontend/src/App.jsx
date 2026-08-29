@@ -12,9 +12,20 @@ import ReviewPage from "./pages/ReviewPage";
 import ObservationsPage from "./pages/ObservationsPage";
 import InvestigationsPage from "./pages/InvestigationsPage";
 import PlaceholderPage from "./pages/PlaceholderPage";
-import { AdminOverviewPage, JurisdictionsRegistryPage, OrganizationsRegistryPage, RegionsRegistryPage, SpeciesProgramsRegistryPage, UsersRegistryPage } from "./pages/AdminRegistryPage";
+import { AdminOverviewPage, OrganizationsRegistryPage, RegionsRegistryPage, SpeciesProgramsRegistryPage, UsersRegistryPage } from "./pages/AdminRegistryPage";
+import AdminJurisdictionOnboardingPage from "./pages/AdminJurisdictionOnboardingPage";
+import AdminScientificReadinessPage from "./pages/AdminScientificReadinessPage";
+import AdminEarlyWarningPage from "./pages/AdminEarlyWarningPage";
+import AdminTaxonomyPage from "./pages/AdminTaxonomyPage";
+import AdminObservationOperationsPage from "./pages/AdminObservationOperationsPage";
+import ReviewerHomePage from "./pages/ReviewerHomePage";
+import AdminReviewerAccessPage from "./pages/AdminReviewerAccessPage";
+import AdminSystemStatusPage from "./pages/AdminSystemStatusPage";
+import ReporterStatusPage from "./pages/ReporterStatusPage";
 import LoginPage from "./pages/LoginPage";
+import { PublicJurisdictionPage, PublicRegionPage, PublicRegionsPage, PublicSpeciesDetailPage, PublicSpeciesDirectoryPage } from "./pages/PublicDirectoryPages";
 import { jurisdictionRoles, useAuth } from "./auth/AuthContext";
+import { hasProtectedAccess } from "./auth/access";
 import { JurisdictionProvider, useJurisdiction } from "./geography/JurisdictionContext";
 import "./App.css";
 
@@ -49,11 +60,18 @@ function Application() {
   if (location.pathname === "/login") return <LoginPage />;
   if (location.pathname.startsWith("/admin") && authLoading) return <div className="grid min-h-screen place-items-center text-sm text-app-muted">Checking platform access…</div>;
   if (location.pathname.startsWith("/admin") && !user) return <Navigate to="/login" state={{ from: location.pathname }} replace />;
-  if (location.pathname.startsWith("/admin") && !user.is_platform_admin) return <Navigate to="/region/caribbean/jamaica/overview" replace />;
+  const reviewerRoute = location.pathname === "/admin/observations" || location.pathname.startsWith("/admin/observations/");
+  if (location.pathname.startsWith("/admin") && !reviewerRoute && !user.is_platform_admin) return <Navigate to="/region/caribbean/jamaica/overview" replace />;
 
   return <AppShell scope={scope} viewportJurisdiction={regionalJurisdiction}>
     <Routes>
       <Route path="/" element={<Navigate to="/region/caribbean" replace />} />
+      <Route path="/regions" element={<PublicRegionsPage />} />
+      <Route path="/regions/:regionSlug" element={<PublicRegionPage />} />
+      <Route path="/jurisdictions/:jurisdiction" element={<PublicJurisdictionPage />} />
+      <Route path="/jurisdictions/:jurisdictionId/marine-species" element={<PublicSpeciesDirectoryPage />} />
+      <Route path="/jurisdictions/:jurisdictionId/invasive-species" element={<PublicSpeciesDirectoryPage invasive />} />
+      <Route path="/jurisdictions/:jurisdictionId/species/:taxonId" element={<PublicSpeciesDetailPage />} />
       <Route path="/region/caribbean" element={<RegionalMapPage onOpenJurisdiction={(jurisdiction) => countryNavigate("map", "caribbean", jurisdiction)} onGeographicContextChange={setRegionalJurisdiction} />} />
       <Route path="/region/caribbean/observations" element={<ObservationsPage scope="regional" onOpenMap={() => navigate("/region/caribbean")} />} />
       <Route path="/region/caribbean/species" element={<RegionalSpeciesIntelligencePage />} />
@@ -69,12 +87,21 @@ function Application() {
       <Route path="/region/:regionSlug/:jurisdictionSlug/species" element={<JurisdictionReady><JurisdictionSpeciesPage /></JurisdictionReady>} />
 
       <Route path="/submit" element={<SubmitPage onObservationCreated={refreshMap} />} />
+      <Route path="/reporter/status/:token" element={<ReporterStatusPage />} />
       <Route path="/admin" element={<ProtectedRoute access="admin"><AdminOverviewPage /></ProtectedRoute>} />
       <Route path="/admin/regions" element={<ProtectedRoute access="admin"><RegionsRegistryPage /></ProtectedRoute>} />
-      <Route path="/admin/jurisdictions" element={<ProtectedRoute access="admin"><JurisdictionsRegistryPage /></ProtectedRoute>} />
+      <Route path="/admin/jurisdictions" element={<ProtectedRoute access="admin"><AdminJurisdictionOnboardingPage /></ProtectedRoute>} />
       <Route path="/admin/organizations" element={<ProtectedRoute access="admin"><OrganizationsRegistryPage /></ProtectedRoute>} />
       <Route path="/admin/users" element={<ProtectedRoute access="admin"><UsersRegistryPage /></ProtectedRoute>} />
       <Route path="/admin/species-programs" element={<ProtectedRoute access="admin"><SpeciesProgramsRegistryPage /></ProtectedRoute>} />
+      <Route path="/admin/scientific-readiness" element={<ProtectedRoute access="admin"><AdminScientificReadinessPage /></ProtectedRoute>} />
+      <Route path="/admin/early-warning" element={<ProtectedRoute access="admin"><AdminEarlyWarningPage /></ProtectedRoute>} />
+      <Route path="/scientific-review/early-warning" element={<ProtectedRoute access="scientific-review"><AdminEarlyWarningPage scientific /></ProtectedRoute>} />
+      <Route path="/admin/taxonomy" element={<ProtectedRoute access="admin"><AdminTaxonomyPage /></ProtectedRoute>} />
+      <Route path="/admin/observations" element={<ProtectedRoute access="observation-review"><AdminObservationOperationsPage /></ProtectedRoute>} />
+      <Route path="/reviewer" element={<ProtectedRoute access="observation-review"><ReviewerHomePage /></ProtectedRoute>} />
+      <Route path="/admin/reviewers" element={<ProtectedRoute access="admin"><AdminReviewerAccessPage /></ProtectedRoute>} />
+      <Route path="/admin/system" element={<ProtectedRoute access="admin"><AdminSystemStatusPage /></ProtectedRoute>} />
       {Object.entries(ADMIN_PAGES).filter(([path]) => !["overview", "regions", "jurisdictions", "organizations", "users", "species-programs"].includes(path)).map(([path, values]) => <Route key={path} path={`/admin/${path}`} element={<ProtectedRoute access="admin"><ConfiguredPlaceholder values={values} /></ProtectedRoute>} />)}
 
       <Route path="/map" element={<Navigate to="/region/caribbean/jamaica/map" replace />} />
@@ -93,11 +120,7 @@ function ProtectedRoute({ access, children }) {
   if (loading) return <div className="grid min-h-[50vh] place-items-center text-sm text-app-muted">Checking trusted access…</div>;
   if (!user) return <Navigate to="/login" state={{ from: location.pathname }} replace />;
   const roles = jurisdictionRoles(user, activeRegion, activeJurisdiction);
-  const allowed = access === "admin"
-    ? user.is_platform_admin
-    : access === "investigations"
-      ? user.is_platform_admin || roles.some((role) => ["VIEWER", "REVIEWER", "MANAGER"].includes(role))
-      : user.is_platform_admin || roles.some((role) => ["REVIEWER", "MANAGER"].includes(role));
+  const allowed = hasProtectedAccess(user, access, roles);
   return allowed ? children : <Navigate to={`/region/${activeRegion}/${activeJurisdiction}/overview`} replace />;
 }
 

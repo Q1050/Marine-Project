@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = import.meta.env?.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 
 const authHeaders = (headers = {}) => {
   const token = sessionStorage.getItem("trustedAccessToken");
@@ -30,16 +30,122 @@ export async function getTrustedUsers() {
 }
 
 async function adminRequest(path, options = {}) {
-  const response = await fetch(`${API_BASE_URL}${path}`, { ...options, headers: authHeaders(options.body ? { "Content-Type": "application/json", ...(options.headers || {}) } : options.headers || {}) });
-  if (!response.ok) { const data = await response.json().catch(() => ({})); throw new Error(data.detail || "Administrative request failed."); }
+  const isFormData = typeof FormData !== "undefined" && options.body instanceof FormData;
+  const contentHeaders = options.body && !isFormData ? { "Content-Type": "application/json" } : {};
+  const response = await fetch(`${API_BASE_URL}${path}`, { ...options, headers: authHeaders({ ...contentHeaders, ...(options.headers || {}) }) });
+  if (!response.ok) { const data = await response.json().catch(() => ({})); throw new Error(data.error?.message || data.detail || "Administrative request failed."); }
   return response.json();
 }
+
+export const getSystemStatus = () => adminRequest("/admin/system/status");
+export const processScientificEvent = (id) => adminRequest(`/admin/system/events/${id}/process`, { method: "POST" });
+export const retryScientificEvent = (id) => adminRequest(`/admin/system/events/${id}/retry`, { method: "POST" });
+export const createSystemBackup = () => adminRequest("/admin/system/backups", { method: "POST" });
 
 export const getAdminOverview = () => adminRequest("/admin/overview");
 export const getAdminRegions = () => adminRequest("/admin/regions");
 export const createAdminRegion = (payload) => adminRequest("/admin/regions", { method: "POST", body: JSON.stringify(payload) });
 export const updateAdminRegion = (id, payload) => adminRequest(`/admin/regions/${id}`, { method: "PATCH", body: JSON.stringify(payload) });
 export const getAdminJurisdictions = () => adminRequest("/admin/jurisdictions");
+export const getAdminJurisdiction = (id) => adminRequest(`/admin/jurisdictions/${id}`);
+export const getRegionOnboardingInventory = (regionId) => adminRequest(`/admin/regions/${regionId}/jurisdiction-onboarding/prepare?dry_run=true`, { method: "POST" });
+export const prepareRegionJurisdictions = (regionId, identifiers) => {
+  const params = new URLSearchParams({ dry_run: "false", canonical_identifiers: identifiers.join(",") });
+  return adminRequest(`/admin/regions/${regionId}/jurisdiction-onboarding/prepare?${params}`, { method: "POST" });
+};
+export const getOnboardingPreparation = (id) => adminRequest(`/admin/jurisdiction-onboarding/${id}`);
+export const approveOnboardingPreparation = (id, manifestFingerprint, approvalReference) => adminRequest(`/admin/jurisdiction-onboarding/${id}/approve`, { method: "POST", body: JSON.stringify({ expected_manifest_fingerprint: manifestFingerprint, approval_reference: approvalReference }) });
+export const applyOnboardingPreparation = (id) => adminRequest(`/admin/jurisdiction-onboarding/${id}/apply`, { method: "POST" });
+export const applyOnboardingBatch = (preparationIds) => adminRequest("/admin/jurisdiction-onboarding/apply-batch", { method: "POST", body: JSON.stringify({ preparation_ids: preparationIds }) });
+export const getAdminRegionTaxa = (regionId) => adminRequest(`/admin/regions/${regionId}/taxa`);
+export const getAdminJurisdictionTaxonReadiness = (jurisdictionId, taxonId) => adminRequest(`/admin/jurisdictions/${jurisdictionId}/taxa/${taxonId}/readiness`);
+export const getAdminTaxa = () => adminRequest("/admin/taxa");
+export const prepareAdminTaxonomy = (taxonId, regionId) => adminRequest("/admin/taxonomy/prepare", { method: "POST", body: JSON.stringify({ taxon_id: Number(taxonId), region_id: Number(regionId) }) });
+export const approveAdminTaxonomy = (id, fingerprint, approvalReference) => adminRequest(`/admin/taxonomy/preparations/${id}/approve`, { method: "POST", body: JSON.stringify({ expected_preparation_fingerprint: fingerprint, approval_reference: approvalReference }) });
+export const applyAdminTaxonomy = (id) => adminRequest(`/admin/taxonomy/preparations/${id}/apply`, { method: "POST" });
+export const getAdminTaxonomyHistory = (taxonId) => adminRequest(`/admin/taxa/${taxonId}/taxonomy-history`);
+export const prepareAdminTaxonomyBulk = (regionId, candidates, dryRun = true) => adminRequest(`/admin/regions/${regionId}/taxonomy/prepare-bulk`, { method: "POST", body: JSON.stringify({ candidates, dry_run: dryRun }) });
+export const approveAdminTaxonomyBatch = (preparationIds, approvalReference) => adminRequest("/admin/taxonomy/preparations/approve-batch", { method: "POST", body: JSON.stringify({ preparation_ids: preparationIds, approval_reference: approvalReference }) });
+export const applyAdminTaxonomyBatch = (preparationIds) => adminRequest("/admin/taxonomy/preparations/apply-batch", { method: "POST", body: JSON.stringify({ preparation_ids: preparationIds }) });
+export const approveLocalTaxonCandidateBatch = (candidateIds, approvalReference) => adminRequest("/admin/taxonomy/local-candidate-batches/approve", { method: "POST", body: JSON.stringify({ candidate_ids: candidateIds, approval_reference: approvalReference }) });
+export const applyLocalTaxonCandidateBatch = (candidateIds) => adminRequest("/admin/taxonomy/local-candidate-batches/apply", { method: "POST", body: JSON.stringify({ candidate_ids: candidateIds }) });
+export const preflightRegionalTaxonManifest = (manifest) => adminRequest("/admin/taxonomy/manifests/preflight", { method: "POST", body: JSON.stringify(manifest) });
+export const prepareRegionalTaxonManifest = (manifest) => adminRequest("/admin/taxonomy/manifests", { method: "POST", body: JSON.stringify(manifest) });
+export const getRegionalTaxonManifest = (runId) => adminRequest(`/admin/taxonomy/manifests/${runId}`);
+export const approveRegionalTaxonManifestItems = (runId, itemIds, approvalReference) => adminRequest(`/admin/taxonomy/manifests/${runId}/approve`, { method: "POST", body: JSON.stringify({ item_ids: itemIds, approval_reference: approvalReference }) });
+export const rejectRegionalTaxonManifestItem = (runId, itemId, approvalReference) => adminRequest(`/admin/taxonomy/manifests/${runId}/items/${itemId}/reject`, { method: "POST", body: JSON.stringify({ item_ids: [itemId], approval_reference: approvalReference }) });
+export const applyRegionalTaxonManifestItems = (runId, itemIds) => adminRequest(`/admin/taxonomy/manifests/${runId}/apply`, { method: "POST", body: JSON.stringify({ item_ids: itemIds }) });
+export const retryRegionalTaxonManifestItems = (runId, itemIds) => adminRequest(`/admin/taxonomy/manifests/${runId}/retry`, { method: "POST", body: JSON.stringify({ item_ids: itemIds }) });
+export const parseScientificCorpusManifest = (content, inputFormat) => adminRequest("/admin/scientific-corpus/manifests/parse", { method: "POST", body: JSON.stringify({ content, input_format: inputFormat }) });
+export const getScientificCorpusContract = () => adminRequest("/admin/scientific-corpus/contract");
+export const getAdminOccurrenceSources = () => adminRequest("/admin/occurrence-sources");
+export const getScientificScalingSummary = (regionId) => adminRequest(`/admin/regions/${regionId}/scientific-scaling/summary`);
+export const getScientificScalingInventory = (regionId) => adminRequest(`/admin/regions/${regionId}/scientific-scaling/inventory`);
+export const getScientificScalingMatrix = (regionId, params = {}) => adminRequest(`/admin/regions/${regionId}/scientific-scaling/matrix?${new URLSearchParams(Object.entries(params).filter(([, value]) => value !== "" && value !== undefined && value !== null)).toString()}`);
+export const getScientificScalingWorkQueue = (regionId, params = {}) => adminRequest(`/admin/regions/${regionId}/scientific-scaling/work-queue?${new URLSearchParams(Object.entries(params).filter(([, value]) => value !== "" && value !== undefined && value !== null)).toString()}`);
+export const getEarlyWarningQueue = () => adminRequest("/admin/early-warning/queue");
+export const getEarlyWarningSummary = () => adminRequest("/admin/early-warning/summary");
+export const reviewEarlyWarning = (assessmentId, state, reason) => adminRequest(`/admin/early-warning/assessments/${assessmentId}/disposition`, { method: "POST", body: JSON.stringify({ state, reason }) });
+export const getScientificEarlyWarningQueue = () => adminRequest("/scientific-review/early-warning");
+export const reviewScientificEarlyWarning = (assessmentId, state, reason) => adminRequest(`/scientific-review/early-warning/${assessmentId}/disposition`, { method: "POST", body: JSON.stringify({ state, reason }) });
+export const claimScientificEarlyWarning = (assessmentId) => adminRequest(`/scientific-review/early-warning/${assessmentId}/claim`, { method: "POST", body: JSON.stringify({ reason: "Scientific reviewer claimed assessment" }) });
+export const evaluateScientificObservation = (observationId) => adminRequest(`/scientific-review/observations/${observationId}/evaluate`, { method: "POST" });
+export const getEarlyWarningConfigurations = (filters = {}) => adminRequest(`/admin/early-warning/configurations?${new URLSearchParams(Object.entries(filters).filter(([,value])=>value!==""&&value!==undefined&&value!==null)).toString()}`);
+export const getEarlyWarningEventSummary = () => adminRequest("/admin/early-warning/events/summary");
+export const getScientificReviewerGrants = () => adminRequest("/admin/scientific-reviewers");
+export const grantScientificReviewer = (payload) => adminRequest("/admin/scientific-reviewers", { method: "POST", body: JSON.stringify(payload) });
+export const revokeScientificReviewer = (id) => adminRequest(`/admin/scientific-reviewers/${id}/revoke`, { method: "POST" });
+export const createEarlyWarningConfiguration = (payload) => adminRequest("/admin/early-warning/configurations", { method: "POST", body: JSON.stringify(payload) });
+export const updateEarlyWarningConfiguration = (id, payload) => adminRequest(`/admin/early-warning/configurations/${id}`, { method: "PUT", body: JSON.stringify(payload) });
+export const transitionEarlyWarningConfiguration = (id, targetState, reference) => adminRequest(`/admin/early-warning/configurations/${id}/transition`, { method: "POST", body: JSON.stringify({ target_state: targetState, reference }) });
+export const getEarlyWarningEvents = (state = "") => adminRequest(`/admin/early-warning/events${state ? `?state=${state}` : ""}`);
+export const processEarlyWarningEvent = (id) => adminRequest(`/admin/early-warning/events/${id}/process`, { method: "POST" });
+export const prepareAdminOccurrenceEvidence = (jurisdictionId, taxonId, sourceKey, dryRun = false) => adminRequest("/admin/occurrence-evidence/preparations", { method: "POST", body: JSON.stringify({ jurisdiction_id: Number(jurisdictionId), taxon_id: Number(taxonId), source_key: sourceKey, dry_run: dryRun }) });
+export const getAdminOccurrencePreparation = (preparationId) => adminRequest(`/admin/occurrence-evidence/preparations/${preparationId}`);
+export const approveAdminOccurrenceCandidates = (preparationId, candidateIds, reviewReference) => adminRequest(`/admin/occurrence-evidence/preparations/${preparationId}/approve`, { method: "POST", body: JSON.stringify({ candidate_ids: candidateIds, review_reference: reviewReference }) });
+export const rejectAdminOccurrenceCandidates = (preparationId, candidateIds, reviewReference) => adminRequest(`/admin/occurrence-evidence/preparations/${preparationId}/reject`, { method: "POST", body: JSON.stringify({ candidate_ids: candidateIds, review_reference: reviewReference }) });
+export const applyAdminOccurrenceEvidence = (preparationId) => adminRequest(`/admin/occurrence-evidence/preparations/${preparationId}/apply`, { method: "POST" });
+export const retryAdminOccurrenceEvidence = (preparationId) => adminRequest(`/admin/occurrence-evidence/preparations/${preparationId}/retry`, { method: "POST" });
+export const initializeAdminOccurrenceReview = (preparationId) => adminRequest(`/admin/occurrence-evidence/preparations/${preparationId}/initialize-review`, { method: "POST" });
+export const getAdminOccurrenceReviewReport = (preparationId) => adminRequest(`/admin/occurrence-evidence/preparations/${preparationId}/review-report`);
+export const disposeAdminOccurrenceCandidates = (preparationId, candidateIds, disposition, reviewReference, evidenceNote = null) => adminRequest(`/admin/occurrence-evidence/preparations/${preparationId}/dispositions`, { method: "POST", body: JSON.stringify({ candidate_ids: candidateIds, disposition, review_reference: reviewReference, evidence_note: evidenceNote }) });
+export const getAdminEcologicalStatus = (jurisdictionId, taxonId) => adminRequest(`/admin/jurisdictions/${jurisdictionId}/taxa/${taxonId}/ecological-status`);
+export const preflightAdminEcologicalStatus = (payload) => adminRequest("/admin/ecological-status/preflight", { method: "POST", body: JSON.stringify(payload) });
+export const prepareAdminEcologicalStatus = (payload) => adminRequest("/admin/ecological-status/preparations", { method: "POST", body: JSON.stringify(payload) });
+export const reviewAdminEcologicalStatus = (preparationId, candidateIds, reviewReference, disposition = "APPROVED") => adminRequest(`/admin/ecological-status/preparations/${preparationId}/review`, { method: "POST", body: JSON.stringify({ candidate_ids: candidateIds, review_reference: reviewReference, disposition }) });
+export const applyAdminEcologicalStatus = (preparationId) => adminRequest(`/admin/ecological-status/preparations/${preparationId}/apply`, { method: "POST" });
+export const getAdminEcologicalSources = () => adminRequest("/admin/ecological-status/sources");
+export const getAdminPublicMedia = () => adminRequest("/admin/public-media");
+export const getAdminObservationQueue = (params = {}) => adminRequest(`/admin/observations/queue?${new URLSearchParams(Object.entries(params).filter(([,value])=>value!==undefined&&value!==null&&value!=="")).toString()}`);
+export const getAdminObservationOperations = (id) => adminRequest(`/admin/observations/${id}/operations`);
+export const getEligibleObservationReviewers = (jurisdictionId) => adminRequest(`/admin/observation-reviewers/eligible?jurisdiction_id=${jurisdictionId}`);
+export const getObservationReviewers = () => adminRequest("/admin/observation-reviewers");
+export const grantObservationReviewer = (payload) => adminRequest("/admin/observation-reviewers/grants",{method:"POST",body:JSON.stringify(payload)});
+export const revokeObservationReviewer = (id) => adminRequest(`/admin/observation-reviewers/grants/${id}/revoke`,{method:"POST"});
+export const getReviewerHome = () => adminRequest("/reviewer/home");
+export const submitPilotFeedback = (payload) => adminRequest("/pilot/feedback",{method:"POST",body:JSON.stringify(payload)});
+export const getAdminPilotFeedback = () => adminRequest("/admin/pilot/feedback");
+export const getAdminPilotActivity = () => adminRequest("/admin/pilot/activity");
+export async function getPrivateObservationImage(id) { const response=await fetch(`${API_BASE_URL}/admin/observations/${id}/image`,{headers:authHeaders()});if(!response.ok)throw new Error("Private observation image unavailable.");return URL.createObjectURL(await response.blob()); }
+export const claimAdminObservation = (id) => adminRequest(`/admin/observations/${id}/claim`, { method: "POST", body: JSON.stringify({ reason: "Reviewer claimed case" }) });
+export const assignAdminObservation = (id, reviewerUserId, expectedReviewerUserId = null) => adminRequest(`/admin/observations/${id}/assign`, { method: "POST", body: JSON.stringify({ reviewer_user_id: reviewerUserId, expected_reviewer_user_id: expectedReviewerUserId, reason: "Operational assignment" }) });
+export const requestAdminObservationInformation = (id, reason) => adminRequest(`/admin/observations/${id}/request-information`, { method: "POST", body: JSON.stringify({ reason }) });
+export const closeAdminObservation = (id, reopen = false, reason = null) => adminRequest(`/admin/observations/${id}/close?reopen=${reopen}`,{method:"POST",body:JSON.stringify({reason:reason||(reopen?"Operational case reopened":"Operational review completed")})});
+export const rotateReporterLink = (id) => adminRequest(`/admin/observations/${id}/manual-reporter-link`,{method:"POST"});
+export const triageAdminObservation = (id) => adminRequest(`/admin/observations/${id}/triage`, { method: "POST" });
+export const updateAdminObservationDisposition = (id, disposition, species, reason) => adminRequest(`/admin/observations/${id}/disposition`, { method: "POST", body: JSON.stringify({ disposition, species, reason }) });
+export const updateAdminObservationPriority = (id, priority, reason) => adminRequest(`/admin/observations/${id}/priority`, { method: "POST", body: JSON.stringify({ priority, reason }) });
+export const registerAdminPublicMedia = (payload) => adminRequest("/admin/public-media", { method: "POST", body: JSON.stringify(payload) });
+export const updateAdminPublicMedia = (id, action, primary = false) => adminRequest(`/admin/public-media/${id}/${action}?primary=${primary}`, { method: "POST" });
+export const getAdminSuitabilityDisplay = (id) => adminRequest(`/admin/suitability-deployments/${id}/public-display`);
+export const approveAdminSuitabilityDisplay = (id, reference) => adminRequest(`/admin/suitability-deployments/${id}/public-display/approve`, { method: "POST", body: JSON.stringify({ review_reference: reference }) });
+export const revokeAdminSuitabilityDisplay = (id) => adminRequest(`/admin/suitability-deployments/${id}/public-display/revoke`, { method: "POST" });
+export const getAdminEcologicalIngestionRuns = (jurisdictionId) => adminRequest(`/admin/ecological-status/ingestion-runs?jurisdiction_id=${Number(jurisdictionId)}`);
+export const getAdminEcologicalIngestion = (runId) => adminRequest(`/admin/ecological-status/ingestion-runs/${runId}`);
+export const preflightAdminEcologicalArtifact = (sourceId, jurisdictionId, file, mapping) => { const body = new FormData(); body.append("source_id", sourceId); body.append("jurisdiction_id", jurisdictionId); body.append("mapping_json", JSON.stringify(mapping)); body.append("artifact", file); return adminRequest("/admin/ecological-status/ingestion/preflight", { method: "POST", body }); };
+export const createAdminEcologicalIngestion = (sourceId, jurisdictionId, file, mapping) => { const body = new FormData(); body.append("source_id", sourceId); body.append("jurisdiction_id", jurisdictionId); body.append("mapping_json", JSON.stringify(mapping)); body.append("artifact", file); return adminRequest("/admin/ecological-status/ingestion-runs", { method: "POST", body }); };
+export const reviewAdminEcologicalIngestion = (runId, rowIds, disposition, reviewReference) => adminRequest(`/admin/ecological-status/ingestion-runs/${runId}/review`, { method: "POST", body: JSON.stringify({ row_ids: rowIds, disposition, review_reference: reviewReference }) });
+export const applyAdminEcologicalIngestion = (runId, rowIds) => adminRequest(`/admin/ecological-status/ingestion-runs/${runId}/apply`, { method: "POST", body: JSON.stringify({ row_ids: rowIds, disposition: "APPROVED", review_reference: "apply" }) });
 export const createAdminJurisdiction = (payload) => adminRequest("/admin/jurisdictions", { method: "POST", body: JSON.stringify(payload) });
 export const updateAdminJurisdiction = (id, payload) => adminRequest(`/admin/jurisdictions/${id}`, { method: "PATCH", body: JSON.stringify(payload) });
 export const getAdminOrganizations = () => adminRequest("/admin/organizations");
@@ -63,6 +169,49 @@ function geographicQuery({ region, jurisdiction } = {}) {
 export async function getRegions() {
   const response = await fetch(`${API_BASE_URL}/regions`);
   if (!response.ok) throw new Error("Failed to load regions.");
+  return response.json();
+}
+
+export async function getPublicRegion(region) {
+  const response = await fetch(`${API_BASE_URL}/regions/${encodeURIComponent(region)}`);
+  if (!response.ok) throw new Error("Region not found.");
+  return response.json();
+}
+
+export async function getPublicJurisdiction(jurisdiction) {
+  const response = await fetch(`${API_BASE_URL}/jurisdictions/${encodeURIComponent(jurisdiction)}`);
+  if (!response.ok) throw new Error("Jurisdiction not found.");
+  return response.json();
+}
+
+export async function getPublicSpeciesDirectory(jurisdictionId, { invasive = false, page = 1, pageSize = 24, search = "" } = {}) {
+  const params = new URLSearchParams({ page, page_size: pageSize });
+  if (search) params.set("search", search);
+  const directory = invasive ? "invasive-species" : "marine-species";
+  const response = await fetch(`${API_BASE_URL}/jurisdictions/${jurisdictionId}/${directory}?${params}`);
+  if (!response.ok) throw new Error("Species directory is unavailable.");
+  return response.json();
+}
+
+export async function getPublicSpeciesDetail(jurisdictionId, taxonId) {
+  const response = await fetch(`${API_BASE_URL}/jurisdictions/${jurisdictionId}/species/${taxonId}`);
+  if (!response.ok) throw new Error("Species detail is unavailable.");
+  return response.json();
+}
+
+export async function getPublicSpeciesMap(jurisdictionId, taxonId) {
+  const response = await fetch(`${API_BASE_URL}/jurisdictions/${jurisdictionId}/species/${taxonId}/map`);
+  if (!response.ok) throw new Error("Species map evidence is unavailable.");
+  return response.json();
+}
+export async function getPublicSuitabilityGrid(jurisdictionId, taxonId) {
+  const response = await fetch(`${API_BASE_URL}/jurisdictions/${jurisdictionId}/species/${taxonId}/suitability-grid`);
+  if (!response.ok) throw new Error("Suitability context is unavailable.");
+  return response.json();
+}
+export async function getPublicTaxonMedia(taxonId) {
+  const response = await fetch(`${API_BASE_URL}/species/${taxonId}/public-media`);
+  if (!response.ok) throw new Error("Public media is unavailable.");
   return response.json();
 }
 
@@ -226,6 +375,8 @@ export async function analyzeObservation({
   locationAccuracy,
   locationCapturedAt,
   locationSource,
+  expectedJurisdictionId,
+  reporterSuggestedTaxonId,
 }) {
   const formData = new FormData();
 
@@ -235,6 +386,8 @@ export async function analyzeObservation({
   if (locationAccuracy != null) formData.append("location_accuracy_m", locationAccuracy);
   if (locationCapturedAt) formData.append("location_captured_at", locationCapturedAt);
   formData.append("location_source", locationSource || "MANUAL");
+  if (expectedJurisdictionId) formData.append("expected_jurisdiction_id", expectedJurisdictionId);
+  if (reporterSuggestedTaxonId) formData.append("reporter_suggested_taxon_id", reporterSuggestedTaxonId);
 
   const response = await fetch(
     `${API_BASE_URL}/observations/analyze`,
@@ -499,4 +652,28 @@ export async function regenerateMonitoringPriorities(
   }
 
   return response.json();
+}
+
+async function governedMediaRequest(path, options = {}) {
+  const response = await fetch(`${API_BASE_URL}${path}`, {
+    ...options,
+    headers: { ...authHeaders(), ...(options.headers || {}) },
+  });
+  if (!response.ok) {
+    let message = "Unable to load governed visual-corpus data.";
+    try { message = (await response.json()).detail || message; } catch { /* retain safe message */ }
+    throw new Error(message);
+  }
+  return response.json();
+}
+
+export const getIdentificationMediaSources = () => governedMediaRequest("/admin/identification-corpus/media-sources");
+export const getIdentificationAcquisitionRuns = () => governedMediaRequest("/admin/identification-corpus/acquisition-runs");
+export const getIdentificationMediaAssets = (taxonId) => governedMediaRequest(`/admin/identification-corpus/assets${taxonId ? `?taxon_id=${taxonId}` : ""}`);
+export const getIdentificationCorpora = () => governedMediaRequest("/admin/identification-corpus/corpora");
+export const reviewIdentificationMediaAsset = (assetId, decision, reference) => governedMediaRequest(`/admin/identification-corpus/assets/${assetId}/review`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ decision, reference }) });
+export async function getIdentificationMediaContent(assetId) {
+  const response = await fetch(`${API_BASE_URL}/admin/identification-corpus/assets/${assetId}/content`, { headers: authHeaders() });
+  if (!response.ok) throw new Error("Controlled media content is unavailable.");
+  return response.blob();
 }

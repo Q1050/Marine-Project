@@ -1,0 +1,28 @@
+name: PostgreSQL portability
+on: [push, pull_request]
+jobs:
+  postgres:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: marine_test
+          POSTGRES_USER: marine_test
+          POSTGRES_PASSWORD: test_only_password
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U marine_test -d marine_test"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      APP_ENV: TEST
+      DATABASE_URL: postgresql+psycopg://marine_test:test_only_password@localhost:5432/marine_test
+      TEST_POSTGRES_URL: postgresql+psycopg://marine_test:test_only_password@localhost:5432/marine_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements-pilot.txt
+      - run: python migration_manager.py
+      - run: python migration_manager.py
+      - run: pytest -q test_milestone15_postgresql_portability.py test_milestone15_postgresql_integration.py test_milestone14_productionization.py test_phase12f2_reviewer_authorization.py test_milestone13d_closure.py

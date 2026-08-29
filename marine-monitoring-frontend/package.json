@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint src test",
     "test:location": "node --test test/sightingLocation.test.js",
+    "test:admin": "node --test test/adminOnboarding.test.js test/scientificScaling.test.js",
+    "test:pilot": "node --test test/pilotAuthorization.test.js",
+    "test": "npm run test:location && npm run test:admin && npm run test:pilot && node --test test/milestone14.test.js",
     "preview": "vite preview"
   },
   "dependencies": {

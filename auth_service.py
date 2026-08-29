@@ -8,7 +8,7 @@ from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy.orm import Session
 
 from database import get_db
-from models import AuthSession, Jurisdiction, OrganizationJurisdiction, OrganizationMembership, Region, User
+from models import AuthSession, Jurisdiction, ObservationReviewerGrant, ScientificReviewerGrant, OrganizationJurisdiction, OrganizationMembership, Region, User
 
 
 SESSION_LIFETIME = timedelta(hours=12)
@@ -78,6 +78,41 @@ def require_platform_admin(user: User = Depends(require_authenticated_user)):
     return user
 
 
+def reviewer_jurisdiction_ids(db: Session, user: User):
+    if user.is_platform_admin:
+        return {row[0] for row in db.query(Jurisdiction.id).filter(Jurisdiction.status == "ACTIVE").all()}
+    return {row[0] for row in db.query(ObservationReviewerGrant.jurisdiction_id).join(Jurisdiction).filter(
+        ObservationReviewerGrant.user_id == user.id,
+        ObservationReviewerGrant.status == "ACTIVE",
+        ObservationReviewerGrant.role == "JURISDICTION_REVIEWER",
+        Jurisdiction.status == "ACTIVE",
+    ).all()}
+
+
+def require_operational_reviewer(user: User = Depends(require_authenticated_user), db: Session = Depends(get_db)):
+    if not user.is_platform_admin and not reviewer_jurisdiction_ids(db, user):
+        raise HTTPException(status_code=403, detail="Operational reviewer access required.")
+    return user
+
+
+def require_review_jurisdiction(db: Session, user: User, jurisdiction_id: int):
+    if not user.is_platform_admin and jurisdiction_id not in reviewer_jurisdiction_ids(db, user):
+        raise HTTPException(status_code=403, detail="Observation is outside your authorized jurisdiction scope.")
+    return user
+
+def scientific_reviewer_jurisdiction_ids(db:Session,user:User):
+    if user.is_platform_admin:return {row[0] for row in db.query(Jurisdiction.id).filter(Jurisdiction.status=="ACTIVE").all()}
+    return {row[0] for row in db.query(ScientificReviewerGrant.jurisdiction_id).join(Jurisdiction).filter(ScientificReviewerGrant.user_id==user.id,ScientificReviewerGrant.status=="ACTIVE",Jurisdiction.status=="ACTIVE").all()}
+
+def require_scientific_reviewer(user:User=Depends(require_authenticated_user),db:Session=Depends(get_db)):
+    if not user.is_platform_admin and not scientific_reviewer_jurisdiction_ids(db,user):raise HTTPException(status_code=403,detail="Scientific reviewer access required.")
+    return user
+
+def require_scientific_jurisdiction(db:Session,user:User,jurisdiction_id:int):
+    if not user.is_platform_admin and jurisdiction_id not in scientific_reviewer_jurisdiction_ids(db,user):raise HTTPException(status_code=403,detail="Scientific review is outside your authorized jurisdiction scope.")
+    return user
+
+
 def revoke_session(db: Session, credentials: HTTPAuthorizationCredentials):
     session = _token_session(db, credentials)
     if session is None:
@@ -136,13 +171,35 @@ def user_payload(db: Session, user: User):
                         "region": link.jurisdiction.region.slug,
                         "roles": sorted(set(authorized.get(link.jurisdiction.id, {}).get("roles", [])) | {membership.role}),
                     }
+    reviewer_jurisdictions = []
+    for row in db.query(ObservationReviewerGrant).filter_by(user_id=user.id, status="ACTIVE").all():
+        jurisdiction = db.get(Jurisdiction, row.jurisdiction_id)
+        if jurisdiction and jurisdiction.status == "ACTIVE":
+            reviewer_jurisdictions.append({"id": jurisdiction.id, "name": jurisdiction.name, "slug": jurisdiction.slug, "region": jurisdiction.region.slug, "role": row.role})
+    scientific_jurisdictions = []
+    for row in db.query(ScientificReviewerGrant).filter_by(user_id=user.id, status="ACTIVE").all():
+        jurisdiction = db.get(Jurisdiction, row.jurisdiction_id)
+        if jurisdiction and jurisdiction.status == "ACTIVE":
+            scientific_jurisdictions.append({"id": jurisdiction.id, "name": jurisdiction.name, "slug": jurisdiction.slug, "region": jurisdiction.region.slug, "role": row.role})
     return {
         "id": user.id,
         "email": user.email,
         "display_name": user.display_name,
+        "organization_name": user.organization_name,
+        "job_title": user.job_title,
         "status": user.status,
         "is_platform_admin": user.is_platform_admin,
         "last_login_at": user.last_login_at,
         "memberships": memberships,
         "authorized_jurisdictions": list(authorized.values()),
+        "operational_review": {
+            "enabled": bool(user.is_platform_admin or reviewer_jurisdictions),
+            "role": "PLATFORM_ADMIN" if user.is_platform_admin else "JURISDICTION_REVIEWER" if reviewer_jurisdictions else None,
+            "authorized_jurisdictions": reviewer_jurisdictions,
+        },
+        "scientific_review": {
+            "enabled": bool(user.is_platform_admin or scientific_jurisdictions),
+            "role": "PLATFORM_ADMIN" if user.is_platform_admin else "JURISDICTION_SCIENTIFIC_REVIEWER" if scientific_jurisdictions else None,
+            "authorized_jurisdictions": scientific_jurisdictions,
+        },
     }

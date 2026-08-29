@@ -139,6 +139,17 @@ def _seed_v3_dataset(SessionLocal):
         record_count=2334,
     )
     session.add(env); session.flush()
+    from scientific_applicability_domain import ApplicabilityStatus, EvidenceRole
+    from scientific_dataset_applicability import create_applicability
+    create_applicability(
+        session, scientific_dataset_id=env.id, jurisdiction_id=jamaica.id,
+        evidence_role=EvidenceRole.ENVIRONMENTAL_COVARIATE,
+        applicability_status=ApplicabilityStatus.AUTHORIZED,
+        reconciliation_method="LEGACY_PROVENANCE_RECONCILIATION",
+        reconciliation_version="phase12a2-v1",
+        provenance_reference="Phase 12A-2 controlled test backfill",
+        provenance={"relationship": "existing Jamaica v3 environmental input"},
+    )
     # 54 historical occurrences
     base_lat = 18.0
     base_lon = -77.0
