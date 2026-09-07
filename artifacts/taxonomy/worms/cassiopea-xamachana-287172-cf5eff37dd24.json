@@ -1,0 +1,104 @@
+{
+  "canonical_content_fingerprint": "cf5eff37dd2437ad6bb085d76d219dd890f00833ff216c16876f21ab61fa4cc1",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=287172",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1267,
+          "child": {
+            "AphiaID": 1740301,
+            "child": {
+              "AphiaID": 135220,
+              "child": {
+                "AphiaID": 394976,
+                "child": {
+                  "AphiaID": 135224,
+                  "child": {
+                    "AphiaID": 411574,
+                    "child": {
+                      "AphiaID": 1393205,
+                      "child": {
+                        "AphiaID": 135234,
+                        "child": {
+                          "AphiaID": 135253,
+                          "child": {
+                            "AphiaID": 287172,
+                            "child": null,
+                            "rank": "Species",
+                            "scientificname": "Cassiopea xamachana"
+                          },
+                          "rank": "Genus",
+                          "scientificname": "Cassiopea"
+                        },
+                        "rank": "Family",
+                        "scientificname": "Cassiopeidae"
+                      },
+                      "rank": "Infraorder",
+                      "scientificname": "Kampylomyaria"
+                    },
+                    "rank": "Suborder",
+                    "scientificname": "Kolpophorae"
+                  },
+                  "rank": "Order",
+                  "scientificname": "Rhizostomeae"
+                },
+                "rank": "Subclass",
+                "scientificname": "Discomedusae"
+              },
+              "rank": "Class",
+              "scientificname": "Scyphozoa"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Medusozoa"
+          },
+          "rank": "Phylum",
+          "scientificname": "Cnidaria"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 287172,
+      "authority": "Bigelow, 1892",
+      "citation": "Collins, A.G.; Morandini, A.C. (2026). World List of Scyphozoa. Cassiopea xamachana Bigelow, 1892. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=287172 on 2026-09-04",
+      "class": "Scyphozoa",
+      "family": "Cassiopeidae",
+      "genus": "Cassiopea",
+      "isBrackish": 1,
+      "isExtinct": 0,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:287172",
+      "match_type": "exact",
+      "modified": "2020-01-03T12:51:47.963Z",
+      "order": "Rhizostomeae",
+      "originalNameUsageID": 287172,
+      "parentNameUsageID": 135253,
+      "phylum": "Cnidaria",
+      "rank": "Species",
+      "scientificname": "Cassiopea xamachana",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=287172",
+      "valid_AphiaID": 287172,
+      "valid_authority": "Bigelow, 1892",
+      "valid_name": "Cassiopea xamachana"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "287172",
+    "scientific_name": "Cassiopea xamachana"
+  },
+  "retrieved_at": "2026-09-04T19:04:21.728845+00:00"
+}

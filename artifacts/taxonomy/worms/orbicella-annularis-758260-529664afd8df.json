@@ -1,0 +1,94 @@
+{
+  "canonical_content_fingerprint": "529664afd8df8edb4dda09225c9ba4861ae93fcf1d01b58f7f1f77de58c4eff8",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=758260",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1267,
+          "child": {
+            "AphiaID": 1292,
+            "child": {
+              "AphiaID": 1340,
+              "child": {
+                "AphiaID": 1363,
+                "child": {
+                  "AphiaID": 1517259,
+                  "child": {
+                    "AphiaID": 1579843,
+                    "child": {
+                      "AphiaID": 758259,
+                      "child": {
+                        "AphiaID": 758260,
+                        "child": null,
+                        "rank": "Species",
+                        "scientificname": "Orbicella annularis"
+                      },
+                      "rank": "Genus",
+                      "scientificname": "Orbicella"
+                    },
+                    "rank": "Family",
+                    "scientificname": "Merulinidae"
+                  },
+                  "rank": "Suborder",
+                  "scientificname": "Vacatina"
+                },
+                "rank": "Order",
+                "scientificname": "Scleractinia"
+              },
+              "rank": "Class",
+              "scientificname": "Hexacorallia"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Anthozoa"
+          },
+          "rank": "Phylum",
+          "scientificname": "Cnidaria"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 758260,
+      "authority": "(Ellis & Solander, 1786)",
+      "citation": "Hoeksema, B. W.; Cairns, S.; Samimi-Namin, K. (2026). World List of Scleractinia. Orbicella annularis (Ellis & Solander, 1786). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=758260 on 2026-09-04",
+      "class": "Hexacorallia",
+      "family": "Merulinidae",
+      "genus": "Orbicella",
+      "isBrackish": null,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:758260",
+      "match_type": "exact",
+      "modified": "2022-05-19T15:47:45.763Z",
+      "order": "Scleractinia",
+      "originalNameUsageID": 758258,
+      "parentNameUsageID": 758259,
+      "phylum": "Cnidaria",
+      "rank": "Species",
+      "scientificname": "Orbicella annularis",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=758260",
+      "valid_AphiaID": 758260,
+      "valid_authority": "(Ellis & Solander, 1786)",
+      "valid_name": "Orbicella annularis"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "758260",
+    "scientific_name": "Orbicella annularis"
+  },
+  "retrieved_at": "2026-09-04T19:04:20.268457+00:00"
+}

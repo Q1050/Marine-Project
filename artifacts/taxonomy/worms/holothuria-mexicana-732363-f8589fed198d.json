@@ -1,0 +1,94 @@
+{
+  "canonical_content_fingerprint": "f8589fed198dd28885c1d1b83dfe982661954871cbcb305001cd414d091a1482",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=732363",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1806,
+          "child": {
+            "AphiaID": 148744,
+            "child": {
+              "AphiaID": 123083,
+              "child": {
+                "AphiaID": 1393249,
+                "child": {
+                  "AphiaID": 1036233,
+                  "child": {
+                    "AphiaID": 731943,
+                    "child": {
+                      "AphiaID": 123456,
+                      "child": {
+                        "AphiaID": 732363,
+                        "child": null,
+                        "rank": "Species",
+                        "scientificname": "Holothuria mexicana"
+                      },
+                      "rank": "Genus",
+                      "scientificname": "Holothuria"
+                    },
+                    "rank": "Family",
+                    "scientificname": "Holothuriidae"
+                  },
+                  "rank": "Order",
+                  "scientificname": "Holothuriida"
+                },
+                "rank": "Subclass",
+                "scientificname": "Actinopoda"
+              },
+              "rank": "Class",
+              "scientificname": "Holothuroidea"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Echinozoa"
+          },
+          "rank": "Phylum",
+          "scientificname": "Echinodermata"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 732363,
+      "authority": "Ludwig, 1875",
+      "citation": "WoRMS (2026). Holothuria mexicana Ludwig, 1875. Accessed at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=732363 on 2026-09-04",
+      "class": "Holothuroidea",
+      "family": "Holothuriidae",
+      "genus": "Holothuria",
+      "isBrackish": 0,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:732363",
+      "match_type": "exact",
+      "modified": "2013-06-14T06:20:48.017Z",
+      "order": "Holothuriida",
+      "originalNameUsageID": 732363,
+      "parentNameUsageID": 123456,
+      "phylum": "Echinodermata",
+      "rank": "Species",
+      "scientificname": "Holothuria mexicana",
+      "status": "alternative representation",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=732363",
+      "valid_AphiaID": 125180,
+      "valid_authority": "Ludwig, 1875",
+      "valid_name": "Holothuria (Halodeima) mexicana"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "732363",
+    "scientific_name": "Holothuria mexicana"
+  },
+  "retrieved_at": "2026-09-04T19:04:27.142366+00:00"
+}

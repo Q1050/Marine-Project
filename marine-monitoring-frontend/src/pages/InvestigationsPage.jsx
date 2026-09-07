@@ -237,7 +237,9 @@ export default function InvestigationsPage() {
             ))}
             {items.length === 0 && (
               <div className="p-10 text-center text-sm text-app-muted">
-                No investigations match the selected filters.
+                No investigations match the selected filters. Investigations are
+                created from verified observations, monitoring priorities, or
+                authorized operational follow-up.
               </div>
             )}
           </div>

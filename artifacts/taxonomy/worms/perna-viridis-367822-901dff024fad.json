@@ -1,0 +1,104 @@
+{
+  "canonical_content_fingerprint": "901dff024fad5270849e6444c4d60b436d4f860ff35750d6144853e9cc68ebaf",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=367822",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 51,
+          "child": {
+            "AphiaID": 105,
+            "child": {
+              "AphiaID": 1424948,
+              "child": {
+                "AphiaID": 206,
+                "child": {
+                  "AphiaID": 210,
+                  "child": {
+                    "AphiaID": 491766,
+                    "child": {
+                      "AphiaID": 211,
+                      "child": {
+                        "AphiaID": 510721,
+                        "child": {
+                          "AphiaID": 138229,
+                          "child": {
+                            "AphiaID": 367822,
+                            "child": null,
+                            "rank": "Species",
+                            "scientificname": "Perna viridis"
+                          },
+                          "rank": "Genus",
+                          "scientificname": "Perna"
+                        },
+                        "rank": "Subfamily",
+                        "scientificname": "Crenellinae"
+                      },
+                      "rank": "Family",
+                      "scientificname": "Mytilidae"
+                    },
+                    "rank": "Superfamily",
+                    "scientificname": "Mytiloidea"
+                  },
+                  "rank": "Order",
+                  "scientificname": "Mytilida"
+                },
+                "rank": "Infraclass",
+                "scientificname": "Pteriomorphia"
+              },
+              "rank": "Subclass",
+              "scientificname": "Autobranchia"
+            },
+            "rank": "Class",
+            "scientificname": "Bivalvia"
+          },
+          "rank": "Phylum",
+          "scientificname": "Mollusca"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 367822,
+      "authority": "(Linnaeus, 1758)",
+      "citation": "MolluscaBase eds. (2026). MolluscaBase. Perna viridis (Linnaeus, 1758). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=367822 on 2026-08-30",
+      "class": "Bivalvia",
+      "family": "Mytilidae",
+      "genus": "Perna",
+      "isBrackish": null,
+      "isExtinct": null,
+      "isFreshwater": null,
+      "isMarine": 1,
+      "isTerrestrial": null,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:367822",
+      "match_type": "exact",
+      "modified": "2010-09-23T11:55:17.473Z",
+      "order": "Mytilida",
+      "originalNameUsageID": 541685,
+      "parentNameUsageID": 138229,
+      "phylum": "Mollusca",
+      "rank": "Species",
+      "scientificname": "Perna viridis",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=367822",
+      "valid_AphiaID": 367822,
+      "valid_authority": "(Linnaeus, 1758)",
+      "valid_name": "Perna viridis"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "367822",
+    "scientific_name": "Perna viridis"
+  },
+  "retrieved_at": "2026-08-30T04:11:22.150050+00:00"
+}

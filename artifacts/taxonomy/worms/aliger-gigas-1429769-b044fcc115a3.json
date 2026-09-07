@@ -1,0 +1,94 @@
+{
+  "canonical_content_fingerprint": "b044fcc115a311e51c558b21736c4238a717c1a508c095c3dcbe41f64cc35b87",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=1429769",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 51,
+          "child": {
+            "AphiaID": 101,
+            "child": {
+              "AphiaID": 224570,
+              "child": {
+                "AphiaID": 382213,
+                "child": {
+                  "AphiaID": 14770,
+                  "child": {
+                    "AphiaID": 23123,
+                    "child": {
+                      "AphiaID": 415025,
+                      "child": {
+                        "AphiaID": 1429769,
+                        "child": null,
+                        "rank": "Species",
+                        "scientificname": "Aliger gigas"
+                      },
+                      "rank": "Genus",
+                      "scientificname": "Aliger"
+                    },
+                    "rank": "Family",
+                    "scientificname": "Strombidae"
+                  },
+                  "rank": "Superfamily",
+                  "scientificname": "Stromboidea"
+                },
+                "rank": "Order",
+                "scientificname": "Littorinimorpha"
+              },
+              "rank": "Subclass",
+              "scientificname": "Caenogastropoda"
+            },
+            "rank": "Class",
+            "scientificname": "Gastropoda"
+          },
+          "rank": "Phylum",
+          "scientificname": "Mollusca"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 1429769,
+      "authority": "(Linnaeus, 1758)",
+      "citation": "MolluscaBase eds. (2026). MolluscaBase. Aliger gigas (Linnaeus, 1758). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=1429769 on 2026-09-04",
+      "class": "Gastropoda",
+      "family": "Strombidae",
+      "genus": "Aliger",
+      "isBrackish": 0,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:1429769",
+      "match_type": "exact",
+      "modified": "2020-04-01T18:25:12.397Z",
+      "order": "Littorinimorpha",
+      "originalNameUsageID": 458661,
+      "parentNameUsageID": 415025,
+      "phylum": "Mollusca",
+      "rank": "Species",
+      "scientificname": "Aliger gigas",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=1429769",
+      "valid_AphiaID": 1429769,
+      "valid_authority": "(Linnaeus, 1758)",
+      "valid_name": "Aliger gigas"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "1429769",
+    "scientific_name": "Aliger gigas"
+  },
+  "retrieved_at": "2026-09-04T19:04:13.135002+00:00"
+}

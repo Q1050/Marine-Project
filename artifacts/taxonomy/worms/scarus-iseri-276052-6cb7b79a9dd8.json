@@ -1,0 +1,119 @@
+{
+  "canonical_content_fingerprint": "6cb7b79a9dd8e1fd3e1e60476137d664e136db13e9634647f98fb9e54b22c747",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=276052",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1821,
+          "child": {
+            "AphiaID": 146419,
+            "child": {
+              "AphiaID": 1828,
+              "child": {
+                "AphiaID": 152352,
+                "child": {
+                  "AphiaID": 10194,
+                  "child": {
+                    "AphiaID": 843664,
+                    "child": {
+                      "AphiaID": 293496,
+                      "child": {
+                        "AphiaID": 1517577,
+                        "child": {
+                          "AphiaID": 125541,
+                          "child": {
+                            "AphiaID": 151787,
+                            "child": {
+                              "AphiaID": 1844755,
+                              "child": {
+                                "AphiaID": 159299,
+                                "child": {
+                                  "AphiaID": 276052,
+                                  "child": null,
+                                  "rank": "Species",
+                                  "scientificname": "Scarus iseri"
+                                },
+                                "rank": "Genus",
+                                "scientificname": "Scarus"
+                              },
+                              "rank": "Tribe",
+                              "scientificname": "Scarini"
+                            },
+                            "rank": "Subfamily",
+                            "scientificname": "Scarinae"
+                          },
+                          "rank": "Family",
+                          "scientificname": "Labridae"
+                        },
+                        "rank": "Order",
+                        "scientificname": "Eupercaria incertae sedis"
+                      },
+                      "rank": "Class",
+                      "scientificname": "Teleostei"
+                    },
+                    "rank": "Superclass",
+                    "scientificname": "Actinopteri"
+                  },
+                  "rank": "Gigaclass",
+                  "scientificname": "Actinopterygii"
+                },
+                "rank": "Parvphylum",
+                "scientificname": "Osteichthyes"
+              },
+              "rank": "Infraphylum",
+              "scientificname": "Gnathostomata"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Vertebrata"
+          },
+          "rank": "Phylum",
+          "scientificname": "Chordata"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 276052,
+      "authority": "(Bloch, 1789)",
+      "citation": "Froese, R. and D. Pauly. Editors. (2026). FishBase. Scarus iseri (Bloch, 1789). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=276052 on 2026-09-04",
+      "class": "Teleostei",
+      "family": "Labridae",
+      "genus": "Scarus",
+      "isBrackish": 0,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:276052",
+      "match_type": "exact",
+      "modified": "2008-01-15T17:27:08.177Z",
+      "order": "Eupercaria incertae sedis",
+      "originalNameUsageID": 312600,
+      "parentNameUsageID": 159299,
+      "phylum": "Chordata",
+      "rank": "Species",
+      "scientificname": "Scarus iseri",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=276052",
+      "valid_AphiaID": 276052,
+      "valid_authority": "(Bloch, 1789)",
+      "valid_name": "Scarus iseri"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "276052",
+    "scientific_name": "Scarus iseri"
+  },
+  "retrieved_at": "2026-09-04T19:04:02.422223+00:00"
+}

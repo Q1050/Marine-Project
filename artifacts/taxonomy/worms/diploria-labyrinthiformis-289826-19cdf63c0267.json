@@ -1,0 +1,99 @@
+{
+  "canonical_content_fingerprint": "19cdf63c02676545f1c9bb70a23678bf2478988482ee6b400042c57c28f46a7c",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=289826",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1267,
+          "child": {
+            "AphiaID": 1292,
+            "child": {
+              "AphiaID": 1340,
+              "child": {
+                "AphiaID": 1363,
+                "child": {
+                  "AphiaID": 1517259,
+                  "child": {
+                    "AphiaID": 196099,
+                    "child": {
+                      "AphiaID": 718680,
+                      "child": {
+                        "AphiaID": 267392,
+                        "child": {
+                          "AphiaID": 289826,
+                          "child": null,
+                          "rank": "Species",
+                          "scientificname": "Diploria labyrinthiformis"
+                        },
+                        "rank": "Genus",
+                        "scientificname": "Diploria"
+                      },
+                      "rank": "Subfamily",
+                      "scientificname": "Faviinae"
+                    },
+                    "rank": "Family",
+                    "scientificname": "Faviidae"
+                  },
+                  "rank": "Suborder",
+                  "scientificname": "Vacatina"
+                },
+                "rank": "Order",
+                "scientificname": "Scleractinia"
+              },
+              "rank": "Class",
+              "scientificname": "Hexacorallia"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Anthozoa"
+          },
+          "rank": "Phylum",
+          "scientificname": "Cnidaria"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 289826,
+      "authority": "(Linnaeus, 1758)",
+      "citation": "Hoeksema, B. W.; Cairns, S.; Samimi-Namin, K. (2026). World List of Scleractinia. Diploria labyrinthiformis (Linnaeus, 1758). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=289826 on 2026-09-04",
+      "class": "Hexacorallia",
+      "family": "Faviidae",
+      "genus": "Diploria",
+      "isBrackish": null,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:289826",
+      "match_type": "exact",
+      "modified": "2022-05-29T06:08:19.927Z",
+      "order": "Scleractinia",
+      "originalNameUsageID": 718701,
+      "parentNameUsageID": 267392,
+      "phylum": "Cnidaria",
+      "rank": "Species",
+      "scientificname": "Diploria labyrinthiformis",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=289826",
+      "valid_AphiaID": 289826,
+      "valid_authority": "(Linnaeus, 1758)",
+      "valid_name": "Diploria labyrinthiformis"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "289826",
+    "scientific_name": "Diploria labyrinthiformis"
+  },
+  "retrieved_at": "2026-09-04T19:04:23.194970+00:00"
+}

@@ -1,371 +1,114 @@
 import { useEffect, useMemo, useState } from "react";
-import { getRegionSpeciesIntelligence } from "../services/api";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { getImageUrl, getPublicTaxonMedia, getRegionSpeciesTracking, getSpeciesCatalog, getSpeciesCatalogDetail } from "../services/api";
+import { formatTaxonomyLineage, indexedTaxaLabel, safeDisplayText } from "../utils/speciesPresentation";
 
 const number = (value) => Number(value || 0).toLocaleString();
 
-function LoadingState() {
-  return (
-    <div className="rsi-state rsi-state--loading">
-      <p>Loading regional species intelligence…</p>
-    </div>
-  );
+function taxonIdentifier(item) {
+  const scheme = safeDisplayText(item.authoritative_identifier_scheme);
+  const identifier = safeDisplayText(item.authoritative_identifier);
+  if (scheme && identifier) return `${scheme}: ${identifier}`;
+  if (Number.isFinite(Number(item.aphia_id))) return `WoRMS AphiaID: ${item.aphia_id}`;
+  const catalogId = safeDisplayText(item.id);
+  return catalogId ? `Catalog ID: ${catalogId}` : "Taxonomic identifier unavailable";
 }
 
-function ErrorState({ message, onRetry }) {
-  return (
-    <div className="rsi-state rsi-state--error" role="alert">
-      <h2>Regional species intelligence unavailable</h2>
-      <p>{message || "The regional species intelligence service is currently unavailable."}</p>
-      {onRetry && (
-        <button type="button" onClick={onRetry} className="rsi-state__retry">
-          Retry
-        </button>
-      )}
-    </div>
-  );
-}
-
-function EmptyState({ hasUnresolved }) {
-  return (
-    <div className="rsi-state rsi-state--empty">
-      <h2>No canonical species reported yet</h2>
-      <p>
-        No canonical species identities are currently represented by regional
-        observation evidence or configured scientific programs in this region.
-      </p>
-      {hasUnresolved && (
-        <p className="rsi-state__hint">
-          Unresolved observation evidence is reported separately below.
-        </p>
-      )}
-    </div>
-  );
-}
-
-function CapabilityTag({ label, value, available }) {
-  return (
-    <span className={`rsi-capability ${available ? "rsi-capability--available" : "rsi-capability--unavailable"}`}>
-      {label}: {value}
+export function SpeciesCard({ item, selected, onSelect }) {
+  return <li><button type="button" className={`catalog-card ${selected ? "catalog-card--selected" : ""}`} onClick={onSelect}>
+    <span className="catalog-card__name">{safeDisplayText(item.common_name, "Common name unavailable")}</span>
+    <em>{safeDisplayText(item.scientific_name, "Scientific name unavailable")}</em>
+    <span className="catalog-card__meta">
+      <span>{safeDisplayText(item.taxonomic_rank, "Rank unavailable")}</span>
+      <span>{number(item.confirmed_observation_count)} confirmed observation{item.confirmed_observation_count === 1 ? "" : "s"}</span>
     </span>
-  );
+    <span className="catalog-card__identifier">{taxonIdentifier(item)}</span>
+  </button></li>;
 }
 
-function SpeciesListItem({ item, isSelected, onSelect }) {
-  const evidenceTotal = item.evidence?.total ?? 0;
-  return (
-    <li>
-      <button
-        type="button"
-        onClick={onSelect}
-        className={`rsi-list-item ${isSelected ? "rsi-list-item--selected" : ""}`}
-      >
-        <div className="rsi-list-item__head">
-          <strong>{item.common_name || item.scientific_name}</strong>
-          <span className="rsi-list-item__scientific">{item.scientific_name}</span>
-        </div>
-        <div className="rsi-list-item__meta">
-          <span>
-            <strong>{number(evidenceTotal)}</strong> reports
-          </span>
-          <span>
-            <strong>{number(item.jurisdictions_with_evidence || 0)}</strong> jurisdiction
-            {item.jurisdictions_with_evidence === 1 ? "" : "s"} with evidence
-          </span>
-          <span>
-            <strong>{number(item.scientific_programs?.length || 0)}</strong> scientific program
-            {(item.scientific_programs?.length || 0) === 1 ? "" : "s"}
-          </span>
-        </div>
-      </button>
-    </li>
-  );
+function ReturnContext({ params }) {
+  const observation = params.get("observation");
+  const lat = Number(params.get("returnLat"));
+  const lng = Number(params.get("returnLng"));
+  const zoom = Number(params.get("returnZoom"));
+  if (!observation || !Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  const query = new URLSearchParams({ lat, lng, z: Number.isFinite(zoom) ? zoom : 7, observation });
+  if (params.get("taxon")) query.set("trackTaxon", params.get("taxon"));
+  return <div className="species-return-context"><span className="species-return-context__icon">⌖</span><div><strong>Linked from field observation #{observation}</strong><span>{lat.toFixed(4)}, {lng.toFixed(4)}</span></div><a href={`/region/caribbean?${query}`}>Return to Map Marker ←</a></div>;
 }
 
-function SpeciesDetail({ species, jurisdictionMeta }) {
-  const evidence = species.evidence || {};
-  const perJurisdiction = species.per_jurisdiction || [];
-  const scientificPrograms = species.scientific_programs || [];
-  const suitabilityDeployments = species.suitability_deployments || [];
-  const priorityGenerations = species.monitoring_priority_generations || [];
-
-  return (
-    <article className="rsi-detail">
-      <header className="rsi-detail__header">
-        <p className="rsi-detail__eyebrow">Canonical species identity</p>
-        <h2>{species.scientific_name}</h2>
-        {species.common_name && species.common_name !== species.scientific_name && (
-          <p className="rsi-detail__common">{species.common_name}</p>
-        )}
-      </header>
-
-      <section className="rsi-detail__section">
-        <h3>Regional platform evidence</h3>
-        <dl className="rsi-detail__grid">
-          <Stat label="Total reports" value={number(evidence.total)} />
-          <Stat label="Verified or corrected" value={number(evidence.verified_or_corrected)} />
-          <Stat label="AI-supported pending" value={number(evidence.ai_supported)} />
-          <Stat label="Pending review" value={number(evidence.pending_review)} />
-        </dl>
-        <p className="rsi-detail__note">
-          {evidence.total > 0
-            ? `${number(evidence.total)} regional report${evidence.total === 1 ? "" : "s"} on file across the region's jurisdictions.`
-            : "No regional platform evidence recorded for this species yet."}
-        </p>
-      </section>
-
-      <section className="rsi-detail__section">
-        <h3>Jurisdiction coverage</h3>
-        <ul className="rsi-detail__jurisdictions">
-          {perJurisdiction.map((item) => {
-            const jurisdictionInfo = item.jurisdiction || jurisdictionMeta.get(item.jurisdiction_id);
-            const ev = item.evidence || {};
-            const jurisdictionName = jurisdictionInfo?.name || "Unknown";
-            const evidenceLabel = ev.total > 0
-              ? `${number(ev.total)} report${ev.total === 1 ? "" : "s"} (${number(ev.verified_or_corrected)} verified)`
-              : "No platform evidence recorded";
-            return (
-              <li key={item.jurisdiction_id} className="rsi-detail__jurisdiction">
-                <div className="rsi-detail__jurisdiction-head">
-                  <strong>{jurisdictionName}</strong>
-                  <span className="rsi-detail__jurisdiction-meta">{evidenceLabel}</span>
-                </div>
-                <div className="rsi-detail__capabilities">
-                  <CapabilityTag label="Species Program" value={item.scientific_program ? "Configured" : "Not configured"} available={item.scientific_program} />
-                  <CapabilityTag label="Habitat suitability" value={item.suitability} available={item.suitability === "Available"} />
-                  <CapabilityTag label="Monitoring Priority" value={item.monitoring_priority} available={item.monitoring_priority === "Available"} />
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-
-      {scientificPrograms.length > 0 && (
-        <section className="rsi-detail__section">
-          <h3>Configured scientific programs</h3>
-          <ul className="rsi-detail__programs">
-            {scientificPrograms.map((program) => (
-              <li key={program.id}>
-                <strong>{program.jurisdiction?.name || "Unknown jurisdiction"}</strong>
-                <span>{program.common_name || "No common name"}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {(suitabilityDeployments.length > 0 || priorityGenerations.length > 0) && (
-        <section className="rsi-detail__section">
-          <h3>Predictive deployment summary</h3>
-          <ul className="rsi-detail__deployments">
-            {suitabilityDeployments.map((dep) => (
-              <li key={dep.id}>
-                Suitability deployment: <code>{dep.model_version}</code>
-                {dep.jurisdiction_id ? ` (jurisdiction ${dep.jurisdiction_id})` : ""}
-              </li>
-            ))}
-            {priorityGenerations.map((gen) => (
-              <li key={gen.id}>
-                Monitoring Priority generation #{gen.id}
-                {gen.jurisdiction_id ? ` (jurisdiction ${gen.jurisdiction_id})` : ""}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      <section className="rsi-detail__section">
-        <h3>Scientific status</h3>
-        <p className="rsi-detail__status-note">
-          Predictive scientific deployments are jurisdiction-specific.
-          Regional species evidence does not represent a Caribbean-wide
-          suitability or abundance model.
-        </p>
-      </section>
-    </article>
-  );
+function ReferenceImagery({ media }) {
+  const images = media?.reference_gallery || [];
+  if (!images.length) return null;
+  return <section className="species-intelligence__section species-reference-imagery">
+    <div><p className="species-intelligence__eyebrow">Visual corpus</p><h2>Reference imagery</h2></div>
+    <p className="species-reference-imagery__note">Human-approved taxonomic reference assets with public-compatible licenses. Imagery is identification support, not occurrence evidence.</p>
+    <ul>{images.map((item) => {
+      const lifeStage = safeDisplayText(item.life_stage);
+      return <li key={item.id}><figure>
+        <a href={safeDisplayText(item.source_reference) || undefined} target="_blank" rel="noreferrer"><img src={getImageUrl(item.url)} alt={`Reference image of ${safeDisplayText(item.scientific_name, "the selected species")}`} loading="lazy" /></a>
+        <figcaption>{lifeStage && <span className="species-reference-imagery__stage">{lifeStage}</span>}<span>{safeDisplayText(item.attribution_text, safeDisplayText(item.creator, "Attribution available from source"))}</span><span>{safeDisplayText(item.source_provider, "Approved visual corpus")} · {safeDisplayText(item.license, "License metadata unavailable")}</span>{safeDisplayText(item.license_url) && <a href={item.license_url} target="_blank" rel="noreferrer">License</a>}</figcaption>
+      </figure></li>;
+    })}</ul>
+  </section>;
 }
 
-function Stat({ label, value }) {
-  return (
-    <div>
-      <dt>{label}</dt>
-      <dd>{value}</dd>
-    </div>
-  );
-}
+export function SpeciesIntelligence({ species, tracking = [], media, operationalContext = null, trackingUnavailableLabel = "No confirmed tracked observations" }) {
+  const navigate = useNavigate();
+  const trackingItem = tracking.find((item) => item.taxon.id === species.id);
+  const lineageItems = formatTaxonomyLineage(species.taxonomy);
+  const sourceScheme = safeDisplayText(species.authoritative_identifier_scheme);
+  const sourceIdentifier = safeDisplayText(species.authoritative_identifier);
+  const sources = [
+    sourceScheme && sourceIdentifier ? { label: sourceScheme, value: sourceIdentifier } : null,
+    Number.isFinite(Number(species.aphia_id)) ? { label: "WoRMS AphiaID", value: String(species.aphia_id) } : null,
+  ].filter(Boolean);
+  const commonName = safeDisplayText(species.common_name, "Common name unavailable");
+  const scientificName = safeDisplayText(species.scientific_name, "Scientific name unavailable");
+  const authorship = safeDisplayText(species.authorship);
 
-function UnresolvedEvidence({ items }) {
-  if (!items || items.length === 0) {
-    return null;
-  }
-  return (
-    <section className="rsi-unresolved">
-      <h3>Unresolved observation evidence</h3>
-      <p className="rsi-unresolved__note">
-        The scientific names below appear in operational observation evidence but
-        do not currently resolve to a canonical Species identity. They are
-        retained here as unresolved evidence rather than being silently
-        remapped.
-      </p>
-      <ul>
-        {items.map((item) => (
-          <li key={item.scientific_name}>
-            <strong>{item.scientific_name}</strong>
-            <span>{number(item.evidence?.total)} report{item.evidence?.total === 1 ? "" : "s"}</span>
-          </li>
-        ))}
-      </ul>
+  return <article className="species-intelligence">
+    <section className="species-intelligence__hero">
+      {lineageItems.length > 0 && <p className="species-lineage">{lineageItems.join(" › ")}</p>}
+      <div className="species-intelligence__title-row"><div>
+        <p className="species-intelligence__eyebrow">Species intelligence</p>
+        <div className="species-intelligence__names"><h1>{commonName}</h1><em>{scientificName}</em></div>
+        {authorship && <span className="species-authorship">{authorship}</span>}
+      </div>{trackingItem ? <button type="button" className="species-tracking-action" onClick={() => navigate(`/region/caribbean?trackTaxon=${species.id}`)}>View on Tracking Map</button> : <span className="species-tracking-unavailable">{trackingUnavailableLabel}</span>}</div>
+      <div className="species-badges"><span>Taxonomic status: {safeDisplayText(species.accepted_name_status, "Unavailable")}</span><span>Ecological status: Not available</span>{operationalContext ? <span>Monitoring priority: {operationalContext.monitoringPriority}</span> : <span>Monitoring priority: Not available</span>}</div>
     </section>
-  );
+
+    <section className="species-intelligence__section"><div><p className="species-intelligence__eyebrow">Accepted taxonomy</p><h2>Canonical record</h2></div><dl className="species-facts"><div><dt>Scientific name</dt><dd><em>{scientificName}</em></dd></div><div><dt>Taxonomic rank</dt><dd>{safeDisplayText(species.taxonomic_rank, "Not available")}</dd></div><div><dt>Taxonomic identifier</dt><dd>{taxonIdentifier(species)}</dd></div><div><dt>Name status</dt><dd>{safeDisplayText(species.accepted_name_status, "Not available")}</dd></div></dl><p className="species-missing-note">A governed public description and diagnostic reference are not yet available for this taxon.</p></section>
+    <ReferenceImagery media={media} />
+    <section className="species-intelligence__section species-intelligence__evidence"><div><p className="species-intelligence__eyebrow">Observation context</p><h2>Confirmed field evidence</h2></div><strong className="species-evidence-total">{number(operationalContext?.verifiedReports ?? species.confirmed_observation_count)}</strong><p>Expert-confirmed or expert-corrected platform observation{(operationalContext?.verifiedReports ?? species.confirmed_observation_count) === 1 ? "" : "s"}{operationalContext?.jurisdictionName ? ` in ${operationalContext.jurisdictionName}` : ""}.</p>{operationalContext ? <p className="species-missing-note">{number(operationalContext.totalReports)} total platform report{operationalContext.totalReports === 1 ? "" : "s"} in this jurisdiction; unresolved identity evidence is excluded from this canonical count.</p> : trackingItem?.observations?.length > 0 ? <ul className="species-jurisdiction-list">{[...new Set(trackingItem.observations.map((item) => safeDisplayText(item.jurisdiction?.name)).filter(Boolean))].map((name) => <li key={name}>{name}</li>)}</ul> : <p className="species-missing-note">No qualifying regional location evidence is available.</p>}</section>
+    <section className="species-intelligence__section"><div><p className="species-intelligence__eyebrow">Scientific capabilities</p><h2>Suitability and priority</h2></div>{operationalContext ? <dl className="species-facts"><div><dt>Species program</dt><dd>{operationalContext.speciesProgram}</dd></div><div><dt>Habitat suitability</dt><dd>{operationalContext.suitability}</dd></div><div><dt>Monitoring priority</dt><dd>{operationalContext.monitoringPriority}</dd></div><div><dt>Jurisdiction</dt><dd>{operationalContext.jurisdictionName}</dd></div></dl> : <p className="species-missing-note">No jurisdiction-specific suitability or monitoring-priority deployment is exposed by this catalog record.</p>}</section>
+    <section className="species-intelligence__section"><div><p className="species-intelligence__eyebrow">Sources</p><h2>Taxonomic references</h2></div>{sources.length ? <ul className="species-source-list">{sources.map((source) => <li key={`${source.label}-${source.value}`}><strong>{source.label}</strong><span>{source.value}</span></li>)}</ul> : <p className="species-missing-note">No public authoritative source identifier is available.</p>}</section>
+  </article>;
 }
 
 export default function RegionalSpeciesIntelligencePage() {
-  const [data, setData] = useState(null);
-  const [loadState, setLoadState] = useState("loading");
-  const [errorMessage, setErrorMessage] = useState(null);
-  const [selectedId, setSelectedId] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState("");
-
-  useEffect(() => {
-    let active = true;
-    getRegionSpeciesIntelligence("caribbean")
-      .then((payload) => {
-        if (!active) return;
-        setData(payload);
-        setLoadState("ready");
-      })
-      .catch((error) => {
-        if (!active) return;
-        setData(null);
-        setErrorMessage(error?.message || "Regional species intelligence could not be loaded.");
-        setLoadState("error");
-      });
-    return () => {
-      active = false;
-    };
-  }, []);
-
-  const reload = () => {
-    setLoadState("loading");
-    setErrorMessage(null);
-    let active = true;
-    getRegionSpeciesIntelligence("caribbean")
-      .then((payload) => {
-        if (!active) return;
-        setData(payload);
-        setLoadState("ready");
-      })
-      .catch((error) => {
-        if (!active) return;
-        setData(null);
-        setErrorMessage(error?.message || "Regional species intelligence could not be loaded.");
-        setLoadState("error");
-      });
-    return () => {
-      active = false;
-    };
-  };
-
-  const species = useMemo(() => data?.species || [], [data]);
-  const filtered = useMemo(() => {
-    const needle = query.trim().toLowerCase();
-    if (!needle) return species;
-    return species.filter((item) =>
-      item.scientific_name.toLowerCase().includes(needle)
-      || (item.common_name && item.common_name.toLowerCase().includes(needle))
-    );
-  }, [species, query]);
-
-  const selected = useMemo(() => {
-    if (filtered.length === 0) return null;
-    const explicit = filtered.find((item) => item.id === selectedId);
-    return explicit || filtered[0];
-  }, [filtered, selectedId]);
-
-  const jurisdictionMeta = useMemo(() => {
-    if (!data?.species) return {};
-    const map = {};
-    for (const item of data.species) {
-      for (const pj of item.per_jurisdiction || []) {
-        if (pj.jurisdiction) {
-          map[pj.jurisdiction_id] = pj.jurisdiction;
-        }
-      }
-    }
-    return map;
-  }, [data]);
-
-  const unresolvedEvidence = data?.unresolved_evidence || [];
-
-  return (
-    <div className="rsi-page">
-      <header className="rsi-page__header">
-        <p className="rsi-page__eyebrow">Caribbean regional monitoring</p>
-        <h1 className="rsi-page__title">Regional Species Intelligence</h1>
-        <p className="rsi-page__subtitle">
-          Canonical species identity, operational observation evidence, and
-          jurisdiction-specific scientific deployment coverage across the
-          configured Caribbean jurisdictions.
-        </p>
-      </header>
-
-      {loadState === "loading" && <LoadingState />}
-      {loadState === "error" && (
-        <ErrorState message={errorMessage} onRetry={reload} />
-      )}
-      {loadState === "ready" && species.length === 0 && (
-        <EmptyState hasUnresolved={unresolvedEvidence.length > 0} />
-      )}
-
-      {loadState === "ready" && species.length > 0 && (
-        <div className="rsi-workspace">
-          <aside className="rsi-list-panel">
-            <label className="rsi-search">
-              <span className="rsi-search__label">Search species</span>
-              <input
-                type="search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="Pterois volitans, Lionfish…"
-                className="rsi-search__input"
-              />
-            </label>
-            <p className="rsi-list-panel__count">
-              {filtered.length} of {species.length} canonical species
-            </p>
-            <ul className="rsi-list" role="listbox">
-              {filtered.map((item) => (
-                <SpeciesListItem
-                  key={item.id}
-                  item={item}
-                  isSelected={item.id === selectedId}
-                  onSelect={() => setSelectedId(item.id)}
-                />
-              ))}
-              {filtered.length === 0 && (
-                <li className="rsi-list-empty">
-                  No species match this filter.
-                </li>
-              )}
-            </ul>
-          </aside>
-          <section className="rsi-detail-panel">
-            {selected ? (
-              <SpeciesDetail species={selected} jurisdictionMeta={jurisdictionMeta} />
-            ) : (
-              <p className="rsi-detail-empty">
-                Select a species from the list to view canonical identity,
-                regional evidence, and jurisdiction deployment coverage.
-              </p>
-            )}
-          </section>
-        </div>
-      )}
-
-      {loadState === "ready" && unresolvedEvidence.length > 0 && (
-        <UnresolvedEvidence items={unresolvedEvidence} />
-      )}
-    </div>
-  );
+  const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [filter, setFilter] = useState("all");
+  const [catalog, setCatalog] = useState({ count: 0, items: [] });
+  const [tracking, setTracking] = useState([]);
+  const [selected, setSelected] = useState(null);
+  const [state, setState] = useState("loading");
+  const [error, setError] = useState(null);
+  const [mediaByTaxon, setMediaByTaxon] = useState({});
+  const selectedId = Number(searchParams.get("taxon"));
+  useEffect(() => { const timer = window.setTimeout(() => setDebouncedQuery(query.trim()), 250); return () => window.clearTimeout(timer); }, [query]);
+  useEffect(() => { let active = true; Promise.all([getSpeciesCatalog({ search: debouncedQuery, withObservations: filter === "observed", pageSize: 100 }), getRegionSpeciesTracking("caribbean")]).then(([catalogData, trackingData]) => { if (!active) return; setCatalog(catalogData); setTracking(trackingData.items || []); setState("ready"); }).catch((reason) => { if (!active) return; setError(reason?.message || "Species catalog could not be loaded."); setState("error"); }); return () => { active = false; }; }, [debouncedQuery, filter]);
+  useEffect(() => { let active = true; if (selectedId > 0) getSpeciesCatalogDetail(selectedId).then((item) => active && setSelected(item)).catch(() => active && setSelected(null)); return () => { active = false; }; }, [selectedId]);
+  const observedCount = useMemo(() => tracking.length, [tracking]);
+  const displayedSelected = selectedId > 0 ? selected : catalog.items[0] || null;
+  useEffect(() => { let active = true; const taxonId = displayedSelected?.id; if (taxonId && !mediaByTaxon[taxonId]) getPublicTaxonMedia(taxonId).then((payload) => { if (active) setMediaByTaxon((current) => ({ ...current, [taxonId]: payload })); }).catch(() => { if (active) setMediaByTaxon((current) => ({ ...current, [taxonId]: { reference_gallery: [] } })); }); return () => { active = false; }; }, [displayedSelected?.id, mediaByTaxon]);
+  const selectSpecies = (item) => { const next = new URLSearchParams(searchParams); next.set("taxon", item.id); setSearchParams(next); setSelected(item); };
+  return <div className="species-catalog-page">
+    <aside className="species-catalog"><div className="species-catalog__header"><div className="species-catalog__heading-row"><h1>Species Catalog</h1><span>{indexedTaxaLabel(catalog.count)}</span></div><label><span className="sr-only">Search species</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Common name, scientific name, or taxon ID" /></label><div className="species-catalog__filters" role="group" aria-label="Catalog filters"><button type="button" className={filter === "all" ? "active" : ""} onClick={() => setFilter("all")}>All Species</button><button type="button" className={filter === "observed" ? "active" : ""} onClick={() => setFilter("observed")}>With Observations ({observedCount})</button></div><p>Canonical taxonomy catalog · independent of regional or ecological status</p></div>
+      {state === "loading" && <p className="species-catalog__state">Loading catalog…</p>}{state === "error" && <p className="species-catalog__state" role="alert">{error}</p>}{state === "ready" && <ul className="species-catalog__list">{catalog.items.map((item) => <SpeciesCard key={item.id} item={item} selected={displayedSelected?.id === item.id} onSelect={() => selectSpecies(item)} />)}</ul>}{state === "ready" && catalog.items.length === 0 && <p className="species-catalog__state">No canonical taxa match this search.</p>}
+    </aside>
+    <main className="species-intelligence-pane"><ReturnContext params={searchParams} />{displayedSelected ? <SpeciesIntelligence species={displayedSelected} tracking={tracking} media={mediaByTaxon[displayedSelected.id]} /> : <div className="species-intelligence-empty"><h2>Select a species</h2><p>Choose a canonical taxon from the catalog to view available intelligence.</p></div>}</main>
+  </div>;
 }

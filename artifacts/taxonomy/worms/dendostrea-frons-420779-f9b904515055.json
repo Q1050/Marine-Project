@@ -1,0 +1,104 @@
+{
+  "canonical_content_fingerprint": "f9b904515055a55ee43d7b39ab513c8ecd9b3916ecc397a8043a5e918dfad8db",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=420779",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 51,
+          "child": {
+            "AphiaID": 105,
+            "child": {
+              "AphiaID": 1424948,
+              "child": {
+                "AphiaID": 206,
+                "child": {
+                  "AphiaID": 1774,
+                  "child": {
+                    "AphiaID": 151323,
+                    "child": {
+                      "AphiaID": 215,
+                      "child": {
+                        "AphiaID": 510735,
+                        "child": {
+                          "AphiaID": 415280,
+                          "child": {
+                            "AphiaID": 420779,
+                            "child": null,
+                            "rank": "Species",
+                            "scientificname": "Dendostrea frons"
+                          },
+                          "rank": "Genus",
+                          "scientificname": "Dendostrea"
+                        },
+                        "rank": "Subfamily",
+                        "scientificname": "Ostreinae"
+                      },
+                      "rank": "Family",
+                      "scientificname": "Ostreidae"
+                    },
+                    "rank": "Superfamily",
+                    "scientificname": "Ostreoidea"
+                  },
+                  "rank": "Order",
+                  "scientificname": "Ostreida"
+                },
+                "rank": "Infraclass",
+                "scientificname": "Pteriomorphia"
+              },
+              "rank": "Subclass",
+              "scientificname": "Autobranchia"
+            },
+            "rank": "Class",
+            "scientificname": "Bivalvia"
+          },
+          "rank": "Phylum",
+          "scientificname": "Mollusca"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 420779,
+      "authority": "(Linnaeus, 1758)",
+      "citation": "MolluscaBase eds. (2026). MolluscaBase. Dendostrea frons (Linnaeus, 1758). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=420779 on 2026-09-04",
+      "class": "Bivalvia",
+      "family": "Ostreidae",
+      "genus": "Dendostrea",
+      "isBrackish": null,
+      "isExtinct": null,
+      "isFreshwater": null,
+      "isMarine": 1,
+      "isTerrestrial": null,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:420779",
+      "match_type": "exact",
+      "modified": "2011-08-02T17:37:26.460Z",
+      "order": "Ostreida",
+      "originalNameUsageID": 819184,
+      "parentNameUsageID": 415280,
+      "phylum": "Mollusca",
+      "rank": "Species",
+      "scientificname": "Dendostrea frons",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=420779",
+      "valid_AphiaID": 420779,
+      "valid_authority": "(Linnaeus, 1758)",
+      "valid_name": "Dendostrea frons"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "420779",
+    "scientific_name": "Dendostrea frons"
+  },
+  "retrieved_at": "2026-09-04T19:04:16.253515+00:00"
+}

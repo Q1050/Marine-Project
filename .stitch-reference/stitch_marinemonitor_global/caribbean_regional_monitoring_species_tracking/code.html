@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Caribbean Marine Monitor - Invasive Species Tracker</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+              950: '#042f2e',
+            },
+            slate: {
+              850: '#151f32',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-animations">
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.6);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+    }
+    .pulse-animation {
+      animation: pulse-ring 2.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    
+    /* Custom Scrollbar for side panel */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-700 font-sans h-screen w-screen overflow-hidden select-none flex">
+<!-- BEGIN: LeftSidebar -->
+<aside class="w-64 bg-white border-r border-slate-200 flex flex-col justify-between z-30 flex-shrink-0 h-full" data-purpose="sidebar-navigation">
+<!-- Top Branding & Navigation -->
+<div class="flex flex-col">
+<!-- App Brand -->
+<div class="p-5 flex items-start gap-3 border-b border-slate-100">
+<div class="w-9 h-9 rounded-lg bg-teal-900 flex items-center justify-center text-teal-300 shadow-sm flex-shrink-0">
+<!-- Wave / Marine Icon -->
+<svg class="w-5 h-5 stroke-current fill-none stroke-[2.2]" viewbox="0 0 24 24">
+<path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 7.5 0M2 17c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 7.5 0" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="leading-tight">
+<h1 class="text-sm font-bold text-slate-900 tracking-tight">Caribbean Marine<br/>Monitor</h1>
+<p class="text-[11px] text-slate-400 font-medium mt-0.5">Regional monitoring</p>
+</div>
+</div>
+<!-- Navigation Category -->
+<div class="px-5 pt-6 pb-2">
+<span class="text-[10px] font-bold tracking-wider text-slate-400 uppercase">REGIONAL</span>
+</div>
+<!-- Nav Links -->
+<nav class="px-3 space-y-1">
+<!-- Overview (Active) -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-teal-50 text-teal-800 font-medium text-sm transition group" href="#">
+<svg class="w-4 h-4 text-teal-600 stroke-[2.2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 2L2 12l10 10 10-12L12 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Overview</span>
+</a>
+<!-- Observations -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium text-sm transition" href="#">
+<svg class="w-4 h-4 text-slate-400 stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<circle cx="12" cy="12" fill="currentColor" r="3"></circle>
+</svg>
+<span>Observations</span>
+</a>
+<!-- Species -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium text-sm transition" href="#">
+<svg class="w-4 h-4 text-slate-400 stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 2a5 5 0 015 5c0 3.5-5 8-5 8s-5-4.5-5-8a5 5 0 015-5z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M12 15v7m-4-3h8" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Species</span>
+</a>
+<!-- Analytics -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium text-sm transition" href="#">
+<svg class="w-4 h-4 text-slate-400 stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 19V5m8 14v-8m8 8V9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Analytics</span>
+</a>
+</nav>
+</div>
+<!-- Bottom Actions -->
+<div class="p-4 border-t border-slate-100 flex flex-col gap-3">
+<!-- Submit Sighting Primary CTA -->
+<button class="w-full bg-teal-800 hover:bg-teal-900 active:bg-teal-950 text-white font-medium text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm transition" data-purpose="submit-sighting-btn">
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Submit sighting</span>
+</button>
+<!-- Settings & Help Links -->
+<div class="pt-2 flex flex-col space-y-1">
+<a class="flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-50 transition" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-50 transition" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Help center</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- END: LeftSidebar -->
+<!-- BEGIN: MainContentArea -->
+<main class="flex-1 flex flex-col relative h-full overflow-hidden">
+<!-- Top Header Bar -->
+<header class="h-16 bg-white/95 backdrop-blur border-b border-slate-200 px-6 flex items-center justify-between z-20 flex-shrink-0" data-purpose="top-navigation-bar">
+<!-- Title & Context -->
+<div>
+<p class="text-[10px] font-bold tracking-widest text-teal-700 uppercase">INVASIVE SPECIES TRACKER</p>
+<div class="flex items-center gap-1.5">
+<h2 class="text-base font-bold text-slate-900">Caribbean</h2>
+<span class="text-slate-400 text-xs">•</span>
+<span class="text-xs text-slate-500 font-medium">Regional monitoring</span>
+</div>
+</div>
+<!-- Right Header Actions -->
+<div class="flex items-center gap-3.5">
+<button class="px-4 py-1.5 rounded-lg border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition">
+          Partner sign in
+        </button>
+<!-- Search Bar -->
+<div class="relative w-64">
+<span class="absolute inset-y-0 left-0 flex items-center pl-2.5 pointer-events-none text-slate-400">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+<input class="w-full pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs placeholder:text-slate-400 text-slate-700 focus:outline-none focus:ring-1 focus:ring-teal-600 focus:bg-white transition" placeholder="Search coordinates or IDs" type="text"/>
+</div>
+<!-- Notification Indicator -->
+<button class="p-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-slate-100 relative">
+<span class="w-2 h-2 rounded-full bg-slate-900 absolute top-2 right-2"></span>
+<svg class="w-4 h-4 invisible" viewbox="0 0 24 24"></svg>
+</button>
+<!-- User Avatar -->
+<div class="w-8 h-8 rounded-full bg-slate-200 border border-slate-300 flex items-center justify-center font-semibold text-xs text-slate-700">
+          CM
+        </div>
+</div>
+</header>
+<!-- Map Canvas Container -->
+<div class="relative flex-1 w-full h-full bg-[#dbe1e6] overflow-hidden" data-purpose="map-viewport">
+<!-- Map Graphics Layer (High-Fidelity SVG Base Map) -->
+<svg class="w-full h-full object-cover select-none" preserveaspectratio="xMidYMid slice" viewbox="0 0 1400 800" xmlns="http://www.w3.org/2000/svg">
+<!-- Ocean Background -->
+<rect fill="#d9e0e5" height="800" width="1400"></rect>
+<!-- Continental Bathymetry / Coastal Shelf Tones (Subtle) -->
+<path d="M 0,380 Q 200,320 380,260 T 520,380 T 700,560 T 900,680 L 1400,750 L 1400,800 L 0,800 Z" fill="#d0d8dd" opacity="0.6"></path>
+<!-- Land Masses (Light Grey Natural Earth Style) -->
+<!-- North America / US Gulf Coast -->
+<path d="M 0,0 L 400,0 C 390,60 360,90 320,110 C 270,120 250,150 220,180 C 180,210 140,240 100,240 L 0,220 Z" fill="#eceff1" stroke="#dde2e5" stroke-width="1.2"></path>
+<text fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="2" x="180" y="80">UNITED STATES</text>
+<!-- Mexico -->
+<path d="M 0,230 Q 120,250 180,310 C 240,370 280,390 330,410 C 370,390 400,340 430,320 C 470,300 480,340 450,380 C 400,420 350,440 320,470 L 0,350 Z" fill="#eceff1" stroke="#dde2e5" stroke-width="1.2"></path>
+<text fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="2" x="210" y="340">MEXICO</text>
+<!-- Central America Bridge -->
+<path d="M 320,450 C 360,460 390,480 410,510 C 430,530 460,545 490,560 C 510,570 515,595 495,605 C 470,600 440,560 400,540 C 360,520 330,490 320,450 Z" fill="#eceff1" stroke="#dde2e5" stroke-width="1.2"></path>
+<text fill="#a0aec0" font-size="8" font-weight="600" x="350" y="475">BELIZE</text>
+<text fill="#a0aec0" font-size="8" font-weight="600" x="365" y="500">HONDURAS</text>
+<text fill="#a0aec0" font-size="8" font-weight="600" x="340" y="520">EL SALVADOR</text>
+<text fill="#a0aec0" font-size="8" font-weight="600" x="365" y="538">NICARAGUA</text>
+<text fill="#a0aec0" font-size="8" font-weight="600" x="390" y="560">COSTA RICA</text>
+<text fill="#a0aec0" font-size="8" font-weight="600" x="420" y="582">PANAMA</text>
+<!-- South America -->
+<path d="M 480,590 C 530,580 580,570 650,580 C 720,590 770,620 830,650 C 890,680 910,750 900,800 L 400,800 C 440,730 460,650 480,590 Z" fill="#eceff1" stroke="#dde2e5" stroke-width="1.2"></path>
+<text fill="#94a3b8" font-size="10" font-weight="600" letter-spacing="1" x="520" y="630">COLOMBIA</text>
+<text fill="#94a3b8" font-size="10" font-weight="600" letter-spacing="1" x="610" y="615">VENEZUELA</text>
+<text fill="#a0aec0" font-size="8" font-weight="600" x="710" y="655">GUYANA</text>
+<text fill="#94a3b8" font-size="10" font-weight="600" letter-spacing="1" x="760" y="800">BRAZIL</text>
+<!-- Caribbean Islands -->
+<!-- Cuba -->
+<path d="M 430,375 C 470,360 520,380 570,410 C 560,420 520,410 470,395 C 440,390 425,385 430,375 Z" fill="#eceff1" stroke="#cbd5e1" stroke-width="1.2"></path>
+<text fill="#94a3b8" font-size="9" font-weight="700" x="475" y="380">CUBA</text>
+<!-- Bahamas Archipelago -->
+<circle cx="510" cy="310" fill="#eceff1" r="4.5" stroke="#cbd5e1" stroke-width="1"></circle>
+<circle cx="530" cy="330" fill="#eceff1" r="6" stroke="#cbd5e1" stroke-width="1"></circle>
+<circle cx="555" cy="350" fill="#eceff1" r="3.5" stroke="#cbd5e1" stroke-width="1"></circle>
+<!-- Jamaica -->
+<ellipse cx="505" cy="450" fill="#eceff1" rx="20" ry="6" stroke="#cbd5e1" stroke-width="1.2"></ellipse>
+<text fill="#94a3b8" font-size="8" font-weight="700" x="480" y="453">JAMAICA</text>
+<!-- Hispaniola (Haiti / Dominican Republic) -->
+<path d="M 570,420 C 600,415 630,425 660,435 C 640,445 610,440 580,435 Z" fill="#eceff1" stroke="#cbd5e1" stroke-width="1.2"></path>
+<text fill="#a0aec0" font-size="7" font-weight="600" x="600" y="430">DOMINICAN</text>
+<text fill="#a0aec0" font-size="7" font-weight="600" x="605" y="438">REPUBLIC</text>
+<!-- Puerto Rico -->
+<rect fill="#eceff1" height="7" rx="3" stroke="#cbd5e1" stroke-width="1" width="22" x="675" y="445"></rect>
+<!-- Lesser Antilles Arc -->
+<circle cx="715" cy="470" fill="#cbd5e1" r="2.5"></circle>
+<circle cx="720" cy="490" fill="#cbd5e1" r="2.5"></circle>
+<circle cx="722" cy="510" fill="#cbd5e1" r="2.5"></circle>
+<circle cx="720" cy="530" fill="#cbd5e1" r="3"></circle>
+<circle cx="715" cy="550" fill="#cbd5e1" r="3.5"></circle>
+<circle cx="700" cy="570" fill="#cbd5e1" r="3"></circle>
+<!-- Eastern Atlantic Coastline (West Africa snippet for scale reference) -->
+<path d="M 1250,150 C 1200,200 1180,260 1200,320 C 1220,380 1240,430 1270,480 C 1290,520 1320,550 1340,600 L 1400,600 L 1400,100 Z" fill="#eceff1" opacity="0.8" stroke="#dde2e5" stroke-width="1.2"></path>
+<text fill="#94a3b8" font-size="9" font-weight="600" x="1230" y="240">MOROCCO</text>
+<text fill="#a0aec0" font-size="8" font-weight="600" x="1220" y="410">MAURITANIA</text>
+<text fill="#a0aec0" font-size="8" font-weight="600" x="1225" y="510">SENEGAL</text>
+</svg>
+<!-- Zoom Controls (Leaflet style top-left) -->
+<div class="absolute top-5 left-5 flex flex-col bg-white rounded-md shadow-md border border-slate-200 overflow-hidden z-10" data-purpose="map-zoom-controls">
+<button class="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 active:bg-slate-200 border-b border-slate-200 text-lg font-bold leading-none">+</button>
+<button class="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 active:bg-slate-200 text-lg font-bold leading-none">−</button>
+</div>
+<!-- BEGIN: SpeciesTrackingFloatingPanel -->
+<section class="absolute top-5 right-6 w-84 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-200/80 p-4 z-20 transition-all duration-200" data-purpose="species-tracking-panel">
+<!-- Panel Header -->
+<div class="flex items-center justify-between pb-3 border-b border-slate-100">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-teal-500 animate-ping"></div>
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-800">Species Tracking</h3>
+</div>
+<span class="px-2 py-0.5 text-[11px] font-semibold bg-teal-50 text-teal-700 border border-teal-200/70 rounded-full">2 Active</span>
+</div>
+<p class="text-[11px] text-slate-500 mt-2 mb-3 leading-tight">Toggle species layers to display confirmed field sightings.</p>
+<!-- Species Layer List -->
+<div class="space-y-2 max-h-[360px] overflow-y-auto pr-0.5">
+<!-- Species Item 1: Lionfish (Active) -->
+<label class="flex items-center justify-between p-2.5 rounded-xl border border-teal-200 bg-teal-50/50 hover:bg-teal-50 transition cursor-pointer group">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 rounded border-slate-300 text-teal-700 focus:ring-teal-600 focus:ring-offset-0 transition cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-teal-600"></span>
+<span class="text-xs font-bold text-slate-800 group-hover:text-teal-950 transition">Lionfish</span>
+</div>
+<span class="text-[11px] italic text-slate-400 font-normal">Pterois volitans</span>
+</div>
+</div>
+<span class="text-[10px] font-semibold bg-teal-100 text-teal-800 px-2 py-0.5 rounded-md">12 confirmed</span>
+</label>
+<!-- Species Item 2: Tiger Prawn (Active) -->
+<label class="flex items-center justify-between p-2.5 rounded-xl border border-amber-200 bg-amber-50/40 hover:bg-amber-50/80 transition cursor-pointer group">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 rounded border-slate-300 text-amber-600 focus:ring-amber-500 focus:ring-offset-0 transition cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span class="text-xs font-bold text-slate-800 group-hover:text-amber-950 transition">Tiger Prawn</span>
+</div>
+<span class="text-[11px] italic text-slate-400 font-normal">Penaeus monodon</span>
+</div>
+</div>
+<span class="text-[10px] font-semibold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-md">4 confirmed</span>
+</label>
+<!-- Species Item 3: Orange Cup Coral (Inactive) -->
+<label class="flex items-center justify-between p-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 transition cursor-pointer group">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 rounded border-slate-300 text-rose-500 focus:ring-rose-500 focus:ring-offset-0 transition cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-rose-400 opacity-60"></span>
+<span class="text-xs font-medium text-slate-700 group-hover:text-slate-900 transition">Orange Cup Coral</span>
+</div>
+<span class="text-[11px] italic text-slate-400 font-normal">Tubastraea coccinea</span>
+</div>
+</div>
+<span class="text-[10px] font-medium text-slate-500 px-2 py-0.5 rounded-md bg-slate-100">7 sightings</span>
+</label>
+<!-- Species Item 4: Halophila Seagrass (Inactive) -->
+<label class="flex items-center justify-between p-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 transition cursor-pointer group">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-600 focus:ring-offset-0 transition cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 opacity-60"></span>
+<span class="text-xs font-medium text-slate-700 group-hover:text-slate-900 transition">Halophila Seagrass</span>
+</div>
+<span class="text-[11px] italic text-slate-400 font-normal">Halophila stipulacea</span>
+</div>
+</div>
+<span class="text-[10px] font-medium text-slate-500 px-2 py-0.5 rounded-md bg-slate-100">3 sightings</span>
+</label>
+</div>
+<!-- Panel Footer Stats / Filter -->
+<div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+<span>Verification: <strong>NEPA / CARICOM</strong></span>
+<button class="text-teal-700 hover:text-teal-900 font-semibold hover:underline">Reset filters</button>
+</div>
+</section>
+<!-- END: SpeciesTrackingFloatingPanel -->
+<!-- MAP MARKERS LAYER -->
+<!-- Marker 1: Bahamas Area (Teal Lionfish Marker) -->
+<div class="absolute top-[44%] left-[45%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer" data-purpose="map-marker-bahamas">
+<div class="relative flex items-center justify-center">
+<span class="pulse-animation absolute w-8 h-8 rounded-full bg-teal-500/40"></span>
+<div class="w-5 h-5 rounded-full bg-teal-700 border-2 border-white shadow-md flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-teal-200"></div>
+</div>
+</div>
+</div>
+<!-- Marker 2: Windward Islands / Barbados (Teal Lionfish Marker) -->
+<div class="absolute top-[63%] left-[58%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer" data-purpose="map-marker-barbados">
+<div class="relative flex items-center justify-center">
+<span class="pulse-animation absolute w-8 h-8 rounded-full bg-teal-500/40"></span>
+<div class="w-5 h-5 rounded-full bg-teal-700 border-2 border-white shadow-md flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-teal-200"></div>
+</div>
+</div>
+</div>
+<!-- Marker 3: Tiger Prawn (Belize Barrier Reef / Amber Marker) -->
+<div class="absolute top-[58%] left-[37%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer" data-purpose="map-marker-belize">
+<div class="relative flex items-center justify-center">
+<span class="pulse-animation absolute w-8 h-8 rounded-full bg-amber-500/40"></span>
+<div class="w-4 h-4 rounded-full bg-amber-600 border-2 border-white shadow-md flex items-center justify-center">
+<div class="w-1 h-1 rounded-full bg-amber-100"></div>
+</div>
+</div>
+</div>
+<!-- Marker 4 & OPEN POPUP: Jamaica (Confirmed Lionfish Anchor) -->
+<div class="absolute top-[55%] left-[43.5%] -translate-x-1/2 -translate-y-1/2 z-30" data-purpose="map-marker-active-popup">
+<!-- Center Target Pin -->
+<div class="relative flex items-center justify-center cursor-pointer">
+<span class="pulse-animation absolute w-10 h-10 rounded-full bg-teal-600/30"></span>
+<div class="w-6 h-6 rounded-full bg-teal-800 border-2 border-white shadow-lg flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-teal-300"></div>
+</div>
+</div>
+<!-- Anchored High-Fidelity Popup Card -->
+<div class="absolute bottom-9 left-1/2 -translate-x-1/2 w-72 bg-white rounded-xl shadow-2xl border border-slate-200 p-4 pb-3.5 z-40 transition-transform">
+<!-- Close Button -->
+<button class="absolute top-3 right-3 text-slate-400 hover:text-slate-600 transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Verified Badge -->
+<div class="flex items-center gap-1.5 text-[10px] font-bold text-teal-800 uppercase tracking-wider mb-1">
+<svg class="w-3.5 h-3.5 text-teal-600 fill-teal-100" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span>EXPERT CONFIRMED</span>
+</div>
+<!-- Species Names -->
+<h4 class="text-sm font-bold text-slate-900 leading-tight">Lionfish</h4>
+<p class="text-xs italic text-slate-500 font-medium mb-3">Pterois volitans</p>
+<!-- Details Grid -->
+<div class="space-y-1.5 py-2 border-t border-b border-slate-100 text-[11px]">
+<div class="flex justify-between">
+<span class="text-slate-400 font-medium">Observed:</span>
+<span class="text-slate-700 font-semibold">Aug 18, 2026 · 14:20 GMT-5</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-400 font-medium">Coordinates:</span>
+<span class="font-mono text-slate-700 font-semibold text-[10.5px]">18.432° N, 77.108° W</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-400 font-medium">Jurisdiction:</span>
+<span class="text-slate-700 font-semibold">Jamaica (St. James)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-400 font-medium">Verified by:</span>
+<span class="text-slate-700 font-semibold">Dr. A. Campbell (NEPA)</span>
+</div>
+</div>
+<!-- Bottom Action Button -->
+<div class="mt-3">
+<button class="w-full bg-slate-50 hover:bg-teal-50 hover:text-teal-800 text-slate-700 border border-slate-200 hover:border-teal-200 text-xs font-semibold py-1.5 px-3 rounded-lg flex items-center justify-center gap-1.5 transition">
+<span>View full observation record</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Little Anchor Pointer / Triangle Down -->
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45 border-r border-b border-slate-200"></div>
+</div>
+</div>
+<!-- BEGIN: BottomLeftJurisdictionsWidget -->
+<div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-slate-200 p-3.5 z-20 w-56" data-purpose="jurisdictions-legend">
+<h5 class="text-xs font-bold text-slate-800 mb-2.5">Caribbean jurisdictions</h5>
+<div class="space-y-2 text-[11px]">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-teal-700 flex-shrink-0"></span>
+<span class="text-slate-600 font-medium">Monitoring active</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full border border-dashed border-slate-400 flex-shrink-0"></span>
+<span class="text-slate-500">Planned / not configured</span>
+</div>
+</div>
+</div>
+<!-- END: BottomLeftJurisdictionsWidget -->
+<!-- Map Attribution (Leaflet / CARTO style bottom right) -->
+<div class="absolute bottom-1 right-2 text-[9px] text-slate-500/80 bg-white/60 px-2 py-0.5 rounded backdrop-blur-xs z-10">
+        Leaflet | © OpenStreetMap contributors © CARTO
+      </div>
+</div>
+</main>
+<!-- END: MainContentArea -->
+</body></html>

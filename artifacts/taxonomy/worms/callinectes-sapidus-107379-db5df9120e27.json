@@ -1,0 +1,134 @@
+{
+  "canonical_content_fingerprint": "db5df9120e27ae6ca53ecf7c2d43cba8008ee1cf174ee530af5d09a840540b23",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=107379",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1065,
+          "child": {
+            "AphiaID": 1066,
+            "child": {
+              "AphiaID": 845959,
+              "child": {
+                "AphiaID": 1071,
+                "child": {
+                  "AphiaID": 1086,
+                  "child": {
+                    "AphiaID": 1089,
+                    "child": {
+                      "AphiaID": 1130,
+                      "child": {
+                        "AphiaID": 106670,
+                        "child": {
+                          "AphiaID": 106673,
+                          "child": {
+                            "AphiaID": 106679,
+                            "child": {
+                              "AphiaID": 106680,
+                              "child": {
+                                "AphiaID": 106702,
+                                "child": {
+                                  "AphiaID": 106763,
+                                  "child": {
+                                    "AphiaID": 148430,
+                                    "child": {
+                                      "AphiaID": 106921,
+                                      "child": {
+                                        "AphiaID": 107379,
+                                        "child": null,
+                                        "rank": "Species",
+                                        "scientificname": "Callinectes sapidus"
+                                      },
+                                      "rank": "Genus",
+                                      "scientificname": "Callinectes"
+                                    },
+                                    "rank": "Subfamily",
+                                    "scientificname": "Portuninae"
+                                  },
+                                  "rank": "Family",
+                                  "scientificname": "Portunidae"
+                                },
+                                "rank": "Superfamily",
+                                "scientificname": "Portunoidea"
+                              },
+                              "rank": "Subsection",
+                              "scientificname": "Heterotremata"
+                            },
+                            "rank": "Section",
+                            "scientificname": "Eubrachyura"
+                          },
+                          "rank": "Infraorder",
+                          "scientificname": "Brachyura"
+                        },
+                        "rank": "Suborder",
+                        "scientificname": "Pleocyemata"
+                      },
+                      "rank": "Order",
+                      "scientificname": "Decapoda"
+                    },
+                    "rank": "Superorder",
+                    "scientificname": "Eucarida"
+                  },
+                  "rank": "Subclass",
+                  "scientificname": "Eumalacostraca"
+                },
+                "rank": "Class",
+                "scientificname": "Malacostraca"
+              },
+              "rank": "Superclass",
+              "scientificname": "Multicrustacea"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Crustacea"
+          },
+          "rank": "Phylum",
+          "scientificname": "Arthropoda"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 107379,
+      "authority": "Rathbun, 1896",
+      "citation": "DecaNet eds. (2026). DecaNet. Callinectes sapidus Rathbun, 1896. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=107379 on 2026-09-04",
+      "class": "Malacostraca",
+      "family": "Portunidae",
+      "genus": "Callinectes",
+      "isBrackish": 1,
+      "isExtinct": 0,
+      "isFreshwater": 1,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:107379",
+      "match_type": "exact",
+      "modified": "2024-01-12T09:59:10.030Z",
+      "order": "Decapoda",
+      "originalNameUsageID": 107379,
+      "parentNameUsageID": 106921,
+      "phylum": "Arthropoda",
+      "rank": "Species",
+      "scientificname": "Callinectes sapidus",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=107379",
+      "valid_AphiaID": 107379,
+      "valid_authority": "Rathbun, 1896",
+      "valid_name": "Callinectes sapidus"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "107379",
+    "scientific_name": "Callinectes sapidus"
+  },
+  "retrieved_at": "2026-09-04T19:04:07.115148+00:00"
+}

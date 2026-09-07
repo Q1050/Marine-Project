@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from "react";
 import L from "leaflet";
 import { MapContainer, Marker, TileLayer, useMap, useMapEvents } from "react-leaflet";
+import { BASEMAP } from "../config/basemap";
 
 import "leaflet/dist/leaflet.css";
 
@@ -50,8 +51,8 @@ export default function SightingLocationPicker({ latitude, longitude, onSelect }
         scrollWheelZoom
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution={BASEMAP.attribution}
+          url={BASEMAP.url}
         />
         <MapInteraction position={position} onSelect={onSelect} />
       </MapContainer>

@@ -1,7 +1,8 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { NAVIGATION } from "../config/navigation";
+import { NAVIGATION, submissionRouteForScope } from "../config/navigation";
 import { jurisdictionRoles, useAuth } from "../auth/AuthContext";
 import { useJurisdiction } from "../geography/JurisdictionContext";
+import { navigationSectionLabel, showPlatformAdminReturn } from "../config/shellPresentation";
 
 export default function AppShell({ scope, viewportJurisdiction, children }) {
   const location = useLocation();
@@ -18,19 +19,22 @@ export default function AppShell({ scope, viewportJurisdiction, children }) {
   const navigation = (NAVIGATION[scope] || NAVIGATION.public).map((item) => scope === "country" ? { ...item, to: `/region/${activeRegion}/${activeJurisdiction}/${item.id}` } : item).filter(
     (item) => (item.id !== "review" || canReview) &&
       (item.id !== "investigations" || canViewInvestigations) &&
+      (!["scientific-readiness", "early-warning"].includes(item.id) || canViewInvestigations) &&
       (item.id !== "observation-operations" || user?.is_platform_admin || user?.operational_review?.enabled) &&
       (item.id !== "scientific-early-warning" || user?.is_platform_admin || user?.scientific_review?.enabled),
   );
   const isMapPage = location.pathname === "/region/caribbean" || (scope === "country" && location.pathname.endsWith("/map"));
   const context = shellContext(scope, viewportJurisdiction, jurisdiction);
-  const countryBase = `/region/${activeRegion}/${activeJurisdiction}`;
+  const submitUrl = submissionRouteForScope(scope, activeRegion, activeJurisdiction);
   const regionalUrl = (
     sessionStorage.getItem("caribbeanRegionalUrl") || "/region/caribbean"
   ).replace("/region/caribbean/map", "/region/caribbean");
+  const isDemonstration = import.meta.env.VITE_APP_ENV === "DEMO";
+  const navigationLabel = navigationSectionLabel(scope, context.jurisdictionName);
 
   return (
-    <div className="min-h-screen bg-surface-subtle text-app-text lg:grid lg:grid-cols-[232px_minmax(0,1fr)]">
-      <aside className="sticky top-0 z-[1200] flex h-auto border-b border-app-border bg-white lg:h-screen lg:flex-col lg:border-b-0 lg:border-r">
+    <div className="app-shell min-h-screen bg-surface-subtle text-app-text lg:grid lg:grid-cols-[232px_minmax(0,1fr)]">
+      <aside className="app-shell-sidebar sticky top-0 z-[1200] flex h-auto border-b border-app-border bg-white lg:h-screen lg:flex-col lg:border-b-0 lg:border-r">
         <button
           className="flex min-w-[220px] items-center gap-3 px-5 py-4 text-left"
           onClick={() => navigate(scope === "admin" ? "/admin" : regionalUrl)}
@@ -52,12 +56,28 @@ export default function AppShell({ scope, viewportJurisdiction, children }) {
             </small>
           </span>
         </button>
+        {showPlatformAdminReturn(scope, user) && (
+          <NavLink
+            to="/admin"
+            className="mx-3 mb-1 rounded-lg border border-app-border px-3 py-2 text-xs font-bold text-teal-700 hover:bg-teal-50"
+          >
+            ← Back to Platform Administration
+          </NavLink>
+        )}
+        {scope === "admin" && location.pathname !== "/admin" && (
+          <NavLink
+            to="/admin"
+            className="mx-3 mb-1 rounded-lg border border-app-border px-3 py-2 text-xs font-bold text-teal-700 hover:bg-teal-50"
+          >
+            ← Back to Admin overview
+          </NavLink>
+        )}
         <nav
           className="flex flex-1 gap-1 overflow-x-auto px-2 pb-2 lg:block lg:overflow-visible lg:px-3 lg:py-3"
           aria-label="Primary navigation"
         >
           <p className="hidden px-3 pb-2 pt-4 text-[10px] font-bold uppercase tracking-[.16em] text-app-muted lg:block">
-            {scope}
+            {navigationLabel}
           </p>
           {navigation.map((item) => (
             <NavLink
@@ -78,23 +98,20 @@ export default function AppShell({ scope, viewportJurisdiction, children }) {
         {scope !== "admin" && (
           <div className="hidden border-t border-app-border p-3 lg:block">
             <NavLink
-              to={
-                scope === "country"
-                  ? `${countryBase}/submit`
-                  : "/submit"
-              }
+              to={submitUrl}
               className="mb-3 block w-full rounded-lg bg-teal-700 px-4 py-3 text-center text-sm font-bold text-white hover:bg-teal-600"
             >
               ＋ Submit sighting
             </NavLink>
-            <div className="space-y-1 text-sm text-slate-600">
-              <div className="rounded-lg px-3 py-2">⚙ Settings</div>
-              <div className="rounded-lg px-3 py-2">? Help center</div>
-            </div>
           </div>
         )}
       </aside>
-      <section className="min-w-0">
+      <section className="app-shell-content min-w-0">
+        {isDemonstration && (
+          <div className="bg-amber-100 px-4 py-2 text-center text-xs font-bold uppercase tracking-[.14em] text-amber-900" role="status">
+            Demonstration data and workflows — not operational scientific evidence
+          </div>
+        )}
         <TopHeader
           scope={scope}
           context={context}
@@ -116,11 +133,9 @@ export default function AppShell({ scope, viewportJurisdiction, children }) {
           {children}
         </main>
       </section>
-      {scope !== "admin" && (
+      {scope !== "admin" && location.pathname !== "/submit" && !location.pathname.endsWith("/submit") && (
         <NavLink
-          to={
-            scope === "country" ? `${countryBase}/submit` : "/submit"
-          }
+          to={submitUrl}
           className="fixed bottom-4 right-4 z-[1300] rounded-full bg-teal-700 px-5 py-3 text-sm font-bold text-white shadow-lg lg:hidden"
         >
           ＋ Submit sighting
@@ -132,7 +147,7 @@ export default function AppShell({ scope, viewportJurisdiction, children }) {
 
 function TopHeader({ scope, context, user, onSignOut, onSignIn, onBackToRegion }) {
   return (
-    <header className="sticky top-[73px] z-[1100] flex h-16 items-center justify-between border-b border-app-border bg-white/95 px-4 backdrop-blur lg:top-0 lg:px-7">
+    <header className="app-top-header sticky top-[73px] z-[1100] flex h-16 items-center justify-between border-b border-app-border bg-white/95 px-4 backdrop-blur lg:top-0 lg:px-7">
       <div className="min-w-0">
         <p className="truncate text-[11px] font-bold uppercase tracking-[.15em] text-teal-700">
           {scope === "admin"

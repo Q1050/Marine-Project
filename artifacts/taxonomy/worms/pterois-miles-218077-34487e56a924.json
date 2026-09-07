@@ -1,0 +1,119 @@
+{
+  "canonical_content_fingerprint": "34487e56a924254b8d25a3d1e7011da27eab1e13d01712759a8aa852bceccf27",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218077",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1821,
+          "child": {
+            "AphiaID": 146419,
+            "child": {
+              "AphiaID": 1828,
+              "child": {
+                "AphiaID": 152352,
+                "child": {
+                  "AphiaID": 10194,
+                  "child": {
+                    "AphiaID": 843664,
+                    "child": {
+                      "AphiaID": 293496,
+                      "child": {
+                        "AphiaID": 11014,
+                        "child": {
+                          "AphiaID": 154247,
+                          "child": {
+                            "AphiaID": 125595,
+                            "child": {
+                              "AphiaID": 154410,
+                              "child": {
+                                "AphiaID": 204051,
+                                "child": {
+                                  "AphiaID": 218077,
+                                  "child": null,
+                                  "rank": "Species",
+                                  "scientificname": "Pterois miles"
+                                },
+                                "rank": "Genus",
+                                "scientificname": "Pterois"
+                              },
+                              "rank": "Subfamily",
+                              "scientificname": "Pteroinae"
+                            },
+                            "rank": "Family",
+                            "scientificname": "Scorpaenidae"
+                          },
+                          "rank": "Suborder",
+                          "scientificname": "Scorpaenoidei"
+                        },
+                        "rank": "Order",
+                        "scientificname": "Perciformes"
+                      },
+                      "rank": "Class",
+                      "scientificname": "Teleostei"
+                    },
+                    "rank": "Superclass",
+                    "scientificname": "Actinopteri"
+                  },
+                  "rank": "Gigaclass",
+                  "scientificname": "Actinopterygii"
+                },
+                "rank": "Parvphylum",
+                "scientificname": "Osteichthyes"
+              },
+              "rank": "Infraphylum",
+              "scientificname": "Gnathostomata"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Vertebrata"
+          },
+          "rank": "Phylum",
+          "scientificname": "Chordata"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 218077,
+      "authority": "(Bennett, 1828)",
+      "citation": "Froese, R. and D. Pauly. Editors. (2026). FishBase. Pterois miles (Bennett, 1828). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=218077 on 2026-09-04",
+      "class": "Teleostei",
+      "family": "Scorpaenidae",
+      "genus": "Pterois",
+      "isBrackish": 0,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:218077",
+      "match_type": "exact",
+      "modified": "2009-06-16T07:05:49.343Z",
+      "order": "Perciformes",
+      "originalNameUsageID": 306457,
+      "parentNameUsageID": 204051,
+      "phylum": "Chordata",
+      "rank": "Species",
+      "scientificname": "Pterois miles",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218077",
+      "valid_AphiaID": 218077,
+      "valid_authority": "(Bennett, 1828)",
+      "valid_name": "Pterois miles"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "218077",
+    "scientific_name": "Pterois miles"
+  },
+  "retrieved_at": "2026-09-04T19:03:59.438694+00:00"
+}

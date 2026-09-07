@@ -1,0 +1,94 @@
+{
+  "canonical_content_fingerprint": "4be730d3df13809e09809284d67161cd5af9cb8cb0543c134c6dd3502e8c21fc",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=144476",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 3,
+        "child": {
+          "AphiaID": 368663,
+          "child": {
+            "AphiaID": 801,
+            "child": {
+              "AphiaID": 1304953,
+              "child": {
+                "AphiaID": 146216,
+                "child": {
+                  "AphiaID": 808,
+                  "child": {
+                    "AphiaID": 143668,
+                    "child": {
+                      "AphiaID": 143816,
+                      "child": {
+                        "AphiaID": 144476,
+                        "child": null,
+                        "rank": "Species",
+                        "scientificname": "Caulerpa taxifolia"
+                      },
+                      "rank": "Genus",
+                      "scientificname": "Caulerpa"
+                    },
+                    "rank": "Family",
+                    "scientificname": "Caulerpaceae"
+                  },
+                  "rank": "Order",
+                  "scientificname": "Bryopsidales"
+                },
+                "rank": "Class",
+                "scientificname": "Ulvophyceae"
+              },
+              "rank": "Subphylum (Subdivision)",
+              "scientificname": "Chlorophytina"
+            },
+            "rank": "Phylum (Division)",
+            "scientificname": "Chlorophyta"
+          },
+          "rank": "Subkingdom",
+          "scientificname": "Viridiplantae"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Plantae"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 144476,
+      "authority": "(M.Vahl) C.Agardh, 1817",
+      "citation": "Guiry, M.D. & Guiry, G.M. (2026). AlgaeBase. World-wide electronic publication, National University of Ireland, Galway (taxonomic information republished from AlgaeBase with permission of M.D. Guiry). Caulerpa taxifolia (M.Vahl) C.Agardh, 1817. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=144476 on 2026-09-04",
+      "class": "Ulvophyceae",
+      "family": "Caulerpaceae",
+      "genus": "Caulerpa",
+      "isBrackish": null,
+      "isExtinct": null,
+      "isFreshwater": null,
+      "isMarine": 1,
+      "isTerrestrial": null,
+      "kingdom": "Plantae",
+      "lsid": "urn:lsid:marinespecies.org:taxname:144476",
+      "match_type": "exact",
+      "modified": "2015-06-26T12:00:51.270Z",
+      "order": "Bryopsidales",
+      "originalNameUsageID": 496835,
+      "parentNameUsageID": 143816,
+      "phylum": "Chlorophyta",
+      "rank": "Species",
+      "scientificname": "Caulerpa taxifolia",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=144476",
+      "valid_AphiaID": 144476,
+      "valid_authority": "(M.Vahl) C.Agardh, 1817",
+      "valid_name": "Caulerpa taxifolia"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "144476",
+    "scientific_name": "Caulerpa taxifolia"
+  },
+  "retrieved_at": "2026-09-04T19:04:31.694545+00:00"
+}

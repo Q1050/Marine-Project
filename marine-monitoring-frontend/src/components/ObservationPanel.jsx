@@ -1,7 +1,5 @@
-import {
-  getImageUrl,
-} from "../services/api";
 import { useState } from "react";
+import { useObservationImage } from "../hooks/useObservationImage";
 
 
 function formatDecision(value) {
@@ -183,7 +181,8 @@ export default function ObservationPanel({
 
 
       <ObservationImage
-        key={sourceImageUrl || "missing"}
+        key={`${observationRecord.id || observation.id}-${sourceImageUrl || "private"}`}
+        observationId={observationRecord.id || observation.id}
         imageUrl={sourceImageUrl}
         species={displayedSpecies}
       />
@@ -482,11 +481,19 @@ export default function ObservationPanel({
 }
 
 
-function ObservationImage({ imageUrl, species }) {
+function ObservationImage({ observationId, imageUrl, species }) {
   const [failed, setFailed] = useState(false);
-  const resolvedUrl = getImageUrl(imageUrl);
+  const { source, loading, unavailable } = useObservationImage(observationId, imageUrl);
 
-  if (!resolvedUrl || failed) {
+  if (loading) {
+    return (
+      <div className="observation-image-fallback" role="status">
+        <strong>Loading submitted image</strong>
+      </div>
+    );
+  }
+
+  if (unavailable || failed) {
     return (
       <div className="observation-image-fallback" role="status">
         <strong>Image unavailable</strong>
@@ -497,7 +504,7 @@ function ObservationImage({ imageUrl, species }) {
 
   return (
     <img
-      src={resolvedUrl}
+      src={source}
       alt={species || "Marine observation"}
       className="observation-image"
       onError={() => setFailed(true)}

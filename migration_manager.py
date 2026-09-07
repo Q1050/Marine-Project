@@ -9,8 +9,11 @@ from milestone14_migrate_production import VERSION, migrate
 from milestone15_migrate_postgresql import VERSION as VERSION_15, migrate as migrate_15
 from milestone17_migrate_visual_corpus import VERSION as VERSION_16, migrate as migrate_16
 from milestone17b_migrate_media_operations import VERSION as VERSION_17, migrate as migrate_17
+from milestone18_migrate_multisource_corpus import VERSION as VERSION_18, migrate as migrate_18
+from milestone19_migrate_media_retry import VERSION as VERSION_19, migrate as migrate_19
+from milestone19_migrate_taxonomy_resolution import VERSION as VERSION_20, migrate as migrate_20
 
-MIGRATIONS=((VERSION,migrate),(VERSION_15,migrate_15),(VERSION_16,migrate_16),(VERSION_17,migrate_17))
+MIGRATIONS=((VERSION,migrate),(VERSION_15,migrate_15),(VERSION_16,migrate_16),(VERSION_17,migrate_17),(VERSION_18,migrate_18),(VERSION_19,migrate_19),(VERSION_20,migrate_20))
 
 
 def _ledger(bind):

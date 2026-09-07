@@ -65,10 +65,11 @@ from models import (
     BackupRecord,
     IdentificationMediaSource, IdentificationMediaAsset, IdentificationCorpus,
     IdentificationMediaAcquisitionRun, IdentificationMediaReviewEvent,
-    IdentificationCorpusInclusion, IdentificationBenchmarkRun, ArtifactReference,
+    IdentificationCorpusInclusion, IdentificationBenchmarkRun, IdentificationCorpusPlan, ArtifactReference,
+    IdentificationMediaTaxonomyEvidence, IdentificationMediaTaxonomyResolution,
     OccurrenceAcquisitionBatch, OccurrenceAcquisitionBatchItem,
 )
-from sqlalchemy import func
+from sqlalchemy import func, or_
 from hotspot_service import HotspotService
 from historical_spatial_service import HistoricalSpatialService
 from prediction_training_occurrence_service import (
@@ -112,7 +113,7 @@ from platform_config import settings
 from production_operations import EventWorker, audit, create_backup, rate_limiter, readiness_report
 from migration_manager import current_versions
 
-from marine_observation_service import MarineObservationService
+from lazy_bioclip_service import LazyMarineObservationService
 from jurisdiction_resolution_service import JurisdictionResolutionService
 from jurisdiction_onboarding_service import JurisdictionOnboardingService
 from bulk_scientific_readiness import SPECIES_BASELINE_PREPARE_CONTRACT
@@ -138,8 +139,10 @@ from anomaly_repository import canonical_json
 from suitability_deployment_governance import SuitabilityDeploymentGovernance
 from scientific_corpus_service import parse_manifest_content, storage_contract, TAXON_GROUPS
 from identification_corpus_service import (MediaSourceGovernanceService,
-    IdentificationCorpusService, AcquisitionRunService, IdentificationBenchmarkService)
+    IdentificationCorpusService, AcquisitionRunService, IdentificationBenchmarkService,
+    IdentificationCorpusPlanService, corpus_readiness_for_taxon)
 from occurrence_batch_service import OccurrenceBatchService
+from media_taxonomy_resolution_service import MediaTaxonomyResolutionService
 
 class VerificationRequest(BaseModel):
     status: str
@@ -335,6 +338,10 @@ class AdminMediaSourceRequest(BaseModel):
 class AdminMediaSourceTransitionRequest(BaseModel): target_state: str; reference: str
 class AdminMediaAcquisitionRequest(BaseModel): media_source_id: int; taxon_id: int; request: dict = Field(default_factory=dict)
 class AdminMediaReviewRequest(BaseModel): decision: str; reference: str
+class AdminMediaTaxonomyResolutionRequest(BaseModel):
+    resolution_state: str
+    reason: str
+    evidence_ids: list[int] = Field(default_factory=list)
 class AdminCorpusRequest(BaseModel):
     corpus_key: str; version: str; intended_purpose: str
     taxonomic_scope: dict = Field(default_factory=dict); configuration: dict = Field(default_factory=dict)
@@ -345,6 +352,14 @@ class AdminCorpusTransitionRequest(BaseModel): target_state: str; reference: str
 class AdminBenchmarkRequest(BaseModel):
     corpus_id: int; model_identity: str; model_version: str; model_hash: Optional[str] = None
     split_name: str; inference_configuration: dict = Field(default_factory=dict)
+class AdminCorpusPlanRequest(BaseModel):
+    plan_key: str; version: str; region_id: int
+    taxonomic_groups: list[str]; preferred_providers: list[str] = Field(default_factory=list)
+    licensing_policy: dict = Field(default_factory=dict); quality_policy: dict = Field(default_factory=dict)
+    duplicate_policy: dict = Field(default_factory=dict); provenance: dict = Field(default_factory=dict)
+    limitations: list[str] = Field(default_factory=list); configuration: dict = Field(default_factory=dict)
+    taxa: list[dict] = Field(default_factory=list)
+class AdminCorpusPlanTransitionRequest(BaseModel): target_state: str; reference: str
 class AdminOccurrenceBatchRequest(BaseModel):
     region_id: int; batch_key: str; items: list[dict]; configuration: dict = Field(default_factory=dict)
 
@@ -595,7 +610,7 @@ async def controlled_http_error(request:Request,exc:HTTPException):
 # LOAD SERVICE ONCE
 # ============================================================
 
-service = MarineObservationService()
+service = LazyMarineObservationService()
 hotspot_service = HotspotService(
     grid_size=0.1
 )
@@ -982,6 +997,27 @@ def admin_scientific_corpus_contract(current_user: User = Depends(require_platfo
 def admin_identification_media_sources(db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
     service=MediaSourceGovernanceService(db);return {"items":[service.payload(row) for row in db.query(IdentificationMediaSource).order_by(IdentificationMediaSource.id).all()]}
 
+@app.get("/admin/identification-corpus/plans")
+def admin_identification_corpus_plans(db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
+    service=IdentificationCorpusPlanService(db);return {"items":[service.payload(row) for row in db.query(IdentificationCorpusPlan).order_by(IdentificationCorpusPlan.id.desc()).all()]}
+
+@app.post("/admin/identification-corpus/plans")
+def admin_create_identification_corpus_plan(payload:AdminCorpusPlanRequest,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
+    try:
+        service=IdentificationCorpusPlanService(db);return service.payload(service.create(payload.model_dump(),current_user.id))
+    except Exception as exc:db.rollback();raise HTTPException(409,str(exc))
+
+@app.post("/admin/identification-corpus/plans/{plan_id}/transition")
+def admin_transition_identification_corpus_plan(plan_id:int,payload:AdminCorpusPlanTransitionRequest,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
+    row=_require_admin_record(db,IdentificationCorpusPlan,plan_id,"Identification corpus plan")
+    try:
+        service=IdentificationCorpusPlanService(db);return service.payload(service.transition(row,payload.target_state,current_user.id,payload.reference))
+    except Exception as exc:db.rollback();raise HTTPException(409,str(exc))
+
+@app.get("/admin/identification-corpus/taxa/{taxon_id}/readiness")
+def admin_identification_taxon_readiness(taxon_id:int,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
+    _require_admin_record(db,Species,taxon_id,"Taxon");return {"taxon_id":taxon_id,"state":corpus_readiness_for_taxon(db,taxon_id),"percentage":None}
+
 @app.post("/admin/identification-corpus/media-sources")
 def admin_create_identification_media_source(payload:AdminMediaSourceRequest,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
     try:return MediaSourceGovernanceService(db).payload(MediaSourceGovernanceService(db).register(payload.model_dump(),current_user.id))
@@ -1007,23 +1043,31 @@ def admin_identification_corpus_export(corpus_id:int,db:Session=Depends(get_db),
     return IdentificationCorpusService(db).export_manifest(corpus_id)
 
 def _identification_asset_payload(db,row):
-    source=db.get(IdentificationMediaSource,row.media_source_id);taxon=db.get(Species,row.taxon_id)
-    return {"id":row.id,"stable_asset_key":row.stable_asset_key,"taxon_id":row.taxon_id,"scientific_name":taxon.scientific_name if taxon else None,"source":{"id":source.id,"provider":source.scientific_provider} if source else None,"provider_asset_identifier":row.provider_asset_identifier,"source_reference":row.source_reference,"creator":row.creator,"license_expression":row.license_expression,"license_classification":row.license_classification,"attribution_text":row.attribution_text,"media_type":row.media_type,"width_px":row.width_px,"height_px":row.height_px,"size_bytes":row.size_bytes,"locality":row.locality,"event_date":row.event_date,"life_stage":row.life_stage,"biological_context":row.biological_context,"taxonomic_linkage":row.taxonomic_linkage,"quality_state":row.quality_state,"quality_metadata":json.loads(row.quality_metadata_json),"duplicate_state":row.duplicate_state,"exact_duplicate_of_id":row.exact_duplicate_of_id,"perceptual_hash":row.perceptual_hash,"perceptual_group":row.perceptual_group,"review_state":row.review_state,"exclusion_reason":row.exclusion_reason,"training_eligible":row.review_state=="APPROVED" and row.license_classification in {"TRAINING_ALLOWED","ATTRIBUTION_REQUIRED"} and row.quality_state=="VALID" and row.duplicate_state in {"UNIQUE","DISTINCT"},"content_url":f"/admin/identification-corpus/assets/{row.id}/content" if row.artifact_reference_id else None}
+    source=db.get(IdentificationMediaSource,row.media_source_id);taxon=db.get(Species,row.taxon_id);metadata=json.loads(row.source_metadata_json)
+    taxonomy_history=MediaTaxonomyResolutionService(db).history(row.id)
+    return {"id":row.id,"stable_asset_key":row.stable_asset_key,"taxon_id":row.taxon_id,"scientific_name":taxon.scientific_name if taxon else None,"source":{"id":source.id,"provider":source.scientific_provider} if source else None,"provider_asset_identifier":row.provider_asset_identifier,"provider_taxon_evidence":row.taxonomic_confidence_source,"source_reference":row.source_reference,"source_metadata":metadata,"license_url":metadata.get("license_url"),"creator":row.creator,"license_expression":row.license_expression,"license_classification":row.license_classification,"attribution_text":row.attribution_text,"media_type":row.media_type,"width_px":row.width_px,"height_px":row.height_px,"size_bytes":row.size_bytes,"locality":row.locality,"event_date":row.event_date,"life_stage":row.life_stage,"biological_context":row.biological_context,"taxonomic_linkage":row.taxonomic_linkage,"taxonomic_limitations":"Provider metadata/search context requires human review." if row.taxonomic_linkage not in {"EXACT_GOVERNED_TAXON","SYNONYM_TO_GOVERNED_TAXON"} else None,"taxonomy_history":taxonomy_history,"quality_state":row.quality_state,"quality_metadata":json.loads(row.quality_metadata_json),"sha256_status":"PRESENT" if row.sha256 else "NOT_ACQUIRED","duplicate_state":row.duplicate_state,"exact_duplicate_of_id":row.exact_duplicate_of_id,"perceptual_hash":row.perceptual_hash,"perceptual_group":row.perceptual_group,"review_state":row.review_state,"exclusion_reason":row.exclusion_reason,"acquisition_retry_count":row.acquisition_retry_count,"acquisition_last_error":row.acquisition_last_error,"acquisition_response":json.loads(row.acquisition_response_json),"training_eligible":row.review_state=="APPROVED" and row.license_classification in {"PUBLIC_DOMAIN","TRAINING_ALLOWED","ATTRIBUTION_REQUIRED"} and row.quality_state=="VALID" and row.duplicate_state in {"UNIQUE","DISTINCT"},"content_url":f"/admin/identification-corpus/assets/{row.id}/content" if row.artifact_reference_id else None}
 
 @app.get("/admin/identification-corpus/acquisition-runs")
 def admin_media_acquisition_runs(db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
     rows=db.query(IdentificationMediaAcquisitionRun).order_by(IdentificationMediaAcquisitionRun.id.desc()).all();return {"items":[{"id":r.id,"media_source_id":r.media_source_id,"taxon_id":r.taxon_id,"workflow_state":r.workflow_state,"retry_count":r.retry_count,"run_fingerprint":r.run_fingerprint,"request":json.loads(r.request_json),"manifest":json.loads(r.provider_manifest_json) if r.provider_manifest_json else None,"created_at":r.created_at,"completed_at":r.completed_at} for r in rows]}
 
 @app.get("/admin/identification-corpus/assets")
-def admin_media_assets(review_state:Optional[str]=None,taxon_id:Optional[int]=None,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
+def admin_media_assets(review_state:Optional[str]=None,taxon_id:Optional[int]=None,provider_id:Optional[int]=None,license_classification:Optional[str]=None,page:int=Query(1,ge=1),page_size:int=Query(100,ge=1,le=500),db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
     query=db.query(IdentificationMediaAsset)
     if review_state:query=query.filter_by(review_state=review_state)
     if taxon_id:query=query.filter_by(taxon_id=taxon_id)
-    return {"items":[_identification_asset_payload(db,r) for r in query.order_by(IdentificationMediaAsset.id).all()]}
+    if provider_id:query=query.filter_by(media_source_id=provider_id)
+    if license_classification:query=query.filter_by(license_classification=license_classification)
+    total=query.count();rows=query.order_by(IdentificationMediaAsset.id).offset((page-1)*page_size).limit(page_size).all()
+    return {"items":[_identification_asset_payload(db,r) for r in rows],"total":total,"page":page,"page_size":page_size}
 
 @app.get("/admin/identification-corpus/assets/{asset_id}")
 def admin_media_asset(asset_id:int,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
     return _identification_asset_payload(db,_require_admin_record(db,IdentificationMediaAsset,asset_id,"Identification media asset"))
+
+@app.get("/admin/regions/{region_id}/identification-corpus/review-progress")
+def admin_identification_review_progress(region_id:int,taxon_id:Optional[int]=None,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
+    _require_admin_record(db,Region,region_id,"Region");return IdentificationCorpusService(db).review_progress(region_id,taxon_id)
 
 @app.get("/admin/identification-corpus/assets/{asset_id}/content")
 def admin_media_asset_content(asset_id:int,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
@@ -1042,6 +1086,27 @@ def admin_media_review_events(asset_id:int,db:Session=Depends(get_db),current_us
 def admin_review_media_asset(asset_id:int,payload:AdminMediaReviewRequest,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
     row=_require_admin_record(db,IdentificationMediaAsset,asset_id,"Identification media asset")
     try:return _identification_asset_payload(db,IdentificationCorpusService(db).review(row,payload.decision,current_user.id,payload.reference))
+    except Exception as exc:db.rollback();raise HTTPException(409,str(exc))
+
+@app.post("/admin/identification-corpus/assets/{asset_id}/taxonomy-evidence/commons")
+def admin_acquire_commons_taxonomy_evidence(asset_id:int,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
+    row=_require_admin_record(db,IdentificationMediaAsset,asset_id,"Identification media asset")
+    try:
+        evidence=MediaTaxonomyResolutionService(db).acquire_commons_evidence(row)
+        return MediaTaxonomyResolutionService.evidence_payload(evidence)
+    except Exception as exc:db.rollback();raise HTTPException(409,str(exc))
+
+@app.get("/admin/identification-corpus/assets/{asset_id}/taxonomy-history")
+def admin_media_taxonomy_history(asset_id:int,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
+    _require_admin_record(db,IdentificationMediaAsset,asset_id,"Identification media asset")
+    return MediaTaxonomyResolutionService(db).history(asset_id)
+
+@app.post("/admin/identification-corpus/assets/{asset_id}/taxonomy-resolution")
+def admin_resolve_media_taxonomy(asset_id:int,payload:AdminMediaTaxonomyResolutionRequest,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
+    row=_require_admin_record(db,IdentificationMediaAsset,asset_id,"Identification media asset")
+    try:
+        resolution=MediaTaxonomyResolutionService(db).resolve(row,payload.resolution_state,current_user.id,payload.reason,payload.evidence_ids)
+        return {"resolution":MediaTaxonomyResolutionService.resolution_payload(resolution),"asset":_identification_asset_payload(db,row)}
     except Exception as exc:db.rollback();raise HTTPException(409,str(exc))
 
 @app.get("/admin/identification-corpus/corpora")
@@ -1072,6 +1137,11 @@ def admin_prepare_identification_benchmark(payload:AdminBenchmarkRequest,db:Sess
     try:
         row=IdentificationBenchmarkService(db).prepare(payload.model_dump(),current_user.id);return {"id":row.id,"workflow_state":row.workflow_state,"run_fingerprint":row.run_fingerprint}
     except Exception as exc:db.rollback();raise HTTPException(409,str(exc))
+
+@app.get("/admin/identification-corpus/benchmarks")
+def admin_identification_benchmarks(db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
+    rows=db.query(IdentificationBenchmarkRun).order_by(IdentificationBenchmarkRun.id.desc()).all()
+    return {"items":[{"id":r.id,"model_identity":r.model_identity,"model_version":r.model_version,"model_hash":r.model_hash,"corpus_id":r.corpus_id,"split_name":r.split_name,"workflow_state":r.workflow_state,"metrics":json.loads(r.metrics_json) if r.metrics_json else None,"taxon_results":json.loads(r.taxon_results_json) if r.taxon_results_json else None,"confusion":json.loads(r.confusion_json) if r.confusion_json else None,"rejection_behavior":json.loads(r.rejection_behavior_json) if r.rejection_behavior_json else None,"created_at":r.created_at,"completed_at":r.completed_at} for r in rows]}
 
 @app.post("/admin/occurrence-acquisition-batches")
 def admin_prepare_occurrence_batch(payload:AdminOccurrenceBatchRequest,db:Session=Depends(get_db),current_user:User=Depends(require_platform_admin)):
@@ -1415,7 +1485,16 @@ def admin_deactivate_scientific_deployment(deployment_id:int,payload:AdminEcolog
 
 @app.get("/species/{taxon_id}/public-media")
 def public_taxon_media(taxon_id:int,db:Session=Depends(get_db)):
-    service=PublicMediaService(db);items=[service.safe(row) for row in service.public_for_taxon(taxon_id)];return {"primary_image":next((item for item in items if item["is_primary"]),None),"gallery":items}
+    service=PublicMediaService(db);items=[service.safe(row) for row in service.public_for_taxon(taxon_id)];references=[service.safe_reference(row) for row in service.approved_reference_for_taxon(taxon_id)];return {"primary_image":next((item for item in items if item["is_primary"]),None),"gallery":items,"reference_gallery":references}
+
+@app.get("/species/{taxon_id}/reference-media/{asset_id}/content")
+def public_reference_media_content(taxon_id:int,asset_id:int,db:Session=Depends(get_db)):
+    row=db.get(IdentificationMediaAsset,asset_id);service=PublicMediaService(db)
+    if not row or row.taxon_id!=taxon_id or not service.reference_is_public_eligible(row):raise HTTPException(404,"Public reference media unavailable")
+    artifact=_require_admin_record(db,ArtifactReference,row.artifact_reference_id,"Artifact")
+    root=settings.artifact_directory.resolve();path=(root/artifact.local_path).resolve()
+    if root not in path.parents or not path.is_file():raise HTTPException(404,"Controlled artifact unavailable")
+    return FileResponse(path,media_type=artifact.media_type)
 
 @app.get("/admin/observations/queue")
 def admin_observation_queue(jurisdiction_id:Optional[int]=None,workflow_state:Optional[str]=None,priority:Optional[str]=None,assigned_reviewer_id:Optional[int]=None,identity_state:Optional[str]=None,duplicate_state:Optional[str]=None,db:Session=Depends(get_db),current_user:User=Depends(require_operational_reviewer)):
@@ -1444,9 +1523,8 @@ def admin_observation_operations(observation_id:int,db:Session=Depends(get_db),c
 
 @app.get("/admin/observations/{observation_id}/image")
 def protected_observation_image(observation_id:int,db:Session=Depends(get_db),current_user:User=Depends(require_operational_reviewer)):
-    observation=_require_admin_record(db,Observation,observation_id,"Observation");require_review_jurisdiction(db,current_user,observation.jurisdiction_id);path=UPLOAD_DIRECTORY/observation.image_filename
-    if not path.is_file():raise HTTPException(404,"Observation image not found")
-    return FileResponse(path)
+    observation=_require_admin_record(db,Observation,observation_id,"Observation");require_review_jurisdiction(db,current_user,observation.jurisdiction_id)
+    return _observation_image_response(observation)
 
 @app.post("/admin/observations/{observation_id}/triage")
 def admin_triage_observation(observation_id:int,db:Session=Depends(get_db),current_user:User=Depends(require_operational_reviewer)):
@@ -2652,6 +2730,146 @@ def get_region_species_intelligence(region_slug: str, db: Session = Depends(get_
         "unresolved_evidence_count": len(payload["unresolved_evidence"]),
         "unresolved_evidence": payload["unresolved_evidence"],
         "note": "Canonical species identity is anchored on the Species table. Operational evidence is aggregated regionally; predictive scientific deployments remain jurisdiction-specific.",
+    }
+
+
+def _public_taxon_payload(taxon, observation_counts=None):
+    """Public canonical-taxonomy representation; governance is kept explicit."""
+    provenance = {}
+    if taxon.taxonomic_provenance_json:
+        try:
+            provenance = json.loads(taxon.taxonomic_provenance_json)
+        except (TypeError, ValueError):
+            provenance = {}
+    counts = (observation_counts or {}).get(taxon.scientific_name, {})
+    return {
+        "id": taxon.id,
+        "scientific_name": taxon.scientific_name,
+        "common_name": taxon.common_name,
+        "taxonomic_rank": taxon.taxonomic_rank,
+        "authorship": taxon.authorship,
+        "authoritative_identifier_scheme": taxon.authoritative_identifier_scheme,
+        "authoritative_identifier": taxon.authoritative_identifier,
+        "aphia_id": taxon.aphia_id,
+        "accepted_name_status": taxon.accepted_name_status,
+        "accepted_taxon_id": taxon.accepted_taxon_id,
+        "parent_taxon_id": taxon.parent_taxon_id,
+        "taxonomy": provenance,
+        "observation_count": counts.get("total", 0),
+        "confirmed_observation_count": counts.get("confirmed", 0),
+    }
+
+
+@app.get("/species/catalog")
+def public_species_catalog(
+    page: int = Query(1, ge=1),
+    page_size: int = Query(25, ge=1, le=100),
+    search: Optional[str] = None,
+    with_observations: bool = False,
+    db: Session = Depends(get_db),
+):
+    """Search already-stored canonical taxa without implying regional governance."""
+    query = db.query(Species).filter(Species.status == "ACTIVE")
+    if search:
+        needle = f"%{search.strip().lower()}%"
+        identifier_match = None
+        try:
+            identifier_match = int(search.strip())
+        except (TypeError, ValueError):
+            pass
+        predicates = [
+            func.lower(Species.scientific_name).like(needle),
+            func.lower(func.coalesce(Species.common_name, "")).like(needle),
+            func.lower(func.coalesce(Species.authoritative_identifier, "")).like(needle),
+        ]
+        if identifier_match is not None:
+            predicates.extend([Species.id == identifier_match, Species.aphia_id == identifier_match])
+        query = query.filter(or_(*predicates))
+
+    observation_aggregates = db.query(
+        Observation.verified_species,
+        func.count(Observation.id),
+    ).filter(
+        Observation.verification_status.in_({"CONFIRMED", "CORRECTED"}),
+        Observation.verified_species.isnot(None),
+    ).group_by(Observation.verified_species).all()
+    confirmed_names = {name for name, _count in observation_aggregates}
+    if with_observations:
+        if not confirmed_names:
+            query = query.filter(Species.id == -1)
+        else:
+            query = query.filter(Species.scientific_name.in_(confirmed_names))
+
+    total = query.count()
+    taxa = query.order_by(Species.scientific_name).offset((page - 1) * page_size).limit(page_size).all()
+    counts = {name: {"total": count, "confirmed": count} for name, count in observation_aggregates}
+    return {
+        "count": total,
+        "page": page,
+        "page_size": page_size,
+        "items": [_public_taxon_payload(taxon, counts) for taxon in taxa],
+        "source": "canonical_species",
+        "note": "Canonical taxonomy records are searchable independently of regional governance, occurrence, ecological status, or monitoring priority.",
+    }
+
+
+@app.get("/species/catalog/{taxon_id}")
+def public_species_catalog_detail(taxon_id: int, db: Session = Depends(get_db)):
+    taxon = _require_admin_record(db, Species, taxon_id, "Taxon")
+    rows = db.query(Observation.verified_species, func.count(Observation.id)).filter(
+        Observation.verification_status.in_({"CONFIRMED", "CORRECTED"}),
+        Observation.verified_species == taxon.scientific_name,
+    ).group_by(Observation.verified_species).all()
+    counts = {name: {"total": count, "confirmed": count} for name, count in rows}
+    return _public_taxon_payload(taxon, counts)
+
+
+@app.get("/regions/{region_slug}/species-tracking")
+def public_region_species_tracking(
+    region_slug: str,
+    limit: int = Query(500, ge=1, le=1000),
+    db: Session = Depends(get_db),
+):
+    region = db.query(Region).filter(func.lower(Region.slug) == region_slug.lower(), Region.status == "ACTIVE").first()
+    if region is None:
+        raise HTTPException(status_code=404, detail="Region not found.")
+    jurisdiction_ids = [item.id for item in region.jurisdictions if item.status == "ACTIVE"]
+    observations = db.query(Observation).filter(
+        Observation.jurisdiction_id.in_(jurisdiction_ids),
+        Observation.verification_status.in_({"CONFIRMED", "CORRECTED"}),
+        Observation.verified_species.isnot(None),
+    ).order_by(Observation.created_at.desc()).limit(limit).all()
+    taxa = db.query(Species).filter(Species.scientific_name.in_({row.verified_species for row in observations})).all() if observations else []
+    taxon_by_name = {row.scientific_name: row for row in taxa}
+    species = {}
+    for observation in observations:
+        taxon = taxon_by_name.get(observation.verified_species)
+        if taxon is None:
+            continue
+        bucket = species.setdefault(taxon.id, {
+            "taxon": _public_taxon_payload(taxon),
+            "confirmed_location_count": 0,
+            "observations": [],
+        })
+        bucket["confirmed_location_count"] += 1
+        bucket["observations"].append({
+            "id": observation.id,
+            "verification_status": observation.verification_status,
+            "observed_at": observation.location_captured_at or observation.created_at,
+            "latitude": observation.latitude,
+            "longitude": observation.longitude,
+            "jurisdiction": ({
+                "name": observation.jurisdiction.name,
+                "slug": observation.jurisdiction.slug,
+            } if observation.jurisdiction else None),
+        })
+    items = sorted(species.values(), key=lambda item: (-item["confirmed_location_count"], item["taxon"]["scientific_name"]))
+    return {
+        "count": len(items),
+        "observation_count": sum(item["confirmed_location_count"] for item in items),
+        "items": items,
+        "eligibility": "Verified species identity with CONFIRMED or CORRECTED observation state in an active regional jurisdiction.",
+        "bounded": len(observations) >= limit,
     }
 
 
@@ -5031,6 +5249,19 @@ def get_observations(
 # ============================================================
 # GET ONE OBSERVATION
 # ============================================================
+
+def _observation_image_response(observation):
+    upload_root=UPLOAD_DIRECTORY.resolve();path=(upload_root/observation.image_filename).resolve()
+    if upload_root not in path.parents or not path.is_file():raise HTTPException(404,"Observation image not found")
+    return FileResponse(path)
+
+
+@app.get("/observations/{observation_id}/image")
+def jurisdiction_observation_image(observation_id:int,db:Session=Depends(get_db),current_user:User=Depends(require_authenticated_user)):
+    observation=_require_admin_record(db,Observation,observation_id,"Observation")
+    require_roles(db,current_user,observation.jurisdiction_id,{"VIEWER","REVIEWER","MANAGER"})
+    return _observation_image_response(observation)
+
 
 @app.get("/observations/{observation_id}")
 def get_observation(

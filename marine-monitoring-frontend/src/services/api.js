@@ -126,7 +126,9 @@ export const getReviewerHome = () => adminRequest("/reviewer/home");
 export const submitPilotFeedback = (payload) => adminRequest("/pilot/feedback",{method:"POST",body:JSON.stringify(payload)});
 export const getAdminPilotFeedback = () => adminRequest("/admin/pilot/feedback");
 export const getAdminPilotActivity = () => adminRequest("/admin/pilot/activity");
-export async function getPrivateObservationImage(id) { const response=await fetch(`${API_BASE_URL}/admin/observations/${id}/image`,{headers:authHeaders()});if(!response.ok)throw new Error("Private observation image unavailable.");return URL.createObjectURL(await response.blob()); }
+async function authenticatedObservationImage(path) { const response=await fetch(`${API_BASE_URL}${path}`,{headers:authHeaders()});const contentType=response.headers.get("Content-Type") || "";if(!response.ok || !contentType.toLowerCase().startsWith("image/"))throw new Error("Private observation image unavailable.");return URL.createObjectURL(await response.blob()); }
+export const getPrivateObservationImage = (id) => authenticatedObservationImage(`/admin/observations/${id}/image`);
+export const getJurisdictionObservationImage = (id) => authenticatedObservationImage(`/observations/${id}/image`);
 export const claimAdminObservation = (id) => adminRequest(`/admin/observations/${id}/claim`, { method: "POST", body: JSON.stringify({ reason: "Reviewer claimed case" }) });
 export const assignAdminObservation = (id, reviewerUserId, expectedReviewerUserId = null) => adminRequest(`/admin/observations/${id}/assign`, { method: "POST", body: JSON.stringify({ reviewer_user_id: reviewerUserId, expected_reviewer_user_id: expectedReviewerUserId, reason: "Operational assignment" }) });
 export const requestAdminObservationInformation = (id, reason) => adminRequest(`/admin/observations/${id}/request-information`, { method: "POST", body: JSON.stringify({ reason }) });
@@ -259,6 +261,27 @@ export async function getJurisdictionSpeciesIntelligence(region = "caribbean", j
     `${API_BASE_URL}/regions/${encodeURIComponent(region)}/jurisdictions/${encodeURIComponent(jurisdiction)}/species`,
   );
   if (!response.ok) throw new Error("Failed to load jurisdiction species intelligence.");
+  return response.json();
+}
+
+export async function getSpeciesCatalog({ page = 1, pageSize = 50, search = "", withObservations = false } = {}) {
+  const params = new URLSearchParams({ page, page_size: pageSize });
+  if (search) params.set("search", search);
+  if (withObservations) params.set("with_observations", "true");
+  const response = await fetch(`${API_BASE_URL}/species/catalog?${params}`);
+  if (!response.ok) throw new Error("Marine species catalog is unavailable.");
+  return response.json();
+}
+
+export async function getSpeciesCatalogDetail(taxonId) {
+  const response = await fetch(`${API_BASE_URL}/species/catalog/${encodeURIComponent(taxonId)}`);
+  if (!response.ok) throw new Error("Species intelligence is unavailable.");
+  return response.json();
+}
+
+export async function getRegionSpeciesTracking(region = "caribbean") {
+  const response = await fetch(`${API_BASE_URL}/regions/${encodeURIComponent(region)}/species-tracking`);
+  if (!response.ok) throw new Error("Species tracking data is unavailable.");
   return response.json();
 }
 
@@ -668,10 +691,13 @@ async function governedMediaRequest(path, options = {}) {
 }
 
 export const getIdentificationMediaSources = () => governedMediaRequest("/admin/identification-corpus/media-sources");
+export const getIdentificationCorpusPlans = () => governedMediaRequest("/admin/identification-corpus/plans");
 export const getIdentificationAcquisitionRuns = () => governedMediaRequest("/admin/identification-corpus/acquisition-runs");
 export const getIdentificationMediaAssets = (taxonId) => governedMediaRequest(`/admin/identification-corpus/assets${taxonId ? `?taxon_id=${taxonId}` : ""}`);
 export const getIdentificationCorpora = () => governedMediaRequest("/admin/identification-corpus/corpora");
 export const reviewIdentificationMediaAsset = (assetId, decision, reference) => governedMediaRequest(`/admin/identification-corpus/assets/${assetId}/review`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ decision, reference }) });
+export const acquireCommonsTaxonomyEvidence = (assetId) => governedMediaRequest(`/admin/identification-corpus/assets/${assetId}/taxonomy-evidence/commons`, { method: "POST" });
+export const resolveIdentificationMediaTaxonomy = (assetId, resolutionState, reason, evidenceIds) => governedMediaRequest(`/admin/identification-corpus/assets/${assetId}/taxonomy-resolution`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ resolution_state: resolutionState, reason, evidence_ids: evidenceIds }) });
 export async function getIdentificationMediaContent(assetId) {
   const response = await fetch(`${API_BASE_URL}/admin/identification-corpus/assets/${assetId}/content`, { headers: authHeaders() });
   if (!response.ok) throw new Error("Controlled media content is unavailable.");

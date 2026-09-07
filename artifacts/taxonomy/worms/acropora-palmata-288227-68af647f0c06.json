@@ -1,0 +1,94 @@
+{
+  "canonical_content_fingerprint": "68af647f0c061e258fc5dbf70f7dbfa97326f7d044f4660485ce3642765086c4",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=288227",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1267,
+          "child": {
+            "AphiaID": 1292,
+            "child": {
+              "AphiaID": 1340,
+              "child": {
+                "AphiaID": 1363,
+                "child": {
+                  "AphiaID": 1517258,
+                  "child": {
+                    "AphiaID": 196095,
+                    "child": {
+                      "AphiaID": 205469,
+                      "child": {
+                        "AphiaID": 288227,
+                        "child": null,
+                        "rank": "Species",
+                        "scientificname": "Acropora palmata"
+                      },
+                      "rank": "Genus",
+                      "scientificname": "Acropora"
+                    },
+                    "rank": "Family",
+                    "scientificname": "Acroporidae"
+                  },
+                  "rank": "Suborder",
+                  "scientificname": "Refertina"
+                },
+                "rank": "Order",
+                "scientificname": "Scleractinia"
+              },
+              "rank": "Class",
+              "scientificname": "Hexacorallia"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Anthozoa"
+          },
+          "rank": "Phylum",
+          "scientificname": "Cnidaria"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 288227,
+      "authority": "(Lamarck, 1816)",
+      "citation": "Hoeksema, B. W.; Cairns, S.; Samimi-Namin, K. (2026). World List of Scleractinia. Acropora palmata (Lamarck, 1816). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=288227 on 2026-09-04",
+      "class": "Hexacorallia",
+      "family": "Acroporidae",
+      "genus": "Acropora",
+      "isBrackish": null,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:288227",
+      "match_type": "exact",
+      "modified": "2022-05-29T06:08:19.927Z",
+      "order": "Scleractinia",
+      "originalNameUsageID": 738917,
+      "parentNameUsageID": 205469,
+      "phylum": "Cnidaria",
+      "rank": "Species",
+      "scientificname": "Acropora palmata",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=288227",
+      "valid_AphiaID": 288227,
+      "valid_authority": "(Lamarck, 1816)",
+      "valid_name": "Acropora palmata"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "288227",
+    "scientific_name": "Acropora palmata"
+  },
+  "retrieved_at": "2026-09-04T19:04:17.838423+00:00"
+}

@@ -1272,6 +1272,50 @@ class IdentificationMediaSource(Base):
     superseded_by_id = Column(Integer, ForeignKey("identification_media_sources.id", ondelete="RESTRICT"), nullable=True)
 
 
+class IdentificationCorpusPlan(Base):
+    """Versioned, reproducible acquisition plan; it never creates governed taxa."""
+    __tablename__ = "identification_corpus_plans"
+    __table_args__ = (
+        UniqueConstraint("plan_key", "version", name="uq_identification_corpus_plan_version"),
+        UniqueConstraint("fingerprint", name="uq_identification_corpus_plan_fingerprint"),
+    )
+    id = Column(Integer, primary_key=True, index=True)
+    plan_key = Column(String(128), nullable=False, index=True)
+    version = Column(String(128), nullable=False)
+    region_id = Column(Integer, ForeignKey("regions.id", ondelete="RESTRICT"), nullable=False, index=True)
+    taxonomic_groups_json = Column(Text, nullable=False)
+    preferred_providers_json = Column(Text, nullable=False)
+    licensing_policy_json = Column(Text, nullable=False)
+    quality_policy_json = Column(Text, nullable=False)
+    duplicate_policy_json = Column(Text, nullable=False)
+    provenance_json = Column(Text, nullable=False)
+    limitations_json = Column(Text, nullable=False)
+    configuration_json = Column(Text, nullable=False)
+    fingerprint = Column(String(64), nullable=False, index=True)
+    lifecycle_state = Column(String(32), nullable=False, default="DRAFT", server_default="DRAFT", index=True)
+    created_by_user_id = Column(Integer, ForeignKey("users.id", ondelete="RESTRICT"), nullable=False)
+    reviewed_by_user_id = Column(Integer, ForeignKey("users.id", ondelete="RESTRICT"), nullable=True)
+    approval_reference = Column(String(512), nullable=True)
+    created_at = Column(DateTime, nullable=False, default=lambda: datetime.now(timezone.utc))
+    approved_at = Column(DateTime, nullable=True)
+    activated_at = Column(DateTime, nullable=True)
+    superseded_at = Column(DateTime, nullable=True)
+
+
+class IdentificationCorpusPlanTaxon(Base):
+    __tablename__ = "identification_corpus_plan_taxa"
+    __table_args__ = (UniqueConstraint("plan_id", "taxon_id", name="uq_identification_corpus_plan_taxon"),)
+    id = Column(Integer, primary_key=True, index=True)
+    plan_id = Column(Integer, ForeignKey("identification_corpus_plans.id", ondelete="CASCADE"), nullable=False, index=True)
+    taxon_id = Column(Integer, ForeignKey("species.id", ondelete="RESTRICT"), nullable=False, index=True)
+    taxonomic_group = Column(String(48), nullable=False, index=True)
+    desired_candidate_count = Column(Integer, nullable=False)
+    minimum_usable_count = Column(Integer, nullable=False)
+    preferred_providers_json = Column(Text, nullable=False)
+    readiness_state = Column(String(48), nullable=False, default="NO_MEDIA_SOURCE", server_default="NO_MEDIA_SOURCE", index=True)
+    created_at = Column(DateTime, nullable=False, default=lambda: datetime.now(timezone.utc))
+
+
 class IdentificationCorpus(Base):
     __tablename__ = "identification_corpora"
     __table_args__ = (UniqueConstraint("corpus_key", "version", name="uq_identification_corpus_version"), UniqueConstraint("fingerprint", name="uq_identification_corpus_fingerprint"))
@@ -1328,6 +1372,9 @@ class IdentificationMediaAsset(Base):
     duplicate_state = Column(String(48), nullable=False, default="UNIQUE", server_default="UNIQUE", index=True)
     review_state = Column(String(32), nullable=False, default="READY_FOR_REVIEW", server_default="READY_FOR_REVIEW", index=True)
     exclusion_reason = Column(String(512), nullable=True)
+    acquisition_retry_count = Column(Integer, nullable=False, default=0, server_default="0")
+    acquisition_last_error = Column(Text, nullable=True)
+    acquisition_response_json = Column(Text, nullable=False, default="{}", server_default="{}")
     reviewed_by_user_id = Column(Integer, ForeignKey("users.id", ondelete="RESTRICT"), nullable=True)
     review_reference = Column(String(512), nullable=True); reviewed_at = Column(DateTime, nullable=True)
     provenance_fingerprint = Column(String(64), nullable=False, unique=True, index=True)
@@ -1373,6 +1420,45 @@ class IdentificationMediaReviewEvent(Base):
     created_at=Column(DateTime,nullable=False,default=lambda:datetime.now(timezone.utc))
 
 
+class IdentificationMediaTaxonomyEvidence(Base):
+    """Append-only provider evidence; not itself a human taxon decision."""
+    __tablename__ = "identification_media_taxonomy_evidence"
+    __table_args__ = (UniqueConstraint("evidence_fingerprint", name="uq_media_taxonomy_evidence_fingerprint"),)
+    id = Column(Integer, primary_key=True, index=True)
+    media_asset_id = Column(Integer, ForeignKey("identification_media_assets.id", ondelete="RESTRICT"), nullable=False, index=True)
+    target_taxon_id = Column(Integer, ForeignKey("species.id", ondelete="RESTRICT"), nullable=False, index=True)
+    evidence_provider = Column(String(128), nullable=False)
+    external_evidence_identifier = Column(String(512), nullable=True)
+    evidence_reference = Column(String(2048), nullable=False)
+    evidence_type = Column(String(64), nullable=False)
+    provider_taxon_identifier = Column(String(256), nullable=True)
+    scientific_name = Column(String(512), nullable=True)
+    taxon_rank = Column(String(64), nullable=True)
+    provider_identification_state = Column(String(128), nullable=True)
+    reconciliation_state = Column(String(64), nullable=False, index=True)
+    evidence_metadata_json = Column(Text, nullable=False, default="{}", server_default="{}")
+    limitations_json = Column(Text, nullable=False, default="[]", server_default="[]")
+    evidence_fingerprint = Column(String(64), nullable=False, index=True)
+    retrieved_at = Column(DateTime, nullable=False)
+    created_at = Column(DateTime, nullable=False, default=lambda: datetime.now(timezone.utc))
+
+
+class IdentificationMediaTaxonomyResolution(Base):
+    """Append-only human scientific resolution of accumulated taxonomy evidence."""
+    __tablename__ = "identification_media_taxonomy_resolutions"
+    __table_args__ = (UniqueConstraint("resolution_fingerprint", name="uq_media_taxonomy_resolution_fingerprint"),)
+    id = Column(Integer, primary_key=True, index=True)
+    media_asset_id = Column(Integer, ForeignKey("identification_media_assets.id", ondelete="RESTRICT"), nullable=False, index=True)
+    target_taxon_id = Column(Integer, ForeignKey("species.id", ondelete="RESTRICT"), nullable=False, index=True)
+    resolution_state = Column(String(64), nullable=False, index=True)
+    reviewer_user_id = Column(Integer, ForeignKey("users.id", ondelete="RESTRICT"), nullable=False)
+    reviewer_reason = Column(Text, nullable=False)
+    evidence_fingerprints_json = Column(Text, nullable=False, default="[]", server_default="[]")
+    provenance_version = Column(String(64), nullable=False, default="media-taxonomy-v1", server_default="media-taxonomy-v1")
+    resolution_fingerprint = Column(String(64), nullable=False, index=True)
+    created_at = Column(DateTime, nullable=False, default=lambda: datetime.now(timezone.utc))
+
+
 class IdentificationBenchmarkRun(Base):
     __tablename__ = "identification_benchmark_runs"
     __table_args__=(UniqueConstraint("run_fingerprint",name="uq_identification_benchmark_run"),)
@@ -1380,6 +1466,18 @@ class IdentificationBenchmarkRun(Base):
     corpus_id=Column(Integer,ForeignKey("identification_corpora.id",ondelete="RESTRICT"),nullable=False,index=True); split_name=Column(String(16),nullable=False)
     inference_configuration_json=Column(Text,nullable=False); metrics_json=Column(Text,nullable=True); taxon_results_json=Column(Text,nullable=True); confusion_json=Column(Text,nullable=True); rejection_behavior_json=Column(Text,nullable=True)
     run_fingerprint=Column(String(64),nullable=False); workflow_state=Column(String(32),nullable=False,default="PREPARED",server_default="PREPARED");created_by_user_id=Column(Integer,ForeignKey("users.id",ondelete="RESTRICT"),nullable=False);created_at=Column(DateTime,nullable=False,default=lambda:datetime.now(timezone.utc));completed_at=Column(DateTime,nullable=True)
+
+@event.listens_for(IdentificationBenchmarkRun, "before_update")
+def _protect_completed_identification_benchmark(_mapper, _connection, target):
+    history = sa_inspect(target).attrs.workflow_state.history
+    completing = bool(history.deleted and history.deleted[0] == "PREPARED" and history.added and history.added[0] == "COMPLETED")
+    if target.workflow_state == "COMPLETED" and not completing:
+        raise ValueError("Completed benchmark runs are immutable")
+
+@event.listens_for(IdentificationBenchmarkRun, "before_delete")
+def _protect_identification_benchmark_delete(_mapper, _connection, target):
+    if target.workflow_state == "COMPLETED":
+        raise ValueError("Completed benchmark runs are immutable")
 
 
 class OccurrenceAcquisitionBatch(Base):
@@ -1400,6 +1498,15 @@ def _protect_identification_media_review_event(_mapper, _connection, _target):
 @event.listens_for(IdentificationMediaReviewEvent, "before_delete")
 def _protect_identification_media_review_event_delete(_mapper, _connection, _target):
     raise ValueError("IdentificationMediaReviewEvent rows are append-only")
+
+
+def _protect_media_taxonomy_history(_mapper, _connection, _target):
+    raise ValueError("Media taxonomy evidence and resolutions are append-only")
+
+
+for _media_taxonomy_model in (IdentificationMediaTaxonomyEvidence, IdentificationMediaTaxonomyResolution):
+    event.listen(_media_taxonomy_model, "before_update", _protect_media_taxonomy_history)
+    event.listen(_media_taxonomy_model, "before_delete", _protect_media_taxonomy_history)
 
 
 class ObservationOperationalCase(Base):

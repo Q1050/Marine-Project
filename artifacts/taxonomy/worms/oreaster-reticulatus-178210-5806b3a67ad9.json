@@ -1,0 +1,104 @@
+{
+  "canonical_content_fingerprint": "5806b3a67ad9e30a37e3c7db569bf58e5d580b57621ab2825ff025f4f47af00d",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=178210",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1806,
+          "child": {
+            "AphiaID": 148743,
+            "child": {
+              "AphiaID": 123080,
+              "child": {
+                "AphiaID": 1562575,
+                "child": {
+                  "AphiaID": 1562576,
+                  "child": {
+                    "AphiaID": 582528,
+                    "child": {
+                      "AphiaID": 123090,
+                      "child": {
+                        "AphiaID": 149871,
+                        "child": {
+                          "AphiaID": 178209,
+                          "child": {
+                            "AphiaID": 178210,
+                            "child": null,
+                            "rank": "Species",
+                            "scientificname": "Oreaster reticulatus"
+                          },
+                          "rank": "Genus",
+                          "scientificname": "Oreaster"
+                        },
+                        "rank": "Family",
+                        "scientificname": "Oreasteridae"
+                      },
+                      "rank": "Order",
+                      "scientificname": "Valvatida"
+                    },
+                    "rank": "Superorder",
+                    "scientificname": "Valvatacea"
+                  },
+                  "rank": "Infraclass",
+                  "scientificname": "Neoasteroidea"
+                },
+                "rank": "Subclass",
+                "scientificname": "Ambuloasteroidea"
+              },
+              "rank": "Class",
+              "scientificname": "Asteroidea"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Asterozoa"
+          },
+          "rank": "Phylum",
+          "scientificname": "Echinodermata"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 178210,
+      "authority": "(Linnaeus, 1758)",
+      "citation": "Mah, C.L. (2026). World Asteroidea Database. Oreaster reticulatus (Linnaeus, 1758). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=178210 on 2026-09-04",
+      "class": "Asteroidea",
+      "family": "Oreasteridae",
+      "genus": "Oreaster",
+      "isBrackish": 0,
+      "isExtinct": 0,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:178210",
+      "match_type": "exact",
+      "modified": "2008-01-25T09:35:43.033Z",
+      "order": "Valvatida",
+      "originalNameUsageID": 178213,
+      "parentNameUsageID": 178209,
+      "phylum": "Echinodermata",
+      "rank": "Species",
+      "scientificname": "Oreaster reticulatus",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=178210",
+      "valid_AphiaID": 178210,
+      "valid_authority": "(Linnaeus, 1758)",
+      "valid_name": "Oreaster reticulatus"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "178210",
+    "scientific_name": "Oreaster reticulatus"
+  },
+  "retrieved_at": "2026-09-04T19:04:28.615691+00:00"
+}

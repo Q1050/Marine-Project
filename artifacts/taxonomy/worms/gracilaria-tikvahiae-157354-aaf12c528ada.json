@@ -1,0 +1,109 @@
+{
+  "canonical_content_fingerprint": "aaf12c528adaff84c3687e21f5156182316ce60dc3ba7013bb8c8c9519f6e1c5",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=157354",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 3,
+        "child": {
+          "AphiaID": 368662,
+          "child": {
+            "AphiaID": 852,
+            "child": {
+              "AphiaID": 493826,
+              "child": {
+                "AphiaID": 368670,
+                "child": {
+                  "AphiaID": 196243,
+                  "child": {
+                    "AphiaID": 876,
+                    "child": {
+                      "AphiaID": 143748,
+                      "child": {
+                        "AphiaID": 1309270,
+                        "child": {
+                          "AphiaID": 1309271,
+                          "child": {
+                            "AphiaID": 144188,
+                            "child": {
+                              "AphiaID": 157354,
+                              "child": null,
+                              "rank": "Species",
+                              "scientificname": "Gracilaria tikvahiae"
+                            },
+                            "rank": "Genus",
+                            "scientificname": "Gracilaria"
+                          },
+                          "rank": "Tribe",
+                          "scientificname": "Gracilarieae"
+                        },
+                        "rank": "Subfamily",
+                        "scientificname": "Gracilarioideae"
+                      },
+                      "rank": "Family",
+                      "scientificname": "Gracilariaceae"
+                    },
+                    "rank": "Order",
+                    "scientificname": "Gracilariales"
+                  },
+                  "rank": "Subclass",
+                  "scientificname": "Rhodymeniophycidae"
+                },
+                "rank": "Class",
+                "scientificname": "Florideophyceae"
+              },
+              "rank": "Subphylum (Subdivision)",
+              "scientificname": "Eurhodophytina"
+            },
+            "rank": "Phylum (Division)",
+            "scientificname": "Rhodophyta"
+          },
+          "rank": "Subkingdom",
+          "scientificname": "Biliphyta"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Plantae"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 157354,
+      "authority": "McLachlan, 1979",
+      "citation": "Guiry, M.D. & Guiry, G.M. (2026). AlgaeBase. World-wide electronic publication, National University of Ireland, Galway (taxonomic information republished from AlgaeBase with permission of M.D. Guiry). Gracilaria tikvahiae McLachlan, 1979. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=157354 on 2026-09-04",
+      "class": "Florideophyceae",
+      "family": "Gracilariaceae",
+      "genus": "Gracilaria",
+      "isBrackish": null,
+      "isExtinct": null,
+      "isFreshwater": null,
+      "isMarine": 1,
+      "isTerrestrial": null,
+      "kingdom": "Plantae",
+      "lsid": "urn:lsid:marinespecies.org:taxname:157354",
+      "match_type": "exact",
+      "modified": "2015-06-26T12:00:51.270Z",
+      "order": "Gracilariales",
+      "originalNameUsageID": 157354,
+      "parentNameUsageID": 144188,
+      "phylum": "Rhodophyta",
+      "rank": "Species",
+      "scientificname": "Gracilaria tikvahiae",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=157354",
+      "valid_AphiaID": 157354,
+      "valid_authority": "McLachlan, 1979",
+      "valid_name": "Gracilaria tikvahiae"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "157354",
+    "scientific_name": "Gracilaria tikvahiae"
+  },
+  "retrieved_at": "2026-09-04T19:04:36.089470+00:00"
+}

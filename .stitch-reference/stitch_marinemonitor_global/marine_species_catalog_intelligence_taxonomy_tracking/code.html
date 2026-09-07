@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Caribbean Marine Monitor — Species Intelligence: Pterois volitans</title>
+<!-- Tailwind CSS v3 with forms and container queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+              950: '#042f2e',
+            },
+            marine: {
+              800: '#144143',
+              900: '#0f2f31',
+              950: '#071e20'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+<!-- Google Font: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-scrollbars">
+    /* Subtle custom scrollbar for desktop intelligence views */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex h-screen overflow-hidden select-none">
+<!-- BEGIN: LeftSidebar -->
+<aside class="w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 z-20">
+<!-- Top Branding & Navigation -->
+<div>
+<!-- Brand Logo Header -->
+<div class="h-16 flex items-center gap-3 px-5 border-b border-slate-100">
+<div class="w-9 h-9 rounded-lg bg-brand-900 flex items-center justify-center text-teal-300 shadow-sm">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h1 class="font-bold text-sm tracking-tight text-slate-900 leading-tight">Caribbean Marine<br/>Monitor</h1>
+<p class="text-[10px] text-slate-400 font-medium tracking-wide">Regional monitoring</p>
+</div>
+</div>
+<!-- Navigation Section -->
+<nav class="p-3 space-y-1">
+<span class="px-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2 mt-2">Regional</span>
+<!-- Overview Link -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          Overview
+        </a>
+<!-- Observations Link -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="3" stroke-width="2"></circle>
+<circle cx="12" cy="12" r="8" stroke-width="2"></circle>
+</svg>
+          Observations
+        </a>
+<!-- Species Active Link -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-semibold text-teal-900 bg-teal-50 border border-teal-100 transition-colors" href="#">
+<svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          Species
+          <span class="ml-auto w-2 h-2 rounded-full bg-brand-600"></span>
+</a>
+<!-- Analytics Link -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          Analytics
+        </a>
+</nav>
+</div>
+<!-- Bottom Actions & Meta -->
+<div class="p-3 border-t border-slate-100 space-y-2">
+<button class="w-full bg-marine-900 hover:bg-marine-800 text-teal-100 font-medium text-xs py-2.5 px-3 rounded-lg flex items-center justify-center gap-2 shadow-sm transition-all">
+<svg class="w-4 h-4 text-teal-300" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+        Submit sighting
+      </button>
+<div class="pt-2 text-[11px] text-slate-500 font-medium space-y-1">
+<a class="flex items-center gap-2 px-2 py-1.5 hover:text-slate-800 rounded" href="#">
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          Settings
+        </a>
+<a class="flex items-center gap-2 px-2 py-1.5 hover:text-slate-800 rounded" href="#">
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          Help center
+        </a>
+</div>
+</div>
+</aside>
+<!-- END: LeftSidebar -->
+<!-- BEGIN: MainContentShell -->
+<div class="flex-1 flex flex-col h-screen overflow-hidden">
+<!-- Top Application Bar -->
+<header class="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0 z-10">
+<!-- Breadcrumbs & Scope -->
+<div class="flex items-center gap-3">
+<span class="text-[10px] font-bold tracking-wider text-brand-700 uppercase bg-teal-50 px-2 py-0.5 rounded border border-teal-100">
+          Invasive Species Tracker
+        </span>
+<div class="h-3 w-px bg-slate-200"></div>
+<div class="flex items-center gap-1.5 text-xs text-slate-500 font-medium">
+<span class="font-semibold text-slate-800">Caribbean</span>
+<span>•</span>
+<span>Regional monitoring</span>
+<span>/</span>
+<span class="text-brand-700 font-semibold">Jamaica</span>
+</div>
+</div>
+<!-- Search & Partner Access Controls -->
+<div class="flex items-center gap-4">
+<div class="relative w-80">
+<svg class="w-4 h-4 text-slate-400 absolute left-3 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<input class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-2 text-slate-700 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all" placeholder="Search coordinates, taxa, or species ID..." type="text"/>
+</div>
+<button class="text-xs font-semibold text-slate-700 border border-slate-200 hover:bg-slate-50 px-3 py-1.5 rounded-lg transition-colors">
+          Partner sign in
+        </button>
+<div class="flex items-center gap-2 pl-1 border-l border-slate-200">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+<div class="w-7 h-7 rounded-full bg-slate-800 text-teal-300 font-bold text-xs flex items-center justify-center">
+            CM
+          </div>
+</div>
+</div>
+</header>
+<!-- Master-Detail Body Area -->
+<main class="flex-1 flex overflow-hidden">
+<!-- BEGIN: LeftSubPanel (Species Index) -->
+<section class="w-80 bg-white border-r border-slate-200 flex flex-col shrink-0 overflow-y-auto" data-purpose="species-index-subpanel">
+<div class="p-4 border-b border-slate-100"><div class="flex items-center justify-between mb-2"><span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Species Catalog</span><span class="text-[11px] font-medium text-teal-700 bg-teal-50 px-2 py-0.5 rounded border border-teal-100">2,840+ Indexed Marine Taxa</span></div><div class="relative"><svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><input class="w-full text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-lg pl-8 pr-3 py-2 focus:ring-1 focus:ring-brand-500 focus:border-brand-500" placeholder="Search common, scientific name, or WoRMS/OBIS ID..." type="text" value="Pterois volitans, Lionfish..."/></div><div class="flex flex-wrap gap-1 mt-3"><button class="px-2 py-1 bg-slate-900 text-white rounded text-[10px] font-medium shadow-sm">All Species</button><button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded text-[10px] font-medium transition-colors">With Obs (14)</button><button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded text-[10px] font-medium transition-colors">Caribbean (8)</button><button class="px-2 py-1 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-100 rounded text-[10px] font-medium transition-colors">Monitored Priority (2)</button></div><div class="flex items-center gap-1.5 mt-2 pt-2 border-t border-slate-100"><button class="flex-1 text-left px-2 py-1 bg-slate-50 hover:bg-slate-100 text-slate-600 border border-slate-200 rounded text-[10px] font-medium flex items-center justify-between"><span>Group: All</span><svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button><button class="flex-1 text-left px-2 py-1 bg-slate-50 hover:bg-slate-100 text-slate-600 border border-slate-200 rounded text-[10px] font-medium flex items-center justify-between"><span>Status: All</span><svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button></div></div>
+<!-- Species List -->
+<div class="p-3 space-y-2 flex-1"><!-- Item 1 (Selected): Red Lionfish --><div class="p-3.5 rounded-xl bg-teal-50/70 border-2 border-brand-500/80 shadow-sm relative cursor-pointer"><div class="flex justify-between items-start"><div><span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold bg-rose-100 text-rose-800 uppercase tracking-wide">Invasive (High Threat)</span><h3 class="text-sm font-bold text-slate-900 mt-1">Red Lionfish</h3><p class="text-xs italic text-brand-800 font-mono">Pterois volitans</p></div><span class="w-2 h-2 rounded-full bg-teal-600"></span></div><div class="mt-3 pt-2.5 border-t border-teal-200/60 flex items-center justify-between text-[11px] font-medium text-slate-600"><span class="flex items-center gap-1"><strong class="text-slate-900">8</strong> regional reports</span><span>•</span><span><strong class="text-slate-900">1</strong> verified</span><span>•</span><span class="text-brand-700 font-semibold">Jamaica NEPA</span></div></div><!-- Item 2: Queen Conch --><div class="p-3 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer"><div class="flex justify-between items-start"><div><span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 uppercase">Native / Regulated Harvest</span><h4 class="text-xs font-semibold text-slate-800 mt-1">Queen Conch</h4><p class="text-[11px] italic text-slate-500 font-mono">Aliger gigas</p></div><span class="text-[10px] text-slate-400 font-medium">34 observations</span></div><div class="mt-2 text-[10px] text-slate-500 flex items-center justify-between"><span>CITES App. II · SPAW Protocol</span><span class="font-mono text-slate-400">WoRMS: 532349</span></div></div><!-- Item 3: Giant Tiger Prawn --><div class="p-3 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer"><div class="flex justify-between items-start"><div><span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium bg-amber-50 text-amber-800 uppercase border border-amber-200">Invasive / Established</span><h4 class="text-xs font-semibold text-slate-800 mt-1">Giant Tiger Prawn</h4><p class="text-[11px] italic text-slate-500 font-mono">Penaeus monodon</p></div><span class="text-[10px] text-slate-400 font-medium">4 confirmed</span></div><div class="mt-2 text-[10px] text-slate-400">Recorded: Colombia, Honduras</div></div><!-- Item 4: Nassau Grouper --><div class="p-3 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer"><div class="flex justify-between items-start"><div><span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-semibold bg-rose-50 text-rose-800 border border-rose-200 uppercase">Native / Critically Endangered</span><h4 class="text-xs font-semibold text-slate-800 mt-1">Nassau Grouper</h4><p class="text-[11px] italic text-slate-500 font-mono">Epinephelus striatus</p></div><span class="text-[10px] text-slate-400 font-medium">19 observations</span></div><div class="mt-2 text-[10px] text-slate-500 flex items-center justify-between"><span>IUCN Red List (CR) · Aggregations</span><span class="font-mono text-slate-400">WoRMS: 273873</span></div></div><!-- Item 5: Elkhorn Coral --><div class="p-3 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer"><div class="flex justify-between items-start"><div><span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-semibold bg-teal-50 text-teal-800 border border-teal-200 uppercase">Native Keystone / Threatened</span><h4 class="text-xs font-semibold text-slate-800 mt-1">Elkhorn Coral</h4><p class="text-[11px] italic text-slate-500 font-mono">Acropora palmata</p></div><span class="text-[10px] text-slate-400 font-medium">12 colonies</span></div><div class="mt-2 text-[10px] text-slate-500">Reef Builder · High Restoration Priority</div></div><!-- Item 6: Halophila Seagrass --><div class="p-3 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer"><div class="flex justify-between items-start"><div><span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium bg-slate-100 text-slate-600 uppercase">Non-Native Phytobenthic</span><h4 class="text-xs font-semibold text-slate-800 mt-1">Halophila Seagrass</h4><p class="text-[11px] italic text-slate-500 font-mono">Halophila stipulacea</p></div><span class="text-[10px] text-slate-400 font-medium">3 sightings</span></div><div class="mt-2 text-[10px] text-slate-400">Displacing Syringodium filiforme</div></div></div>
+<!-- Direct Taxa Index Link -->
+<div class="p-3 border-t border-slate-100 bg-slate-50/50">
+<button class="w-full text-center py-2 text-xs font-semibold text-brand-700 hover:text-brand-800 flex items-center justify-center gap-1.5">Taxonomic Index &amp; WoRMS Directory <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+</div>
+</section>
+<!-- END: LeftSubPanel -->
+<!-- BEGIN: DetailedSpeciesDossier -->
+<section class="flex-1 overflow-y-auto bg-slate-50 p-6 space-y-6" data-purpose="scientific-species-dossier">
+<!-- Cross-linking Banner From Map Observation -->
+<div class="bg-teal-900 text-teal-100 rounded-xl p-3.5 px-4 flex items-center justify-between shadow-sm border border-teal-800">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-teal-800 flex items-center justify-center text-teal-300 shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<p class="text-xs font-semibold text-white">Linked from Active Field Observation #JM-0842 (Montego Bay Marine Park, Jamaica)</p>
+<p class="text-[11px] text-teal-300">Verified by Dr. A. Campbell (NEPA) at 18.432° N, 77.108° W on Aug 18, 2026</p>
+</div>
+</div>
+<button class="text-xs font-medium bg-teal-700/60 hover:bg-teal-700 text-white px-3 py-1.5 rounded-lg border border-teal-600 transition-colors flex items-center gap-1.5">
+            Return to Map Marker
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Taxonomic Header & Primary Meta Card -->
+<article class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+<!-- Taxonomic Breadcrumbs -->
+<div class="flex items-center gap-1.5 text-[11px] font-mono text-slate-500 overflow-x-auto pb-2 mb-3 border-b border-slate-100">
+<span class="text-slate-400">Kingdom:</span> <span class="text-slate-700">Animalia</span> <span>›</span>
+<span class="text-slate-400">Phylum:</span> <span class="text-slate-700">Chordata</span> <span>›</span>
+<span class="text-slate-400">Class:</span> <span class="text-slate-700">Actinopterygii</span> <span>›</span>
+<span class="text-slate-400">Order:</span> <span class="text-slate-700">Scorpaeniformes</span> <span>›</span>
+<span class="text-slate-400">Family:</span> <span class="text-slate-700 font-semibold">Scorpaenidae</span> <span>›</span>
+<span class="text-brand-700 font-bold bg-teal-50 px-1.5 py-0.5 rounded">Pterois volitans (Linnaeus, 1758)</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+<div>
+<div class="flex items-center gap-3 flex-wrap">
+<h1 class="text-2xl font-extrabold text-slate-900 tracking-tight">Red Lionfish</h1>
+<span class="text-lg italic font-medium text-slate-500 font-mono">Pterois volitans</span>
+</div>
+<p class="text-xs text-slate-500 mt-1 max-w-2xl">
+                Indo-Pacific predatory marine teleost established throughout the Greater Caribbean Basin, Gulf of Mexico, and Western Atlantic. Recognized driver of dramatic coral-reef juvenile teleost recruitment declines.
+              </p>
+<!-- Diagnostic Badges -->
+<div class="flex flex-wrap items-center gap-2 mt-3.5"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-100 text-rose-900 border border-rose-200"><span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>Ecological Status: Invasive (CARICOM Priority)</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-200">Toxin Classification: Venomous Spines (Neurotoxin / Acetylcholine)</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-teal-100 text-teal-900 border border-teal-200">Global Assessment: IUCN Established Alien</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium font-mono bg-slate-100 text-slate-700 border border-slate-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Taxonomic Status: Accepted (WoRMS AphiaID: 159559)</span></div>
+</div>
+<!-- Header Action Controls -->
+<div class="flex lg:flex-col gap-2 shrink-0">
+<a class="px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-xs font-medium flex items-center justify-center gap-2 transition-colors" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                View on Tracking Map
+              </a>
+<button class="px-3 py-1.5 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-lg text-xs font-medium flex items-center justify-center gap-2 transition-colors">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                Scientific Dossier (PDF)
+              </button>
+<button class="px-3 py-1.5 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 rounded-lg text-xs font-medium flex items-center justify-center gap-2 transition-colors">
+                Cite GBIF/OBIS Taxon
+              </button>
+</div>
+</div>
+</article>
+<!-- BEGIN: MorphologicalStagesSection -->
+<article class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm space-y-4">
+<div class="flex items-center justify-between border-b border-slate-100 pb-3">
+<div>
+<h2 class="text-sm font-bold text-slate-900 tracking-tight">Morphological Stages &amp; Diagnostic Criteria</h2>
+<p class="text-xs text-slate-500">Ontogenetic variation between early settlement phase and reproductive adult stages</p>
+</div>
+<span class="text-[11px] font-mono text-slate-400">Meristics Formula: D: XIII, 10–11 | A: III, 6–7</span>
+</div>
+<!-- Graphic Morphological Stage Cards: Young vs Old -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Juvenile Stage Card -->
+<div class="rounded-xl border border-slate-200 bg-slate-50/50 p-4 relative overflow-hidden flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-wider text-teal-800 bg-teal-100 px-2 py-0.5 rounded">
+                    Juvenile Settlement Phase
+                  </span>
+<span class="text-xs font-mono font-semibold text-slate-600">&lt; 7.0 cm Total Length</span>
+</div>
+<!-- Abstracted Diagrammatic Anatomical Vector Representation -->
+<div class="my-4 h-32 rounded-lg bg-gradient-to-r from-teal-950/5 via-slate-100 to-amber-950/5 border border-slate-200/80 flex items-center justify-center relative p-3">
+<div class="text-center">
+<div class="inline-flex items-center justify-center p-2 rounded-full bg-white shadow-sm border border-slate-200 mb-1">
+<svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<p class="text-[11px] font-bold text-slate-700">Juvenile Cryptic Morphotype</p>
+<p class="text-[10px] text-slate-500 font-mono">Supraocular Tentacles &amp; Translucent Membranes</p>
+</div>
+</div>
+<!-- Diagnostic Bullet Points -->
+<ul class="text-xs space-y-2 text-slate-600">
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-1.5 shrink-0"></span>
+<span><strong>Translucent Fin Webbing:</strong> Pectoral membranes remain mostly clear with faint micro-punctate spotting.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-1.5 shrink-0"></span>
+<span><strong>Supraocular Tentacles:</strong> Distinct, elongated fleshy horns directly above eyes, assisting crypsis in algae.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-1.5 shrink-0"></span>
+<span><strong>Nursery Microhabitats:</strong> Concentrated in shallow mangrove prop roots, seagrass margins, and artificial canal pilings.</span>
+</li>
+</ul>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-medium text-amber-900 bg-amber-50/80 rounded p-2 border border-amber-200/60">
+                ⚠️ Spines synthesize bioactive venom glandular secretions at sizes as small as 1.5 cm standard length.
+              </div>
+</div>
+<!-- Adult Stage Card -->
+<div class="rounded-xl border border-slate-200 bg-slate-50/50 p-4 relative overflow-hidden flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-wider text-rose-800 bg-rose-100 px-2 py-0.5 rounded">
+                    Adult / Apex Predator Phase
+                  </span>
+<span class="text-xs font-mono font-semibold text-slate-600">15.0 – 45.0 cm Total Length</span>
+</div>
+<!-- Abstracted Diagrammatic Anatomical Vector Representation -->
+<div class="my-4 h-32 rounded-lg bg-gradient-to-r from-rose-950/5 via-slate-100 to-teal-950/5 border border-slate-200/80 flex items-center justify-center relative p-3">
+<div class="text-center">
+<div class="inline-flex items-center justify-center p-2 rounded-full bg-white shadow-sm border border-slate-200 mb-1">
+<svg class="w-8 h-8 text-rose-700" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<p class="text-[11px] font-bold text-slate-700">Apex Zebrine Morphotype</p>
+<p class="text-[10px] text-slate-500 font-mono">13 Venomous Grooved Dorsal Spines (Full Caliber)</p>
+</div>
+</div>
+<!-- Diagnostic Bullet Points -->
+<ul class="text-xs space-y-2 text-slate-600">
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600 mt-1.5 shrink-0"></span>
+<span><strong>13 Venomous Dorsal Spines:</strong> Deep glandular grooves along lateral spine shafts coated in venomous integument.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600 mt-1.5 shrink-0"></span>
+<span><strong>Color Pattern:</strong> Alternating reddish-brown / maroon and creamy white vertical banding with spotted rayed fins.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600 mt-1.5 shrink-0"></span>
+<span><strong>Size Metrics:</strong> Mean Caribbean adult standard length 26–32 cm; record documented at 47.6 cm TL.</span>
+</li>
+</ul>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-mono text-slate-600 bg-slate-100 rounded p-2 border border-slate-200">
+                Pectoral Fin Ray Count: 14 unbranched | Lateral scales: 90–120 ctenoid rows
+              </div>
+</div>
+</div>
+<!-- Anatomical Formula Data Strip -->
+<div class="bg-slate-100/70 rounded-lg p-3 grid grid-cols-2 md:grid-cols-4 gap-3 text-center border border-slate-200">
+<div>
+<span class="block text-[10px] font-medium text-slate-500 uppercase">Dorsal Spine Formula</span>
+<span class="font-mono text-xs font-bold text-slate-800">XIII, 10–11</span>
+</div>
+<div>
+<span class="block text-[10px] font-medium text-slate-500 uppercase">Anal Fin Formula</span>
+<span class="font-mono text-xs font-bold text-slate-800">III, 6–7</span>
+</div>
+<div>
+<span class="block text-[10px] font-medium text-slate-500 uppercase">Pelvic Formula</span>
+<span class="font-mono text-xs font-bold text-slate-800">I, 5 (venomous)</span>
+</div>
+<div>
+<span class="block text-[10px] font-medium text-slate-500 uppercase">Vertebral Count</span>
+<span class="font-mono text-xs font-bold text-slate-800">24 (10 + 14)</span>
+</div>
+</div>
+</article>
+<!-- END: MorphologicalStagesSection -->
+<!-- BEGIN: EcologicalMatrixGrid -->
+<article class="space-y-2">
+<h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Doctoral Biometric &amp; Ecological Matrix</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+<!-- Matrix Card 1 -->
+<div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-teal-50 text-brand-700 flex items-center justify-center mb-3">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-xs font-bold text-slate-900">Trophic Level: 4.2</h3>
+<p class="text-[10px] font-mono text-brand-700 font-semibold mb-2">Apex Generalist Predator</p>
+<p class="text-xs text-slate-600 leading-relaxed">
+                Consumes &gt;70 native teleost and decapod crustacean taxa. Capable of reducing native recruitment by 79% within 5 weeks of reef colonisation.
+              </p>
+</div>
+<!-- Matrix Card 2 -->
+<div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-teal-50 text-brand-700 flex items-center justify-center mb-3">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-xs font-bold text-slate-900">1.0 m – 300+ m Depth</h3>
+<p class="text-[10px] font-mono text-brand-700 font-semibold mb-2">Mesophotic Depth Refuge</p>
+<p class="text-xs text-slate-600 leading-relaxed">
+                Thrives in extreme bathymetric ranges beyond conventional recreational culling limits (30 m). Thermal envelope spans 10.0°C to 32.5°C.
+              </p>
+</div>
+<!-- Matrix Card 3 -->
+<div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-teal-50 text-brand-700 flex items-center justify-center mb-3">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-xs font-bold text-slate-900">2M+ Eggs / Female / Year</h3>
+<p class="text-[10px] font-mono text-brand-700 font-semibold mb-2">Year-Round Spawning Cycle</p>
+<p class="text-xs text-slate-600 leading-relaxed">
+                Spawn every 2 to 4 days in warm Caribbean waters. Encapsulated buoyant gelatinous mucous ball protects embryos from predation during pelagic drift.
+              </p>
+</div>
+<!-- Matrix Card 4 -->
+<div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-teal-50 text-brand-700 flex items-center justify-center mb-3">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-xs font-bold text-slate-900">25–40 Day Larval Duration</h3>
+<p class="text-[10px] font-mono text-brand-700 font-semibold mb-2">Oceanic Hydrodynamic Transport</p>
+<p class="text-xs text-slate-600 leading-relaxed">
+                Pelagic larvae carried hundreds of kilometers across the Caribbean Current and Loop Current into coastal barrier reef systems.
+              </p>
+</div>
+</div>
+</article>
+<!-- END: EcologicalMatrixGrid -->
+<!-- BEGIN: RegionalPlatformEvidence (Elevated from reference) -->
+<article class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm space-y-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+<div>
+<h2 class="text-sm font-bold text-slate-900 uppercase tracking-tight">Regional Platform Evidence &amp; Status</h2>
+<p class="text-xs text-slate-500">Observation pipeline validated across configured Caribbean jurisdictions</p>
+</div>
+<span class="text-xs font-medium text-slate-500">8 total regional reports recorded</span>
+</div>
+<!-- Counters Row -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-2">
+<div class="text-center p-3 rounded-lg bg-slate-50 border border-slate-100">
+<span class="text-[11px] font-medium text-slate-500 block">Total Reports</span>
+<span class="text-2xl font-black text-slate-900">8</span>
+</div>
+<div class="text-center p-3 rounded-lg bg-teal-50/70 border border-teal-100">
+<span class="text-[11px] font-medium text-teal-800 block">Verified or Corrected</span>
+<span class="text-2xl font-black text-teal-700">1</span>
+</div>
+<div class="text-center p-3 rounded-lg bg-amber-50/70 border border-amber-100">
+<span class="text-[11px] font-medium text-amber-800 block">AI-Supported Pending</span>
+<span class="text-2xl font-black text-amber-700">7</span>
+</div>
+<div class="text-center p-3 rounded-lg bg-slate-50 border border-slate-100">
+<span class="text-[11px] font-medium text-slate-500 block">Pending Review</span>
+<span class="text-2xl font-black text-slate-400">0</span>
+</div>
+</div>
+<!-- Jurisdictional Breakdown Accordions -->
+<div class="space-y-3">
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Jurisdiction Coverage &amp; Deployment</h3>
+<!-- Jamaica Row (Active & Configured) -->
+<div class="p-4 rounded-xl border border-teal-200 bg-teal-50/30">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+<h4 class="text-sm font-bold text-slate-900">Jamaica</h4>
+<span class="text-[10px] text-teal-800 font-semibold bg-teal-100 px-2 py-0.5 rounded">Active Monitoring Zone</span>
+</div>
+<span class="text-xs font-bold text-slate-800">8 reports (1 verified by NEPA)</span>
+</div>
+<div class="flex flex-wrap gap-2 text-xs">
+<span class="px-2.5 py-1 rounded bg-white border border-teal-200 font-medium text-teal-900 flex items-center gap-1.5">
+<svg class="w-3.5 h-3.5 text-teal-600" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+                  Species Program: Configured
+                </span>
+<span class="px-2.5 py-1 rounded bg-white border border-teal-200 font-medium text-teal-900 flex items-center gap-1.5">
+<svg class="w-3.5 h-3.5 text-teal-600" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+                  Habitat Suitability: Available (v3 High Density)
+                </span>
+<span class="px-2.5 py-1 rounded bg-white border border-teal-200 font-medium text-teal-900">
+                  Monitoring Priority: Critical / Intervention Active
+                </span>
+</div>
+</div>
+<!-- Bahamas Row -->
+<div class="p-4 rounded-xl border border-slate-200 bg-white">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+<h4 class="text-sm font-semibold text-slate-800">Bahamas</h4>
+</div>
+<span class="text-xs text-slate-400 font-medium">No platform evidence recorded yet</span>
+</div>
+<div class="flex flex-wrap gap-2 text-xs text-slate-500">
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600">Species Program: Not configured</span>
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600">Habitat suitability: Under assessment</span>
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600">Monitoring Priority: Not configured</span>
+</div>
+</div>
+<!-- Barbados Row -->
+<div class="p-4 rounded-xl border border-slate-200 bg-white">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+<h4 class="text-sm font-semibold text-slate-800">Barbados</h4>
+</div>
+<span class="text-xs text-slate-400 font-medium">No platform evidence recorded yet</span>
+</div>
+<div class="flex flex-wrap gap-2 text-xs text-slate-500">
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600">Species Program: Not configured</span>
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600">Habitat suitability: Not configured</span>
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600">Monitoring Priority: Not configured</span>
+</div>
+</div>
+</div>
+</article>
+<!-- END: RegionalPlatformEvidence -->
+<!-- Configured Scientific Programs Footer Meta -->
+<div class="p-4 rounded-xl bg-slate-100/80 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-600">
+<div>
+<span class="font-bold text-slate-800">Scientific Institutional Oversight:</span> NEPA Jamaica Invasive Species Task Force &amp; CARICOM Biosecurity Alliance
+          </div>
+<div class="flex items-center gap-3">
+<span class="text-slate-400">Taxon Record Hash: <code class="font-mono text-[11px] text-slate-700">urn:lsid:marinespecies.org:taxname:159559</code></span>
+</div>
+</div>
+</section>
+<!-- END: DetailedSpeciesDossier -->
+</main>
+<!-- END: Master-Detail Body Area -->
+</div>
+<!-- END: MainContentShell -->
+</body></html>

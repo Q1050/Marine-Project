@@ -1,0 +1,12 @@
+{
+  "version": "regional-identification-scaling-v1",
+  "required_dimensions": [
+    "taxonomy_authority", "media_provider_availability", "item_license", "attribution",
+    "taxonomy_resolution_burden", "reviewed_media", "duplicate_and_event_groups",
+    "life_stage_and_context_diversity", "benchmark_independence", "negative_open_set_controls",
+    "storage_estimate", "bounded_concurrency", "provider_rate_limits", "human_review_capacity"
+  ],
+  "automatic_taxon_approval": false,
+  "uniform_image_target_required": false,
+  "scientific_firewall": "media identification != jurisdiction occurrence != ecological status != invasive status"
+}

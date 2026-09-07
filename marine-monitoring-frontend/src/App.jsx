@@ -15,6 +15,7 @@ import PlaceholderPage from "./pages/PlaceholderPage";
 import { AdminOverviewPage, OrganizationsRegistryPage, RegionsRegistryPage, SpeciesProgramsRegistryPage, UsersRegistryPage } from "./pages/AdminRegistryPage";
 import AdminJurisdictionOnboardingPage from "./pages/AdminJurisdictionOnboardingPage";
 import AdminScientificReadinessPage from "./pages/AdminScientificReadinessPage";
+import AgencySciencePage from "./pages/AgencySciencePage";
 import AdminEarlyWarningPage from "./pages/AdminEarlyWarningPage";
 import AdminTaxonomyPage from "./pages/AdminTaxonomyPage";
 import AdminObservationOperationsPage from "./pages/AdminObservationOperationsPage";
@@ -76,6 +77,7 @@ function Application() {
       <Route path="/region/caribbean/observations" element={<ObservationsPage scope="regional" onOpenMap={() => navigate("/region/caribbean")} />} />
       <Route path="/region/caribbean/species" element={<RegionalSpeciesIntelligencePage />} />
       <Route path="/region/caribbean/analytics" element={<RegionalAnalyticsPage />} />
+      <Route path="/region/caribbean/submit" element={<SubmitPage onObservationCreated={refreshMap} />} />
 
       <Route path="/region/:regionSlug/:jurisdictionSlug/overview" element={<JurisdictionReady><OverviewPage onNavigate={countryNavigate} /></JurisdictionReady>} />
       <Route path="/region/:regionSlug/:jurisdictionSlug/map" element={<JurisdictionReady><MapPage refreshKey={mapRefreshKey} /></JurisdictionReady>} />
@@ -85,6 +87,8 @@ function Application() {
       <Route path="/region/:regionSlug/:jurisdictionSlug/submit" element={<JurisdictionReady><SubmitPage onObservationCreated={refreshMap} /></JurisdictionReady>} />
       {Object.entries(COUNTRY_PLACEHOLDERS).map(([path, values]) => <Route key={path} path={`/region/:regionSlug/:jurisdictionSlug/${path}`} element={<JurisdictionReady><ConfiguredPlaceholder values={values} /></JurisdictionReady>} />)}
       <Route path="/region/:regionSlug/:jurisdictionSlug/species" element={<JurisdictionReady><JurisdictionSpeciesPage /></JurisdictionReady>} />
+      <Route path="/region/:regionSlug/:jurisdictionSlug/scientific-readiness" element={<JurisdictionReady><ProtectedRoute access="investigations"><AgencySciencePage view="scientific-readiness" /></ProtectedRoute></JurisdictionReady>} />
+      <Route path="/region/:regionSlug/:jurisdictionSlug/early-warning" element={<JurisdictionReady><ProtectedRoute access="investigations"><AgencySciencePage view="early-warning" /></ProtectedRoute></JurisdictionReady>} />
 
       <Route path="/submit" element={<SubmitPage onObservationCreated={refreshMap} />} />
       <Route path="/reporter/status/:token" element={<ReporterStatusPage />} />

@@ -1,0 +1,129 @@
+{
+  "canonical_content_fingerprint": "22259f4c0257f35f15a2f14926dba074df8d2f18eb0b3089964277e43adf3bc3",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=421990",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1065,
+          "child": {
+            "AphiaID": 1066,
+            "child": {
+              "AphiaID": 845959,
+              "child": {
+                "AphiaID": 1071,
+                "child": {
+                  "AphiaID": 1086,
+                  "child": {
+                    "AphiaID": 1089,
+                    "child": {
+                      "AphiaID": 1130,
+                      "child": {
+                        "AphiaID": 106670,
+                        "child": {
+                          "AphiaID": 106673,
+                          "child": {
+                            "AphiaID": 106679,
+                            "child": {
+                              "AphiaID": 106680,
+                              "child": {
+                                "AphiaID": 106700,
+                                "child": {
+                                  "AphiaID": 439056,
+                                  "child": {
+                                    "AphiaID": 415649,
+                                    "child": {
+                                      "AphiaID": 421990,
+                                      "child": null,
+                                      "rank": "Species",
+                                      "scientificname": "Mithraculus sculptus"
+                                    },
+                                    "rank": "Genus",
+                                    "scientificname": "Mithraculus"
+                                  },
+                                  "rank": "Family",
+                                  "scientificname": "Mithracidae"
+                                },
+                                "rank": "Superfamily",
+                                "scientificname": "Majoidea"
+                              },
+                              "rank": "Subsection",
+                              "scientificname": "Heterotremata"
+                            },
+                            "rank": "Section",
+                            "scientificname": "Eubrachyura"
+                          },
+                          "rank": "Infraorder",
+                          "scientificname": "Brachyura"
+                        },
+                        "rank": "Suborder",
+                        "scientificname": "Pleocyemata"
+                      },
+                      "rank": "Order",
+                      "scientificname": "Decapoda"
+                    },
+                    "rank": "Superorder",
+                    "scientificname": "Eucarida"
+                  },
+                  "rank": "Subclass",
+                  "scientificname": "Eumalacostraca"
+                },
+                "rank": "Class",
+                "scientificname": "Malacostraca"
+              },
+              "rank": "Superclass",
+              "scientificname": "Multicrustacea"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Crustacea"
+          },
+          "rank": "Phylum",
+          "scientificname": "Arthropoda"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 421990,
+      "authority": "(Lamarck, 1818)",
+      "citation": "DecaNet eds. (2026). DecaNet. Mithraculus sculptus (Lamarck, 1818). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=421990 on 2026-09-04",
+      "class": "Malacostraca",
+      "family": "Mithracidae",
+      "genus": "Mithraculus",
+      "isBrackish": 0,
+      "isExtinct": 0,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:421990",
+      "match_type": "exact",
+      "modified": "2022-04-10T09:24:53.270Z",
+      "order": "Decapoda",
+      "originalNameUsageID": 453875,
+      "parentNameUsageID": 415649,
+      "phylum": "Arthropoda",
+      "rank": "Species",
+      "scientificname": "Mithraculus sculptus",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=421990",
+      "valid_AphiaID": 421990,
+      "valid_authority": "(Lamarck, 1818)",
+      "valid_name": "Mithraculus sculptus"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "421990",
+    "scientific_name": "Mithraculus sculptus"
+  },
+  "retrieved_at": "2026-09-04T19:04:08.704891+00:00"
+}

@@ -1,0 +1,104 @@
+{
+  "canonical_content_fingerprint": "d5046ead976960790281e5abc8d12705b8c5067437bb392797f9dce5f8b1a1c3",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=124332",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1806,
+          "child": {
+            "AphiaID": 148744,
+            "child": {
+              "AphiaID": 123082,
+              "child": {
+                "AphiaID": 149854,
+                "child": {
+                  "AphiaID": 510502,
+                  "child": {
+                    "AphiaID": 152528,
+                    "child": {
+                      "AphiaID": 510522,
+                      "child": {
+                        "AphiaID": 123163,
+                        "child": {
+                          "AphiaID": 123395,
+                          "child": {
+                            "AphiaID": 124332,
+                            "child": null,
+                            "rank": "Species",
+                            "scientificname": "Diadema antillarum"
+                          },
+                          "rank": "Genus",
+                          "scientificname": "Diadema"
+                        },
+                        "rank": "Family",
+                        "scientificname": "Diadematidae"
+                      },
+                      "rank": "Order",
+                      "scientificname": "Diadematoida"
+                    },
+                    "rank": "Superorder",
+                    "scientificname": "Diadematacea"
+                  },
+                  "rank": "Infraclass",
+                  "scientificname": "Aulodonta"
+                },
+                "rank": "Subclass",
+                "scientificname": "Euechinoidea"
+              },
+              "rank": "Class",
+              "scientificname": "Echinoidea"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Echinozoa"
+          },
+          "rank": "Phylum",
+          "scientificname": "Echinodermata"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 124332,
+      "authority": "(Philippi, 1845)",
+      "citation": "Kroh, A.; Mooi, R. (2026). World Echinoidea Database. Diadema antillarum (Philippi, 1845). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=124332 on 2026-09-04",
+      "class": "Echinoidea",
+      "family": "Diadematidae",
+      "genus": "Diadema",
+      "isBrackish": 0,
+      "isExtinct": 0,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:124332",
+      "match_type": "exact",
+      "modified": "2021-01-09T21:30:30.927Z",
+      "order": "Diadematoida",
+      "originalNameUsageID": 125174,
+      "parentNameUsageID": 123395,
+      "phylum": "Echinodermata",
+      "rank": "Species",
+      "scientificname": "Diadema antillarum",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=124332",
+      "valid_AphiaID": 124332,
+      "valid_authority": "(Philippi, 1845)",
+      "valid_name": "Diadema antillarum"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "124332",
+    "scientific_name": "Diadema antillarum"
+  },
+  "retrieved_at": "2026-09-04T19:04:24.693221+00:00"
+}

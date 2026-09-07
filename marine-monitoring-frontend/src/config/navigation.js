@@ -19,6 +19,8 @@ export const NAVIGATION = {
     { id: "investigations", label: "Investigations", icon: "⌕" },
     { id: "species", label: "Species", icon: "♧" },
     { id: "analytics", label: "Analytics", icon: "▥" },
+    { id: "scientific-readiness", label: "Scientific readiness", icon: "◉" },
+    { id: "early-warning", label: "Early warning", icon: "!" },
   ],
   admin: [
     { id: "admin-overview", label: "Overview", icon: "◇", to: "/admin", end: true },
@@ -41,12 +43,18 @@ export const NAVIGATION = {
   ],
 };
 
+export function submissionRouteForScope(scope, activeRegion, activeJurisdiction) {
+  if (scope === "country") return `/region/${activeRegion}/${activeJurisdiction}/submit`;
+  if (scope === "regional") return "/region/caribbean/submit";
+  return "/submit";
+}
+
 export function routeContext(pathname) {
   if (pathname.startsWith("/scientific-review")) return { scope: "reviewer", activeRegion: null, activeJurisdiction: null };
   if (pathname === "/reviewer") return { scope: "reviewer", activeRegion: null, activeJurisdiction: null };
   if (pathname === "/admin/observations" || pathname.startsWith("/admin/observations/")) return { scope: "reviewer", activeRegion: null, activeJurisdiction: null };
   if (pathname.startsWith("/admin")) return { scope: "admin", activeRegion: null, activeJurisdiction: null };
-  const countryMatch = pathname.match(/^\/region\/([^/]+)\/([^/]+)\/(overview|map|observations|review|submit|investigations|species|analytics)(?:\/|$)/);
+  const countryMatch = pathname.match(/^\/region\/([^/]+)\/([^/]+)\/(overview|map|observations|review|submit|investigations|species|scientific-readiness|early-warning|analytics)(?:\/|$)/);
   if (countryMatch) return { scope: "country", activeRegion: countryMatch[1], activeJurisdiction: countryMatch[2] };
   if (pathname.startsWith("/region/caribbean")) return { scope: "regional", activeRegion: "caribbean", activeJurisdiction: null };
   if (pathname === "/submit") return { scope: "public", activeRegion: "caribbean", activeJurisdiction: null };

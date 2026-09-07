@@ -1,0 +1,803 @@
+INFO:     Started server process [20488]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+{"event":"request_completed","correlation_id":"b7484a3365fd440b854916b3eab3717c","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":227.09}
+{"event":"request_completed","correlation_id":"f9c5b27920d044c3b01a10a94699595d","method":"GET","route":"/species/1/reference-media/1/content","status":200,"duration_ms":14.23}
+{"event":"request_completed","correlation_id":"337e8a60ed1743d0b4c9cd78ce86385b","method":"GET","route":"/species/1/reference-media/7/content","status":200,"duration_ms":10.32}
+{"event":"request_completed","correlation_id":"d64d48dc97b645bbba584677a3d389e3","method":"GET","route":"/species/1/reference-media/10/content","status":200,"duration_ms":13.06}
+{"event":"request_completed","correlation_id":"161fad55a1f74bc9bfabc78d31893c90","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":60.06}
+{"event":"request_completed","correlation_id":"b8c22cd767954c0884ccbd87e82b1091","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":20.6}
+{"event":"request_completed","correlation_id":"c4312c2cc31743568224ddbec3854309","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":93.22}
+{"event":"request_completed","correlation_id":"aa1d4f15ca6b43158be4467f7a14cd79","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":115.11}
+{"event":"request_completed","correlation_id":"1a5893c4dda84dbcb2e133e1479a899d","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":56.06}
+{"event":"request_completed","correlation_id":"2c58b66e040744a783f53008e05d9ec1","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":103.77}
+{"event":"request_completed","correlation_id":"ecb222bd75be4887b4b0a744fe09f1c1","method":"GET","route":"/species/catalog","status":200,"duration_ms":21.85}
+{"event":"request_completed","correlation_id":"e5a8001b0eda47f5bc4010d582a9a135","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":25.82}
+{"event":"request_completed","correlation_id":"df87ad0081f74550bdd9cd0405a5efd4","method":"GET","route":"/species/catalog","status":200,"duration_ms":17.56}
+{"event":"request_completed","correlation_id":"98d62dc0378547eaae875a1cbcbc4fee","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":15.4}
+{"event":"request_completed","correlation_id":"b230f2ed99b4427e865342aee48f93cf","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":18.31}
+{"event":"request_completed","correlation_id":"68190f8a45e148028976837f340a8e81","method":"GET","route":"/species/1/reference-media/10/content","status":200,"duration_ms":12.94}
+{"event":"request_completed","correlation_id":"64fe18249ca644ffae42506527dd4306","method":"GET","route":"/species/1/reference-media/1/content","status":200,"duration_ms":16.18}
+{"event":"request_completed","correlation_id":"93518d205f1a43e38b3d6af585a774f6","method":"GET","route":"/species/1/reference-media/7/content","status":200,"duration_ms":16.41}
+{"event":"request_completed","correlation_id":"ea8d92bd8b29466ba1b124e48d3393c3","method":"GET","route":"/observations/map","status":200,"duration_ms":26.67}
+{"event":"request_completed","correlation_id":"1ca8ac513fba4415ab8e09a284d7aa71","method":"GET","route":"/observations/map","status":200,"duration_ms":23.51}
+{"event":"request_completed","correlation_id":"5f7f51c033f244ac8689fd0ac9b72281","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":58.27}
+{"event":"request_completed","correlation_id":"e0f1817727fe42b498821168753a536a","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":45.83}
+{"event":"request_completed","correlation_id":"661b4f5b1c8546d3898f4f13ca331187","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":15.59}
+{"event":"request_completed","correlation_id":"c979f713379b4016a0e3fe5faa52a14f","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":49.67}
+{"event":"request_completed","correlation_id":"df31c1110db54af39424ad93a2bfe120","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":79.47}
+{"event":"request_completed","correlation_id":"bcfa60ed97224d7285815e958fd155d6","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":69.33}
+{"event":"request_completed","correlation_id":"9d99fb683a374882b0d0aa9ac3c8c52f","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":45.62}
+{"event":"request_completed","correlation_id":"e472dc918d634667bb14db1eac289cbb","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":89.31}
+{"event":"request_completed","correlation_id":"2988ea464d5e4a069737d9f279c70e41","method":"GET","route":"/regions","status":200,"duration_ms":9.04}
+{"event":"request_completed","correlation_id":"913cd5051f7d45a5b77ef3a23328aee6","method":"GET","route":"/regions","status":200,"duration_ms":8.14}
+{"event":"request_completed","correlation_id":"ac3a742356c540a9a7a0ff7d79563d9c","method":"GET","route":"/observations/map","status":200,"duration_ms":19.08}
+{"event":"request_completed","correlation_id":"de7fcbc9533444d490ec7e152613805f","method":"GET","route":"/observations/map","status":200,"duration_ms":16.04}
+{"event":"request_completed","correlation_id":"64743d1156614ab496e76ff5b152a84f","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":42.82}
+{"event":"request_completed","correlation_id":"ea92b0a9386e490cbc33d7d7f5d85270","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":43.05}
+{"event":"request_completed","correlation_id":"554f3fdc1eca478185661f7e31b11af1","method":"GET","route":"/species/catalog","status":200,"duration_ms":14.52}
+{"event":"request_completed","correlation_id":"df846388d6214adfb71654e5e40fc1ab","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":16.66}
+{"event":"request_completed","correlation_id":"7108b38833f74197a4079e2abc97428e","method":"GET","route":"/species/catalog","status":200,"duration_ms":15.31}
+{"event":"request_completed","correlation_id":"cb6bbee6b4a241db8eb6a17ea33ca1f9","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":15.78}
+{"event":"request_completed","correlation_id":"2176e4c1acf14a75979c656b023d10f4","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":17.12}
+{"event":"request_completed","correlation_id":"d70c79af20c744e0b9ac86bdc7854220","method":"GET","route":"/regions/caribbean/analytics","status":200,"duration_ms":66.22}
+{"event":"request_completed","correlation_id":"700a490101b548058dee147d19f8403c","method":"GET","route":"/regions/caribbean/analytics","status":200,"duration_ms":64.02}
+{"event":"request_completed","correlation_id":"c49c3bbc4b88468d8b0cc71a9e0bd652","method":"GET","route":"/species/catalog","status":200,"duration_ms":16.62}
+{"event":"request_completed","correlation_id":"5807e824bb5547acb2fdd3759d4deac0","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":16.59}
+{"event":"request_completed","correlation_id":"67827c0b0e0b4a44aacceaddf6698c08","method":"GET","route":"/species/catalog","status":200,"duration_ms":13.22}
+{"event":"request_completed","correlation_id":"bd3f9b0c72704bf0865ea5286bccff61","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":13.75}
+{"event":"request_completed","correlation_id":"315d818100c84bc187f452d8037cc82a","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":20.17}
+{"event":"request_completed","correlation_id":"5b137c7e552340f1a750ace5c0edc5b9","method":"GET","route":"/observations/map","status":200,"duration_ms":15.1}
+{"event":"request_completed","correlation_id":"f7ba04b289144da6b787cac1b33b81cd","method":"GET","route":"/observations/map","status":200,"duration_ms":15.23}
+{"event":"request_completed","correlation_id":"6e1782fb78cc4618aa9023ef35849f8a","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":42.58}
+{"event":"request_completed","correlation_id":"80bf25193acd469a83222a2a4d1bf0b2","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":40.22}
+{"event":"request_completed","correlation_id":"4d62a664efd4466b969d9a7afc5622c9","method":"GET","route":"/species/catalog","status":200,"duration_ms":12.92}
+{"event":"request_completed","correlation_id":"4df4dc8e0c984baebf261acf6dfb67a2","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":18.32}
+{"event":"request_completed","correlation_id":"38f52e045849436d91b188806ff41b2a","method":"GET","route":"/species/catalog","status":200,"duration_ms":15.58}
+{"event":"request_completed","correlation_id":"9c220d317f164fe98f872c567a176dae","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":16.55}
+{"event":"request_completed","correlation_id":"5d028a481883409a8f028e825a1904d9","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":15.46}
+{"event":"request_completed","correlation_id":"0fe28c3c1eeb4827946559085fdb4c25","method":"GET","route":"/observations/1","status":200,"duration_ms":67.42}
+Parsing model identifier. Schema: hf-hub, Identifier: imageomics/bioclip-2
+Attempting to load config from HF Hub: imageomics/bioclip-2
+HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/imageomics/bioclip-2/resolve/main/open_clip_config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/imageomics/bioclip-2/2957b322090f9cb17ae72c71981c7218a28d81e0/open_clip_config.json "HTTP/1.1 200 OK"
+Loaded model config from HF Hub: imageomics/bioclip-2
+HTTP Request: HEAD https://huggingface.co/imageomics/bioclip-2/resolve/main/open_clip_model.safetensors "HTTP/1.1 302 Found"
+Found default weights file on HF Hub: C:\Users\romar\.cache\huggingface\hub\models--imageomics--bioclip-2\snapshots\2957b322090f9cb17ae72c71981c7218a28d81e0\open_clip_model.safetensors
+Instantiating model architecture: CLIP
+Loading full pretrained weights from: C:\Users\romar\.cache\huggingface\hub\models--imageomics--bioclip-2\snapshots\2957b322090f9cb17ae72c71981c7218a28d81e0\open_clip_model.safetensors
+Final image preprocessing configuration set: {'size': (224, 224), 'mode': 'RGB', 'mean': [0.48145466, 0.4578275, 0.40821073], 'std': [0.26862954, 0.26130258, 0.27577711], 'interpolation': 'bicubic', 'resize_mode': 'shortest', 'fill_color': 0}
+Model hf-hub:imageomics/bioclip-2 creation process complete.
+{"event":"request_completed","correlation_id":"f4e372b3b3294fb0a0de8916edb457b3","method":"POST","route":"/observations/analyze","status":200,"duration_ms":62801.21}
+{"event":"request_completed","correlation_id":"45333aa56b0648a0bc129949ea807284","method":"GET","route":"/observations/53","status":200,"duration_ms":114.63}
+{"event":"request_completed","correlation_id":"c5fd790cba88469087791e42b641e256","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":68.85}
+{"event":"request_completed","correlation_id":"1550d88c37c5434ca448ab39cefb098e","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":78.06}
+{"event":"request_completed","correlation_id":"be4165f5fcd240ee996b3b8e690e8ea6","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":78.68}
+{"event":"request_completed","correlation_id":"255bfb09b6594e2cb9befbfc5f7014f6","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":146.95}
+{"event":"request_completed","correlation_id":"3b48bf005f08464aa7ff08e54555fa9f","method":"GET","route":"/observations/53","status":200,"duration_ms":22.43}
+{"event":"request_completed","correlation_id":"fac5af0aa0a040d2b9c5406ebc5ee439","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":23.77}
+{"event":"request_completed","correlation_id":"cc69166c708243f6aba47eb2ed59eeef","method":"GET","route":"/species/catalog","status":200,"duration_ms":26.74}
+{"event":"request_completed","correlation_id":"e398cfb15dd54b05b188e131c46fae63","method":"GET","route":"/species/catalog","status":200,"duration_ms":9.97}
+{"event":"request_completed","correlation_id":"5cd88fad437747cab9c3e97380a459c7","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":15.65}
+{"event":"request_completed","correlation_id":"4772e228947b47d6b7aa5d5eac4dfbfb","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":32.24}
+{"event":"request_completed","correlation_id":"a0cdd9d8faa14d4088703fa7596d46dd","method":"GET","route":"/observations/map","status":200,"duration_ms":20.99}
+{"event":"request_completed","correlation_id":"a07f847c08eb499b9174061cec935ae7","method":"GET","route":"/observations/map","status":200,"duration_ms":16.78}
+{"event":"request_completed","correlation_id":"c835bfb9144c4f44b76df934a3f74b58","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":71.64}
+{"event":"request_completed","correlation_id":"f5dca3c02ea74342842ece97caa5c80a","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":33.59}
+{"event":"request_completed","correlation_id":"ca0a33c167cd4a5382732784f97ec620","method":"GET","route":"/observations/map","status":200,"duration_ms":16.69}
+{"event":"request_completed","correlation_id":"c499abcb4c4248d7a2078e7763625141","method":"GET","route":"/observations/map","status":200,"duration_ms":16.86}
+{"event":"request_completed","correlation_id":"3d340e9a630c44aba50f57f26da76231","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":55.28}
+{"event":"request_completed","correlation_id":"e495bf32bd9d45a4b9c93eda92a60a99","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":33.15}
+{"event":"request_completed","correlation_id":"9619e94c17e344aa86bff8970da63af2","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":19.01}
+{"event":"request_completed","correlation_id":"f8d090e62e164b18ade5f3b5288ff5f7","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":21.25}
+{"event":"request_completed","correlation_id":"76efd44b76b445e3a45982a2c37ed8d9","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":53.99}
+{"event":"request_completed","correlation_id":"3820028f000f476ca59938b8c691aef3","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":92.84}
+{"event":"request_completed","correlation_id":"65b3e28695614fdfb4e60456b5261c85","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":37.93}
+{"event":"request_completed","correlation_id":"d3d4c56ab6834d179c746d0b4a523911","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":79.42}
+{"event":"request_completed","correlation_id":"8b7ba17e9cda477f8179c2600be3003d","method":"GET","route":"/species/catalog","status":200,"duration_ms":43.43}
+{"event":"request_completed","correlation_id":"b390291ee9714f63bdcf36823dd3e284","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":45.94}
+{"event":"request_completed","correlation_id":"289e946c22c943e3828b5fa3418e7ba2","method":"GET","route":"/species/catalog","status":200,"duration_ms":11.14}
+{"event":"request_completed","correlation_id":"d164a7754d2645abbfe0f948cceb292e","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":25.06}
+{"event":"request_completed","correlation_id":"a7abca51e287439a82b23032e638a7df","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":36.39}
+{"event":"request_completed","correlation_id":"a7e1d1f7b46b4202b04e68fd9525d426","method":"GET","route":"/observations/map","status":200,"duration_ms":15.0}
+{"event":"request_completed","correlation_id":"cbea903a7ff342f2ae4edaa5de7cfbce","method":"GET","route":"/observations/map","status":200,"duration_ms":11.38}
+{"event":"request_completed","correlation_id":"01e5afeab8db43bdab81978c6a16c813","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":91.74}
+{"event":"request_completed","correlation_id":"30025496b5a94d1d98844e55d3841296","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":52.41}
+{"event":"request_completed","correlation_id":"8a9bdb2e9f7a489782973912eedd7bc8","method":"GET","route":"/species/catalog","status":200,"duration_ms":13.18}
+{"event":"request_completed","correlation_id":"c5d6f1a5fd9c44cc8f1121f76dc700e0","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":19.97}
+{"event":"request_completed","correlation_id":"80e30f24ff1b40c8830e54fe19eee563","method":"GET","route":"/species/catalog","status":200,"duration_ms":13.59}
+{"event":"request_completed","correlation_id":"996cd7d4150e4434bc68201fa7c9d2d8","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":17.68}
+{"event":"request_completed","correlation_id":"d4744fca6ce84be79c77e963b74fd408","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":14.24}
+{"event":"request_completed","correlation_id":"99a4abaebbdb4248be866a811eb50409","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":16.0}
+{"event":"request_completed","correlation_id":"2ee48fb7035c471ab21d027eaafceb54","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":31.26}
+{"event":"request_completed","correlation_id":"affc1d7d260d45398a86ae86f5871446","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":71.86}
+{"event":"request_completed","correlation_id":"a6e5e14e65b84d36b46c1d980175fee5","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":95.55}
+{"event":"request_completed","correlation_id":"583bfbf8046a48c2a59d57aafcbb09f2","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":36.12}
+{"event":"request_completed","correlation_id":"60e5bd26b7494ddb9ad58655a4d32e3b","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":152.84}
+{"event":"request_completed","correlation_id":"7a26c905716340b6acc65b92bfcc3141","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":16.73}
+{"event":"request_completed","correlation_id":"92a07816599b4fae9c25dfaef4e9b2b2","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":14.73}
+{"event":"request_completed","correlation_id":"0b5bdb9f3ece4a4cb7c6fd5e9a6854e8","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":47.8}
+{"event":"request_completed","correlation_id":"89ce74d86117418e84e8970a4381fc93","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":67.52}
+{"event":"request_completed","correlation_id":"a05dafc7f07b46f48e9ed734a797010f","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":143.28}
+{"event":"request_completed","correlation_id":"3dd878bfe5b547719525e4dd40c824d0","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":64.12}
+{"event":"request_completed","correlation_id":"acfb457fd693496fa09b100ef6060418","method":"GET","route":"/regions","status":200,"duration_ms":9.03}
+{"event":"request_completed","correlation_id":"b08cf873095d45ef86e4cdd52dd319c0","method":"GET","route":"/regions","status":200,"duration_ms":6.17}
+{"event":"request_completed","correlation_id":"c9085526fc5d4326b0b6c35d41ed8ded","method":"GET","route":"/regions/caribbean","status":200,"duration_ms":60.98}
+{"event":"request_completed","correlation_id":"2f4c5e98579047ab841c2d05cb5d1881","method":"GET","route":"/regions/caribbean","status":200,"duration_ms":35.64}
+{"event":"request_completed","correlation_id":"3cc6c1a5aa304e57bfd9d673b649f36a","method":"GET","route":"/jurisdictions/bahamas","status":200,"duration_ms":42.53}
+{"event":"request_completed","correlation_id":"7999c221ee91469a980579cc61fee3ff","method":"GET","route":"/jurisdictions/bahamas","status":200,"duration_ms":25.66}
+{"event":"request_completed","correlation_id":"b0d53eb526da47778942b823a6e8ae62","method":"GET","route":"/observations/map","status":200,"duration_ms":17.43}
+{"event":"request_completed","correlation_id":"d1980f743fee49c1bb242dfc11e92858","method":"GET","route":"/observations/map","status":200,"duration_ms":17.18}
+{"event":"request_completed","correlation_id":"2d65a26499384dc3b18e16a4a5b13221","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":47.4}
+{"event":"request_completed","correlation_id":"b4a8651dfb0644ccb00f74c30942d470","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":38.07}
+{"event":"request_completed","correlation_id":"62a0f41ef6f7498983a5012ec7ec60c2","method":"GET","route":"/jurisdictions/bahamas","status":200,"duration_ms":22.38}
+{"event":"request_completed","correlation_id":"543d1e7d5c20477bbba6e3d21e061a21","method":"GET","route":"/jurisdictions/bahamas","status":200,"duration_ms":31.76}
+{"event":"request_completed","correlation_id":"fe253ea39b8a4b1a942200e98c16b025","method":"GET","route":"/regions/caribbean","status":200,"duration_ms":38.39}
+{"event":"request_completed","correlation_id":"759829a3217f48389c466a0e5e1efb50","method":"GET","route":"/regions/caribbean","status":200,"duration_ms":33.97}
+{"event":"request_completed","correlation_id":"c2f80baef1eb44779e4ab1545fe664fb","method":"GET","route":"/regions","status":200,"duration_ms":8.71}
+{"event":"request_completed","correlation_id":"ad326fcdc9a34adbb3e9ad37b688c9dc","method":"GET","route":"/regions","status":200,"duration_ms":8.43}
+{"event":"request_completed","correlation_id":"6558315d89c0480cb154c58a208e1416","method":"GET","route":"/species/catalog","status":200,"duration_ms":15.61}
+{"event":"request_completed","correlation_id":"3185de182a1943ccaf5db214b2d0a705","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":22.04}
+{"event":"request_completed","correlation_id":"bad009863404441fb003d004d4d8c65e","method":"GET","route":"/species/catalog","status":200,"duration_ms":17.93}
+{"event":"request_completed","correlation_id":"2878c685859644db86b1866ec377fe65","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":16.94}
+{"event":"request_completed","correlation_id":"687b5608e5c34b36b9d0c7328f1370ab","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":20.08}
+{"event":"request_completed","correlation_id":"1f42be18a1e1441aa7a2e1ffdf380955","method":"GET","route":"/observations/map","status":200,"duration_ms":15.45}
+{"event":"request_completed","correlation_id":"ad8c7a45c9ad45b8915d14412668f5a7","method":"GET","route":"/observations/map","status":200,"duration_ms":15.58}
+{"event":"request_completed","correlation_id":"873ca4de39614898a4d5f91c8758e802","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":46.07}
+{"event":"request_completed","correlation_id":"9a0fce7972d44347bf04cf1f710f5bef","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":39.34}
+{"event":"request_completed","correlation_id":"bdbe7d34872441f1bf5e60a06c9b5139","method":"GET","route":"/observations/map","status":200,"duration_ms":17.41}
+{"event":"request_completed","correlation_id":"5082ce78b83f4678988e0f6b04f462fd","method":"GET","route":"/observations/map","status":200,"duration_ms":14.31}
+{"event":"request_completed","correlation_id":"e42627c67a7a4886b46786c4e0d153ef","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":46.96}
+{"event":"request_completed","correlation_id":"4059e07e3bd7424dbb934f7b126cb143","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":35.74}
+{"event":"request_completed","correlation_id":"7e9af44ea7914d649fa9dce149529834","method":"GET","route":"/species/catalog","status":200,"duration_ms":17.29}
+{"event":"request_completed","correlation_id":"5dff73da873b4a1c8f99a247d6b4c4a1","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":23.37}
+{"event":"request_completed","correlation_id":"8e05b31c7ee245489943a53de8a9c688","method":"GET","route":"/species/catalog","status":200,"duration_ms":14.16}
+{"event":"request_completed","correlation_id":"7118c1bde9e942919245a251b05ff2f8","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":16.98}
+{"event":"request_completed","correlation_id":"06c853de7f29467cbe19f91a987c9700","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":17.82}
+{"event":"request_completed","correlation_id":"f7e6e3b9dc654fe5b7de05e4915e5b24","method":"GET","route":"/regions/caribbean/analytics","status":200,"duration_ms":65.96}
+{"event":"request_completed","correlation_id":"f0c59e2d5f4045cf8af0b8a849cd73ca","method":"GET","route":"/regions/caribbean/analytics","status":200,"duration_ms":57.6}
+{"event":"request_completed","correlation_id":"61c014d5772049858c3aee99ff9c4c48","method":"GET","route":"/species/catalog","status":200,"duration_ms":12.67}
+{"event":"request_completed","correlation_id":"05d08a662a4f4c979ee95c75a697fdc9","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":17.98}
+{"event":"request_completed","correlation_id":"eb3a17dd42a4410dbd744deb4b49cb98","method":"GET","route":"/species/catalog","status":200,"duration_ms":13.73}
+{"event":"request_completed","correlation_id":"b946577de0b34b2f9fc707ec99764183","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":14.09}
+{"event":"request_completed","correlation_id":"195f505dbb844e9d88e838ade2c31db6","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":17.54}
+{"event":"request_completed","correlation_id":"6bbff4b55f78469b9d537fea99d72ae9","method":"GET","route":"/observations/map","status":200,"duration_ms":20.4}
+{"event":"request_completed","correlation_id":"8174f6aade654a9cab6f292dc90d1992","method":"GET","route":"/observations/map","status":200,"duration_ms":16.18}
+{"event":"request_completed","correlation_id":"5325931e8d774372a086a552d62a8766","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":49.16}
+{"event":"request_completed","correlation_id":"d88aa4e2c15b4883b8da0ea620e8f2b5","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":39.14}
+{"event":"request_completed","correlation_id":"c0c5b042ffbb4d2aa2bcb24d850e0e6c","method":"GET","route":"/regions","status":200,"duration_ms":8.74}
+{"event":"request_completed","correlation_id":"8794db2722e34ce1af439ea00370c4e1","method":"GET","route":"/regions","status":200,"duration_ms":6.79}
+{"event":"request_completed","correlation_id":"eff1d47f56e74158afd34473b9d05126","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":15.93}
+{"event":"request_completed","correlation_id":"af0d5f27fc004ba18d84b5a5452baf11","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":21.86}
+{"event":"request_completed","correlation_id":"28cd442edb6d435fbeeaf4ae21663c70","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":49.87}
+{"event":"request_completed","correlation_id":"9b8cc01495cf431492e8d7fe82946d16","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":83.59}
+{"event":"request_completed","correlation_id":"8999dfb352c04eb6b900456517bc3bf7","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":42.01}
+{"event":"request_completed","correlation_id":"881f60d6a0f048688ec1b29254b06106","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":61.08}
+{"event":"request_completed","correlation_id":"5f630dc233034bfaac354f409ba0cab8","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":13.77}
+{"event":"request_completed","correlation_id":"bedc7cb4d5ab4f58aead1e0c714c8377","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":18.96}
+{"event":"request_completed","correlation_id":"ec9960ae5aa04917a8b75381d02f5ad4","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":47.94}
+{"event":"request_completed","correlation_id":"7cfcddf0b15141b88d68c5c76be6c766","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":65.26}
+{"event":"request_completed","correlation_id":"f733bd437f9245dd89e382d4a2b46e72","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":32.64}
+{"event":"request_completed","correlation_id":"9e751f20424d4712a8ef4488f9dbd425","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":60.5}
+{"event":"request_completed","correlation_id":"5df3db7a1f6f499a93dd87b6ac9e4e13","method":"GET","route":"/observations/map","status":200,"duration_ms":15.35}
+{"event":"request_completed","correlation_id":"baea89e276244c32b9d1df9726575e38","method":"GET","route":"/observations/map","status":200,"duration_ms":18.39}
+{"event":"request_completed","correlation_id":"9e74984f65ea41e291834e6f334df60a","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":44.61}
+{"event":"request_completed","correlation_id":"b752b59a7fcb4cbbac0f56c175ab0c92","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":37.56}
+{"event":"request_completed","correlation_id":"40f63691140945f998a1eb627311d98d","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":18.56}
+{"event":"request_completed","correlation_id":"1ace77d88a1743f5841bdafc26c3ac2f","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":16.28}
+{"event":"request_completed","correlation_id":"0ebd4f70d37948fb8489f1a624b35546","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":47.12}
+{"event":"request_completed","correlation_id":"4c316deccee640eab15d7e5ae830c532","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":77.03}
+{"event":"request_completed","correlation_id":"01cf67f8e2164ff4828ed64674903164","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":37.28}
+{"event":"request_completed","correlation_id":"0609b93d72004970a743bdd27da58e86","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":64.16}
+{"event":"request_completed","correlation_id":"36f2e88b00c74c129d5576422be2057e","method":"GET","route":"/observations/map","status":200,"duration_ms":14.72}
+{"event":"request_completed","correlation_id":"6433da374bab46318a4a5c523be1b565","method":"GET","route":"/observations/map","status":200,"duration_ms":20.07}
+{"event":"request_completed","correlation_id":"e1aeca34621a4a8fa372d29fe9b24917","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":45.03}
+{"event":"request_completed","correlation_id":"f29623d5916a4481acb5d36512a97375","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":32.87}
+{"event":"request_completed","correlation_id":"1fd474c5e6774ead817fd21d2b4a88e6","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":13.68}
+{"event":"request_completed","correlation_id":"212e0de72dd54b1fa4f84c10853f59a7","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":14.54}
+{"event":"request_completed","correlation_id":"c492a183112c449a8f44f02725110a49","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":50.45}
+{"event":"request_completed","correlation_id":"f704b465f35f438ead768d9ddb3ab3e6","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":72.98}
+{"event":"request_completed","correlation_id":"5d8f36f6685c47c5a185d79682ad5707","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":32.73}
+{"event":"request_completed","correlation_id":"00d06e8686f94a7c9b5512a37dc26e14","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":71.45}
+{"event":"request_completed","correlation_id":"9c38a2f1a3bb413c98ed0ae722affef3","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":65.2}
+{"event":"request_completed","correlation_id":"72d3c2fe9a2a4b208349382077bf7829","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":35.0}
+{"event":"request_completed","correlation_id":"06125f4ad7f245168b24630f614ebd8d","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":110.76}
+{"event":"request_completed","correlation_id":"ea537cff8aad4b7f87646d283f3017cb","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":154.7}
+{"event":"request_completed","correlation_id":"97aeeb7d0d714639a3db022f066f08e8","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":47.17}
+{"event":"request_completed","correlation_id":"28cd28b094774f2284e9b61c2d874b3d","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":91.79}
+{"event":"request_completed","correlation_id":"9e590b0c95f64a4b992937b8e3bf6349","method":"GET","route":"/observations/map","status":200,"duration_ms":30.19}
+{"event":"request_completed","correlation_id":"d4f77ad4fb33462c832f5bd9fbafca8d","method":"GET","route":"/observations/map","status":200,"duration_ms":15.72}
+{"event":"request_completed","correlation_id":"95e83c73da5a4d4e98daf457eeb148a7","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":53.19}
+{"event":"request_completed","correlation_id":"011eeb93658143e58f5e01bba843b385","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":39.55}
+{"event":"request_completed","correlation_id":"5e9536bc4c3145718b3840631fb1b678","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":15.93}
+{"event":"request_completed","correlation_id":"c22bc8ee6d3946519599ba9bf9acd6e1","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":24.37}
+{"event":"request_completed","correlation_id":"16b40013dc624382b79f3e5ca45aece9","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":51.11}
+{"event":"request_completed","correlation_id":"6a96c1f719b64732865b1414ea9fe063","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":86.19}
+{"event":"request_completed","correlation_id":"1969095203be4087985da08612af797a","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":43.42}
+{"event":"request_completed","correlation_id":"374e676a6227478a8b23c6b2eabf896a","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":71.26}
+{"event":"request_completed","correlation_id":"180e2c92c34049b4a8bc02d1f91954ca","method":"GET","route":"/observations/map","status":200,"duration_ms":21.51}
+{"event":"request_completed","correlation_id":"283c783314c84cdab7ca104a2561adcd","method":"GET","route":"/observations/map","status":200,"duration_ms":13.74}
+{"event":"request_completed","correlation_id":"2d93e5f1467c4be3b5f0afccfcc061e0","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":42.81}
+{"event":"request_completed","correlation_id":"5b56c3d57d95418783ab6cd277eef9f5","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":38.26}
+{"event":"request_completed","correlation_id":"6cfa2f3e1f1a43c39c2f11bb68faea95","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":13.44}
+{"event":"request_completed","correlation_id":"5acd28c2ed6747c5ac33485ea088996d","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":21.77}
+{"event":"request_completed","correlation_id":"80609d3f4fc340bc96cd5ebb1a5fa8ed","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":44.83}
+{"event":"request_completed","correlation_id":"28988a49b764474bab8a6d2cfb4ae7de","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":35.09}
+{"event":"request_completed","correlation_id":"55be4ead700043b2a3da04d50322d4fe","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":98.36}
+{"event":"request_completed","correlation_id":"cc1712d628264d689e244056744f3728","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":71.25}
+{"event":"request_completed","correlation_id":"12e3a104d159498fa87cfec46faeab2f","method":"GET","route":"/observations/map","status":200,"duration_ms":15.11}
+{"event":"request_completed","correlation_id":"6992d888da9e4450a784afe86ecb0b7f","method":"GET","route":"/observations/map","status":200,"duration_ms":17.67}
+{"event":"request_completed","correlation_id":"69115aedb7674506ba7b52975cc27613","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":42.81}
+{"event":"request_completed","correlation_id":"72d580724edc499a8f34a64c31db15ee","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":31.98}
+{"event":"request_completed","correlation_id":"4c9e32a4c28f4765966f5615bf547d9b","method":"GET","route":"/species/catalog","status":200,"duration_ms":15.47}
+{"event":"request_completed","correlation_id":"518e98b551cd43ce86a3109e02534364","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":16.87}
+{"event":"request_completed","correlation_id":"ccdd887830564e489abdf787ddb3cd7c","method":"GET","route":"/species/catalog","status":200,"duration_ms":11.6}
+{"event":"request_completed","correlation_id":"81d0a3acbaf24d839fd03ff795800af9","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":12.27}
+{"event":"request_completed","correlation_id":"717badebdf1f4640986575e8808d087e","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":29.57}
+{"event":"request_completed","correlation_id":"07deba4453fe4c42b5df202f731a23f2","method":"GET","route":"/regions/caribbean/analytics","status":200,"duration_ms":80.39}
+{"event":"request_completed","correlation_id":"2e86840b41904e5eae5467196354e2c9","method":"GET","route":"/regions/caribbean/analytics","status":200,"duration_ms":68.87}
+{"event":"request_completed","correlation_id":"e254f6faf7f343708aa21b8a1ec649cc","method":"GET","route":"/species/catalog","status":200,"duration_ms":23.31}
+{"event":"request_completed","correlation_id":"43536e1d868040d0ae4996491f59d0ac","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":26.23}
+{"event":"request_completed","correlation_id":"129646d3b6d8499f99f1a791ccd9e399","method":"GET","route":"/species/catalog","status":200,"duration_ms":17.25}
+{"event":"request_completed","correlation_id":"2ad6f255719c4f8f967017d862e29e02","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":23.48}
+{"event":"request_completed","correlation_id":"101631547bfb4575b3048e434ef4dacb","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":72.08}
+{"event":"request_completed","correlation_id":"cd227bc290494be587b751f7b04d7dce","method":"GET","route":"/observations/map","status":200,"duration_ms":16.6}
+{"event":"request_completed","correlation_id":"64193592013d423fa68ce319835ef2b2","method":"GET","route":"/observations/map","status":200,"duration_ms":24.09}
+{"event":"request_completed","correlation_id":"ea4ee5c1c1fc49409c0a4edeaf940deb","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":119.35}
+{"event":"request_completed","correlation_id":"0b5c315eb9d547dc886a4b7902e91927","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":37.11}
+{"event":"request_completed","correlation_id":"c252920c103940b49575a883c5f6fd75","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":26.6}
+{"event":"request_completed","correlation_id":"ffe2ad7e9661413d92a811e72ec67647","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":19.94}
+{"event":"request_completed","correlation_id":"539cab1487084e7599416e5c73ca0e32","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":66.52}
+{"event":"request_completed","correlation_id":"cbd9ac2215b34426ba0f737dd17a1dca","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":106.56}
+{"event":"request_completed","correlation_id":"b5906c62a5294c93b870cf71ad0952ea","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":71.95}
+{"event":"request_completed","correlation_id":"511e4f6b11de493283eab1accc187957","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":184.35}
+{"event":"request_completed","correlation_id":"4f370d9e404a4472b734c6a535c42e3e","method":"GET","route":"/species/catalog","status":200,"duration_ms":17.21}
+{"event":"request_completed","correlation_id":"c4d2efea62154230a269287553376333","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":18.27}
+{"event":"request_completed","correlation_id":"d97e730d9f174487bb39c13ecd74bd05","method":"GET","route":"/species/catalog","status":200,"duration_ms":12.76}
+{"event":"request_completed","correlation_id":"b45d77305b474cdaa477544665c2ad43","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":15.57}
+{"event":"request_completed","correlation_id":"573e043e85554e8ab64566e1e0141a8f","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":21.62}
+{"event":"request_completed","correlation_id":"878943fef28c44239588c6bb98529269","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":19.12}
+{"event":"request_completed","correlation_id":"c373cebc30db472ca3a6c87fa23c6e51","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":22.9}
+{"event":"request_completed","correlation_id":"a81b71dd52fd4fe2a66c50fedb094062","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":52.66}
+{"event":"request_completed","correlation_id":"040780bc515a440d80734abb4a8e5a43","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":79.11}
+{"event":"request_completed","correlation_id":"72448f8846c44d4ca71a0beabde3c6f5","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":35.66}
+{"event":"request_completed","correlation_id":"474ad4d419a84877b423aa0d26a0f05c","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":75.62}
+{"event":"request_completed","correlation_id":"722db19f7347448e97e447997534b331","method":"GET","route":"/species/catalog","status":200,"duration_ms":14.71}
+{"event":"request_completed","correlation_id":"e441f6ae4cd648868ae5439f72d1b28d","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":15.99}
+{"event":"request_completed","correlation_id":"fadf9ea0ca974c85b359d54dd84621e5","method":"GET","route":"/species/catalog","status":200,"duration_ms":11.32}
+{"event":"request_completed","correlation_id":"c6208d1b8ebc4a51b80b21336c764be1","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":13.22}
+{"event":"request_completed","correlation_id":"d78350b2195b4c6aa05c24a8b774097c","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":13.68}
+{"event":"request_completed","correlation_id":"ea626fea70d046fe9defb57830e0eac2","method":"GET","route":"/species/catalog","status":200,"duration_ms":16.8}
+{"event":"request_completed","correlation_id":"9cd79110b9154df59f31a27ad62aa1ba","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":17.54}
+{"event":"request_completed","correlation_id":"7957d733e9c44e128fcfe564e8f2e440","method":"GET","route":"/species/catalog","status":200,"duration_ms":14.12}
+{"event":"request_completed","correlation_id":"4f86e40685314e2c9b652962e1ff3284","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":15.45}
+{"event":"request_completed","correlation_id":"e45baa2157874423adbe06db33a91bf0","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":19.26}
+{"event":"request_completed","correlation_id":"3ffdd7e7332b45a7b267cb4de611a92a","method":"GET","route":"/species/catalog","status":200,"duration_ms":12.21}
+{"event":"request_completed","correlation_id":"1325993a31dc4908bd45b4be0d4ceffb","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":17.18}
+{"event":"request_completed","correlation_id":"aab5c258b1354887abfe4337aa06c54b","method":"GET","route":"/species/catalog","status":200,"duration_ms":11.86}
+{"event":"request_completed","correlation_id":"f300dab58099469d893db6e0ec4f49c8","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":12.76}
+{"event":"request_completed","correlation_id":"05ad0aaddd714a59900d89d9f6dbef86","method":"GET","route":"/species/1/public-media","status":200,"duration_ms":28.45}
+{"event":"request_completed","correlation_id":"e6c4102381df4b89bb730bdfadd4e0a2","method":"GET","route":"/health/ready","status":200,"duration_ms":281.51}
+{"event":"request_completed","correlation_id":"f4b2470e26014fcb9039223c1aa79549","method":"OPTIONS","route":"/auth/login","status":200,"duration_ms":23.98}
+{"event":"request_completed","correlation_id":"4828d351122f4d08871437eb81c02adf","method":"POST","route":"/auth/login","status":401,"duration_ms":392.42}
+{"event":"request_completed","correlation_id":"e4a7b3a4f5c1478b8f9da737687660f2","method":"POST","route":"/auth/login","status":401,"duration_ms":93.37}
+{"event":"request_completed","correlation_id":"27683e26d19943cf87b38853da321d71","method":"POST","route":"/auth/login","status":401,"duration_ms":69.18}
+{"event":"request_completed","correlation_id":"3fc3b4dfcc8d4639acdb311986e1a593","method":"POST","route":"/auth/login","status":401,"duration_ms":73.23}
+{"event":"request_completed","correlation_id":"888fef3d39734c1888aa62b4a22a6355","method":"POST","route":"/auth/login","status":200,"duration_ms":562.66}
+{"event":"request_completed","correlation_id":"08a7f118868948e28f81cf2afd47039f","method":"OPTIONS","route":"/admin/overview","status":200,"duration_ms":4.91}
+{"event":"request_completed","correlation_id":"197a6933b21248c587f61706ff81cfc6","method":"OPTIONS","route":"/admin/overview","status":200,"duration_ms":0.45}
+{"event":"request_completed","correlation_id":"91310b5a5b624929ad4276ed4e84b4fa","method":"GET","route":"/admin/overview","status":200,"duration_ms":308.69}
+{"event":"request_completed","correlation_id":"4802f9447f0b44d4b064df4ae0032385","method":"GET","route":"/admin/overview","status":200,"duration_ms":71.63}
+{"event":"request_completed","correlation_id":"b672148dc4824d9c94517b8f983e1c7c","method":"OPTIONS","route":"/admin/observations/queue","status":200,"duration_ms":4.16}
+{"event":"request_completed","correlation_id":"1433f822297f48f4bfff109f599f32ff","method":"OPTIONS","route":"/admin/observations/queue","status":200,"duration_ms":6.91}
+{"event":"request_completed","correlation_id":"94b99a298aee47fc855349eb48aee680","method":"GET","route":"/admin/observations/queue","status":200,"duration_ms":264.28}
+{"event":"request_completed","correlation_id":"d7c7ee4bd67042b5a54642069d3d5ab0","method":"OPTIONS","route":"/admin/observations/53/image","status":200,"duration_ms":2.8}
+{"event":"request_completed","correlation_id":"0dc097904d244975a54b9e1eb0166c04","method":"OPTIONS","route":"/admin/observations/12/image","status":200,"duration_ms":4.06}
+{"event":"request_completed","correlation_id":"9efa7e642c6241edb5d3e513feb4bcca","method":"OPTIONS","route":"/admin/observations/11/image","status":200,"duration_ms":2.74}
+{"event":"request_completed","correlation_id":"77ee488c1a3a4169a08128fa374feb82","method":"OPTIONS","route":"/admin/observations/10/image","status":200,"duration_ms":6.25}
+{"event":"request_completed","correlation_id":"4cbc317d60fe41d7b4521f30e767f421","method":"OPTIONS","route":"/admin/observations/9/image","status":200,"duration_ms":7.3}
+{"event":"request_completed","correlation_id":"e3fd240420b54e0dafb8ab3c173eec45","method":"OPTIONS","route":"/admin/observations/8/image","status":200,"duration_ms":8.46}
+{"event":"request_completed","correlation_id":"582bce7258d44c0d92f214772b423192","method":"OPTIONS","route":"/admin/observations/7/image","status":200,"duration_ms":6.15}
+{"event":"request_completed","correlation_id":"fb9c218e933a4e6f9c2cad3d283e0de7","method":"OPTIONS","route":"/admin/observations/6/image","status":200,"duration_ms":2.88}
+{"event":"request_completed","correlation_id":"8cb938a5a8ae4be7a7bacbf0e47f8161","method":"OPTIONS","route":"/admin/observations/5/image","status":200,"duration_ms":5.92}
+{"event":"request_completed","correlation_id":"55cda5581dff49a3b25768fbe0e8dcce","method":"OPTIONS","route":"/admin/observations/4/image","status":200,"duration_ms":5.91}
+{"event":"request_completed","correlation_id":"bf83ba3c45d148779c4cb4bf00d6cdb0","method":"OPTIONS","route":"/admin/observations/3/image","status":200,"duration_ms":3.58}
+{"event":"request_completed","correlation_id":"a68e60a61f7c4567b9851aba48da0a75","method":"OPTIONS","route":"/admin/observations/2/image","status":200,"duration_ms":2.05}
+{"event":"request_completed","correlation_id":"d6c8323a72ae4bbcaa4a89f1d5cde89a","method":"OPTIONS","route":"/admin/observations/1/image","status":200,"duration_ms":4.08}
+{"event":"request_completed","correlation_id":"2d8b684461ef425a856e7a7c1a78a49e","method":"OPTIONS","route":"/admin/observations/53/operations","status":200,"duration_ms":4.64}
+{"event":"request_completed","correlation_id":"925d91561c234840b26b67d3acd66e6a","method":"OPTIONS","route":"/admin/observation-reviewers/eligible","status":200,"duration_ms":3.46}
+{"event":"request_completed","correlation_id":"5b3efdf5565b4a8789b9d8f5cc5c6615","method":"OPTIONS","route":"/admin/observations/12/image","status":200,"duration_ms":1.65}
+{"event":"request_completed","correlation_id":"eb3558ad8f6649538479baee0b44e2f0","method":"OPTIONS","route":"/admin/observations/11/image","status":200,"duration_ms":3.67}
+{"event":"request_completed","correlation_id":"a59eb75b9ee34a8d81aab3a5b21b60c9","method":"OPTIONS","route":"/admin/observations/10/image","status":200,"duration_ms":4.45}
+{"event":"request_completed","correlation_id":"064da75cedd441f091dd4223ff8840dd","method":"OPTIONS","route":"/admin/observations/9/image","status":200,"duration_ms":3.58}
+{"event":"request_completed","correlation_id":"17a9ce400d1a465ea14f24ad5c82e316","method":"OPTIONS","route":"/admin/observations/8/image","status":200,"duration_ms":3.17}
+{"event":"request_completed","correlation_id":"5700134e0e3f452b9b5bf1c8723621df","method":"OPTIONS","route":"/admin/observations/7/image","status":200,"duration_ms":5.37}
+{"event":"request_completed","correlation_id":"fe4b4921dbd74a04af4b93e8fbc80a2e","method":"OPTIONS","route":"/admin/observations/6/image","status":200,"duration_ms":4.84}
+{"event":"request_completed","correlation_id":"c64d6440269446e69e6a06b7849da4b2","method":"OPTIONS","route":"/admin/observations/5/image","status":200,"duration_ms":1.86}
+{"event":"request_completed","correlation_id":"42e81bf584ed4453920da6089de5fd89","method":"OPTIONS","route":"/admin/observations/4/image","status":200,"duration_ms":3.53}
+{"event":"request_completed","correlation_id":"36564849f6d24d02857ae9e4a1cb61fd","method":"OPTIONS","route":"/admin/observations/3/image","status":200,"duration_ms":13.88}
+{"event":"request_completed","correlation_id":"c5b2383bad75416ca5d82c3a0b66f130","method":"OPTIONS","route":"/admin/observations/2/image","status":200,"duration_ms":1.1}
+{"event":"request_completed","correlation_id":"48b8e1b3deb646d7831006f5034fb859","method":"OPTIONS","route":"/admin/observations/1/image","status":200,"duration_ms":3.15}
+{"event":"request_completed","correlation_id":"e8bfd79db2f84cd395e6bba4ad985bca","method":"GET","route":"/admin/observations/queue","status":200,"duration_ms":193.94}
+{"event":"request_completed","correlation_id":"0f3b212e1709452f907818143ecb9d3c","method":"GET","route":"/admin/observations/53/image","status":200,"duration_ms":421.48}
+{"event":"request_completed","correlation_id":"8d83ffb3d42242d48b407a0ba467f31d","method":"GET","route":"/admin/observations/12/image","status":200,"duration_ms":411.54}
+{"event":"request_completed","correlation_id":"bd757247b95c4c7ebd2c486277573f17","method":"GET","route":"/admin/observations/6/image","status":200,"duration_ms":21.63}
+{"event":"request_completed","correlation_id":"aa2b523f910f4a139ba38e66ad028c58","method":"GET","route":"/admin/observations/7/image","status":200,"duration_ms":40.68}
+{"event":"request_completed","correlation_id":"ba7b1b4f546e4a0690b454daba9eba55","method":"GET","route":"/admin/observations/11/image","status":200,"duration_ms":429.98}
+{"event":"request_completed","correlation_id":"550681dfc9d24ebe98da62610b10f0df","method":"GET","route":"/admin/observations/10/image","status":200,"duration_ms":456.18}
+{"event":"request_completed","correlation_id":"e59bffdef8004cb0af44f4bd5148205a","method":"GET","route":"/admin/observations/5/image","status":200,"duration_ms":29.95}
+{"event":"request_completed","correlation_id":"f9f79d9b1c4f4907a7f358120d56e601","method":"GET","route":"/admin/observations/8/image","status":200,"duration_ms":373.21}
+{"event":"request_completed","correlation_id":"f5013e3ad33543bf905a8d815d3fe1c0","method":"GET","route":"/admin/observations/9/image","status":200,"duration_ms":484.63}
+{"event":"request_completed","correlation_id":"c0c848f07c734e408d3acd5987c428fb","method":"GET","route":"/admin/observations/4/image","status":200,"duration_ms":53.06}
+{"event":"request_completed","correlation_id":"f6d56b2257d643268609d2670f85ebe9","method":"GET","route":"/admin/observations/3/image","status":404,"duration_ms":47.41}
+{"event":"request_completed","correlation_id":"a4acb80a72ba4dc4b516603416054900","method":"GET","route":"/admin/observations/2/image","status":404,"duration_ms":30.94}
+{"event":"request_completed","correlation_id":"aed0c69a9a5f4636b626c95b72c14d22","method":"GET","route":"/admin/observations/1/image","status":404,"duration_ms":32.87}
+{"event":"request_completed","correlation_id":"68e18bcd29814ae38855c778fec5f390","method":"GET","route":"/admin/observation-reviewers/eligible","status":200,"duration_ms":45.95}
+{"event":"request_completed","correlation_id":"bc4443e94aa0434e9c78098512b638e6","method":"GET","route":"/admin/observations/3/image","status":404,"duration_ms":58.53}
+{"event":"request_completed","correlation_id":"3586a8d064674883b665660d6a729430","method":"GET","route":"/admin/observations/1/image","status":404,"duration_ms":35.43}
+{"event":"request_completed","correlation_id":"833a1e6c460d44e18235758415c35c6f","method":"GET","route":"/admin/observations/2/image","status":404,"duration_ms":38.5}
+{"event":"request_completed","correlation_id":"a4b357664a14439ca91f1e00f6e57498","method":"GET","route":"/admin/observations/53/operations","status":200,"duration_ms":81.9}
+{"event":"request_completed","correlation_id":"050fe94389bc439ca1ee658735aec087","method":"GET","route":"/admin/observation-reviewers/eligible","status":200,"duration_ms":27.67}
+{"event":"request_completed","correlation_id":"2b7dad7bdc1849bbab674ec93ce0b617","method":"GET","route":"/admin/observations/53/operations","status":200,"duration_ms":38.42}
+{"event":"request_completed","correlation_id":"7010e3e182fa43798a4e998bd80e6def","method":"OPTIONS","route":"/reviewer/home","status":200,"duration_ms":0.59}
+{"event":"request_completed","correlation_id":"a9ebda3c789f472d982d22d54f978e8e","method":"OPTIONS","route":"/reviewer/home","status":200,"duration_ms":1.59}
+{"event":"request_completed","correlation_id":"237d0c4b11564aa9accf440c8fd1f9cd","method":"GET","route":"/reviewer/home","status":200,"duration_ms":105.56}
+{"event":"request_completed","correlation_id":"6c4b249be44942d88a1e8ffcae886f96","method":"GET","route":"/reviewer/home","status":200,"duration_ms":75.3}
+{"event":"request_completed","correlation_id":"868a0b80724a432984891e3449d93eda","method":"GET","route":"/admin/observations/queue","status":200,"duration_ms":73.27}
+{"event":"request_completed","correlation_id":"17a646a633f343deaf9259c57ccb36a5","method":"GET","route":"/admin/observations/3/image","status":404,"duration_ms":40.39}
+{"event":"request_completed","correlation_id":"b7c7daafe0864f568293a110a5109bcb","method":"GET","route":"/admin/observations/2/image","status":404,"duration_ms":39.63}
+{"event":"request_completed","correlation_id":"9437dbcda0b442c096ba2026cf12e1cd","method":"GET","route":"/admin/observation-reviewers/eligible","status":200,"duration_ms":57.71}
+{"event":"request_completed","correlation_id":"d833ce778eca4057981c1d9cc9a17ad9","method":"GET","route":"/admin/observations/53/operations","status":200,"duration_ms":70.27}
+{"event":"request_completed","correlation_id":"e8b871ad392048af965a464ecc1c4e04","method":"GET","route":"/admin/observations/1/image","status":404,"duration_ms":85.6}
+{"event":"request_completed","correlation_id":"b5eca9bb4b7b469dbae7afef8475b6f6","method":"GET","route":"/admin/observations/3/image","status":404,"duration_ms":44.4}
+{"event":"request_completed","correlation_id":"fe3aecef47d34ae0acc712ffa1dc889d","method":"GET","route":"/admin/observations/2/image","status":404,"duration_ms":40.86}
+{"event":"request_completed","correlation_id":"887952d971eb48d7b48fc3af13cc2955","method":"GET","route":"/admin/observations/1/image","status":404,"duration_ms":14.86}
+{"event":"request_completed","correlation_id":"f4d6820d7a2c4e8c8bc22536bf92c293","method":"GET","route":"/admin/observations/queue","status":200,"duration_ms":146.94}
+{"event":"request_completed","correlation_id":"31f70483daa041a7aea1a13574a61a68","method":"GET","route":"/admin/observation-reviewers/eligible","status":200,"duration_ms":12.13}
+{"event":"request_completed","correlation_id":"3079cd5e6cb44309876ce8522cccdaaf","method":"GET","route":"/admin/observations/53/operations","status":200,"duration_ms":17.14}
+{"event":"request_completed","correlation_id":"7caebcd15db74cef893ce01228ca945b","method":"GET","route":"/reviewer/home","status":200,"duration_ms":78.96}
+{"event":"request_completed","correlation_id":"18069a2458514f58a2b8af987463866a","method":"GET","route":"/reviewer/home","status":200,"duration_ms":78.84}
+{"event":"request_completed","correlation_id":"a8149e3a5470476ab2fc37fdf73eeba1","method":"GET","route":"/admin/observations/queue","status":200,"duration_ms":114.19}
+{"event":"request_completed","correlation_id":"1ecf511b259543e89fefa4030a3d53d7","method":"GET","route":"/admin/observation-reviewers/eligible","status":200,"duration_ms":34.84}
+{"event":"request_completed","correlation_id":"22e63c36e34242d48412d772cbea1937","method":"GET","route":"/admin/observations/1/image","status":404,"duration_ms":44.8}
+{"event":"request_completed","correlation_id":"f7eb4bddd2984a36a084635c502170fc","method":"GET","route":"/admin/observations/3/image","status":404,"duration_ms":55.89}
+{"event":"request_completed","correlation_id":"b73a7109923b4622ba1523216fb3da7c","method":"GET","route":"/admin/observations/53/operations","status":200,"duration_ms":76.73}
+{"event":"request_completed","correlation_id":"0bb5c24022d84d8d8ddbce0838aa0e1e","method":"GET","route":"/admin/observations/1/image","status":404,"duration_ms":58.35}
+{"event":"request_completed","correlation_id":"1d641c40f4654a67b4a7100ad7d7bbdd","method":"GET","route":"/admin/observations/2/image","status":404,"duration_ms":116.09}
+{"event":"request_completed","correlation_id":"7a697d5fa736424e95cf7807746df596","method":"GET","route":"/admin/observations/3/image","status":404,"duration_ms":62.24}
+{"event":"request_completed","correlation_id":"16d3566e32b54ce6bd8015d0667bb0c9","method":"GET","route":"/admin/observations/2/image","status":404,"duration_ms":19.28}
+{"event":"request_completed","correlation_id":"abed419339f24a789489f3a70df97c92","method":"GET","route":"/admin/observations/queue","status":200,"duration_ms":191.18}
+{"event":"request_completed","correlation_id":"b2f0414c977d4b789e990751b338e653","method":"GET","route":"/admin/observation-reviewers/eligible","status":200,"duration_ms":9.93}
+{"event":"request_completed","correlation_id":"9b8b25b615534afea707ef4681ae5fa8","method":"GET","route":"/admin/observations/53/operations","status":200,"duration_ms":19.24}
+{"event":"request_completed","correlation_id":"1b951444fc5a41f196a82277069965c0","method":"OPTIONS","route":"/admin/overview","status":200,"duration_ms":0.54}
+{"event":"request_completed","correlation_id":"42a2e0bd723f47ab8239dccce5bda7fd","method":"OPTIONS","route":"/admin/overview","status":200,"duration_ms":1.63}
+{"event":"request_completed","correlation_id":"d60cd4bebd074c54b65b68aa0890b1f4","method":"GET","route":"/admin/overview","status":200,"duration_ms":90.82}
+{"event":"request_completed","correlation_id":"61a69fb550334cfab34f747258789a3b","method":"GET","route":"/admin/overview","status":200,"duration_ms":64.96}
+{"event":"request_completed","correlation_id":"324a1f2b38c8447aa468f8d69f03e4f0","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":0.72}
+{"event":"request_completed","correlation_id":"19f9fa3edb09451f9b67b032bb079e55","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":0.48}
+{"event":"request_completed","correlation_id":"2cd8f34388874f8c94ec20b3ecc55169","method":"GET","route":"/auth/me","status":200,"duration_ms":39.41}
+{"event":"request_completed","correlation_id":"f978fe1988cc4d3ca61f4e021f2f4849","method":"GET","route":"/auth/me","status":200,"duration_ms":36.45}
+{"event":"request_completed","correlation_id":"03b185ea70e8460a8a18b5c54e11a8fc","method":"GET","route":"/admin/overview","status":200,"duration_ms":119.54}
+{"event":"request_completed","correlation_id":"25e847e4cb614e1684b3b219cca62df6","method":"GET","route":"/admin/overview","status":200,"duration_ms":48.37}
+{"event":"request_completed","correlation_id":"e73a08831c11480ca9f4d031b796399f","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":0.21}
+{"event":"request_completed","correlation_id":"597f0d8ea21c4403aaffd6328bd2866f","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":0.17}
+{"event":"request_completed","correlation_id":"653f5360582e4e1b907ac3c028379dd5","method":"GET","route":"/auth/me","status":401,"duration_ms":10.82}
+{"event":"request_completed","correlation_id":"d7a20ac06f1a41c78ea32b93a44de9fb","method":"GET","route":"/auth/me","status":401,"duration_ms":16.94}
+{"event":"request_completed","correlation_id":"dc196756f97f4341b15452888fa631e2","method":"OPTIONS","route":"/admin/observation-reviewers","status":200,"duration_ms":0.53}
+{"event":"request_completed","correlation_id":"24e995cc8b1c48ef89960cf810c55478","method":"OPTIONS","route":"/admin/users","status":200,"duration_ms":2.37}
+{"event":"request_completed","correlation_id":"dd892c03dfaf47d1ac1586fcbde04d06","method":"OPTIONS","route":"/admin/jurisdictions","status":200,"duration_ms":4.67}
+{"event":"request_completed","correlation_id":"d603c1be2fb24e7f96a0c84508c13605","method":"OPTIONS","route":"/admin/observation-reviewers","status":200,"duration_ms":10.93}
+{"event":"request_completed","correlation_id":"c9159c9347fe43d5a92331a8adc408ae","method":"OPTIONS","route":"/admin/users","status":200,"duration_ms":12.24}
+{"event":"request_completed","correlation_id":"c4c289c8cf404e90a8e6c512511e2b76","method":"OPTIONS","route":"/admin/jurisdictions","status":200,"duration_ms":13.05}
+{"event":"request_completed","correlation_id":"b47ae08437d34457a4d017aad72da6e6","method":"GET","route":"/admin/observation-reviewers","status":200,"duration_ms":40.19}
+{"event":"request_completed","correlation_id":"3a22b9a4c121484a8ba981994ed62a18","method":"GET","route":"/admin/users","status":200,"duration_ms":41.31}
+{"event":"request_completed","correlation_id":"fe59e6c955454ce8918b355d920c89da","method":"GET","route":"/admin/observation-reviewers","status":200,"duration_ms":15.55}
+{"event":"request_completed","correlation_id":"fd3ee4d02120432c8b09d7c54ff3f906","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":61.52}
+{"event":"request_completed","correlation_id":"dbf30cc4884c4511aea17653606decd9","method":"GET","route":"/admin/users","status":200,"duration_ms":24.87}
+{"event":"request_completed","correlation_id":"4efc921688044b9182c6081f7f97fa18","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":47.88}
+{"event":"request_completed","correlation_id":"0ce468cd414f4cb0a7a440edd31d3002","method":"OPTIONS","route":"/admin/regions","status":200,"duration_ms":0.28}
+{"event":"request_completed","correlation_id":"f3a1a5566d4d46b79847a6a5789cd3bd","method":"OPTIONS","route":"/admin/regions","status":200,"duration_ms":0.54}
+{"event":"request_completed","correlation_id":"3a063e024f3343fca0c588bc12e4e2e8","method":"GET","route":"/admin/regions","status":200,"duration_ms":17.44}
+{"event":"request_completed","correlation_id":"8ed7d63d753b47e0b809d019d8acc92b","method":"GET","route":"/admin/regions","status":200,"duration_ms":12.58}
+{"event":"request_completed","correlation_id":"e4e974435f9945cbb2dfd9231a412e75","method":"GET","route":"/admin/regions","status":200,"duration_ms":11.33}
+{"event":"request_completed","correlation_id":"032d0d9893f64a2dbc44be38d2280d94","method":"OPTIONS","route":"/admin/regions/1/jurisdiction-onboarding/prepare","status":200,"duration_ms":0.19}
+{"event":"request_completed","correlation_id":"c68c5f2bdd834f2ebacb70f2cac3b394","method":"GET","route":"/admin/regions","status":200,"duration_ms":16.02}
+{"event":"request_completed","correlation_id":"1f3b3f5e3a494302ac5da81eacc07f94","method":"POST","route":"/admin/regions/1/jurisdiction-onboarding/prepare","status":200,"duration_ms":273.62}
+{"event":"request_completed","correlation_id":"d1bb32c7ff20468e8f93dcf5b3a54ab5","method":"OPTIONS","route":"/admin/jurisdictions/1","status":200,"duration_ms":0.23}
+{"event":"request_completed","correlation_id":"1afed8796c8847bebd207034138e6219","method":"GET","route":"/admin/jurisdictions/1","status":200,"duration_ms":40.17}
+{"event":"request_completed","correlation_id":"71f6dcbfa21e4d528321d30f3cd923c2","method":"OPTIONS","route":"/admin/organizations","status":200,"duration_ms":0.97}
+{"event":"request_completed","correlation_id":"687f87635ddc408196e65c4d1d800c82","method":"OPTIONS","route":"/admin/organizations","status":200,"duration_ms":1.1}
+{"event":"request_completed","correlation_id":"d10f9bc168aa472693c3369f6e9411a3","method":"GET","route":"/admin/organizations","status":200,"duration_ms":19.29}
+{"event":"request_completed","correlation_id":"2f9c3ff7d22e447ca63a2c2c50ffedb9","method":"GET","route":"/admin/organizations","status":200,"duration_ms":11.92}
+{"event":"request_completed","correlation_id":"ce0b6a4b540b426c8c9854af0bc0e190","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":61.56}
+{"event":"request_completed","correlation_id":"49170b4405a349c98bb3f6229e29b149","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":39.16}
+{"event":"request_completed","correlation_id":"503b91257b0343d29121e1fbcd0600cb","method":"OPTIONS","route":"/admin/organizations","status":200,"duration_ms":0.24}
+{"event":"request_completed","correlation_id":"d5ebb9a1de064d7884f926e3f0b44917","method":"POST","route":"/admin/organizations","status":200,"duration_ms":60.48}
+{"event":"request_completed","correlation_id":"f28b7ba8055947989bc8916e6e82b2fa","method":"GET","route":"/admin/organizations","status":200,"duration_ms":15.09}
+{"event":"request_completed","correlation_id":"6b36bbc20f484dff93faf568103febd1","method":"OPTIONS","route":"/admin/organizations/1/jurisdictions","status":200,"duration_ms":0.24}
+{"event":"request_completed","correlation_id":"9f8208ddbda14900892315ca8971e0bf","method":"POST","route":"/admin/organizations/1/jurisdictions","status":200,"duration_ms":50.64}
+{"event":"request_completed","correlation_id":"3c8cce0e5c894840a46993342234f402","method":"GET","route":"/admin/organizations","status":200,"duration_ms":15.65}
+{"event":"request_completed","correlation_id":"27b46f055fd54aa8ab7c5a040bf160fd","method":"OPTIONS","route":"/admin/organization-jurisdictions/1","status":200,"duration_ms":0.25}
+{"event":"request_completed","correlation_id":"c91567425172428b9d9262eebdb22483","method":"PATCH","route":"/admin/organization-jurisdictions/1","status":200,"duration_ms":41.2}
+{"event":"request_completed","correlation_id":"ed23cbdefb894f0d839528e43fee1111","method":"GET","route":"/admin/organizations","status":200,"duration_ms":18.18}
+{"event":"request_completed","correlation_id":"6021cf03655244d8a4bf0a77c28e1e3f","method":"GET","route":"/auth/me","status":200,"duration_ms":13.83}
+{"event":"request_completed","correlation_id":"33a661312901413ab1c4717d4eea91e8","method":"GET","route":"/auth/me","status":200,"duration_ms":16.94}
+{"event":"request_completed","correlation_id":"098668c360274fe5b6d037d5ee7fe211","method":"GET","route":"/admin/organizations","status":200,"duration_ms":17.84}
+{"event":"request_completed","correlation_id":"0d4c83e6a6dd457e9dbc836ec7aad18f","method":"GET","route":"/admin/organizations","status":200,"duration_ms":14.03}
+{"event":"request_completed","correlation_id":"a53e95737afb46e6ba887fa16ea44e2d","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":43.2}
+{"event":"request_completed","correlation_id":"6b99220105ef4891b1230f0c9280755e","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":34.9}
+{"event":"request_completed","correlation_id":"5c87e5efe9884430be904dab21c6df0b","method":"POST","route":"/admin/organizations/1/jurisdictions","status":200,"duration_ms":38.75}
+{"event":"request_completed","correlation_id":"40ffd80634c9489db1da5ca65b5fa910","method":"GET","route":"/admin/organizations","status":200,"duration_ms":21.05}
+{"event":"request_completed","correlation_id":"862147983191468c867b8aa1c4fcbacb","method":"GET","route":"/admin/users","status":200,"duration_ms":23.29}
+{"event":"request_completed","correlation_id":"9b3854bf69c44d25b2fd4e55320374cd","method":"GET","route":"/admin/organizations","status":200,"duration_ms":27.0}
+{"event":"request_completed","correlation_id":"0cda8c39690c481bb9b43fd8f3f0cb77","method":"GET","route":"/admin/users","status":200,"duration_ms":18.88}
+{"event":"request_completed","correlation_id":"fcd25b77755c4466b152cc8462e47772","method":"GET","route":"/admin/organizations","status":200,"duration_ms":19.55}
+{"event":"request_completed","correlation_id":"a455091f2d1944e5845467c0bfcdb488","method":"OPTIONS","route":"/admin/species-programs","status":200,"duration_ms":0.27}
+{"event":"request_completed","correlation_id":"e91c3cb750c042f0b4575fb677630bb9","method":"OPTIONS","route":"/admin/species-programs","status":200,"duration_ms":0.62}
+{"event":"request_completed","correlation_id":"9e696654f7e24ae7b9d67c3b9bea4b52","method":"GET","route":"/admin/species-programs","status":200,"duration_ms":29.8}
+{"event":"request_completed","correlation_id":"29a2520bb5d7464db2b24ffdd77e5169","method":"GET","route":"/admin/species-programs","status":200,"duration_ms":19.27}
+{"event":"request_completed","correlation_id":"7765b7c9a382412f943b31293b99ac6f","method":"OPTIONS","route":"/admin/jurisdictions","status":200,"duration_ms":0.58}
+{"event":"request_completed","correlation_id":"b8451bd8f2944a428d28f353e2ba2764","method":"OPTIONS","route":"/admin/jurisdictions","status":200,"duration_ms":0.36}
+{"event":"request_completed","correlation_id":"3fee6100e7f74b73885714c1a0565b0c","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":51.35}
+{"event":"request_completed","correlation_id":"8cafc6ed57d44370aaee2820168830d0","method":"OPTIONS","route":"/admin/regions/1/scientific-scaling/summary","status":200,"duration_ms":0.21}
+{"event":"request_completed","correlation_id":"1af3af4ef1c0419992a06e50e24a0c64","method":"OPTIONS","route":"/admin/regions/1/scientific-scaling/inventory","status":200,"duration_ms":1.41}
+{"event":"request_completed","correlation_id":"38a8f2ecd1964754b4ac5d2f6d83d18e","method":"OPTIONS","route":"/admin/regions/1/scientific-scaling/matrix","status":200,"duration_ms":4.85}
+{"event":"request_completed","correlation_id":"958018208b994e29bf2bc520dbf56986","method":"OPTIONS","route":"/admin/regions/1/scientific-scaling/work-queue","status":200,"duration_ms":5.75}
+{"event":"request_completed","correlation_id":"852b082874d4448f9ca3e2f121c89995","method":"GET","route":"/admin/regions/1/scientific-scaling/inventory","status":200,"duration_ms":134.43}
+{"event":"request_completed","correlation_id":"81f3d2fed12b44ca9c17ed188f88e321","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":187.4}
+{"event":"request_completed","correlation_id":"8f54dca11f084ac08dad38c32553578b","method":"GET","route":"/admin/regions/1/scientific-scaling/matrix","status":200,"duration_ms":299.04}
+{"event":"request_completed","correlation_id":"775d1f55e84c4eb1bea85bd47bada697","method":"GET","route":"/admin/regions/1/scientific-scaling/work-queue","status":200,"duration_ms":306.75}
+{"event":"request_completed","correlation_id":"7be587724d5a4990b7007d3188c3770d","method":"GET","route":"/admin/regions/1/scientific-scaling/summary","status":200,"duration_ms":318.99}
+{"event":"request_completed","correlation_id":"5f6289fd87ac4b19b4501b3eba8f90ea","method":"OPTIONS","route":"/admin/identification-corpus/media-sources","status":200,"duration_ms":0.19}
+{"event":"request_completed","correlation_id":"6d50bf33a4784c2fbed01dd1e27e89f8","method":"OPTIONS","route":"/admin/identification-corpus/acquisition-runs","status":200,"duration_ms":2.78}
+{"event":"request_completed","correlation_id":"9b7b5de849ac4b79beb90740a3ba8365","method":"OPTIONS","route":"/admin/identification-corpus/assets","status":200,"duration_ms":3.49}
+{"event":"request_completed","correlation_id":"5897ed4a41cc4be3ae53fe5809f816e6","method":"OPTIONS","route":"/admin/identification-corpus/corpora","status":200,"duration_ms":4.32}
+{"event":"request_completed","correlation_id":"5c99d526a5714ce9bb301bcc8b0a9488","method":"OPTIONS","route":"/admin/identification-corpus/plans","status":200,"duration_ms":1.59}
+{"event":"request_completed","correlation_id":"2c5016d4e1a9434bbaff270e495910e0","method":"OPTIONS","route":"/admin/identification-corpus/acquisition-runs","status":200,"duration_ms":2.31}
+{"event":"request_completed","correlation_id":"1f41bda2e9b541cd9b9408d150e072b7","method":"OPTIONS","route":"/admin/identification-corpus/assets","status":200,"duration_ms":3.28}
+{"event":"request_completed","correlation_id":"5e25b78e71f9465ea82035941654ecd3","method":"OPTIONS","route":"/admin/identification-corpus/corpora","status":200,"duration_ms":4.81}
+{"event":"request_completed","correlation_id":"bdfa18bf4bd44f8e91164ac6f1caef5b","method":"OPTIONS","route":"/admin/identification-corpus/plans","status":200,"duration_ms":6.38}
+{"event":"request_completed","correlation_id":"e43eff26e0264a2b90172b8f211712c0","method":"GET","route":"/admin/identification-corpus/media-sources","status":200,"duration_ms":51.14}
+{"event":"request_completed","correlation_id":"4c47d0aacc02443c85af364bea4fb762","method":"GET","route":"/admin/identification-corpus/acquisition-runs","status":200,"duration_ms":59.57}
+{"event":"request_completed","correlation_id":"dac7181337de46d1b08764f086dc24a1","method":"GET","route":"/admin/identification-corpus/corpora","status":200,"duration_ms":66.03}
+{"event":"request_completed","correlation_id":"f824c5a2535845c9b09c20d99fe1d400","method":"GET","route":"/admin/identification-corpus/media-sources","status":200,"duration_ms":56.98}
+{"event":"request_completed","correlation_id":"5ff41ec15e4e4b76953f5b08d9b06c9d","method":"GET","route":"/admin/identification-corpus/plans","status":200,"duration_ms":96.78}
+{"event":"request_completed","correlation_id":"9ff8bed1a12d4d09a4e1269db4e3cf59","method":"GET","route":"/admin/identification-corpus/acquisition-runs","status":200,"duration_ms":56.2}
+{"event":"request_completed","correlation_id":"513793133f6349a99050b78eb93afaa9","method":"GET","route":"/admin/identification-corpus/corpora","status":200,"duration_ms":55.64}
+{"event":"request_completed","correlation_id":"8d13325397db4f2f9fd4d5ac512e2885","method":"GET","route":"/admin/identification-corpus/plans","status":200,"duration_ms":24.83}
+{"event":"request_completed","correlation_id":"8eca6d04f56042429b1bcf8b32f12209","method":"GET","route":"/admin/identification-corpus/assets","status":200,"duration_ms":251.96}
+{"event":"request_completed","correlation_id":"4e400dead30a4044a50dd3051e0a4e61","method":"GET","route":"/admin/identification-corpus/assets","status":200,"duration_ms":148.76}
+{"event":"request_completed","correlation_id":"c412004d9c554bed884e0878cf716864","method":"OPTIONS","route":"/admin/identification-corpus/assets/17/content","status":200,"duration_ms":0.75}
+{"event":"request_completed","correlation_id":"faa2d8afa0494c2c92552570c723a42b","method":"OPTIONS","route":"/admin/identification-corpus/assets/19/content","status":200,"duration_ms":6.6}
+{"event":"request_completed","correlation_id":"4aeada62c8a549da865d6b1721a1fbf4","method":"OPTIONS","route":"/admin/identification-corpus/assets/20/content","status":200,"duration_ms":2.15}
+{"event":"request_completed","correlation_id":"b84681769d5e49c7850a1efdde18849f","method":"OPTIONS","route":"/admin/identification-corpus/assets/21/content","status":200,"duration_ms":3.06}
+{"event":"request_completed","correlation_id":"f8bc8c4be9664dc9b981ccfdecd71065","method":"OPTIONS","route":"/admin/identification-corpus/assets/22/content","status":200,"duration_ms":3.94}
+{"event":"request_completed","correlation_id":"19bd3fd9969348aaa538e05f90d8f823","method":"OPTIONS","route":"/admin/identification-corpus/assets/23/content","status":200,"duration_ms":5.36}
+{"event":"request_completed","correlation_id":"a05250aa03ed4f1f8af9de999c5981f8","method":"OPTIONS","route":"/admin/identification-corpus/assets/24/content","status":200,"duration_ms":5.13}
+{"event":"request_completed","correlation_id":"a392ff50d61f4428856ca92cc64d4315","method":"OPTIONS","route":"/admin/identification-corpus/assets/17/content","status":200,"duration_ms":6.16}
+{"event":"request_completed","correlation_id":"4bbcbb3cde7847b983a2da3f8b36c54e","method":"OPTIONS","route":"/admin/identification-corpus/assets/19/content","status":200,"duration_ms":1.6}
+{"event":"request_completed","correlation_id":"468dc021c4a14f1d80bd04c7593e16aa","method":"OPTIONS","route":"/admin/identification-corpus/assets/20/content","status":200,"duration_ms":2.25}
+{"event":"request_completed","correlation_id":"58e89e3a3a2d47abbe26c3a141abef7a","method":"OPTIONS","route":"/admin/identification-corpus/assets/21/content","status":200,"duration_ms":3.3}
+{"event":"request_completed","correlation_id":"a049df7f94894b978b2f8865bad58eaf","method":"OPTIONS","route":"/admin/identification-corpus/assets/22/content","status":200,"duration_ms":4.14}
+{"event":"request_completed","correlation_id":"e8a420e790cf4eaea8c692c09047c5ab","method":"OPTIONS","route":"/admin/identification-corpus/assets/23/content","status":200,"duration_ms":5.09}
+{"event":"request_completed","correlation_id":"083d13a38af846a6a81b1deaac9ea95c","method":"OPTIONS","route":"/admin/identification-corpus/assets/24/content","status":200,"duration_ms":6.07}
+{"event":"request_completed","correlation_id":"7fee652e86944659998ff06c5b4044b7","method":"GET","route":"/admin/identification-corpus/assets/20/content","status":200,"duration_ms":39.28}
+{"event":"request_completed","correlation_id":"3330ebafa977436b97feedcfa15f07cc","method":"GET","route":"/admin/identification-corpus/assets/23/content","status":200,"duration_ms":39.16}
+{"event":"request_completed","correlation_id":"3791ee6744a54134a0ac9b939d203e8b","method":"GET","route":"/admin/identification-corpus/assets/22/content","status":200,"duration_ms":40.04}
+{"event":"request_completed","correlation_id":"ee5641f28f7d488e8eb1db2ba20529a4","method":"GET","route":"/admin/identification-corpus/assets/17/content","status":200,"duration_ms":45.24}
+{"event":"request_completed","correlation_id":"c05b292106364a65b20f667e097883fd","method":"GET","route":"/admin/identification-corpus/assets/21/content","status":200,"duration_ms":44.38}
+{"event":"request_completed","correlation_id":"73d1809eb8e341a8b5b3024a62dc4859","method":"GET","route":"/admin/identification-corpus/assets/19/content","status":200,"duration_ms":69.66}
+{"event":"request_completed","correlation_id":"f6506f4a0b5b4a51a623692bfda84ef9","method":"GET","route":"/admin/identification-corpus/assets/24/content","status":200,"duration_ms":71.27}
+{"event":"request_completed","correlation_id":"2888668ed8aa4508af380c95faf14014","method":"OPTIONS","route":"/admin/early-warning/queue","status":200,"duration_ms":0.29}
+{"event":"request_completed","correlation_id":"76a008928629499b8c8ca10dde70e64d","method":"OPTIONS","route":"/admin/early-warning/queue","status":200,"duration_ms":0.19}
+{"event":"request_completed","correlation_id":"d92a27f4d7ea4a8a969e25d3fa96c1a5","method":"GET","route":"/admin/early-warning/queue","status":200,"duration_ms":16.97}
+{"event":"request_completed","correlation_id":"ba24570de9cc4a6da5a3cfab044ca8fc","method":"GET","route":"/admin/early-warning/queue","status":200,"duration_ms":11.06}
+{"event":"request_completed","correlation_id":"20650a3d2f2a479d931c026ff24a6721","method":"OPTIONS","route":"/admin/taxa","status":200,"duration_ms":0.56}
+{"event":"request_completed","correlation_id":"a294eeb18ea14c2bb917b9c48abf8e53","method":"OPTIONS","route":"/admin/regions","status":200,"duration_ms":1.79}
+{"event":"request_completed","correlation_id":"13ca0c4f75794fa2aedfea9e97d475ca","method":"OPTIONS","route":"/admin/taxa","status":200,"duration_ms":3.44}
+{"event":"request_completed","correlation_id":"86be12dd1dd24ee8a07f266222b4dc7b","method":"OPTIONS","route":"/admin/regions","status":200,"duration_ms":3.38}
+{"event":"request_completed","correlation_id":"40431b40a1b14a55a759830bb5bc9064","method":"GET","route":"/admin/taxa","status":200,"duration_ms":18.21}
+{"event":"request_completed","correlation_id":"54446d2674e442c08cdade293f80bc78","method":"GET","route":"/admin/regions","status":200,"duration_ms":17.98}
+{"event":"request_completed","correlation_id":"999e7315ffe948959557faa66fb0b768","method":"GET","route":"/admin/taxa","status":200,"duration_ms":15.16}
+{"event":"request_completed","correlation_id":"ce0c2f58b3054370999f38a7176fac82","method":"GET","route":"/admin/regions","status":200,"duration_ms":16.54}
+{"event":"request_completed","correlation_id":"476fb80e63804266ab1c9655e4209b26","method":"OPTIONS","route":"/admin/system/status","status":200,"duration_ms":0.18}
+{"event":"request_completed","correlation_id":"c8c8c473280549bfac98499e7c6d3a02","method":"GET","route":"/admin/system/status","status":200,"duration_ms":95.41}
+{"event":"request_completed","correlation_id":"d3f35d5e0af54fc8880af7385ce8cc69","method":"GET","route":"/admin/system/status","status":200,"duration_ms":41.64}
+{"event":"request_completed","correlation_id":"c2cfea741d564126a1ec55bfd31dbf71","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":0.22}
+{"event":"request_completed","correlation_id":"4d6585ef19a94f67ab2c7bb6b009cc4d","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":0.5}
+{"event":"request_completed","correlation_id":"25968de3e1c9450bb56ebb469814e10b","method":"GET","route":"/auth/me","status":200,"duration_ms":12.89}
+{"event":"request_completed","correlation_id":"ae056951ea3341618d8b86a67c98e875","method":"GET","route":"/auth/me","status":200,"duration_ms":17.99}
+{"event":"request_completed","correlation_id":"5da71dadadb94204b3b4d797112ac6e2","method":"GET","route":"/admin/taxa","status":200,"duration_ms":13.67}
+{"event":"request_completed","correlation_id":"3cba76cdc9734fb497440063b6db66be","method":"GET","route":"/admin/regions","status":200,"duration_ms":14.87}
+{"event":"request_completed","correlation_id":"ae274b79413b44e88a56e18625174a9b","method":"GET","route":"/admin/taxa","status":200,"duration_ms":16.28}
+{"event":"request_completed","correlation_id":"5eadeab2c58a44ab8b1cb92f67c637fc","method":"GET","route":"/admin/regions","status":200,"duration_ms":18.51}
+{"event":"request_completed","correlation_id":"d20657e19a33489cbe1da98dcb7c8a91","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":63.67}
+{"event":"request_completed","correlation_id":"7ce4f817994e4331b1d1264a29eae67a","method":"GET","route":"/admin/regions/1/scientific-scaling/inventory","status":200,"duration_ms":31.75}
+{"event":"request_completed","correlation_id":"df78344a2b304f1f8c7e6e4f98fa9d39","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":88.68}
+{"event":"request_completed","correlation_id":"d0cf41a492454b7a9069bd8daf6db606","method":"GET","route":"/admin/regions/1/scientific-scaling/matrix","status":200,"duration_ms":100.28}
+{"event":"request_completed","correlation_id":"7d59db46419a497f9f2711edc2a46111","method":"GET","route":"/admin/regions/1/scientific-scaling/work-queue","status":200,"duration_ms":108.29}
+{"event":"request_completed","correlation_id":"f73af37c7eee4ee7b15e780e5e4be867","method":"GET","route":"/admin/regions/1/scientific-scaling/summary","status":200,"duration_ms":128.3}
+{"event":"request_completed","correlation_id":"a7eab2abe9714119a0ae00616a647a3f","method":"OPTIONS","route":"/admin/users","status":200,"duration_ms":0.49}
+{"event":"request_completed","correlation_id":"e9e2aa7728fa413d8402d428a3858e65","method":"OPTIONS","route":"/admin/organizations","status":200,"duration_ms":0.96}
+{"event":"request_completed","correlation_id":"1605302d65d24cc2a133fe2e9381146b","method":"OPTIONS","route":"/admin/users","status":200,"duration_ms":1.93}
+{"event":"request_completed","correlation_id":"79c0fc884d714a53a4df108503606462","method":"OPTIONS","route":"/admin/organizations","status":200,"duration_ms":2.98}
+{"event":"request_completed","correlation_id":"22e02fda105d4bde81deaf19a9f54612","method":"GET","route":"/admin/organizations","status":200,"duration_ms":19.49}
+{"event":"request_completed","correlation_id":"1a0f1b99ad1b406bb295661fd54cc716","method":"GET","route":"/admin/users","status":200,"duration_ms":31.76}
+{"event":"request_completed","correlation_id":"4890609c4f0f4e08b25431add9a90358","method":"GET","route":"/admin/organizations","status":200,"duration_ms":22.15}
+{"event":"request_completed","correlation_id":"83832689372643caaab6f8defdaae4d7","method":"GET","route":"/admin/users","status":200,"duration_ms":14.94}
+{"event":"request_completed","correlation_id":"80a0bfeb081e4ff896e079cce336a3f8","method":"GET","route":"/admin/organizations","status":200,"duration_ms":25.96}
+{"event":"request_completed","correlation_id":"284534186a864b989b6ae53f0ff974c9","method":"GET","route":"/admin/organizations","status":200,"duration_ms":26.28}
+{"event":"request_completed","correlation_id":"f213bd4bb24940db997bc589fca5e4e0","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":58.86}
+{"event":"request_completed","correlation_id":"17b497ba25a640128374c6cbc4089b50","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":65.56}
+{"event":"request_completed","correlation_id":"28cd973f07c64af7ab13ec6c3402e893","method":"GET","route":"/admin/users","status":200,"duration_ms":20.49}
+{"event":"request_completed","correlation_id":"cbd527f4990845dabc727aef2fd88334","method":"GET","route":"/admin/organizations","status":200,"duration_ms":26.28}
+{"event":"request_completed","correlation_id":"0a772509d03f4c6ab0dce1b0e67eb5c7","method":"GET","route":"/admin/users","status":200,"duration_ms":21.73}
+{"event":"request_completed","correlation_id":"b0af5ca712324e26905e8e03525db205","method":"GET","route":"/admin/organizations","status":200,"duration_ms":20.91}
+{"event":"request_completed","correlation_id":"44713a13745445a693d69d02d4281b24","method":"OPTIONS","route":"/admin/users","status":200,"duration_ms":0.24}
+{"event":"request_completed","correlation_id":"ee30904f206048e6afe229c3f38ef227","method":"POST","route":"/admin/users","status":400,"duration_ms":17.0}
+{"event":"request_completed","correlation_id":"624034aeaea9461ba8402439a632d79f","method":"POST","route":"/admin/users","status":200,"duration_ms":236.72}
+{"event":"request_completed","correlation_id":"6d9e30138b91459caafdc1a4772d8c31","method":"GET","route":"/admin/users","status":200,"duration_ms":24.85}
+{"event":"request_completed","correlation_id":"9354f8e9a80041d5a3c1d8e4af40fa14","method":"OPTIONS","route":"/admin/users/53/memberships","status":200,"duration_ms":0.18}
+{"event":"request_completed","correlation_id":"00a4bc33e9ba434d97e651a7856bec72","method":"POST","route":"/admin/users/53/memberships","status":200,"duration_ms":74.6}
+{"event":"request_completed","correlation_id":"83789e09c2f04f56b43e8db2a05f80af","method":"GET","route":"/admin/users","status":200,"duration_ms":39.38}
+{"event":"request_completed","correlation_id":"19b7cf5d23d5481a8924e97aeb7cff0b","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":23.3}
+{"event":"request_completed","correlation_id":"a1229524e7ce4d40881ce4ffa6fd5ca9","method":"GET","route":"/regions/caribbean/species-tracking","status":200,"duration_ms":18.05}
+{"event":"request_completed","correlation_id":"510bd1917cd14dc899ec48d070eb6af3","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":61.76}
+{"event":"request_completed","correlation_id":"5072355b68fb45739fa17796a222cf3e","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":86.85}
+{"event":"request_completed","correlation_id":"58bc544bc9b64ea89dbe5a6bf83277f5","method":"GET","route":"/regions/caribbean/jurisdictions","status":200,"duration_ms":44.7}
+{"event":"request_completed","correlation_id":"a6e786eaf64c447c9932e94591f4342f","method":"GET","route":"/regions/caribbean/overview","status":200,"duration_ms":71.67}
+{"event":"request_completed","correlation_id":"d177288c20cc41ddb9e785af668d1334","method":"OPTIONS","route":"/auth/login","status":200,"duration_ms":0.3}
+{"event":"request_completed","correlation_id":"567281a189494aaa923dd3a7340dae65","method":"POST","route":"/auth/login","status":200,"duration_ms":94.69}
+{"event":"request_completed","correlation_id":"cbd9bf9fd61b4a9196701f0bba6d0238","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":20.06}
+{"event":"request_completed","correlation_id":"e5d3ada464a94294b4af65653299f850","method":"GET","route":"/analytics/summary","status":200,"duration_ms":56.15}
+{"event":"request_completed","correlation_id":"f532b841bc3f4efca96daf188893f5c0","method":"GET","route":"/observations/map","status":200,"duration_ms":67.24}
+{"event":"request_completed","correlation_id":"816ac902ac994bc3bad0fcbd320de766","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":79.97}
+{"event":"request_completed","correlation_id":"84e23984d4f6499387da85db105d7c97","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":135.5}
+{"event":"request_completed","correlation_id":"4e0b69812b0448f3a703fb8722500b53","method":"GET","route":"/analytics/summary","status":200,"duration_ms":67.63}
+{"event":"request_completed","correlation_id":"000eff41aaf54f81aca518088cf92e87","method":"GET","route":"/observations/map","status":200,"duration_ms":69.71}
+{"event":"request_completed","correlation_id":"491d833dd87247f5acbe823b581bc237","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":66.81}
+{"event":"request_completed","correlation_id":"01d6e06994644cad88476ef409fe2443","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":64.92}
+{"event":"request_completed","correlation_id":"581d75cba43747a58517d25e220be179","method":"GET","route":"/observations/map","status":200,"duration_ms":44.52}
+{"event":"request_completed","correlation_id":"5fd1ba8ddaaf434084b1f18eafbc97da","method":"GET","route":"/analytics/summary","status":200,"duration_ms":48.46}
+{"event":"request_completed","correlation_id":"4df34a7069cc43c79a36d74660d9c5b4","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":76.49}
+{"event":"request_completed","correlation_id":"b5f2c204f1cf4e2e96f4dd7eb05b840c","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":114.77}
+{"event":"request_completed","correlation_id":"5d6dec63937d4bf7bc054fce16066865","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":114.14}
+{"event":"request_completed","correlation_id":"2342b3d2b8424bc7b6cd31adea097d2b","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":125.69}
+{"event":"request_completed","correlation_id":"920d1ea40cdd45229e7af8314f7e053f","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":111.28}
+{"event":"request_completed","correlation_id":"52fa60cd6a474b29bc4a50abe0a4a698","method":"GET","route":"/observations/map","status":200,"duration_ms":91.32}
+{"event":"request_completed","correlation_id":"651cbed1ae4f486d97b9cada19225936","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":39.9}
+{"event":"request_completed","correlation_id":"fba0fc4505124d278a8d14556784afa2","method":"GET","route":"/analytics/summary","status":200,"duration_ms":58.19}
+{"event":"request_completed","correlation_id":"b7f8bc96d694403cba2a2d07b028a2e3","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":75.77}
+{"event":"request_completed","correlation_id":"1f0b8a060b934a3c9cd570fe5a7412e5","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":63.81}
+{"event":"request_completed","correlation_id":"f50c9fb7191547768e544ecdf66252d3","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":126.23}
+{"event":"request_completed","correlation_id":"6a5892f9326f478ca2ff4c700ce7a64c","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":122.72}
+{"event":"request_completed","correlation_id":"6669c599a0a04adb836cbf246230e7bd","method":"OPTIONS","route":"/admin/organizations","status":200,"duration_ms":1.19}
+{"event":"request_completed","correlation_id":"a628f957ea4e43c3857d719bf48d5ddb","method":"OPTIONS","route":"/admin/jurisdictions","status":200,"duration_ms":0.62}
+{"event":"request_completed","correlation_id":"046801a1aa8f4674ad44228a9fbafd60","method":"OPTIONS","route":"/admin/organizations","status":200,"duration_ms":9.56}
+{"event":"request_completed","correlation_id":"6b62cc5e6b5e48e58bf507c70ac2308c","method":"OPTIONS","route":"/admin/jurisdictions","status":200,"duration_ms":10.56}
+{"event":"request_completed","correlation_id":"da5435d0ae6e4be0823743a71d4fbeb5","method":"GET","route":"/admin/organizations","status":200,"duration_ms":37.06}
+{"event":"request_completed","correlation_id":"928b036e2dd2432e841ca3619f9f0860","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":67.52}
+{"event":"request_completed","correlation_id":"7921c9526f9647039b59c324abb2225f","method":"GET","route":"/admin/organizations","status":200,"duration_ms":20.43}
+{"event":"request_completed","correlation_id":"17a1af5bbf654f3290947ee73bceec96","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":48.39}
+{"event":"request_completed","correlation_id":"dd47a6cb152b4dc9bda1d570dfdbe748","method":"OPTIONS","route":"/admin/regions","status":200,"duration_ms":0.25}
+{"event":"request_completed","correlation_id":"e360b21d95fe4bf4bd81bd20133c411d","method":"OPTIONS","route":"/admin/regions","status":200,"duration_ms":0.17}
+{"event":"request_completed","correlation_id":"eb5583ae4bb34a5595373709e7f8d34d","method":"GET","route":"/admin/regions","status":200,"duration_ms":12.88}
+{"event":"request_completed","correlation_id":"ab5000609377420484fe1bfecebc42fb","method":"OPTIONS","route":"/admin/regions/1/jurisdiction-onboarding/prepare","status":200,"duration_ms":0.2}
+{"event":"request_completed","correlation_id":"2624436f50eb4842b117e2f134aa6476","method":"GET","route":"/admin/regions","status":200,"duration_ms":14.56}
+{"event":"request_completed","correlation_id":"fad5de07bb744bda8097af56ba4c7fb6","method":"POST","route":"/admin/regions/1/jurisdiction-onboarding/prepare","status":200,"duration_ms":190.45}
+{"event":"request_completed","correlation_id":"8d8c17f2ba1e443ba3c0050ece2550e8","method":"GET","route":"/observations/map","status":200,"duration_ms":18.64}
+{"event":"request_completed","correlation_id":"4f2d6dfaf4d8418faaa51a7ad6b2075d","method":"GET","route":"/observations/map","status":200,"duration_ms":14.27}
+{"event":"request_completed","correlation_id":"4c1168ca8cf042e69fb7020c7b518791","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica/species","status":200,"duration_ms":34.05}
+{"event":"request_completed","correlation_id":"ac2f5500a0c641febe10f06d52be463b","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica/species","status":200,"duration_ms":20.98}
+{"event":"request_completed","correlation_id":"5b2661b8cd8f4dd68783b48200bd9b92","method":"OPTIONS","route":"/regions/caribbean/jurisdictions/jamaica/investigations","status":200,"duration_ms":0.68}
+{"event":"request_completed","correlation_id":"8be1a573b89048fa84a47336a2099773","method":"OPTIONS","route":"/regions/caribbean/jurisdictions/jamaica/organizations","status":200,"duration_ms":1.56}
+{"event":"request_completed","correlation_id":"891cf87c5ca5486aba11cdb580b43634","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica/organizations","status":200,"duration_ms":41.09}
+{"event":"request_completed","correlation_id":"189e29b7bdf04084be18473ba49e959d","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica/investigations","status":200,"duration_ms":54.53}
+{"event":"request_completed","correlation_id":"47767eb003e845569b17372399dd7f39","method":"GET","route":"/analytics/summary","status":200,"duration_ms":25.48}
+{"event":"request_completed","correlation_id":"9ae1e6885ddc427d9d51c5cafc90a416","method":"GET","route":"/observations/map","status":200,"duration_ms":37.61}
+{"event":"request_completed","correlation_id":"d45fafb7a23c485ea32fa038024bd63a","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":80.66}
+{"event":"request_completed","correlation_id":"a5dc33ca12424bbfbdb2d44c3ca8a0bc","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":82.19}
+{"event":"request_completed","correlation_id":"89c72ceeb04c48c284f614b94266e001","method":"GET","route":"/observations/map","status":200,"duration_ms":20.21}
+{"event":"request_completed","correlation_id":"a6b985b0301c4d6ca4f4b747d2b4b387","method":"GET","route":"/analytics/summary","status":200,"duration_ms":48.58}
+{"event":"request_completed","correlation_id":"400a0e4ec0f04c9c9c38e754e43e9eda","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":34.99}
+{"event":"request_completed","correlation_id":"7b23bc6b0760414cae42521cb111016e","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":67.43}
+{"event":"request_completed","correlation_id":"ebea9aa54e2847b39d0af85170607b89","method":"GET","route":"/observations/map","status":200,"duration_ms":31.05}
+{"event":"request_completed","correlation_id":"2ef2b264e4404876b28ddafa6ddbcbd8","method":"GET","route":"/analytics/summary","status":200,"duration_ms":31.23}
+{"event":"request_completed","correlation_id":"21706ee55567409c89a5489000e700e5","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":37.61}
+{"event":"request_completed","correlation_id":"6d9cac35b2274753b90439cec369deca","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":53.81}
+{"event":"request_completed","correlation_id":"7073dd095d7e43d5b3364bc794f1f08e","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":109.52}
+{"event":"request_completed","correlation_id":"ec80dbb490e24279b26c6f19be42acfa","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":117.17}
+{"event":"request_completed","correlation_id":"dcbea3326d0a450ba0c5ac41830d90c5","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":98.99}
+{"event":"request_completed","correlation_id":"fe498fcc7e634db08543b290d969e149","method":"GET","route":"/observations/map","status":200,"duration_ms":103.33}
+{"event":"request_completed","correlation_id":"cad5a86a3d364eebbe45d8ee1b2456e9","method":"GET","route":"/analytics/summary","status":200,"duration_ms":98.61}
+{"event":"request_completed","correlation_id":"5a7988c60f8c4bf8aa6e93e5546421a8","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":47.39}
+{"event":"request_completed","correlation_id":"279f41ed04214b76be415b329d130555","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":58.18}
+{"event":"request_completed","correlation_id":"4c953a1896194b72af50ae73e0eecf67","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":44.29}
+{"event":"request_completed","correlation_id":"0d20d799f5e24258a2280a457dd2b9d1","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":103.45}
+{"event":"request_completed","correlation_id":"0740597750574c5c99dd155ed10dca9a","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":88.23}
+{"event":"request_completed","correlation_id":"ade1ea01352c4251b875efe4bd3650c5","method":"GET","route":"/observations/map","status":200,"duration_ms":24.95}
+{"event":"request_completed","correlation_id":"bf1afad24d3c4869ad55d8105af78ac9","method":"GET","route":"/analytics/summary","status":200,"duration_ms":75.08}
+{"event":"request_completed","correlation_id":"4cda125751a64becac75cfb54030a0c0","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":78.33}
+{"event":"request_completed","correlation_id":"6555cf7174b34bcf8fce5f85e06467f8","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":78.95}
+{"event":"request_completed","correlation_id":"0d5337f3f8f447f381c963742984e95e","method":"GET","route":"/observations/map","status":200,"duration_ms":49.53}
+{"event":"request_completed","correlation_id":"472f1ad193254c70b43d0aabcf74bce2","method":"GET","route":"/analytics/summary","status":200,"duration_ms":22.18}
+{"event":"request_completed","correlation_id":"bbd37257297e41ada199d3bf6f1ee578","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":26.73}
+{"event":"request_completed","correlation_id":"2d330bbdefc74031930387d9224c6bb7","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":88.84}
+{"event":"request_completed","correlation_id":"904f21960de24470b6dfe5b53bffbcf9","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":1.43}
+{"event":"request_completed","correlation_id":"475aef4be4c14c949feb93a982a9d26f","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":0.52}
+{"event":"request_completed","correlation_id":"c6ef7003bb854bd7a273a7eb325ca911","method":"GET","route":"/auth/me","status":200,"duration_ms":45.73}
+{"event":"request_completed","correlation_id":"ee63834514504e44b5eff8f257455d9d","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":67.73}
+{"event":"request_completed","correlation_id":"e10ae915afc94c1c81033e6045471870","method":"GET","route":"/auth/me","status":200,"duration_ms":65.31}
+{"event":"request_completed","correlation_id":"23ea17f9cf4942a9b907d58f71e4a3c3","method":"GET","route":"/auth/me","status":200,"duration_ms":33.99}
+{"event":"request_completed","correlation_id":"6f6cf230d3ef4b9a8479fb335e3ab67c","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":40.59}
+{"event":"request_completed","correlation_id":"48c39e6d67064a00a4ac52fb7c2b0be6","method":"GET","route":"/auth/me","status":200,"duration_ms":42.13}
+{"event":"request_completed","correlation_id":"bb8dcd2f82994a80859296f4c90d4dfc","method":"OPTIONS","route":"/admin/regions","status":200,"duration_ms":0.2}
+{"event":"request_completed","correlation_id":"d10b46450a064d78956405ed57625e8c","method":"OPTIONS","route":"/admin/regions","status":200,"duration_ms":0.43}
+{"event":"request_completed","correlation_id":"ba95bce9e872405986da68ca17a437c7","method":"GET","route":"/admin/regions","status":200,"duration_ms":26.33}
+{"event":"request_completed","correlation_id":"57c08622687b4dd6b4061a423a83036d","method":"GET","route":"/analytics/summary","status":200,"duration_ms":29.99}
+{"event":"request_completed","correlation_id":"d9a0fa2267b34534b414dc1739f75666","method":"GET","route":"/observations/map","status":200,"duration_ms":36.84}
+{"event":"request_completed","correlation_id":"baf9ffebe65840adb16a5ebfdfbb0731","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":77.49}
+{"event":"request_completed","correlation_id":"80344277465d4993b072de2556258f13","method":"OPTIONS","route":"/admin/regions/1/jurisdiction-onboarding/prepare","status":200,"duration_ms":26.67}
+{"event":"request_completed","correlation_id":"09073811f78b45cf9060f87c34c641ea","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":81.64}
+{"event":"request_completed","correlation_id":"75f083beba964079a7c99f6fd1bc555c","method":"GET","route":"/admin/regions","status":200,"duration_ms":74.6}
+{"event":"request_completed","correlation_id":"0cb6e29b94e842a2a0aeed10ec4972b6","method":"GET","route":"/observations/map","status":200,"duration_ms":35.21}
+{"event":"request_completed","correlation_id":"291416c570c24c939c96f04042e06738","method":"GET","route":"/analytics/summary","status":200,"duration_ms":42.51}
+{"event":"request_completed","correlation_id":"735cec62b4804e6a90975a5575cf270e","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":45.96}
+{"event":"request_completed","correlation_id":"51da8c0a301146c7bf032b15a9f0bdb5","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":81.06}
+{"event":"request_completed","correlation_id":"127a4357f8b546c092b63e965632f901","method":"POST","route":"/admin/regions/1/jurisdiction-onboarding/prepare","status":200,"duration_ms":232.08}
+{"event":"request_completed","correlation_id":"7eab3615b9754065b8c21af278abf302","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":24.41}
+{"event":"request_completed","correlation_id":"45d37c860c1144d4833de1824aedf246","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":18.83}
+{"event":"request_completed","correlation_id":"070881d331f042c19b990b3be19b2210","method":"GET","route":"/analytics/summary","status":200,"duration_ms":17.43}
+{"event":"request_completed","correlation_id":"ccace7b713624ef0ac6217f6583215b9","method":"GET","route":"/observations/map","status":200,"duration_ms":72.65}
+{"event":"request_completed","correlation_id":"0ccfd5b38c47429baed8e93295bd71a3","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":79.7}
+{"event":"request_completed","correlation_id":"dbc73b3eec494f98b4940f8624a00d5e","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":80.62}
+{"event":"request_completed","correlation_id":"57899d26945b4030b4ab46c37131c27b","method":"GET","route":"/analytics/summary","status":200,"duration_ms":27.9}
+{"event":"request_completed","correlation_id":"e6f9ca36d50c44e4af823639e543ff52","method":"GET","route":"/observations/map","status":200,"duration_ms":34.13}
+{"event":"request_completed","correlation_id":"3e132fb5c31e4d71b7b8736146843b08","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":55.71}
+{"event":"request_completed","correlation_id":"d7893a9cc6d84e5aa0fcf011c69b33c4","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":107.66}
+{"event":"request_completed","correlation_id":"61ad2704998c4b11b4f9e0c587ab8cf7","method":"GET","route":"/observations/map","status":200,"duration_ms":35.94}
+{"event":"request_completed","correlation_id":"243efb07717049f1aab6032eb76af230","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":46.26}
+{"event":"request_completed","correlation_id":"98e56858be084e5bae2e1cf43c3273d5","method":"GET","route":"/analytics/summary","status":200,"duration_ms":41.42}
+{"event":"request_completed","correlation_id":"09cf61e3af264cf3acc4164054eff186","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":59.58}
+{"event":"request_completed","correlation_id":"b4551b9186e24d7c92079d0e9130b3cb","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":112.0}
+{"event":"request_completed","correlation_id":"815225fd27cc4ea3bc890f2ddbd01fc9","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":125.57}
+{"event":"request_completed","correlation_id":"c7baa7a5893e4b6199582fd21e7fe312","method":"GET","route":"/observations/map","status":200,"duration_ms":84.12}
+{"event":"request_completed","correlation_id":"666bb7901d694dd5ba4478ecf9779fe4","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":86.71}
+{"event":"request_completed","correlation_id":"52ca04da2f334ba1b7aa7360151ff9ce","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":114.0}
+{"event":"request_completed","correlation_id":"b612f0e47d8f4cbca7f3ef70ec4061c2","method":"GET","route":"/analytics/summary","status":200,"duration_ms":90.46}
+{"event":"request_completed","correlation_id":"8ba12aa7bdb748e4bbc0fe07dba4f611","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":50.42}
+{"event":"request_completed","correlation_id":"69d855204c2e456baee5d5828909e5ec","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":42.05}
+{"event":"request_completed","correlation_id":"ef1409b691d747e3befe510b41e59a6f","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":106.46}
+{"event":"request_completed","correlation_id":"14b64f96ff404ad58ca4ef29f79a7184","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":86.55}
+{"event":"request_completed","correlation_id":"609805301bdd4177bb7e8835d8ffdac7","method":"GET","route":"/observations/map","status":200,"duration_ms":26.74}
+{"event":"request_completed","correlation_id":"167bbcd76a7b4c5db0dcd899c4224eac","method":"GET","route":"/analytics/summary","status":200,"duration_ms":29.07}
+{"event":"request_completed","correlation_id":"98def874d0ec42d48bc2f57e13ddcb55","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":47.84}
+{"event":"request_completed","correlation_id":"201986c7ce21460da5ceebd2abe6150b","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":91.7}
+{"event":"request_completed","correlation_id":"426610bf161440d78c64282b28ed9595","method":"GET","route":"/observations/map","status":200,"duration_ms":68.3}
+{"event":"request_completed","correlation_id":"f8ebec59048c4e099ec75e2e380cb71d","method":"GET","route":"/analytics/summary","status":200,"duration_ms":71.24}
+{"event":"request_completed","correlation_id":"4ae8b7dfcb5b43829bb442ab428cc20b","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":62.94}
+{"event":"request_completed","correlation_id":"eeaf0dc1ec6646589b506c4e93fc7b31","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":68.26}
+{"event":"request_completed","correlation_id":"abf0bbbb4abf499a90a1035072598211","method":"GET","route":"/auth/me","status":200,"duration_ms":21.37}
+{"event":"request_completed","correlation_id":"408d29b9377d4d2c96ba94ff98c263cd","method":"GET","route":"/auth/me","status":200,"duration_ms":15.76}
+{"event":"request_completed","correlation_id":"2ca6911dbec846d6a4a52d0b5ba17e8b","method":"GET","route":"/admin/regions","status":200,"duration_ms":17.86}
+{"event":"request_completed","correlation_id":"59805eb263bf456da999a116fba4d51a","method":"GET","route":"/admin/regions","status":200,"duration_ms":16.75}
+{"event":"request_completed","correlation_id":"2a588ab8677a4e24816f712eb8eb3aed","method":"POST","route":"/admin/regions/1/jurisdiction-onboarding/prepare","status":200,"duration_ms":136.67}
+{"event":"request_completed","correlation_id":"b0ae35e9823b4349b513ceeb85e044ce","method":"GET","route":"/observations/map","status":200,"duration_ms":29.65}
+{"event":"request_completed","correlation_id":"64909317e99d45538d880f6f6929e404","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":38.4}
+{"event":"request_completed","correlation_id":"f8c630f96b0b410fae2d67d75bf61664","method":"GET","route":"/analytics/summary","status":200,"duration_ms":51.74}
+{"event":"request_completed","correlation_id":"eb6134c4238743cfb7de674faaef07ed","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":54.03}
+{"event":"request_completed","correlation_id":"c366b71ee2d9455e8e555100fc0211ab","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":127.24}
+{"event":"request_completed","correlation_id":"6d52bb8da0f0432cb6afdd25b9a34e2c","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":128.77}
+{"event":"request_completed","correlation_id":"d6fea06e69d94b4e89561d50f9efee9d","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":108.2}
+{"event":"request_completed","correlation_id":"4f219eb249b54493918f804c5d5773b1","method":"GET","route":"/observations/map","status":200,"duration_ms":103.59}
+{"event":"request_completed","correlation_id":"0900b26d65d64ecea09640cc3d5f795b","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":103.34}
+{"event":"request_completed","correlation_id":"22728369156445779c5af60e224c16a6","method":"GET","route":"/analytics/summary","status":200,"duration_ms":106.04}
+{"event":"request_completed","correlation_id":"1ae390d5f4c844b1a10f42b27c99c577","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":53.29}
+{"event":"request_completed","correlation_id":"3870845ee2974c37ae8479fe269ca47c","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":87.88}
+{"event":"request_completed","correlation_id":"99cdcd71bdba42bcbfe570754200ac7c","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":90.9}
+{"event":"request_completed","correlation_id":"724640b586e54ddeb675a38dc6afeb63","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":88.99}
+{"event":"request_completed","correlation_id":"10a98686721c437a87ac49f306190c99","method":"GET","route":"/analytics/summary","status":200,"duration_ms":26.39}
+{"event":"request_completed","correlation_id":"3612f89dfb864ba585e662951ded0a94","method":"GET","route":"/observations/map","status":200,"duration_ms":31.03}
+{"event":"request_completed","correlation_id":"c2d1cd7a83f745cea2f1e59ed705bea3","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":98.17}
+{"event":"request_completed","correlation_id":"5ba57f4d76864a61bbd9e2a81e74f3dc","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":101.15}
+{"event":"request_completed","correlation_id":"4904db9fdcc7477a9f933ac4dde61101","method":"GET","route":"/analytics/summary","status":200,"duration_ms":75.75}
+{"event":"request_completed","correlation_id":"f7e42d6ee95a4f49a7cdf8aa81637b18","method":"GET","route":"/observations/map","status":200,"duration_ms":92.78}
+{"event":"request_completed","correlation_id":"0db90f84e5f74b0687bdd7ac36f3e764","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":44.76}
+{"event":"request_completed","correlation_id":"1d78466f949142c5a90d915ebb009e49","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":89.38}
+{"event":"request_completed","correlation_id":"ef4902cf97c44f2781fcb4467cc8afe2","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":33.02}
+{"event":"request_completed","correlation_id":"9ff09a7f1e8f4f9ca877bf09e3d5efd7","method":"GET","route":"/analytics/summary","status":200,"duration_ms":34.76}
+{"event":"request_completed","correlation_id":"4744da966f684e7a999aa2b6e2ef4a55","method":"GET","route":"/observations/map","status":200,"duration_ms":38.37}
+{"event":"request_completed","correlation_id":"f450f4165a1548d1a0a2e39fc5caae76","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":51.5}
+{"event":"request_completed","correlation_id":"adc5784ec7814753afc311d505ab603b","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":104.88}
+{"event":"request_completed","correlation_id":"06946786614243a286c7d61399b9c865","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":113.63}
+{"event":"request_completed","correlation_id":"bfae89c17ff9476f870a484a5b7ff82f","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":82.76}
+{"event":"request_completed","correlation_id":"8d791d21f9f944da9cdb80561d542447","method":"GET","route":"/analytics/summary","status":200,"duration_ms":85.28}
+{"event":"request_completed","correlation_id":"b1014542b48d46d689455d2d8ba476c0","method":"GET","route":"/observations/map","status":200,"duration_ms":72.59}
+{"event":"request_completed","correlation_id":"09551bd84bc440a0bfeeec238bfedaf7","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":107.87}
+{"event":"request_completed","correlation_id":"e7d2e1d68f1c4823882d602f6fbb07c4","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":78.04}
+{"event":"request_completed","correlation_id":"426e8c4b889a40e5b144454bd2d4b3d1","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":70.39}
+{"event":"request_completed","correlation_id":"0d60a700ce104f1da4beb524701f44da","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":107.07}
+{"event":"request_completed","correlation_id":"91453d1196154e48948eb30ae64588f2","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":72.41}
+{"event":"request_completed","correlation_id":"6355123622f44138a60317debac385cd","method":"GET","route":"/observations/1","status":200,"duration_ms":15.58}
+{"event":"request_completed","correlation_id":"80ac5c2ee6f74e7aadb0cc76f74669c8","method":"GET","route":"/analytics/summary","status":200,"duration_ms":45.05}
+{"event":"request_completed","correlation_id":"d19964f3892b44b29471ca8b27bb382c","method":"GET","route":"/observations/map","status":200,"duration_ms":54.28}
+{"event":"request_completed","correlation_id":"95873bc8c2ed493ab02bfbb4db512c52","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":98.48}
+{"event":"request_completed","correlation_id":"2c8ca411f13f4dc0ac46c1d733f184eb","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":102.5}
+{"event":"request_completed","correlation_id":"c1cfc8c97d3a4299a14521239f143229","method":"GET","route":"/observations/map","status":200,"duration_ms":29.95}
+{"event":"request_completed","correlation_id":"5052fac44e44461bb1154f7e3de6374c","method":"GET","route":"/analytics/summary","status":200,"duration_ms":33.69}
+{"event":"request_completed","correlation_id":"b0441b7c52064e0882e4f4e0975adbb8","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":75.17}
+{"event":"request_completed","correlation_id":"b795831c5be040eb81c1e961f48a5e3f","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":79.35}
+{"event":"request_completed","correlation_id":"dbb704ace80345d088ab37c58468594a","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":32.36}
+{"event":"request_completed","correlation_id":"21882662ea5446139aa50392a893b8a8","method":"GET","route":"/analytics/summary","status":200,"duration_ms":33.78}
+{"event":"request_completed","correlation_id":"9c69884f6d0e4892830472086232e690","method":"GET","route":"/observations/map","status":200,"duration_ms":39.16}
+{"event":"request_completed","correlation_id":"f4f9bfa0a49744949a6aaa7c95e4d5a5","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":51.05}
+{"event":"request_completed","correlation_id":"3ae75ab1cad14dd393205931d1e6762a","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":105.6}
+{"event":"request_completed","correlation_id":"4f969701a7dc4345bee13db4a27d8946","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":114.09}
+{"event":"request_completed","correlation_id":"a4b137d0596949c48f4f22a6472db7c5","method":"GET","route":"/analytics/hotspots","status":200,"duration_ms":93.83}
+{"event":"request_completed","correlation_id":"7628d476f7254a1fa5a0ffed0820cde9","method":"GET","route":"/analytics/summary","status":200,"duration_ms":94.03}
+{"event":"request_completed","correlation_id":"b2dab71bfd7540f485ba4d8dfd5e9f13","method":"GET","route":"/observations/map","status":200,"duration_ms":45.95}
+{"event":"request_completed","correlation_id":"37205b83182f40be9aaf99fc255949fe","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":127.33}
+{"event":"request_completed","correlation_id":"e7f00838d7ce44958ff02bb5015c077d","method":"GET","route":"/predictions/species/Pterois volitans/suitability/grid","status":200,"duration_ms":56.75}
+{"event":"request_completed","correlation_id":"3be10112664f49e7a24eb4b192d4bd32","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":97.38}
+{"event":"request_completed","correlation_id":"d45e8ec394be4647a37e56bf0a4952ab","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/summary","status":200,"duration_ms":75.28}
+{"event":"request_completed","correlation_id":"2a87628f8b934f29ac0b973866f3c25f","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":55.95}
+{"event":"request_completed","correlation_id":"d9a1125a31c442f0acdc46d056c601be","method":"GET","route":"/observations/1","status":200,"duration_ms":17.61}
+{"event":"request_completed","correlation_id":"110167a6d35644539ddc611c23cba056","method":"GET","route":"/observations/map","status":200,"duration_ms":11.15}
+{"event":"request_completed","correlation_id":"fd9aca277d504a6488e4a50782d72a6d","method":"GET","route":"/observations/1","status":200,"duration_ms":9.75}
+{"event":"request_completed","correlation_id":"6e066a4cdab04f7e889658c8cca76375","method":"OPTIONS","route":"/admin/observations/1/image","status":200,"duration_ms":1.81}
+{"event":"request_completed","correlation_id":"3e8379fd9c164c87b2e7e72f8eb63142","method":"OPTIONS","route":"/admin/observations/1/image","status":200,"duration_ms":4.1}
+{"event":"request_completed","correlation_id":"09091a5c4c50439bb92e86c45f399624","method":"GET","route":"/admin/observations/1/image","status":403,"duration_ms":35.09}
+{"event":"request_completed","correlation_id":"c39aea21a2104a1ca560e57cd13cdec3","method":"GET","route":"/admin/observations/1/image","status":403,"duration_ms":17.54}
+{"event":"request_completed","correlation_id":"e13ebd13e7a846b2b3378c63dc595775","method":"OPTIONS","route":"/admin/observations/1/image","status":200,"duration_ms":0.17}
+{"event":"request_completed","correlation_id":"dd507f163e834725a043c9fe4bd5affc","method":"GET","route":"/admin/observations/1/image","status":401,"duration_ms":5.99}
+{"event":"request_completed","correlation_id":"511d0e830ea64bd8b05e4e10de73ac9b","method":"OPTIONS","route":"/admin/observations/2/image","status":200,"duration_ms":0.19}
+{"event":"request_completed","correlation_id":"10ee571d3f6d4e3a99f371a6737e2e43","method":"GET","route":"/admin/observations/2/image","status":401,"duration_ms":6.77}
+{"event":"request_completed","correlation_id":"65535edf5fb94601b65c0fb72f2a5900","method":"OPTIONS","route":"/admin/observations/53/image","status":200,"duration_ms":0.21}
+{"event":"request_completed","correlation_id":"49f99a5632d54b3784c725d19c06a45a","method":"GET","route":"/admin/observations/53/image","status":401,"duration_ms":7.26}
+{"event":"request_completed","correlation_id":"eda696e9bb0d4c269a5c87523fd84a19","method":"OPTIONS","route":"/admin/jurisdictions","status":200,"duration_ms":0.28}
+{"event":"request_completed","correlation_id":"ebcab8c6b18d4588ae780b200d8884fd","method":"OPTIONS","route":"/admin/jurisdictions","status":200,"duration_ms":0.17}
+{"event":"request_completed","correlation_id":"910c8edcd1d34c79858765e739efc174","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":75.66}
+{"event":"request_completed","correlation_id":"f36139f4ff634e19a4fc92279a9a5112","method":"OPTIONS","route":"/admin/regions/1/scientific-scaling/summary","status":200,"duration_ms":0.33}
+{"event":"request_completed","correlation_id":"a02621cb436442b6bc6e33c1260b4b57","method":"OPTIONS","route":"/admin/regions/1/scientific-scaling/inventory","status":200,"duration_ms":0.74}
+{"event":"request_completed","correlation_id":"131f7afe3ce1425fb569492cd6f4d3b6","method":"OPTIONS","route":"/admin/regions/1/scientific-scaling/matrix","status":200,"duration_ms":7.49}
+{"event":"request_completed","correlation_id":"24b908a3ebf24ef89ebdccd20a3bb326","method":"OPTIONS","route":"/admin/regions/1/scientific-scaling/work-queue","status":200,"duration_ms":15.76}
+{"event":"request_completed","correlation_id":"bdaac123930b43ecbd3d2148b0d213a1","method":"GET","route":"/admin/regions/1/scientific-scaling/inventory","status":200,"duration_ms":83.32}
+{"event":"request_completed","correlation_id":"fa47145d7dd148a293aef3dfe807fa2d","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":176.88}
+{"event":"request_completed","correlation_id":"6ead2c8e616c4b1cba452bf182600d14","method":"GET","route":"/admin/regions/1/scientific-scaling/work-queue","status":200,"duration_ms":243.94}
+{"event":"request_completed","correlation_id":"c97bd326ca434674bd6a944ad2905eed","method":"GET","route":"/admin/regions/1/scientific-scaling/matrix","status":200,"duration_ms":249.05}
+{"event":"request_completed","correlation_id":"1c38a9d9d474487daa3ccbf8aeaf65a3","method":"GET","route":"/admin/regions/1/scientific-scaling/summary","status":200,"duration_ms":256.42}
+{"event":"request_completed","correlation_id":"cbc605bccf5548c4bba6f545ec85836f","method":"GET","route":"/observations/map","status":200,"duration_ms":11.9}
+{"event":"request_completed","correlation_id":"4d5a666d560a4f5cbe565903df12ecbf","method":"GET","route":"/observations/map","status":200,"duration_ms":11.71}
+{"event":"request_completed","correlation_id":"3011c64aa89a4b9da0f3f8bf7247c3ec","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":59.38}
+{"event":"request_completed","correlation_id":"4d7ea0abdb754d48b9ab34969cb82e1d","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":22.14}
+{"event":"request_completed","correlation_id":"38c6da79cd794b7eac15faa276e50b5c","method":"GET","route":"/observations/map","status":200,"duration_ms":38.75}
+{"event":"request_completed","correlation_id":"053c910feb9942b393a89c0c4b01a20d","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":69.45}
+{"event":"request_completed","correlation_id":"215a16f8a4984d3d918db1a1577548a8","method":"GET","route":"/analytics/summary","status":200,"duration_ms":82.67}
+{"event":"request_completed","correlation_id":"ec062586b1f342a8bdc4dc2a3aeb353b","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":116.86}
+{"event":"request_completed","correlation_id":"7cdf5cb055ec458487cda10bf24a956c","method":"GET","route":"/observations/map","status":200,"duration_ms":81.36}
+{"event":"request_completed","correlation_id":"2361aed04e164f2ba62738e4af8fb857","method":"GET","route":"/analytics/summary","status":200,"duration_ms":34.88}
+{"event":"request_completed","correlation_id":"4924b85202b64d3281f47e55ae3ff507","method":"GET","route":"/predictions/species/Pterois volitans/next-areas/freshness","status":200,"duration_ms":52.01}
+{"event":"request_completed","correlation_id":"786857c646eb4935a0618d875e666bb5","method":"GET","route":"/predictions/species/Pterois volitans/next-areas","status":200,"duration_ms":92.33}
+{"event":"request_completed","correlation_id":"49f5825470fe4c31a7f465ba600b4f93","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":145.15}
+{"event":"request_completed","correlation_id":"69d398d5c93e415e9878231a53db2bfc","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":328.26}
+{"event":"request_completed","correlation_id":"101cc37abd764773b7bbe0c58a36cf07","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":0.31}
+{"event":"request_completed","correlation_id":"39d1b99160b148a5a0057ea91b7f84fa","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":72.42}
+{"event":"request_completed","correlation_id":"fb4381dbef4b4328a617be64ad9ca805","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":1.34}
+{"event":"request_completed","correlation_id":"2afd8723a2084be289709c4a0213a331","method":"GET","route":"/regions/caribbean/jurisdictions/jamaica","status":200,"duration_ms":23.36}
+{"event":"request_completed","correlation_id":"4098e1eb70d549849ac0262b5f167b0f","method":"GET","route":"/auth/me","status":200,"duration_ms":101.85}
+{"event":"request_completed","correlation_id":"985837f14c2e4905893421dab605942e","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":5.67}
+{"event":"request_completed","correlation_id":"47735dcc31704691a2959364157458ff","method":"OPTIONS","route":"/auth/me","status":200,"duration_ms":73.69}
+{"event":"request_completed","correlation_id":"a03bd7a69c4d44ce8428c9a78e416aea","method":"GET","route":"/observations/map","status":200,"duration_ms":192.59}
+{"event":"request_completed","correlation_id":"a46890040dcc4442b455711eb52f5588","method":"GET","route":"/auth/me","status":200,"duration_ms":165.57}
+{"event":"request_completed","correlation_id":"b0a772975e0246479fd7b288565eff4f","method":"GET","route":"/auth/me","status":200,"duration_ms":365.33}
+{"event":"request_completed","correlation_id":"c8e747daa9e14fee8928bd690037d3cd","method":"GET","route":"/observations/map","status":200,"duration_ms":46.17}
+{"event":"request_completed","correlation_id":"35d5dd35007e4dec9a64a427087151d6","method":"GET","route":"/auth/me","status":200,"duration_ms":73.8}
+{"event":"request_completed","correlation_id":"d5893ecb30ec43caaa577565d764fe54","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":162.43}
+{"event":"request_completed","correlation_id":"a29dafe2b8d045de85a6d199e153d770","method":"GET","route":"/admin/regions/1/scientific-scaling/inventory","status":200,"duration_ms":48.21}
+{"event":"request_completed","correlation_id":"59e3b4ea33224b389513375fd6ac5206","method":"GET","route":"/admin/jurisdictions","status":200,"duration_ms":109.99}
+{"event":"request_completed","correlation_id":"6c01871320374f29887c7260c9c73a73","method":"GET","route":"/admin/regions/1/scientific-scaling/work-queue","status":200,"duration_ms":167.39}
+{"event":"request_completed","correlation_id":"330b38834c1d4b42a2d02cbc59b2eba2","method":"GET","route":"/admin/regions/1/scientific-scaling/summary","status":200,"duration_ms":183.28}
+{"event":"request_completed","correlation_id":"a534896258254eaca7255842be254ae1","method":"GET","route":"/admin/regions/1/scientific-scaling/matrix","status":200,"duration_ms":221.03}
+{"event":"request_completed","correlation_id":"e03f83df2c694b269a234b64e04ba623","method":"GET","route":"/observations/53/image","status":404,"duration_ms":22.91}

@@ -1,0 +1,99 @@
+{
+  "canonical_content_fingerprint": "dde2f469807df6646614e4da07b2aa075a20624a26b1376107cc98c8827d1fd9",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=145560",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 7,
+        "child": {
+          "AphiaID": 582419,
+          "child": {
+            "AphiaID": 368898,
+            "child": {
+              "AphiaID": 345465,
+              "child": {
+                "AphiaID": 830,
+                "child": {
+                  "AphiaID": 1304856,
+                  "child": {
+                    "AphiaID": 844,
+                    "child": {
+                      "AphiaID": 143725,
+                      "child": {
+                        "AphiaID": 144132,
+                        "child": {
+                          "AphiaID": 145560,
+                          "child": null,
+                          "rank": "Species",
+                          "scientificname": "Sargassum natans"
+                        },
+                        "rank": "Genus",
+                        "scientificname": "Sargassum"
+                      },
+                      "rank": "Family",
+                      "scientificname": "Sargassaceae"
+                    },
+                    "rank": "Order",
+                    "scientificname": "Fucales"
+                  },
+                  "rank": "Subclass",
+                  "scientificname": "Fucophycidae"
+                },
+                "rank": "Class",
+                "scientificname": "Phaeophyceae"
+              },
+              "rank": "Phylum",
+              "scientificname": "Ochrophyta"
+            },
+            "rank": "Infrakingdom",
+            "scientificname": "Heterokonta"
+          },
+          "rank": "Subkingdom",
+          "scientificname": "Harosa"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Chromista"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 145560,
+      "authority": "(Linnaeus) Gaillon, 1828",
+      "citation": "Guiry, M.D. & Guiry, G.M. (2026). AlgaeBase. World-wide electronic publication, National University of Ireland, Galway (taxonomic information republished from AlgaeBase with permission of M.D. Guiry). Sargassum natans (Linnaeus) Gaillon, 1828. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=145560 on 2026-09-04",
+      "class": "Phaeophyceae",
+      "family": "Sargassaceae",
+      "genus": "Sargassum",
+      "isBrackish": null,
+      "isExtinct": null,
+      "isFreshwater": null,
+      "isMarine": 1,
+      "isTerrestrial": null,
+      "kingdom": "Chromista",
+      "lsid": "urn:lsid:marinespecies.org:taxname:145560",
+      "match_type": "exact",
+      "modified": "2015-06-26T12:00:51.270Z",
+      "order": "Fucales",
+      "originalNameUsageID": 239246,
+      "parentNameUsageID": 144132,
+      "phylum": "Ochrophyta",
+      "rank": "Species",
+      "scientificname": "Sargassum natans",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=145560",
+      "valid_AphiaID": 145560,
+      "valid_authority": "(Linnaeus) Gaillon, 1828",
+      "valid_name": "Sargassum natans"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "145560",
+    "scientific_name": "Sargassum natans"
+  },
+  "retrieved_at": "2026-09-04T19:04:34.618531+00:00"
+}

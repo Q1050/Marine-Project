@@ -1,0 +1,114 @@
+{
+  "canonical_content_fingerprint": "4999834ef8646ba79d0e0fa8cc402e7b9be2ac2406a943628ede19748d470d44",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=213380",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1806,
+          "child": {
+            "AphiaID": 148744,
+            "child": {
+              "AphiaID": 123082,
+              "child": {
+                "AphiaID": 149854,
+                "child": {
+                  "AphiaID": 510517,
+                  "child": {
+                    "AphiaID": 149855,
+                    "child": {
+                      "AphiaID": 510518,
+                      "child": {
+                        "AphiaID": 510534,
+                        "child": {
+                          "AphiaID": 510604,
+                          "child": {
+                            "AphiaID": 179653,
+                            "child": {
+                              "AphiaID": 179659,
+                              "child": {
+                                "AphiaID": 213380,
+                                "child": null,
+                                "rank": "Species",
+                                "scientificname": "Echinometra lucunter"
+                              },
+                              "rank": "Genus",
+                              "scientificname": "Echinometra"
+                            },
+                            "rank": "Family",
+                            "scientificname": "Echinometridae"
+                          },
+                          "rank": "Superfamily",
+                          "scientificname": "Odontophora"
+                        },
+                        "rank": "Infraorder",
+                        "scientificname": "Echinidea"
+                      },
+                      "rank": "Order",
+                      "scientificname": "Camarodonta"
+                    },
+                    "rank": "Subterclass",
+                    "scientificname": "Echinacea"
+                  },
+                  "rank": "Infraclass",
+                  "scientificname": "Carinacea"
+                },
+                "rank": "Subclass",
+                "scientificname": "Euechinoidea"
+              },
+              "rank": "Class",
+              "scientificname": "Echinoidea"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Echinozoa"
+          },
+          "rank": "Phylum",
+          "scientificname": "Echinodermata"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 213380,
+      "authority": "(Linnaeus, 1758)",
+      "citation": "Kroh, A.; Mooi, R. (2026). World Echinoidea Database. Echinometra lucunter (Linnaeus, 1758). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=213380 on 2026-09-04",
+      "class": "Echinoidea",
+      "family": "Echinometridae",
+      "genus": "Echinometra",
+      "isBrackish": 0,
+      "isExtinct": 0,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:213380",
+      "match_type": "exact",
+      "modified": "2013-08-26T18:24:18.240Z",
+      "order": "Camarodonta",
+      "originalNameUsageID": 568960,
+      "parentNameUsageID": 179659,
+      "phylum": "Echinodermata",
+      "rank": "Species",
+      "scientificname": "Echinometra lucunter",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=213380",
+      "valid_AphiaID": 213380,
+      "valid_authority": "(Linnaeus, 1758)",
+      "valid_name": "Echinometra lucunter"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "213380",
+    "scientific_name": "Echinometra lucunter"
+  },
+  "retrieved_at": "2026-09-04T19:04:30.251526+00:00"
+}

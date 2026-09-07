@@ -7,6 +7,7 @@ import {
   Rectangle,
   TileLayer,
 } from "react-leaflet";
+import { BASEMAP } from "../config/basemap";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import {
   getPublicJurisdiction,
@@ -213,7 +214,7 @@ export function PublicJurisdictionPage() {
               text={
                 data.governed_invasive_species_count
                   ? "Browse current approved invasive-status records."
-                  : "No governed invasive marine-species records are currently available for this jurisdiction."
+                  : "No governed invasive marine-species records are currently available for this jurisdiction. No governed invasive-species assertions are shown until source review is complete."
               }
             />
           </div>
@@ -505,8 +506,8 @@ function SpeciesEvidenceMap({ data }) {
           className="h-full w-full"
         >
           <TileLayer
-            attribution="&copy; OpenStreetMap contributors"
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution={BASEMAP.attribution}
+            url={BASEMAP.url}
           />
           {layers.suitability && data.suitability?.cells.map((cell) => { const half=cell.grid_size/2; return <Rectangle key={`${cell.latitude}-${cell.longitude}`} bounds={[[cell.latitude-half,cell.longitude-half],[cell.latitude+half,cell.longitude+half]]} pathOptions={{color:"#7c3aed",weight:0,fillOpacity:Math.max(.08,(cell.suitability_score||0)*.35)}}><Popup>{cell.suitability_band}<br/>Relative environmental suitability: {cell.suitability_score?.toFixed(3)}<br/>{data.suitability.disclaimer}</Popup></Rectangle>; })}
           {layers.boundary && data.boundary && (

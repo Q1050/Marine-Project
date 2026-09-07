@@ -1,0 +1,2108 @@
+{
+  "authority": {
+    "api": "https://www.marinespecies.org/rest",
+    "provider": "World Register of Marine Species (WoRMS)",
+    "provider_version": "live-rest-v1"
+  },
+  "candidates": [
+    {
+      "accepted_scientific_name": "Pterois volitans",
+      "aphia_id": 159559,
+      "authorship": "(Linnaeus, 1758)",
+      "group": "FISH",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1821",
+          "rank": "Phylum",
+          "scientific_name": "Chordata"
+        },
+        {
+          "aphia_id": "146419",
+          "rank": "Subphylum",
+          "scientific_name": "Vertebrata"
+        },
+        {
+          "aphia_id": "1828",
+          "rank": "Infraphylum",
+          "scientific_name": "Gnathostomata"
+        },
+        {
+          "aphia_id": "152352",
+          "rank": "Parvphylum",
+          "scientific_name": "Osteichthyes"
+        },
+        {
+          "aphia_id": "10194",
+          "rank": "Gigaclass",
+          "scientific_name": "Actinopterygii"
+        },
+        {
+          "aphia_id": "843664",
+          "rank": "Superclass",
+          "scientific_name": "Actinopteri"
+        },
+        {
+          "aphia_id": "293496",
+          "rank": "Class",
+          "scientific_name": "Teleostei"
+        },
+        {
+          "aphia_id": "11014",
+          "rank": "Order",
+          "scientific_name": "Perciformes"
+        },
+        {
+          "aphia_id": "154247",
+          "rank": "Suborder",
+          "scientific_name": "Scorpaenoidei"
+        },
+        {
+          "aphia_id": "125595",
+          "rank": "Family",
+          "scientific_name": "Scorpaenidae"
+        },
+        {
+          "aphia_id": "154410",
+          "rank": "Subfamily",
+          "scientific_name": "Pteroinae"
+        },
+        {
+          "aphia_id": "204051",
+          "rank": "Genus",
+          "scientific_name": "Pterois"
+        },
+        {
+          "aphia_id": "159559",
+          "rank": "Species",
+          "scientific_name": "Pterois volitans"
+        }
+      ],
+      "parent": {
+        "aphia_id": "204051",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\pterois-volitans-159559-a26cee4630fc.json",
+      "provider_artifact_sha256": "0ac9bb031f939b8b4df2eb61e0018d4ef56acbbcacc0d7f7f977d5ae099fdc14",
+      "provider_content_fingerprint": "a26cee4630fce8b1a2bb587914843740db82ce5d7d594ece848b2f6b901aefb2",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Pterois volitans",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=159559",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Pterois miles",
+      "aphia_id": 218077,
+      "authorship": "(Bennett, 1828)",
+      "group": "FISH",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1821",
+          "rank": "Phylum",
+          "scientific_name": "Chordata"
+        },
+        {
+          "aphia_id": "146419",
+          "rank": "Subphylum",
+          "scientific_name": "Vertebrata"
+        },
+        {
+          "aphia_id": "1828",
+          "rank": "Infraphylum",
+          "scientific_name": "Gnathostomata"
+        },
+        {
+          "aphia_id": "152352",
+          "rank": "Parvphylum",
+          "scientific_name": "Osteichthyes"
+        },
+        {
+          "aphia_id": "10194",
+          "rank": "Gigaclass",
+          "scientific_name": "Actinopterygii"
+        },
+        {
+          "aphia_id": "843664",
+          "rank": "Superclass",
+          "scientific_name": "Actinopteri"
+        },
+        {
+          "aphia_id": "293496",
+          "rank": "Class",
+          "scientific_name": "Teleostei"
+        },
+        {
+          "aphia_id": "11014",
+          "rank": "Order",
+          "scientific_name": "Perciformes"
+        },
+        {
+          "aphia_id": "154247",
+          "rank": "Suborder",
+          "scientific_name": "Scorpaenoidei"
+        },
+        {
+          "aphia_id": "125595",
+          "rank": "Family",
+          "scientific_name": "Scorpaenidae"
+        },
+        {
+          "aphia_id": "154410",
+          "rank": "Subfamily",
+          "scientific_name": "Pteroinae"
+        },
+        {
+          "aphia_id": "204051",
+          "rank": "Genus",
+          "scientific_name": "Pterois"
+        },
+        {
+          "aphia_id": "218077",
+          "rank": "Species",
+          "scientific_name": "Pterois miles"
+        }
+      ],
+      "parent": {
+        "aphia_id": "204051",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\pterois-miles-218077-34487e56a924.json",
+      "provider_artifact_sha256": "4b332503817f6490a95d434c44af238a8b01358a7d0c57290f6f7e3b13640606",
+      "provider_content_fingerprint": "34487e56a924254b8d25a3d1e7011da27eab1e13d01712759a8aa852bceccf27",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Pterois miles",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218077",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Acanthurus coeruleus",
+      "aphia_id": 159581,
+      "authorship": "Bloch & Schneider, 1801",
+      "group": "FISH",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1821",
+          "rank": "Phylum",
+          "scientific_name": "Chordata"
+        },
+        {
+          "aphia_id": "146419",
+          "rank": "Subphylum",
+          "scientific_name": "Vertebrata"
+        },
+        {
+          "aphia_id": "1828",
+          "rank": "Infraphylum",
+          "scientific_name": "Gnathostomata"
+        },
+        {
+          "aphia_id": "152352",
+          "rank": "Parvphylum",
+          "scientific_name": "Osteichthyes"
+        },
+        {
+          "aphia_id": "10194",
+          "rank": "Gigaclass",
+          "scientific_name": "Actinopterygii"
+        },
+        {
+          "aphia_id": "843664",
+          "rank": "Superclass",
+          "scientific_name": "Actinopteri"
+        },
+        {
+          "aphia_id": "293496",
+          "rank": "Class",
+          "scientific_name": "Teleostei"
+        },
+        {
+          "aphia_id": "1517548",
+          "rank": "Order",
+          "scientific_name": "Acanthuriformes"
+        },
+        {
+          "aphia_id": "125515",
+          "rank": "Family",
+          "scientific_name": "Acanthuridae"
+        },
+        {
+          "aphia_id": "125908",
+          "rank": "Genus",
+          "scientific_name": "Acanthurus"
+        },
+        {
+          "aphia_id": "159581",
+          "rank": "Species",
+          "scientific_name": "Acanthurus coeruleus"
+        }
+      ],
+      "parent": {
+        "aphia_id": "125908",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\acanthurus-coeruleus-159581-c2e7c1dbb663.json",
+      "provider_artifact_sha256": "248da9097c41782f9b733e813c4fd8a98cf7267860e3f18d7734cae2135e5a07",
+      "provider_content_fingerprint": "c2e7c1dbb663bfe6f6c1587adbf1e319d61f52a6e116f849f6460e7ee6058d4c",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Acanthurus coeruleus",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=159581",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Scarus iseri",
+      "aphia_id": 276052,
+      "authorship": "(Bloch, 1789)",
+      "group": "FISH",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1821",
+          "rank": "Phylum",
+          "scientific_name": "Chordata"
+        },
+        {
+          "aphia_id": "146419",
+          "rank": "Subphylum",
+          "scientific_name": "Vertebrata"
+        },
+        {
+          "aphia_id": "1828",
+          "rank": "Infraphylum",
+          "scientific_name": "Gnathostomata"
+        },
+        {
+          "aphia_id": "152352",
+          "rank": "Parvphylum",
+          "scientific_name": "Osteichthyes"
+        },
+        {
+          "aphia_id": "10194",
+          "rank": "Gigaclass",
+          "scientific_name": "Actinopterygii"
+        },
+        {
+          "aphia_id": "843664",
+          "rank": "Superclass",
+          "scientific_name": "Actinopteri"
+        },
+        {
+          "aphia_id": "293496",
+          "rank": "Class",
+          "scientific_name": "Teleostei"
+        },
+        {
+          "aphia_id": "1517577",
+          "rank": "Order",
+          "scientific_name": "Eupercaria incertae sedis"
+        },
+        {
+          "aphia_id": "125541",
+          "rank": "Family",
+          "scientific_name": "Labridae"
+        },
+        {
+          "aphia_id": "151787",
+          "rank": "Subfamily",
+          "scientific_name": "Scarinae"
+        },
+        {
+          "aphia_id": "1844755",
+          "rank": "Tribe",
+          "scientific_name": "Scarini"
+        },
+        {
+          "aphia_id": "159299",
+          "rank": "Genus",
+          "scientific_name": "Scarus"
+        },
+        {
+          "aphia_id": "276052",
+          "rank": "Species",
+          "scientific_name": "Scarus iseri"
+        }
+      ],
+      "parent": {
+        "aphia_id": "159299",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\scarus-iseri-276052-6cb7b79a9dd8.json",
+      "provider_artifact_sha256": "dc606c905ac7668920b207453363b36665e05de5600172dbe26cee8048992805",
+      "provider_content_fingerprint": "6cb7b79a9dd8e1fd3e1e60476137d664e136db13e9634647f98fb9e54b22c747",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Scarus iseri",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=276052",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Haemulon flavolineatum",
+      "aphia_id": 275727,
+      "authorship": "(Desmarest, 1823)",
+      "group": "FISH",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1821",
+          "rank": "Phylum",
+          "scientific_name": "Chordata"
+        },
+        {
+          "aphia_id": "146419",
+          "rank": "Subphylum",
+          "scientific_name": "Vertebrata"
+        },
+        {
+          "aphia_id": "1828",
+          "rank": "Infraphylum",
+          "scientific_name": "Gnathostomata"
+        },
+        {
+          "aphia_id": "152352",
+          "rank": "Parvphylum",
+          "scientific_name": "Osteichthyes"
+        },
+        {
+          "aphia_id": "10194",
+          "rank": "Gigaclass",
+          "scientific_name": "Actinopterygii"
+        },
+        {
+          "aphia_id": "843664",
+          "rank": "Superclass",
+          "scientific_name": "Actinopteri"
+        },
+        {
+          "aphia_id": "293496",
+          "rank": "Class",
+          "scientific_name": "Teleostei"
+        },
+        {
+          "aphia_id": "1517577",
+          "rank": "Order",
+          "scientific_name": "Eupercaria incertae sedis"
+        },
+        {
+          "aphia_id": "125538",
+          "rank": "Family",
+          "scientific_name": "Haemulidae"
+        },
+        {
+          "aphia_id": "714648",
+          "rank": "Subfamily",
+          "scientific_name": "Haemulinae"
+        },
+        {
+          "aphia_id": "158806",
+          "rank": "Genus",
+          "scientific_name": "Haemulon"
+        },
+        {
+          "aphia_id": "275727",
+          "rank": "Species",
+          "scientific_name": "Haemulon flavolineatum"
+        }
+      ],
+      "parent": {
+        "aphia_id": "158806",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\haemulon-flavolineatum-275727-283c33703131.json",
+      "provider_artifact_sha256": "a2b186f06bc2e7c805a0112ed3cd8d5772be7065d086b3b9f21b4362ae775284",
+      "provider_content_fingerprint": "283c33703131f442cee80760518c0e70a63c26e6209ea6df926432c7a2f6ef12",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Haemulon flavolineatum",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=275727",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Panulirus argus",
+      "aphia_id": 382891,
+      "authorship": "(Latreille, 1804)",
+      "group": "CRUSTACEANS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1065",
+          "rank": "Phylum",
+          "scientific_name": "Arthropoda"
+        },
+        {
+          "aphia_id": "1066",
+          "rank": "Subphylum",
+          "scientific_name": "Crustacea"
+        },
+        {
+          "aphia_id": "845959",
+          "rank": "Superclass",
+          "scientific_name": "Multicrustacea"
+        },
+        {
+          "aphia_id": "1071",
+          "rank": "Class",
+          "scientific_name": "Malacostraca"
+        },
+        {
+          "aphia_id": "1086",
+          "rank": "Subclass",
+          "scientific_name": "Eumalacostraca"
+        },
+        {
+          "aphia_id": "1089",
+          "rank": "Superorder",
+          "scientific_name": "Eucarida"
+        },
+        {
+          "aphia_id": "1130",
+          "rank": "Order",
+          "scientific_name": "Decapoda"
+        },
+        {
+          "aphia_id": "106670",
+          "rank": "Suborder",
+          "scientific_name": "Pleocyemata"
+        },
+        {
+          "aphia_id": "383017",
+          "rank": "Infraorder",
+          "scientific_name": "Achelata"
+        },
+        {
+          "aphia_id": "106794",
+          "rank": "Family",
+          "scientific_name": "Palinuridae"
+        },
+        {
+          "aphia_id": "107060",
+          "rank": "Genus",
+          "scientific_name": "Panulirus"
+        },
+        {
+          "aphia_id": "382891",
+          "rank": "Species",
+          "scientific_name": "Panulirus argus"
+        }
+      ],
+      "parent": {
+        "aphia_id": "107060",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\panulirus-argus-382891-82228b2f5b9c.json",
+      "provider_artifact_sha256": "d4992e5e4fb2101d243983ce9e3b1dff91f3ca15a7f1fde96eecc0a681c3f71e",
+      "provider_content_fingerprint": "82228b2f5b9cf0b097b082f748073f6e08d7198f10d995a1638573d31f74788d",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Panulirus argus",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=382891",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Callinectes sapidus",
+      "aphia_id": 107379,
+      "authorship": "Rathbun, 1896",
+      "group": "CRUSTACEANS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1065",
+          "rank": "Phylum",
+          "scientific_name": "Arthropoda"
+        },
+        {
+          "aphia_id": "1066",
+          "rank": "Subphylum",
+          "scientific_name": "Crustacea"
+        },
+        {
+          "aphia_id": "845959",
+          "rank": "Superclass",
+          "scientific_name": "Multicrustacea"
+        },
+        {
+          "aphia_id": "1071",
+          "rank": "Class",
+          "scientific_name": "Malacostraca"
+        },
+        {
+          "aphia_id": "1086",
+          "rank": "Subclass",
+          "scientific_name": "Eumalacostraca"
+        },
+        {
+          "aphia_id": "1089",
+          "rank": "Superorder",
+          "scientific_name": "Eucarida"
+        },
+        {
+          "aphia_id": "1130",
+          "rank": "Order",
+          "scientific_name": "Decapoda"
+        },
+        {
+          "aphia_id": "106670",
+          "rank": "Suborder",
+          "scientific_name": "Pleocyemata"
+        },
+        {
+          "aphia_id": "106673",
+          "rank": "Infraorder",
+          "scientific_name": "Brachyura"
+        },
+        {
+          "aphia_id": "106679",
+          "rank": "Section",
+          "scientific_name": "Eubrachyura"
+        },
+        {
+          "aphia_id": "106680",
+          "rank": "Subsection",
+          "scientific_name": "Heterotremata"
+        },
+        {
+          "aphia_id": "106702",
+          "rank": "Superfamily",
+          "scientific_name": "Portunoidea"
+        },
+        {
+          "aphia_id": "106763",
+          "rank": "Family",
+          "scientific_name": "Portunidae"
+        },
+        {
+          "aphia_id": "148430",
+          "rank": "Subfamily",
+          "scientific_name": "Portuninae"
+        },
+        {
+          "aphia_id": "106921",
+          "rank": "Genus",
+          "scientific_name": "Callinectes"
+        },
+        {
+          "aphia_id": "107379",
+          "rank": "Species",
+          "scientific_name": "Callinectes sapidus"
+        }
+      ],
+      "parent": {
+        "aphia_id": "106921",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\callinectes-sapidus-107379-db5df9120e27.json",
+      "provider_artifact_sha256": "e0b133d61587669fa21e95cfd84ab706be60d43f8394474c9df990fe8494ad81",
+      "provider_content_fingerprint": "db5df9120e27ae6ca53ecf7c2d43cba8008ee1cf174ee530af5d09a840540b23",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Callinectes sapidus",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=107379",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Mithraculus sculptus",
+      "aphia_id": 421990,
+      "authorship": "(Lamarck, 1818)",
+      "group": "CRUSTACEANS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1065",
+          "rank": "Phylum",
+          "scientific_name": "Arthropoda"
+        },
+        {
+          "aphia_id": "1066",
+          "rank": "Subphylum",
+          "scientific_name": "Crustacea"
+        },
+        {
+          "aphia_id": "845959",
+          "rank": "Superclass",
+          "scientific_name": "Multicrustacea"
+        },
+        {
+          "aphia_id": "1071",
+          "rank": "Class",
+          "scientific_name": "Malacostraca"
+        },
+        {
+          "aphia_id": "1086",
+          "rank": "Subclass",
+          "scientific_name": "Eumalacostraca"
+        },
+        {
+          "aphia_id": "1089",
+          "rank": "Superorder",
+          "scientific_name": "Eucarida"
+        },
+        {
+          "aphia_id": "1130",
+          "rank": "Order",
+          "scientific_name": "Decapoda"
+        },
+        {
+          "aphia_id": "106670",
+          "rank": "Suborder",
+          "scientific_name": "Pleocyemata"
+        },
+        {
+          "aphia_id": "106673",
+          "rank": "Infraorder",
+          "scientific_name": "Brachyura"
+        },
+        {
+          "aphia_id": "106679",
+          "rank": "Section",
+          "scientific_name": "Eubrachyura"
+        },
+        {
+          "aphia_id": "106680",
+          "rank": "Subsection",
+          "scientific_name": "Heterotremata"
+        },
+        {
+          "aphia_id": "106700",
+          "rank": "Superfamily",
+          "scientific_name": "Majoidea"
+        },
+        {
+          "aphia_id": "439056",
+          "rank": "Family",
+          "scientific_name": "Mithracidae"
+        },
+        {
+          "aphia_id": "415649",
+          "rank": "Genus",
+          "scientific_name": "Mithraculus"
+        },
+        {
+          "aphia_id": "421990",
+          "rank": "Species",
+          "scientific_name": "Mithraculus sculptus"
+        }
+      ],
+      "parent": {
+        "aphia_id": "415649",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\mithraculus-sculptus-421990-22259f4c0257.json",
+      "provider_artifact_sha256": "ee6656e434a1b0abb44f6b7db9d2f5059806c3389cd9c443d50a9550d774c3c1",
+      "provider_content_fingerprint": "22259f4c0257f35f15a2f14926dba074df8d2f18eb0b3089964277e43adf3bc3",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Mithraculus sculptus",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=421990",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Stenopus hispidus",
+      "aphia_id": 210370,
+      "authorship": "(Olivier, 1811)",
+      "group": "CRUSTACEANS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1065",
+          "rank": "Phylum",
+          "scientific_name": "Arthropoda"
+        },
+        {
+          "aphia_id": "1066",
+          "rank": "Subphylum",
+          "scientific_name": "Crustacea"
+        },
+        {
+          "aphia_id": "845959",
+          "rank": "Superclass",
+          "scientific_name": "Multicrustacea"
+        },
+        {
+          "aphia_id": "1071",
+          "rank": "Class",
+          "scientific_name": "Malacostraca"
+        },
+        {
+          "aphia_id": "1086",
+          "rank": "Subclass",
+          "scientific_name": "Eumalacostraca"
+        },
+        {
+          "aphia_id": "1089",
+          "rank": "Superorder",
+          "scientific_name": "Eucarida"
+        },
+        {
+          "aphia_id": "1130",
+          "rank": "Order",
+          "scientific_name": "Decapoda"
+        },
+        {
+          "aphia_id": "106670",
+          "rank": "Suborder",
+          "scientific_name": "Pleocyemata"
+        },
+        {
+          "aphia_id": "106676",
+          "rank": "Infraorder",
+          "scientific_name": "Stenopodidea"
+        },
+        {
+          "aphia_id": "106797",
+          "rank": "Family",
+          "scientific_name": "Stenopodidae"
+        },
+        {
+          "aphia_id": "107066",
+          "rank": "Genus",
+          "scientific_name": "Stenopus"
+        },
+        {
+          "aphia_id": "210370",
+          "rank": "Species",
+          "scientific_name": "Stenopus hispidus"
+        }
+      ],
+      "parent": {
+        "aphia_id": "107066",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\stenopus-hispidus-210370-f63c5f702b34.json",
+      "provider_artifact_sha256": "90b4b6ec10f46278a1652871f457d5bc6fce19bb2b58208f547e35832a3f43dd",
+      "provider_content_fingerprint": "f63c5f702b3472832aa93385d3e07d3497f05af23c8ee2f437dcd6ef68bedd29",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Stenopus hispidus",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=210370",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Perna viridis",
+      "aphia_id": 367822,
+      "authorship": "(Linnaeus, 1758)",
+      "group": "MOLLUSCS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "51",
+          "rank": "Phylum",
+          "scientific_name": "Mollusca"
+        },
+        {
+          "aphia_id": "105",
+          "rank": "Class",
+          "scientific_name": "Bivalvia"
+        },
+        {
+          "aphia_id": "1424948",
+          "rank": "Subclass",
+          "scientific_name": "Autobranchia"
+        },
+        {
+          "aphia_id": "206",
+          "rank": "Infraclass",
+          "scientific_name": "Pteriomorphia"
+        },
+        {
+          "aphia_id": "210",
+          "rank": "Order",
+          "scientific_name": "Mytilida"
+        },
+        {
+          "aphia_id": "491766",
+          "rank": "Superfamily",
+          "scientific_name": "Mytiloidea"
+        },
+        {
+          "aphia_id": "211",
+          "rank": "Family",
+          "scientific_name": "Mytilidae"
+        },
+        {
+          "aphia_id": "510721",
+          "rank": "Subfamily",
+          "scientific_name": "Crenellinae"
+        },
+        {
+          "aphia_id": "138229",
+          "rank": "Genus",
+          "scientific_name": "Perna"
+        },
+        {
+          "aphia_id": "367822",
+          "rank": "Species",
+          "scientific_name": "Perna viridis"
+        }
+      ],
+      "parent": {
+        "aphia_id": "138229",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\perna-viridis-367822-3e9a9c5dd2e1.json",
+      "provider_artifact_sha256": "a86df57fc064aee03cc9aa4517e0760342f9cbd0b58df6ef613d9b7860be3e30",
+      "provider_content_fingerprint": "3e9a9c5dd2e17329b99479f37c414da508b403ab7bbae987e4528089734073ba",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Perna viridis",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=367822",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Aliger gigas",
+      "aphia_id": 1429769,
+      "authorship": "(Linnaeus, 1758)",
+      "group": "MOLLUSCS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "51",
+          "rank": "Phylum",
+          "scientific_name": "Mollusca"
+        },
+        {
+          "aphia_id": "101",
+          "rank": "Class",
+          "scientific_name": "Gastropoda"
+        },
+        {
+          "aphia_id": "224570",
+          "rank": "Subclass",
+          "scientific_name": "Caenogastropoda"
+        },
+        {
+          "aphia_id": "382213",
+          "rank": "Order",
+          "scientific_name": "Littorinimorpha"
+        },
+        {
+          "aphia_id": "14770",
+          "rank": "Superfamily",
+          "scientific_name": "Stromboidea"
+        },
+        {
+          "aphia_id": "23123",
+          "rank": "Family",
+          "scientific_name": "Strombidae"
+        },
+        {
+          "aphia_id": "415025",
+          "rank": "Genus",
+          "scientific_name": "Aliger"
+        },
+        {
+          "aphia_id": "1429769",
+          "rank": "Species",
+          "scientific_name": "Aliger gigas"
+        }
+      ],
+      "parent": {
+        "aphia_id": "415025",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\aliger-gigas-1429769-b044fcc115a3.json",
+      "provider_artifact_sha256": "045c02096f0e97a2deb802351eb9ba520d576d1eba34d20776f5227b3b6e941e",
+      "provider_content_fingerprint": "b044fcc115a311e51c558b21736c4238a717c1a508c095c3dcbe41f64cc35b87",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Aliger gigas",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=1429769",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Octopus briareus",
+      "aphia_id": 341954,
+      "authorship": "G. C. Robson, 1929",
+      "group": "MOLLUSCS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "51",
+          "rank": "Phylum",
+          "scientific_name": "Mollusca"
+        },
+        {
+          "aphia_id": "11707",
+          "rank": "Class",
+          "scientific_name": "Cephalopoda"
+        },
+        {
+          "aphia_id": "11709",
+          "rank": "Subclass",
+          "scientific_name": "Coleoidea"
+        },
+        {
+          "aphia_id": "325343",
+          "rank": "Superorder",
+          "scientific_name": "Octopodiformes"
+        },
+        {
+          "aphia_id": "11718",
+          "rank": "Order",
+          "scientific_name": "Octopoda"
+        },
+        {
+          "aphia_id": "11733",
+          "rank": "Suborder",
+          "scientific_name": "Incirrata"
+        },
+        {
+          "aphia_id": "14672",
+          "rank": "Superfamily",
+          "scientific_name": "Octopodoidea"
+        },
+        {
+          "aphia_id": "11782",
+          "rank": "Family",
+          "scientific_name": "Octopodidae"
+        },
+        {
+          "aphia_id": "138268",
+          "rank": "Genus",
+          "scientific_name": "Octopus"
+        },
+        {
+          "aphia_id": "341954",
+          "rank": "Species",
+          "scientific_name": "Octopus briareus"
+        }
+      ],
+      "parent": {
+        "aphia_id": "138268",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\octopus-briareus-341954-9c4d5d363d4b.json",
+      "provider_artifact_sha256": "a06b0f40b838d764d389829b0f4579268755fb78518372a15e3fb0b53d79d443",
+      "provider_content_fingerprint": "9c4d5d363d4be14635a1b65781c0ff4703c01977d3205422e43e5c5a4ecac879",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Octopus briareus",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=341954",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Dendostrea frons",
+      "aphia_id": 420779,
+      "authorship": "(Linnaeus, 1758)",
+      "group": "MOLLUSCS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "51",
+          "rank": "Phylum",
+          "scientific_name": "Mollusca"
+        },
+        {
+          "aphia_id": "105",
+          "rank": "Class",
+          "scientific_name": "Bivalvia"
+        },
+        {
+          "aphia_id": "1424948",
+          "rank": "Subclass",
+          "scientific_name": "Autobranchia"
+        },
+        {
+          "aphia_id": "206",
+          "rank": "Infraclass",
+          "scientific_name": "Pteriomorphia"
+        },
+        {
+          "aphia_id": "1774",
+          "rank": "Order",
+          "scientific_name": "Ostreida"
+        },
+        {
+          "aphia_id": "151323",
+          "rank": "Superfamily",
+          "scientific_name": "Ostreoidea"
+        },
+        {
+          "aphia_id": "215",
+          "rank": "Family",
+          "scientific_name": "Ostreidae"
+        },
+        {
+          "aphia_id": "510735",
+          "rank": "Subfamily",
+          "scientific_name": "Ostreinae"
+        },
+        {
+          "aphia_id": "415280",
+          "rank": "Genus",
+          "scientific_name": "Dendostrea"
+        },
+        {
+          "aphia_id": "420779",
+          "rank": "Species",
+          "scientific_name": "Dendostrea frons"
+        }
+      ],
+      "parent": {
+        "aphia_id": "415280",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\dendostrea-frons-420779-f9b904515055.json",
+      "provider_artifact_sha256": "ace6779d7bc660aa644c1583cd915b5d733a62ee2e2668d3a7f7f4e64e0e4333",
+      "provider_content_fingerprint": "f9b904515055a55ee43d7b39ab513c8ecd9b3916ecc397a8043a5e918dfad8db",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Dendostrea frons",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=420779",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Acropora palmata",
+      "aphia_id": 288227,
+      "authorship": "(Lamarck, 1816)",
+      "group": "CNIDARIANS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1267",
+          "rank": "Phylum",
+          "scientific_name": "Cnidaria"
+        },
+        {
+          "aphia_id": "1292",
+          "rank": "Subphylum",
+          "scientific_name": "Anthozoa"
+        },
+        {
+          "aphia_id": "1340",
+          "rank": "Class",
+          "scientific_name": "Hexacorallia"
+        },
+        {
+          "aphia_id": "1363",
+          "rank": "Order",
+          "scientific_name": "Scleractinia"
+        },
+        {
+          "aphia_id": "1517258",
+          "rank": "Suborder",
+          "scientific_name": "Refertina"
+        },
+        {
+          "aphia_id": "196095",
+          "rank": "Family",
+          "scientific_name": "Acroporidae"
+        },
+        {
+          "aphia_id": "205469",
+          "rank": "Genus",
+          "scientific_name": "Acropora"
+        },
+        {
+          "aphia_id": "288227",
+          "rank": "Species",
+          "scientific_name": "Acropora palmata"
+        }
+      ],
+      "parent": {
+        "aphia_id": "205469",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\acropora-palmata-288227-68af647f0c06.json",
+      "provider_artifact_sha256": "020717be49828758e061d4434f303db823002991719e530626248020d878c03a",
+      "provider_content_fingerprint": "68af647f0c061e258fc5dbf70f7dbfa97326f7d044f4660485ce3642765086c4",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Acropora palmata",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=288227",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Orbicella annularis",
+      "aphia_id": 758260,
+      "authorship": "(Ellis & Solander, 1786)",
+      "group": "CNIDARIANS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1267",
+          "rank": "Phylum",
+          "scientific_name": "Cnidaria"
+        },
+        {
+          "aphia_id": "1292",
+          "rank": "Subphylum",
+          "scientific_name": "Anthozoa"
+        },
+        {
+          "aphia_id": "1340",
+          "rank": "Class",
+          "scientific_name": "Hexacorallia"
+        },
+        {
+          "aphia_id": "1363",
+          "rank": "Order",
+          "scientific_name": "Scleractinia"
+        },
+        {
+          "aphia_id": "1517259",
+          "rank": "Suborder",
+          "scientific_name": "Vacatina"
+        },
+        {
+          "aphia_id": "1579843",
+          "rank": "Family",
+          "scientific_name": "Merulinidae"
+        },
+        {
+          "aphia_id": "758259",
+          "rank": "Genus",
+          "scientific_name": "Orbicella"
+        },
+        {
+          "aphia_id": "758260",
+          "rank": "Species",
+          "scientific_name": "Orbicella annularis"
+        }
+      ],
+      "parent": {
+        "aphia_id": "758259",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\orbicella-annularis-758260-529664afd8df.json",
+      "provider_artifact_sha256": "f64c687551d21376fe48de1cfb5ce43e08f10c0b013ddb5a4f09ac6d36c888d6",
+      "provider_content_fingerprint": "529664afd8df8edb4dda09225c9ba4861ae93fcf1d01b58f7f1f77de58c4eff8",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Orbicella annularis",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=758260",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Cassiopea xamachana",
+      "aphia_id": 287172,
+      "authorship": "Bigelow, 1892",
+      "group": "CNIDARIANS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1267",
+          "rank": "Phylum",
+          "scientific_name": "Cnidaria"
+        },
+        {
+          "aphia_id": "1740301",
+          "rank": "Subphylum",
+          "scientific_name": "Medusozoa"
+        },
+        {
+          "aphia_id": "135220",
+          "rank": "Class",
+          "scientific_name": "Scyphozoa"
+        },
+        {
+          "aphia_id": "394976",
+          "rank": "Subclass",
+          "scientific_name": "Discomedusae"
+        },
+        {
+          "aphia_id": "135224",
+          "rank": "Order",
+          "scientific_name": "Rhizostomeae"
+        },
+        {
+          "aphia_id": "411574",
+          "rank": "Suborder",
+          "scientific_name": "Kolpophorae"
+        },
+        {
+          "aphia_id": "1393205",
+          "rank": "Infraorder",
+          "scientific_name": "Kampylomyaria"
+        },
+        {
+          "aphia_id": "135234",
+          "rank": "Family",
+          "scientific_name": "Cassiopeidae"
+        },
+        {
+          "aphia_id": "135253",
+          "rank": "Genus",
+          "scientific_name": "Cassiopea"
+        },
+        {
+          "aphia_id": "287172",
+          "rank": "Species",
+          "scientific_name": "Cassiopea xamachana"
+        }
+      ],
+      "parent": {
+        "aphia_id": "135253",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\cassiopea-xamachana-287172-cf5eff37dd24.json",
+      "provider_artifact_sha256": "c0873c29a9a0ebb91d6437b589316477c935f9e0a4db836fb95cefad99028550",
+      "provider_content_fingerprint": "cf5eff37dd2437ad6bb085d76d219dd890f00833ff216c16876f21ab61fa4cc1",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Cassiopea xamachana",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=287172",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Diploria labyrinthiformis",
+      "aphia_id": 289826,
+      "authorship": "(Linnaeus, 1758)",
+      "group": "CNIDARIANS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1267",
+          "rank": "Phylum",
+          "scientific_name": "Cnidaria"
+        },
+        {
+          "aphia_id": "1292",
+          "rank": "Subphylum",
+          "scientific_name": "Anthozoa"
+        },
+        {
+          "aphia_id": "1340",
+          "rank": "Class",
+          "scientific_name": "Hexacorallia"
+        },
+        {
+          "aphia_id": "1363",
+          "rank": "Order",
+          "scientific_name": "Scleractinia"
+        },
+        {
+          "aphia_id": "1517259",
+          "rank": "Suborder",
+          "scientific_name": "Vacatina"
+        },
+        {
+          "aphia_id": "196099",
+          "rank": "Family",
+          "scientific_name": "Faviidae"
+        },
+        {
+          "aphia_id": "718680",
+          "rank": "Subfamily",
+          "scientific_name": "Faviinae"
+        },
+        {
+          "aphia_id": "267392",
+          "rank": "Genus",
+          "scientific_name": "Diploria"
+        },
+        {
+          "aphia_id": "289826",
+          "rank": "Species",
+          "scientific_name": "Diploria labyrinthiformis"
+        }
+      ],
+      "parent": {
+        "aphia_id": "267392",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\diploria-labyrinthiformis-289826-19cdf63c0267.json",
+      "provider_artifact_sha256": "426796b0083293e93344a8fcab56c9b6933c710b3704eee0e9186150c444932b",
+      "provider_content_fingerprint": "19cdf63c02676545f1c9bb70a23678bf2478988482ee6b400042c57c28f46a7c",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Diploria labyrinthiformis",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=289826",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Diadema antillarum",
+      "aphia_id": 124332,
+      "authorship": "(Philippi, 1845)",
+      "group": "ECHINODERMS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1806",
+          "rank": "Phylum",
+          "scientific_name": "Echinodermata"
+        },
+        {
+          "aphia_id": "148744",
+          "rank": "Subphylum",
+          "scientific_name": "Echinozoa"
+        },
+        {
+          "aphia_id": "123082",
+          "rank": "Class",
+          "scientific_name": "Echinoidea"
+        },
+        {
+          "aphia_id": "149854",
+          "rank": "Subclass",
+          "scientific_name": "Euechinoidea"
+        },
+        {
+          "aphia_id": "510502",
+          "rank": "Infraclass",
+          "scientific_name": "Aulodonta"
+        },
+        {
+          "aphia_id": "152528",
+          "rank": "Superorder",
+          "scientific_name": "Diadematacea"
+        },
+        {
+          "aphia_id": "510522",
+          "rank": "Order",
+          "scientific_name": "Diadematoida"
+        },
+        {
+          "aphia_id": "123163",
+          "rank": "Family",
+          "scientific_name": "Diadematidae"
+        },
+        {
+          "aphia_id": "123395",
+          "rank": "Genus",
+          "scientific_name": "Diadema"
+        },
+        {
+          "aphia_id": "124332",
+          "rank": "Species",
+          "scientific_name": "Diadema antillarum"
+        }
+      ],
+      "parent": {
+        "aphia_id": "123395",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\diadema-antillarum-124332-d5046ead9769.json",
+      "provider_artifact_sha256": "b02e394655db37c33bae0944f061970a357b2c76979614fb3d415fd074324444",
+      "provider_content_fingerprint": "d5046ead976960790281e5abc8d12705b8c5067437bb392797f9dce5f8b1a1c3",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Diadema antillarum",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=124332",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Holothuria (Halodeima) mexicana",
+      "aphia_id": 732363,
+      "authorship": "Ludwig, 1875",
+      "group": "ECHINODERMS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1806",
+          "rank": "Phylum",
+          "scientific_name": "Echinodermata"
+        },
+        {
+          "aphia_id": "148744",
+          "rank": "Subphylum",
+          "scientific_name": "Echinozoa"
+        },
+        {
+          "aphia_id": "123083",
+          "rank": "Class",
+          "scientific_name": "Holothuroidea"
+        },
+        {
+          "aphia_id": "1393249",
+          "rank": "Subclass",
+          "scientific_name": "Actinopoda"
+        },
+        {
+          "aphia_id": "1036233",
+          "rank": "Order",
+          "scientific_name": "Holothuriida"
+        },
+        {
+          "aphia_id": "731943",
+          "rank": "Family",
+          "scientific_name": "Holothuriidae"
+        },
+        {
+          "aphia_id": "123456",
+          "rank": "Genus",
+          "scientific_name": "Holothuria"
+        },
+        {
+          "aphia_id": "732363",
+          "rank": "Species",
+          "scientific_name": "Holothuria mexicana"
+        }
+      ],
+      "parent": {
+        "aphia_id": "123456",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\holothuria-mexicana-732363-f8589fed198d.json",
+      "provider_artifact_sha256": "4f53ca35cfe8fa55c17bb00cf7300658a17941f679dcabd27e53986dd8a892e7",
+      "provider_content_fingerprint": "f8589fed198dd28885c1d1b83dfe982661954871cbcb305001cd414d091a1482",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Holothuria mexicana",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=732363",
+      "status": "SYNONYM"
+    },
+    {
+      "accepted_scientific_name": "Oreaster reticulatus",
+      "aphia_id": 178210,
+      "authorship": "(Linnaeus, 1758)",
+      "group": "ECHINODERMS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1806",
+          "rank": "Phylum",
+          "scientific_name": "Echinodermata"
+        },
+        {
+          "aphia_id": "148743",
+          "rank": "Subphylum",
+          "scientific_name": "Asterozoa"
+        },
+        {
+          "aphia_id": "123080",
+          "rank": "Class",
+          "scientific_name": "Asteroidea"
+        },
+        {
+          "aphia_id": "1562575",
+          "rank": "Subclass",
+          "scientific_name": "Ambuloasteroidea"
+        },
+        {
+          "aphia_id": "1562576",
+          "rank": "Infraclass",
+          "scientific_name": "Neoasteroidea"
+        },
+        {
+          "aphia_id": "582528",
+          "rank": "Superorder",
+          "scientific_name": "Valvatacea"
+        },
+        {
+          "aphia_id": "123090",
+          "rank": "Order",
+          "scientific_name": "Valvatida"
+        },
+        {
+          "aphia_id": "149871",
+          "rank": "Family",
+          "scientific_name": "Oreasteridae"
+        },
+        {
+          "aphia_id": "178209",
+          "rank": "Genus",
+          "scientific_name": "Oreaster"
+        },
+        {
+          "aphia_id": "178210",
+          "rank": "Species",
+          "scientific_name": "Oreaster reticulatus"
+        }
+      ],
+      "parent": {
+        "aphia_id": "178209",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\oreaster-reticulatus-178210-5806b3a67ad9.json",
+      "provider_artifact_sha256": "bd9d7811712c69e74cadaac8916fdb0608a48c94f68a7660a8ba48091612c402",
+      "provider_content_fingerprint": "5806b3a67ad9e30a37e3c7db569bf58e5d580b57621ab2825ff025f4f47af00d",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Oreaster reticulatus",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=178210",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Echinometra lucunter",
+      "aphia_id": 213380,
+      "authorship": "(Linnaeus, 1758)",
+      "group": "ECHINODERMS",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "2",
+          "rank": "Kingdom",
+          "scientific_name": "Animalia"
+        },
+        {
+          "aphia_id": "1806",
+          "rank": "Phylum",
+          "scientific_name": "Echinodermata"
+        },
+        {
+          "aphia_id": "148744",
+          "rank": "Subphylum",
+          "scientific_name": "Echinozoa"
+        },
+        {
+          "aphia_id": "123082",
+          "rank": "Class",
+          "scientific_name": "Echinoidea"
+        },
+        {
+          "aphia_id": "149854",
+          "rank": "Subclass",
+          "scientific_name": "Euechinoidea"
+        },
+        {
+          "aphia_id": "510517",
+          "rank": "Infraclass",
+          "scientific_name": "Carinacea"
+        },
+        {
+          "aphia_id": "149855",
+          "rank": "Subterclass",
+          "scientific_name": "Echinacea"
+        },
+        {
+          "aphia_id": "510518",
+          "rank": "Order",
+          "scientific_name": "Camarodonta"
+        },
+        {
+          "aphia_id": "510534",
+          "rank": "Infraorder",
+          "scientific_name": "Echinidea"
+        },
+        {
+          "aphia_id": "510604",
+          "rank": "Superfamily",
+          "scientific_name": "Odontophora"
+        },
+        {
+          "aphia_id": "179653",
+          "rank": "Family",
+          "scientific_name": "Echinometridae"
+        },
+        {
+          "aphia_id": "179659",
+          "rank": "Genus",
+          "scientific_name": "Echinometra"
+        },
+        {
+          "aphia_id": "213380",
+          "rank": "Species",
+          "scientific_name": "Echinometra lucunter"
+        }
+      ],
+      "parent": {
+        "aphia_id": "179659",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\echinometra-lucunter-213380-4999834ef864.json",
+      "provider_artifact_sha256": "31b74635640a51f6f8fb916115a9e567e4cee0f71807d5cfbbb38eb04c6d3f16",
+      "provider_content_fingerprint": "4999834ef8646ba79d0e0fa8cc402e7b9be2ac2406a943628ede19748d470d44",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Echinometra lucunter",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=213380",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Caulerpa taxifolia",
+      "aphia_id": 144476,
+      "authorship": "(M.Vahl) C.Agardh, 1817",
+      "group": "ALGAE_SEAWEED",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "3",
+          "rank": "Kingdom",
+          "scientific_name": "Plantae"
+        },
+        {
+          "aphia_id": "368663",
+          "rank": "Subkingdom",
+          "scientific_name": "Viridiplantae"
+        },
+        {
+          "aphia_id": "801",
+          "rank": "Phylum (Division)",
+          "scientific_name": "Chlorophyta"
+        },
+        {
+          "aphia_id": "1304953",
+          "rank": "Subphylum (Subdivision)",
+          "scientific_name": "Chlorophytina"
+        },
+        {
+          "aphia_id": "146216",
+          "rank": "Class",
+          "scientific_name": "Ulvophyceae"
+        },
+        {
+          "aphia_id": "808",
+          "rank": "Order",
+          "scientific_name": "Bryopsidales"
+        },
+        {
+          "aphia_id": "143668",
+          "rank": "Family",
+          "scientific_name": "Caulerpaceae"
+        },
+        {
+          "aphia_id": "143816",
+          "rank": "Genus",
+          "scientific_name": "Caulerpa"
+        },
+        {
+          "aphia_id": "144476",
+          "rank": "Species",
+          "scientific_name": "Caulerpa taxifolia"
+        }
+      ],
+      "parent": {
+        "aphia_id": "143816",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\caulerpa-taxifolia-144476-4be730d3df13.json",
+      "provider_artifact_sha256": "35c3ccee65a99ba17f74e497eb09b8e4cdd6b9e729d20ac5ef73b4cc52e37a60",
+      "provider_content_fingerprint": "4be730d3df13809e09809284d67161cd5af9cb8cb0543c134c6dd3502e8c21fc",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Caulerpa taxifolia",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=144476",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Halimeda opuntia",
+      "aphia_id": 144482,
+      "authorship": "(Linnaeus) J.V.Lamouroux, 1816",
+      "group": "ALGAE_SEAWEED",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "3",
+          "rank": "Kingdom",
+          "scientific_name": "Plantae"
+        },
+        {
+          "aphia_id": "368663",
+          "rank": "Subkingdom",
+          "scientific_name": "Viridiplantae"
+        },
+        {
+          "aphia_id": "801",
+          "rank": "Phylum (Division)",
+          "scientific_name": "Chlorophyta"
+        },
+        {
+          "aphia_id": "1304953",
+          "rank": "Subphylum (Subdivision)",
+          "scientific_name": "Chlorophytina"
+        },
+        {
+          "aphia_id": "146216",
+          "rank": "Class",
+          "scientific_name": "Ulvophyceae"
+        },
+        {
+          "aphia_id": "808",
+          "rank": "Order",
+          "scientific_name": "Bryopsidales"
+        },
+        {
+          "aphia_id": "1649443",
+          "rank": "Suborder",
+          "scientific_name": "Halimedineae"
+        },
+        {
+          "aphia_id": "368715",
+          "rank": "Family",
+          "scientific_name": "Halimedaceae"
+        },
+        {
+          "aphia_id": "1649447",
+          "rank": "Tribe",
+          "scientific_name": "Halimedeae"
+        },
+        {
+          "aphia_id": "143820",
+          "rank": "Genus",
+          "scientific_name": "Halimeda"
+        },
+        {
+          "aphia_id": "144482",
+          "rank": "Species",
+          "scientific_name": "Halimeda opuntia"
+        }
+      ],
+      "parent": {
+        "aphia_id": "143820",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\halimeda-opuntia-144482-2c0bd62c1274.json",
+      "provider_artifact_sha256": "605fee1473800b7ef4477b8936e716e7a8e6f19e88e08f2d3029559d2360be42",
+      "provider_content_fingerprint": "2c0bd62c12740fc650b818d6a2e3203bcaf1f5db8cdf5ad257df5fb32b26db7a",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Halimeda opuntia",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=144482",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Sargassum natans",
+      "aphia_id": 145560,
+      "authorship": "(Linnaeus) Gaillon, 1828",
+      "group": "ALGAE_SEAWEED",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "7",
+          "rank": "Kingdom",
+          "scientific_name": "Chromista"
+        },
+        {
+          "aphia_id": "582419",
+          "rank": "Subkingdom",
+          "scientific_name": "Harosa"
+        },
+        {
+          "aphia_id": "368898",
+          "rank": "Infrakingdom",
+          "scientific_name": "Heterokonta"
+        },
+        {
+          "aphia_id": "345465",
+          "rank": "Phylum",
+          "scientific_name": "Ochrophyta"
+        },
+        {
+          "aphia_id": "830",
+          "rank": "Class",
+          "scientific_name": "Phaeophyceae"
+        },
+        {
+          "aphia_id": "1304856",
+          "rank": "Subclass",
+          "scientific_name": "Fucophycidae"
+        },
+        {
+          "aphia_id": "844",
+          "rank": "Order",
+          "scientific_name": "Fucales"
+        },
+        {
+          "aphia_id": "143725",
+          "rank": "Family",
+          "scientific_name": "Sargassaceae"
+        },
+        {
+          "aphia_id": "144132",
+          "rank": "Genus",
+          "scientific_name": "Sargassum"
+        },
+        {
+          "aphia_id": "145560",
+          "rank": "Species",
+          "scientific_name": "Sargassum natans"
+        }
+      ],
+      "parent": {
+        "aphia_id": "144132",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\sargassum-natans-145560-dde2f469807d.json",
+      "provider_artifact_sha256": "7f2ae2ddc529285b0a0ccef9ad53413e75db17080d73b71cb145b2a594c7a3e8",
+      "provider_content_fingerprint": "dde2f469807df6646614e4da07b2aa075a20624a26b1376107cc98c8827d1fd9",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Sargassum natans",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=145560",
+      "status": "ACCEPTED"
+    },
+    {
+      "accepted_scientific_name": "Gracilaria tikvahiae",
+      "aphia_id": 157354,
+      "authorship": "McLachlan, 1979",
+      "group": "ALGAE_SEAWEED",
+      "lineage": [
+        {
+          "aphia_id": "1",
+          "rank": "Superdomain",
+          "scientific_name": "Biota"
+        },
+        {
+          "aphia_id": "3",
+          "rank": "Kingdom",
+          "scientific_name": "Plantae"
+        },
+        {
+          "aphia_id": "368662",
+          "rank": "Subkingdom",
+          "scientific_name": "Biliphyta"
+        },
+        {
+          "aphia_id": "852",
+          "rank": "Phylum (Division)",
+          "scientific_name": "Rhodophyta"
+        },
+        {
+          "aphia_id": "493826",
+          "rank": "Subphylum (Subdivision)",
+          "scientific_name": "Eurhodophytina"
+        },
+        {
+          "aphia_id": "368670",
+          "rank": "Class",
+          "scientific_name": "Florideophyceae"
+        },
+        {
+          "aphia_id": "196243",
+          "rank": "Subclass",
+          "scientific_name": "Rhodymeniophycidae"
+        },
+        {
+          "aphia_id": "876",
+          "rank": "Order",
+          "scientific_name": "Gracilariales"
+        },
+        {
+          "aphia_id": "143748",
+          "rank": "Family",
+          "scientific_name": "Gracilariaceae"
+        },
+        {
+          "aphia_id": "1309270",
+          "rank": "Subfamily",
+          "scientific_name": "Gracilarioideae"
+        },
+        {
+          "aphia_id": "1309271",
+          "rank": "Tribe",
+          "scientific_name": "Gracilarieae"
+        },
+        {
+          "aphia_id": "144188",
+          "rank": "Genus",
+          "scientific_name": "Gracilaria"
+        },
+        {
+          "aphia_id": "157354",
+          "rank": "Species",
+          "scientific_name": "Gracilaria tikvahiae"
+        }
+      ],
+      "parent": {
+        "aphia_id": "144188",
+        "scientific_name": null
+      },
+      "provider_artifact": "artifacts\\taxonomy\\worms\\gracilaria-tikvahiae-157354-aaf12c528ada.json",
+      "provider_artifact_sha256": "d3e37b3441841a29d58c24166594b24cffeb88870dd7964f491c1650c9456acf",
+      "provider_content_fingerprint": "aaf12c528adaff84c3687e21f5156182316ce60dc3ba7013bb8c8c9519f6e1c5",
+      "rank": "SPECIES",
+      "review_state": "READY_FOR_REVIEW",
+      "scientific_name": "Gracilaria tikvahiae",
+      "source_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=157354",
+      "status": "ACCEPTED"
+    }
+  ],
+  "limitations": [
+    "Human approval and apply are required.",
+    "No occurrence, ecological status, media eligibility, model, or anomaly state is implied."
+  ],
+  "manifest_fingerprint": "10bc63572d7d1f55a937c974a8d623dee48a80ffc71bc9f405b630dfa27eaa87",
+  "manifest_id": "caribbean-buildathon-multitaxon",
+  "manifest_version": "1",
+  "purpose": "Small six-group Caribbean regional taxonomy candidate set for explicit human review",
+  "semantics": "Regional catalog candidacy does not establish jurisdiction presence or ecological status."
+}

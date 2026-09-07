@@ -1,0 +1,104 @@
+{
+  "canonical_content_fingerprint": "9c4d5d363d4be14635a1b65781c0ff4703c01977d3205422e43e5c5a4ecac879",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=341954",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 51,
+          "child": {
+            "AphiaID": 11707,
+            "child": {
+              "AphiaID": 11709,
+              "child": {
+                "AphiaID": 325343,
+                "child": {
+                  "AphiaID": 11718,
+                  "child": {
+                    "AphiaID": 11733,
+                    "child": {
+                      "AphiaID": 14672,
+                      "child": {
+                        "AphiaID": 11782,
+                        "child": {
+                          "AphiaID": 138268,
+                          "child": {
+                            "AphiaID": 341954,
+                            "child": null,
+                            "rank": "Species",
+                            "scientificname": "Octopus briareus"
+                          },
+                          "rank": "Genus",
+                          "scientificname": "Octopus"
+                        },
+                        "rank": "Family",
+                        "scientificname": "Octopodidae"
+                      },
+                      "rank": "Superfamily",
+                      "scientificname": "Octopodoidea"
+                    },
+                    "rank": "Suborder",
+                    "scientificname": "Incirrata"
+                  },
+                  "rank": "Order",
+                  "scientificname": "Octopoda"
+                },
+                "rank": "Superorder",
+                "scientificname": "Octopodiformes"
+              },
+              "rank": "Subclass",
+              "scientificname": "Coleoidea"
+            },
+            "rank": "Class",
+            "scientificname": "Cephalopoda"
+          },
+          "rank": "Phylum",
+          "scientificname": "Mollusca"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 341954,
+      "authority": "G. C. Robson, 1929",
+      "citation": "MolluscaBase eds. (2026). MolluscaBase. Octopus briareus G. C. Robson, 1929. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=341954 on 2026-09-04",
+      "class": "Cephalopoda",
+      "family": "Octopodidae",
+      "genus": "Octopus",
+      "isBrackish": null,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:341954",
+      "match_type": "exact",
+      "modified": "2022-08-27T09:38:30.867Z",
+      "order": "Octopoda",
+      "originalNameUsageID": 341954,
+      "parentNameUsageID": 138268,
+      "phylum": "Mollusca",
+      "rank": "Species",
+      "scientificname": "Octopus briareus",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=341954",
+      "valid_AphiaID": 341954,
+      "valid_authority": "G. C. Robson, 1929",
+      "valid_name": "Octopus briareus"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "341954",
+    "scientific_name": "Octopus briareus"
+  },
+  "retrieved_at": "2026-09-04T19:04:14.793241+00:00"
+}

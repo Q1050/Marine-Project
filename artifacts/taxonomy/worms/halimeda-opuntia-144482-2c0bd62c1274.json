@@ -1,0 +1,104 @@
+{
+  "canonical_content_fingerprint": "2c0bd62c12740fc650b818d6a2e3203bcaf1f5db8cdf5ad257df5fb32b26db7a",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=144482",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 3,
+        "child": {
+          "AphiaID": 368663,
+          "child": {
+            "AphiaID": 801,
+            "child": {
+              "AphiaID": 1304953,
+              "child": {
+                "AphiaID": 146216,
+                "child": {
+                  "AphiaID": 808,
+                  "child": {
+                    "AphiaID": 1649443,
+                    "child": {
+                      "AphiaID": 368715,
+                      "child": {
+                        "AphiaID": 1649447,
+                        "child": {
+                          "AphiaID": 143820,
+                          "child": {
+                            "AphiaID": 144482,
+                            "child": null,
+                            "rank": "Species",
+                            "scientificname": "Halimeda opuntia"
+                          },
+                          "rank": "Genus",
+                          "scientificname": "Halimeda"
+                        },
+                        "rank": "Tribe",
+                        "scientificname": "Halimedeae"
+                      },
+                      "rank": "Family",
+                      "scientificname": "Halimedaceae"
+                    },
+                    "rank": "Suborder",
+                    "scientificname": "Halimedineae"
+                  },
+                  "rank": "Order",
+                  "scientificname": "Bryopsidales"
+                },
+                "rank": "Class",
+                "scientificname": "Ulvophyceae"
+              },
+              "rank": "Subphylum (Subdivision)",
+              "scientificname": "Chlorophytina"
+            },
+            "rank": "Phylum (Division)",
+            "scientificname": "Chlorophyta"
+          },
+          "rank": "Subkingdom",
+          "scientificname": "Viridiplantae"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Plantae"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 144482,
+      "authority": "(Linnaeus) J.V.Lamouroux, 1816",
+      "citation": "Guiry, M.D. & Guiry, G.M. (2026). AlgaeBase. World-wide electronic publication, National University of Ireland, Galway (taxonomic information republished from AlgaeBase with permission of M.D. Guiry). Halimeda opuntia (Linnaeus) J.V.Lamouroux, 1816. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=144482 on 2026-09-04",
+      "class": "Ulvophyceae",
+      "family": "Halimedaceae",
+      "genus": "Halimeda",
+      "isBrackish": null,
+      "isExtinct": null,
+      "isFreshwater": null,
+      "isMarine": 1,
+      "isTerrestrial": null,
+      "kingdom": "Plantae",
+      "lsid": "urn:lsid:marinespecies.org:taxname:144482",
+      "match_type": "exact",
+      "modified": "2015-06-26T12:00:51.270Z",
+      "order": "Bryopsidales",
+      "originalNameUsageID": 497544,
+      "parentNameUsageID": 143820,
+      "phylum": "Chlorophyta",
+      "rank": "Species",
+      "scientificname": "Halimeda opuntia",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=144482",
+      "valid_AphiaID": 144482,
+      "valid_authority": "(Linnaeus) J.V.Lamouroux, 1816",
+      "valid_name": "Halimeda opuntia"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "144482",
+    "scientific_name": "Halimeda opuntia"
+  },
+  "retrieved_at": "2026-09-04T19:04:33.183499+00:00"
+}

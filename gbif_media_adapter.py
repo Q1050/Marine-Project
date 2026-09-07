@@ -1,9 +1,9 @@
 """Bounded GBIF occurrence-media adapter with item-level license handling."""
 from __future__ import annotations
 import hashlib,time
-from dataclasses import dataclass
 from datetime import datetime
 import requests
+from media_provider_contract import MediaProviderManifest
 
 GBIF_API="https://api.gbif.org/v1"
 LICENSES={
@@ -20,10 +20,6 @@ def parse_event_date(value):
  if not value:return None
  try:return datetime.fromisoformat(str(value).replace("Z","+00:00"))
  except (TypeError,ValueError):return None
-
-@dataclass(frozen=True)
-class GBIFMediaManifest:
- query:dict;retrieved:int;end_of_records:bool;provider_version:str;records:tuple
 
 class GBIFMediaAdapter:
  def __init__(self,session=None,timeout=25,max_bytes=15_000_000,delay_seconds=.2,retries=3):self.http=session or requests.Session();self.timeout=timeout;self.max_bytes=max_bytes;self.delay=delay_seconds;self.retries=retries
@@ -49,7 +45,7 @@ class GBIFMediaAdapter:
      records.append({"provider_asset_identifier":hashlib.sha256(identifier.encode()).hexdigest(),"provider_occurrence_id":str(occurrence.get("key")),"source_event_identifier":occurrence.get("eventID") or occurrence.get("occurrenceID") or str(occurrence.get("key")),"specimen_identifier":occurrence.get("catalogNumber"),"source_reference":media.get("references") or f"https://www.gbif.org/occurrence/{occurrence.get('key')}","image_url":identifier,"creator":media.get("creator") or occurrence.get("recordedBy"),"license_expression":media.get("license") or "UNRESOLVED","attribution_text":f"{media.get('creator') or occurrence.get('recordedBy') or 'Creator unavailable'}; {occurrence.get('publishingOrgKey') or occurrence.get('institutionCode') or 'GBIF data publisher'}; {media.get('license') or 'license unresolved'}","license":license_info,"media_type":media.get("format") if str(media.get("format") or "").startswith("image/") else "image/jpeg","provider_taxon_key":occurrence.get("taxonKey"),"provider_scientific_name":occurrence.get("scientificName"),"taxonomic_linkage":"EXACT_GOVERNED_TAXON","locality":occurrence.get("locality"),"event_date":parse_event_date(occurrence.get("eventDate")),"life_stage":occurrence.get("lifeStage"),"biological_context":"PRESERVED_SPECIMEN" if occurrence.get("basisOfRecord")=="PRESERVED_SPECIMEN" else "IN_SITU_OBSERVATION","source_metadata":{"gbif_key":occurrence.get("key"),"dataset_key":occurrence.get("datasetKey"),"publishing_org_key":occurrence.get("publishingOrgKey"),"basis_of_record":occurrence.get("basisOfRecord"),"country_code":occurrence.get("countryCode")}});break
     if len(records)>=limit:break
    time.sleep(self.delay)
-  return GBIFMediaManifest({"taxon_key":taxon_key,"scientific_name":scientific_name,"limit":limit,"page_size":page_size},len(records),end,"GBIF_API_V1",tuple(records))
+  return MediaProviderManifest("GBIF",{"taxon_key":taxon_key,"scientific_name":scientific_name,"limit":limit,"page_size":page_size},len(records),end,"GBIF_API_V1",tuple(records))
  def download(self,url):
   response=self._get(url,stream=True);content_type=response.headers.get("content-type","").split(";")[0].lower();declared=int(response.headers.get("content-length") or 0)
   if declared>self.max_bytes:raise ValueError("Image exceeds configured size limit")

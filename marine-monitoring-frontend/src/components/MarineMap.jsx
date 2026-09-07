@@ -12,6 +12,7 @@ import {
 import "leaflet/dist/leaflet.css";
 
 import L from "leaflet";
+import { BASEMAP } from "../config/basemap";
 
 function createMarkerIcon(className, symbol) {
   return L.divIcon({
@@ -167,8 +168,8 @@ export default function MarineMap({
     >
       <ZoomControl position="bottomright" />
       <TileLayer
-        attribution="&copy; OpenStreetMap contributors &copy; CARTO"
-        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+        attribution={BASEMAP.attribution}
+        url={BASEMAP.url}
       />
 
       {visibleLayers.suitability && suitabilityCells.map((cell, index) => {

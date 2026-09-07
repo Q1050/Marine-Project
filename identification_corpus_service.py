@@ -9,10 +9,12 @@ from sqlalchemy import func, or_
 from jurisdiction_boundary_registry import canonical_json
 from models import (ArtifactReference, IdentificationCorpus, IdentificationCorpusInclusion,
     IdentificationMediaAcquisitionRun, IdentificationMediaAsset, IdentificationMediaSource,
-    IdentificationMediaReviewEvent, IdentificationBenchmarkRun, RegionalTaxonRegistry, Species)
+    IdentificationMediaReviewEvent, IdentificationBenchmarkRun, IdentificationCorpusPlan,
+    IdentificationCorpusPlanTaxon, RegionalTaxonRegistry, Species)
 
 SOURCE_STATES={"READY_FOR_REVIEW":{"APPROVED","REJECTED"},"APPROVED":{"ACTIVE","REJECTED"},"ACTIVE":{"DEACTIVATED","SUPERSEDED"},"DEACTIVATED":{"ACTIVE","SUPERSEDED"}}
-TRAINING_LICENSES={"TRAINING_ALLOWED","ATTRIBUTION_REQUIRED"}
+TRAINING_LICENSES={"PUBLIC_DOMAIN","TRAINING_ALLOWED","ATTRIBUTION_REQUIRED"}
+TAXONOMIC_GROUPS={"fish","algae/seaweed","crustaceans","molluscs","cnidarians","echinoderms","other"}
 SUPPORTED_TYPES={"image/jpeg":"JPEG","image/png":"PNG","image/webp":"WEBP"}
 PERCEPTUAL_ALGORITHM="DHASH-64";PERCEPTUAL_VERSION="1";PERCEPTUAL_REVIEW_DISTANCE=6
 
@@ -123,15 +125,42 @@ class IdentificationCorpusService:
   meta.update({"perceptual_algorithm":PERCEPTUAL_ALGORITHM,"perceptual_version":PERCEPTUAL_VERSION,"nearest_perceptual_distance":distance,"review_threshold":PERCEPTUAL_REVIEW_DISTANCE})
   row=IdentificationMediaAsset(stable_asset_key=f"{source.registration_key}:{payload['provider_asset_identifier']}",taxon_id=taxon.id,media_source_id=source.id,provider_asset_identifier=payload["provider_asset_identifier"],source_reference=payload["source_reference"],creator=payload.get("creator"),license_expression=payload.get("license_expression","UNRESOLVED"),license_classification=license_class,attribution_text=payload.get("attribution_text") or "Attribution unresolved",media_type=payload["media_type"],artifact_reference_id=artifact.id if artifact else None,sha256=digest,width_px=meta.get("width_px"),height_px=meta.get("height_px"),size_bytes=len(data) if data is not None else payload.get("size_bytes"),acquired_at=datetime.now(timezone.utc) if data is not None else None,source_metadata_json=canonical_json(payload.get("source_metadata") or {}),life_stage=payload.get("life_stage"),sex=payload.get("sex"),view_orientation=payload.get("view_orientation"),biological_context=payload.get("biological_context"),locality=payload.get("locality"),event_date=payload.get("event_date"),source_event_identifier=payload.get("source_event_identifier"),specimen_identifier=payload.get("specimen_identifier"),taxonomic_linkage=payload.get("taxonomic_linkage","EXACT_GOVERNED_TAXON"),taxonomic_confidence_source=payload.get("taxonomic_confidence_source"),quality_state=quality,quality_metadata_json=canonical_json(meta),exact_duplicate_of_id=duplicate.id if duplicate else None,perceptual_hash=phash,perceptual_hash_algorithm=f"{PERCEPTUAL_ALGORITHM}:{PERCEPTUAL_VERSION}",perceptual_group=f"phash:{likely.perceptual_hash}" if likely else (f"phash:{phash}" if phash else None),duplicate_state=duplicate_state,review_state=review,exclusion_reason="License or quality blocks training review" if review=="EXCLUDED" else None,provenance_fingerprint=fingerprint(identity))
   self.session.add(row);self.session.commit();return row
+ def retry_acquisition(self,row,data=None,media_type=None,error=None,response_metadata=None,quality_configuration=None):
+  if row.review_state=="APPROVED":raise ValueError("Approved assets cannot be replaced by acquisition retry")
+  row.acquisition_retry_count=(row.acquisition_retry_count or 0)+1;row.acquisition_response_json=canonical_json(response_metadata or {})
+  if error or data is None:
+   row.acquisition_last_error=str(error or "No media bytes returned");self.session.commit();return row
+  quality,meta=MediaQualityValidator(quality_configuration).validate(data,media_type or row.media_type)
+  if quality!="VALID":
+   row.quality_state=quality;row.quality_metadata_json=canonical_json(meta);row.acquisition_last_error=f"Technical validation failed: {quality}";self.session.commit();return row
+  digest=hashlib.sha256(data).hexdigest();duplicate=self.session.query(IdentificationMediaAsset).filter(IdentificationMediaAsset.id!=row.id,IdentificationMediaAsset.sha256==digest).first();phash=perceptual_hash(data);likely=None;distance=None
+  if not duplicate:
+   for candidate in self.session.query(IdentificationMediaAsset).filter(IdentificationMediaAsset.id!=row.id,IdentificationMediaAsset.perceptual_hash.is_not(None)).all():
+    current=perceptual_distance(phash,candidate.perceptual_hash)
+    if distance is None or current<distance:distance=current;likely=candidate
+   if distance is None or distance>PERCEPTUAL_REVIEW_DISTANCE:likely=None
+  source=self.session.get(IdentificationMediaSource,row.media_source_id);stored=self.store.put(data,f"identification/{row.taxon_id}") if self.store else None
+  if stored:
+   artifact=self.session.query(ArtifactReference).filter_by(sha256=stored["sha256"]).one_or_none()
+   if not artifact:artifact=ArtifactReference(local_path=stored["logical_key"],sha256=stored["sha256"],media_type=media_type or row.media_type,artifact_type="IDENTIFICATION_MEDIA",size_bytes=stored["size_bytes"],provider=source.scientific_provider,source_reference=row.source_reference);self.session.add(artifact);self.session.flush()
+   row.artifact_reference_id=artifact.id
+  row.media_type=media_type or row.media_type;row.sha256=digest;row.width_px=meta.get("width_px");row.height_px=meta.get("height_px");row.size_bytes=len(data);row.acquired_at=datetime.now(timezone.utc);row.quality_state="VALID";meta.update({"perceptual_algorithm":PERCEPTUAL_ALGORITHM,"perceptual_version":PERCEPTUAL_VERSION,"nearest_perceptual_distance":distance,"review_threshold":PERCEPTUAL_REVIEW_DISTANCE});row.quality_metadata_json=canonical_json(meta);row.perceptual_hash=phash;row.perceptual_hash_algorithm=f"{PERCEPTUAL_ALGORITHM}:{PERCEPTUAL_VERSION}";row.exact_duplicate_of_id=duplicate.id if duplicate else None;row.duplicate_state="EXACT_DUPLICATE" if duplicate else "LIKELY_DUPLICATE" if likely else "DISTINCT";row.perceptual_group=f"phash:{likely.perceptual_hash}" if likely else f"phash:{phash}";row.acquisition_last_error=None
+  if row.license_classification in TRAINING_LICENSES:row.review_state="READY_FOR_REVIEW";row.exclusion_reason=None
+  self.session.commit();return row
  def review(self,row,decision,user_id,reference):
   if row.review_state not in {"READY_FOR_REVIEW","REVIEW_REQUIRED"}:raise ValueError("Asset is not reviewable")
   if decision=="APPROVED":
    if row.license_classification not in TRAINING_LICENSES:raise ValueError("License is not explicitly training eligible")
    if row.taxonomic_linkage not in {"EXACT_GOVERNED_TAXON","SYNONYM_TO_GOVERNED_TAXON"}:raise ValueError("Taxonomic linkage blocks approval")
    if row.quality_state!="VALID" or row.duplicate_state not in {"UNIQUE","DISTINCT"}:raise ValueError("Quality/duplicate state blocks approval")
-  elif decision!="EXCLUDED":raise ValueError("Decision must be APPROVED or EXCLUDED")
-  prior=row.review_state;row.review_state=decision;row.reviewed_by_user_id=user_id;row.review_reference=reference;row.reviewed_at=datetime.now(timezone.utc)
-  self.session.add(IdentificationMediaReviewEvent(media_asset_id=row.id,reviewer_user_id=user_id,action=decision,prior_review_state=prior,current_review_state=decision,reason=reference,license_state=row.license_classification,duplicate_state=row.duplicate_state,quality_state=row.quality_state));self.session.commit();return row
+  elif decision not in {"EXCLUDED","TAXONOMY_REVIEW_REQUIRED","DUPLICATE","NEEDS_REVIEW"}:raise ValueError("Unsupported review decision")
+  prior=row.review_state
+  if decision=="DUPLICATE":row.review_state="EXCLUDED";row.duplicate_state="CONFIRMED_DUPLICATE";row.exclusion_reason=reference
+  elif decision=="TAXONOMY_REVIEW_REQUIRED":row.review_state="TAXONOMY_REVIEW_REQUIRED"
+  elif decision=="NEEDS_REVIEW":row.review_state="REVIEW_REQUIRED"
+  else:row.review_state=decision;row.exclusion_reason=reference if decision=="EXCLUDED" else None
+  row.reviewed_by_user_id=user_id;row.review_reference=reference;row.reviewed_at=datetime.now(timezone.utc)
+  self.session.add(IdentificationMediaReviewEvent(media_asset_id=row.id,reviewer_user_id=user_id,action=decision,prior_review_state=prior,current_review_state=row.review_state,reason=reference,license_state=row.license_classification,duplicate_state=row.duplicate_state,quality_state=row.quality_state));self.session.commit();return row
  def transition_corpus(self,corpus,target,user_id,reference):
   allowed={"DRAFT":{"READY_FOR_REVIEW","REJECTED"},"READY_FOR_REVIEW":{"APPROVED","REJECTED"},"APPROVED":{"FROZEN","SUPERSEDED"},"FROZEN":{"SUPERSEDED"}}
   if target not in allowed.get(corpus.lifecycle_state,set()):raise ValueError("Invalid corpus lifecycle transition")
@@ -165,6 +194,16 @@ class IdentificationCorpusService:
    else:state="READY_FOR_CORPUS_PREPARATION";reason="Approved eligible assets exist; diversity still requires corpus review."
    items.append({"taxon_id":taxon.id,"scientific_name":taxon.scientific_name,"state":state,"reason":reason,"candidate_assets":len(rows),"approved_assets":len(approved),"training_eligible":len(eligible),"excluded":sum(r.review_state=="EXCLUDED" for r in rows),"duplicates":sum(r.duplicate_state not in {"UNIQUE","DISTINCT"} for r in rows),"unique_providers":len({r.media_source_id for r in rows}),"unique_events_or_specimens":len({r.source_event_identifier or r.specimen_identifier for r in rows if r.source_event_identifier or r.specimen_identifier}),"life_stages":dict(Counter(r.life_stage or "UNKNOWN" for r in rows)),"quality":dict(Counter(r.quality_state for r in rows))})
   return {"region_id":region_id,"page":page,"page_size":page_size,"total":total,"items":items,"semantics":"Regional identification support does not establish jurisdiction presence or ecology."}
+ def review_progress(self,region_id,taxon_id=None):
+  query=self.session.query(IdentificationMediaAsset,Species,IdentificationMediaSource).join(Species,Species.id==IdentificationMediaAsset.taxon_id).join(IdentificationMediaSource,IdentificationMediaSource.id==IdentificationMediaAsset.media_source_id).join(RegionalTaxonRegistry,RegionalTaxonRegistry.taxon_id==Species.id).filter(RegionalTaxonRegistry.region_id==region_id,RegionalTaxonRegistry.review_status=="APPROVED",RegionalTaxonRegistry.superseded_at.is_(None))
+  if taxon_id:query=query.filter(IdentificationMediaAsset.taxon_id==taxon_id)
+  grouped=defaultdict(list)
+  for asset,taxon,source in query.all():grouped[(taxon.id,taxon.scientific_name)].append((asset,source))
+  items=[]
+  for (identifier,name),rows in sorted(grouped.items(),key=lambda item:item[0][1]):
+   assets=[row[0] for row in rows];approved=[a for a in assets if a.review_state=="APPROVED"];events={a.source_event_identifier or a.specimen_identifier or f"asset:{a.id}" for a in approved};localities={a.locality for a in approved if a.locality};dates={a.event_date.date().isoformat() for a in approved if a.event_date};eligible=[a for a in assets if a.license_classification in TRAINING_LICENSES]
+   items.append({"taxon_id":identifier,"scientific_name":name,"readiness":corpus_readiness_for_taxon(self.session,identifier),"candidates":len(assets),"license_eligible":len(eligible),"human_approved":len(approved),"excluded":sum(a.review_state=="EXCLUDED" for a in assets),"needs_review":sum(a.review_state in {"READY_FOR_REVIEW","REVIEW_REQUIRED","TAXONOMY_REVIEW_REQUIRED"} for a in assets),"unique_providers":len({source.id for _,source in rows}),"provider_distribution":dict(Counter(source.scientific_provider for _,source in rows)),"independent_approved_events":len(events),"duplicate_groups":len({a.perceptual_group for a in assets if a.perceptual_group}),"locality_diversity":len(localities),"date_diversity":len(dates),"contexts":dict(Counter(a.biological_context or "UNKNOWN" for a in approved)),"life_stages":dict(Counter(a.life_stage or "UNKNOWN" for a in approved))})
+  return {"region_id":region_id,"items":items,"semantics":"Human approval and source independence are categorical evidence; no readiness percentage is calculated."}
  def deterministic_split(self,asset_ids,seed="visual-corpus-v1",ratios=(0.7,0.15,0.15)):
   assets=self.session.query(IdentificationMediaAsset).filter(IdentificationMediaAsset.id.in_(asset_ids)).all();groups=defaultdict(list)
   for a in assets:groups[(f"event:{a.source_event_identifier}" if a.source_event_identifier else None) or (f"specimen:{a.specimen_identifier}" if a.specimen_identifier else None) or a.perceptual_group or (f"sha:{a.sha256}" if a.sha256 else None) or f"asset:{a.id}"].append(a)
@@ -186,10 +225,70 @@ class IdentificationBenchmarkService:
  def prepare(self,payload,user_id):
   corpus=self.session.get(IdentificationCorpus,payload["corpus_id"])
   if not corpus or corpus.lifecycle_state!="FROZEN":raise ValueError("Benchmark requires a frozen corpus")
+  gate=self.quality_gate(corpus.id)
+  if gate["state"]!="BENCHMARK_READY":raise ValueError(f"PRETRAINED_BENCHMARK_NOT_JUSTIFIED: {', '.join(gate['reasons'])}")
   dependency={k:payload.get(k) for k in ("model_identity","model_hash","model_version","corpus_id","split_name","inference_configuration")};fp=fingerprint(dependency)
   row=self.session.query(IdentificationBenchmarkRun).filter_by(run_fingerprint=fp).one_or_none()
   if row:return row
   row=IdentificationBenchmarkRun(model_identity=payload["model_identity"],model_hash=payload.get("model_hash"),model_version=payload["model_version"],corpus_id=corpus.id,split_name=payload["split_name"],inference_configuration_json=canonical_json(payload.get("inference_configuration") or {}),run_fingerprint=fp,created_by_user_id=user_id);self.session.add(row);self.session.commit();return row
+ def quality_gate(self,corpus_id):
+  corpus=self.session.get(IdentificationCorpus,corpus_id)
+  if not corpus or corpus.lifecycle_state!="FROZEN":return {"state":"REVIEW_REQUIRED","reasons":["Corpus is not frozen."]}
+  rows=self.session.query(IdentificationCorpusInclusion,IdentificationMediaAsset).join(IdentificationMediaAsset,IdentificationMediaAsset.id==IdentificationCorpusInclusion.media_asset_id).filter(IdentificationCorpusInclusion.corpus_id==corpus_id,IdentificationCorpusInclusion.inclusion_state=="APPROVED").all();reasons=[]
+  if not rows:reasons.append("No reviewed benchmark assets.")
+  if any(asset.review_state!="APPROVED" for _,asset in rows):reasons.append("Corpus includes media without human approval.")
+  if any(asset.quality_state!="VALID" or asset.license_classification not in TRAINING_LICENSES for _,asset in rows):reasons.append("Corpus includes technically or legally blocked media.")
+  groups=defaultdict(set)
+  for inclusion,asset in rows:groups[asset.taxon_id].add(inclusion.split_group_key or asset.source_event_identifier or asset.specimen_identifier or asset.perceptual_group or f"asset:{asset.id}")
+  if any(not values for values in groups.values()):reasons.append("Independent source grouping is unavailable.")
+  return {"state":"BENCHMARK_READY" if not reasons else "PRETRAINED_BENCHMARK_NOT_JUSTIFIED","reasons":reasons,"taxa":len(groups),"assets":len(rows),"independent_groups":sum(len(values) for values in groups.values())}
+ def complete(self,row,metrics,taxon_results=None,confusion=None,rejection_behavior=None):
+  if row.workflow_state!="PREPARED":raise ValueError("Only a prepared benchmark may complete")
+  row.metrics_json=canonical_json(metrics);row.taxon_results_json=canonical_json(taxon_results or {});row.confusion_json=canonical_json(confusion or {});row.rejection_behavior_json=canonical_json(rejection_behavior or {});row.workflow_state="COMPLETED";row.completed_at=datetime.now(timezone.utc);self.session.commit();return row
+
+class IdentificationCorpusPlanService:
+ def __init__(self,session):self.session=session
+ def create(self,payload,user_id):
+  groups=set(payload.get("taxonomic_groups") or [])
+  if not groups or not groups<=TAXONOMIC_GROUPS:raise ValueError("Plan contains unsupported taxonomic groups")
+  region_id=payload["region_id"]
+  governed={r.taxon_id for r in self.session.query(RegionalTaxonRegistry).filter_by(region_id=region_id,review_status="APPROVED").filter(RegionalTaxonRegistry.superseded_at.is_(None)).all()}
+  requested={int(item["taxon_id"]) for item in payload.get("taxa") or []}
+  if not requested<=governed:raise ValueError("A plan may contain only currently governed regional taxa")
+  config={k:payload.get(k) for k in ("plan_key","version","region_id","taxonomic_groups","preferred_providers","licensing_policy","quality_policy","duplicate_policy","provenance","limitations","configuration","taxa")};fp=fingerprint(config)
+  existing=self.session.query(IdentificationCorpusPlan).filter_by(fingerprint=fp).one_or_none()
+  if existing:return existing
+  row=IdentificationCorpusPlan(plan_key=payload["plan_key"],version=payload["version"],region_id=region_id,taxonomic_groups_json=canonical_json(sorted(groups)),preferred_providers_json=canonical_json(payload.get("preferred_providers") or []),licensing_policy_json=canonical_json(payload.get("licensing_policy") or {}),quality_policy_json=canonical_json(payload.get("quality_policy") or {}),duplicate_policy_json=canonical_json(payload.get("duplicate_policy") or {}),provenance_json=canonical_json(payload.get("provenance") or {}),limitations_json=canonical_json(payload.get("limitations") or []),configuration_json=canonical_json(payload.get("configuration") or {}),fingerprint=fp,created_by_user_id=user_id);self.session.add(row);self.session.flush()
+  for item in payload.get("taxa") or []:
+   if item["taxonomic_group"] not in TAXONOMIC_GROUPS:raise ValueError("Unsupported taxonomic group")
+   desired=int(item.get("desired_candidate_count",30));minimum=int(item.get("minimum_usable_count",10))
+   if minimum<1 or desired<minimum:raise ValueError("Candidate targets must be positive and desired >= minimum")
+   self.session.add(IdentificationCorpusPlanTaxon(plan_id=row.id,taxon_id=item["taxon_id"],taxonomic_group=item["taxonomic_group"],desired_candidate_count=desired,minimum_usable_count=minimum,preferred_providers_json=canonical_json(item.get("preferred_providers") or payload.get("preferred_providers") or [])))
+  self.session.commit();return row
+ def transition(self,row,target,user_id,reference):
+  allowed={"DRAFT":{"READY_FOR_REVIEW"},"READY_FOR_REVIEW":{"APPROVED","REJECTED"},"APPROVED":{"ACTIVE","SUPERSEDED"},"ACTIVE":{"SUPERSEDED"}}
+  if target not in allowed.get(row.lifecycle_state,set()):raise ValueError("Invalid corpus-plan lifecycle transition")
+  now=datetime.now(timezone.utc);row.lifecycle_state=target;row.reviewed_by_user_id=user_id;row.approval_reference=reference
+  if target=="APPROVED":row.approved_at=now
+  elif target=="ACTIVE":row.activated_at=now
+  elif target=="SUPERSEDED":row.superseded_at=now
+  self.session.commit();return row
+ def payload(self,row):
+  taxa=self.session.query(IdentificationCorpusPlanTaxon).filter_by(plan_id=row.id).order_by(IdentificationCorpusPlanTaxon.id).all()
+  return {"id":row.id,"plan_key":row.plan_key,"version":row.version,"region_id":row.region_id,"lifecycle_state":row.lifecycle_state,"taxonomic_groups":json.loads(row.taxonomic_groups_json),"preferred_providers":json.loads(row.preferred_providers_json),"licensing_policy":json.loads(row.licensing_policy_json),"quality_policy":json.loads(row.quality_policy_json),"duplicate_policy":json.loads(row.duplicate_policy_json),"provenance":json.loads(row.provenance_json),"limitations":json.loads(row.limitations_json),"fingerprint":row.fingerprint,"taxa":[{"taxon_id":t.taxon_id,"taxonomic_group":t.taxonomic_group,"desired_candidate_count":t.desired_candidate_count,"minimum_usable_count":t.minimum_usable_count,"preferred_providers":json.loads(t.preferred_providers_json),"readiness_state":corpus_readiness_for_taxon(self.session,t.taxon_id)} for t in taxa]}
+
+def corpus_readiness_for_taxon(session,taxon_id):
+ sources=session.query(IdentificationMediaSource).filter_by(lifecycle_state="ACTIVE").count();runs=session.query(IdentificationMediaAcquisitionRun).filter_by(taxon_id=taxon_id).all();assets=session.query(IdentificationMediaAsset).filter_by(taxon_id=taxon_id).all()
+ if not sources:return "NO_MEDIA_SOURCE"
+ if any(r.workflow_state in {"PENDING","CLAIMED"} for r in runs):return "ACQUISITION_IN_PROGRESS"
+ if not assets:return "ACQUISITION_READY"
+ if any(a.review_state in {"READY_FOR_REVIEW","REVIEW_REQUIRED","TAXONOMY_REVIEW_REQUIRED"} for a in assets):return "REVIEW_REQUIRED"
+ approved=[a for a in assets if a.review_state=="APPROVED"]
+ if not approved:return "INSUFFICIENT_REVIEWED_MEDIA"
+ corpora=session.query(IdentificationCorpus).join(IdentificationCorpusInclusion).join(IdentificationMediaAsset).filter(IdentificationMediaAsset.taxon_id==taxon_id,IdentificationCorpus.lifecycle_state=="FROZEN").all()
+ if not corpora:return "INSUFFICIENT_REVIEWED_MEDIA"
+ if session.query(IdentificationBenchmarkRun).filter(IdentificationBenchmarkRun.corpus_id.in_([c.id for c in corpora]),IdentificationBenchmarkRun.workflow_state=="COMPLETED").first():return "BENCHMARKED"
+ return "BENCHMARK_READY"
 
 class AcquisitionRunService:
  def __init__(self,session):self.session=session

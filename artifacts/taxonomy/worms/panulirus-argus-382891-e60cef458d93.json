@@ -1,0 +1,114 @@
+{
+  "canonical_content_fingerprint": "e60cef458d935c005a4080c04a097aaa0cdf339a2aab63a5c0e8683a565cc57e",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=382891",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1065,
+          "child": {
+            "AphiaID": 1066,
+            "child": {
+              "AphiaID": 845959,
+              "child": {
+                "AphiaID": 1071,
+                "child": {
+                  "AphiaID": 1086,
+                  "child": {
+                    "AphiaID": 1089,
+                    "child": {
+                      "AphiaID": 1130,
+                      "child": {
+                        "AphiaID": 106670,
+                        "child": {
+                          "AphiaID": 383017,
+                          "child": {
+                            "AphiaID": 106794,
+                            "child": {
+                              "AphiaID": 107060,
+                              "child": {
+                                "AphiaID": 382891,
+                                "child": null,
+                                "rank": "Species",
+                                "scientificname": "Panulirus argus"
+                              },
+                              "rank": "Genus",
+                              "scientificname": "Panulirus"
+                            },
+                            "rank": "Family",
+                            "scientificname": "Palinuridae"
+                          },
+                          "rank": "Infraorder",
+                          "scientificname": "Achelata"
+                        },
+                        "rank": "Suborder",
+                        "scientificname": "Pleocyemata"
+                      },
+                      "rank": "Order",
+                      "scientificname": "Decapoda"
+                    },
+                    "rank": "Superorder",
+                    "scientificname": "Eucarida"
+                  },
+                  "rank": "Subclass",
+                  "scientificname": "Eumalacostraca"
+                },
+                "rank": "Class",
+                "scientificname": "Malacostraca"
+              },
+              "rank": "Superclass",
+              "scientificname": "Multicrustacea"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Crustacea"
+          },
+          "rank": "Phylum",
+          "scientificname": "Arthropoda"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 382891,
+      "authority": "(Latreille, 1804)",
+      "citation": "DecaNet eds. (2026). DecaNet. Panulirus argus (Latreille, 1804). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=382891 on 2026-08-30",
+      "class": "Malacostraca",
+      "family": "Palinuridae",
+      "genus": "Panulirus",
+      "isBrackish": 0,
+      "isExtinct": 0,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:382891",
+      "match_type": "exact",
+      "modified": "2020-10-20T13:39:35.423Z",
+      "order": "Decapoda",
+      "originalNameUsageID": 383098,
+      "parentNameUsageID": 107060,
+      "phylum": "Arthropoda",
+      "rank": "Species",
+      "scientificname": "Panulirus argus",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=382891",
+      "valid_AphiaID": 382891,
+      "valid_authority": "(Latreille, 1804)",
+      "valid_name": "Panulirus argus"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "382891",
+    "scientific_name": "Panulirus argus"
+  },
+  "retrieved_at": "2026-08-30T04:11:23.743334+00:00"
+}

@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { hasProtectedAccess } from "../src/auth/access.js";
+import { navigationSectionLabel, showPlatformAdminReturn } from "../src/config/shellPresentation.js";
 
 const reviewer={is_platform_admin:false,operational_review:{enabled:true}};
 const publicUser={is_platform_admin:false,operational_review:{enabled:false}};
@@ -56,4 +57,45 @@ test("13D closure exposes governed administration, layers, and observation conte
   assert.match(page,/No scientific assessments are awaiting review/);
   assert.match(operations,/Early-warning \/ scientific context/);
   assert.match(operations,/Eligibility is not itself an anomaly/);
+});
+
+test("all Early Warning tabs tolerate empty API collections and expose truthful empty states",()=>{
+  const page=readFileSync(new URL("../src/pages/AdminEarlyWarningPage.jsx",import.meta.url),"utf8");
+  for(const tab of ["Assessment review","Scientific reviewers","Configurations","Controlled events"]){
+    assert.match(page,new RegExp(tab));
+  }
+  assert.match(page,/arrayFrom\(u,"users","items"\)/);
+  assert.match(page,/No scientific assessments are awaiting review/);
+  assert.match(page,/No scientific reviewer grants are configured/);
+  assert.match(page,/No early-warning configurations are currently active/);
+  assert.match(page,/No controlled scientific events have been recorded/);
+});
+
+test("Country shell identifies agency context and only platform admins receive the admin return",()=>{
+  assert.equal(navigationSectionLabel("country","Jamaica"),"Jamaica agency workspace");
+  assert.equal(showPlatformAdminReturn("country",admin),true);
+  assert.equal(showPlatformAdminReturn("country",reviewer),false);
+  assert.equal(showPlatformAdminReturn("country",publicUser),false);
+  assert.equal(showPlatformAdminReturn("regional",admin),false);
+});
+
+test("agency roles do not gain Admin scientific-readiness or taxonomy routes",()=>{
+  const app=readFileSync(new URL("../src/App.jsx",import.meta.url),"utf8");
+  assert.match(app,/path="\/admin\/scientific-readiness"[^\n]+access="admin"/);
+  assert.match(app,/path="\/admin\/taxonomy"[^\n]+access="admin"/);
+  assert.equal(hasProtectedAccess(reviewer,"admin"),false);
+});
+
+test("agency science navigation uses Country-scoped read-only routes",()=>{
+  const navigation=readFileSync(new URL("../src/config/navigation.js",import.meta.url),"utf8");
+  const app=readFileSync(new URL("../src/App.jsx",import.meta.url),"utf8");
+  const page=readFileSync(new URL("../src/pages/AgencySciencePage.jsx",import.meta.url),"utf8");
+  assert.match(navigation,/id: "scientific-readiness", label: "Scientific readiness"/);
+  assert.match(navigation,/id: "early-warning", label: "Early warning"/);
+  assert.match(app,/jurisdictionSlug\/scientific-readiness[^\n]+access="investigations"/);
+  assert.match(app,/jurisdictionSlug\/early-warning[^\n]+access="investigations"/);
+  assert.match(page,/getJurisdictionSpeciesIntelligence/);
+  assert.match(page,/Read-only jurisdiction/);
+  assert.match(page,/Automatic scientific evaluation is disabled/);
+  assert.doesNotMatch(page,/createEarlyWarning|reviewEarlyWarning|transitionEarlyWarning|grantScientific/);
 });

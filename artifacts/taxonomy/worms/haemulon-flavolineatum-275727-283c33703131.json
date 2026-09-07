@@ -1,0 +1,114 @@
+{
+  "canonical_content_fingerprint": "283c33703131f442cee80760518c0e70a63c26e6209ea6df926432c7a2f6ef12",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=275727",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1821,
+          "child": {
+            "AphiaID": 146419,
+            "child": {
+              "AphiaID": 1828,
+              "child": {
+                "AphiaID": 152352,
+                "child": {
+                  "AphiaID": 10194,
+                  "child": {
+                    "AphiaID": 843664,
+                    "child": {
+                      "AphiaID": 293496,
+                      "child": {
+                        "AphiaID": 1517577,
+                        "child": {
+                          "AphiaID": 125538,
+                          "child": {
+                            "AphiaID": 714648,
+                            "child": {
+                              "AphiaID": 158806,
+                              "child": {
+                                "AphiaID": 275727,
+                                "child": null,
+                                "rank": "Species",
+                                "scientificname": "Haemulon flavolineatum"
+                              },
+                              "rank": "Genus",
+                              "scientificname": "Haemulon"
+                            },
+                            "rank": "Subfamily",
+                            "scientificname": "Haemulinae"
+                          },
+                          "rank": "Family",
+                          "scientificname": "Haemulidae"
+                        },
+                        "rank": "Order",
+                        "scientificname": "Eupercaria incertae sedis"
+                      },
+                      "rank": "Class",
+                      "scientificname": "Teleostei"
+                    },
+                    "rank": "Superclass",
+                    "scientificname": "Actinopteri"
+                  },
+                  "rank": "Gigaclass",
+                  "scientificname": "Actinopterygii"
+                },
+                "rank": "Parvphylum",
+                "scientificname": "Osteichthyes"
+              },
+              "rank": "Infraphylum",
+              "scientificname": "Gnathostomata"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Vertebrata"
+          },
+          "rank": "Phylum",
+          "scientificname": "Chordata"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 275727,
+      "authority": "(Desmarest, 1823)",
+      "citation": "Froese, R. and D. Pauly. Editors. (2026). FishBase. Haemulon flavolineatum (Desmarest, 1823). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=275727 on 2026-09-04",
+      "class": "Teleostei",
+      "family": "Haemulidae",
+      "genus": "Haemulon",
+      "isBrackish": 0,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:275727",
+      "match_type": "exact",
+      "modified": "2008-01-15T17:27:08.177Z",
+      "order": "Eupercaria incertae sedis",
+      "originalNameUsageID": 317689,
+      "parentNameUsageID": 158806,
+      "phylum": "Chordata",
+      "rank": "Species",
+      "scientificname": "Haemulon flavolineatum",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=275727",
+      "valid_AphiaID": 275727,
+      "valid_authority": "(Desmarest, 1823)",
+      "valid_name": "Haemulon flavolineatum"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "275727",
+    "scientific_name": "Haemulon flavolineatum"
+  },
+  "retrieved_at": "2026-09-04T19:04:04.039482+00:00"
+}

@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   CircleMarker,
   MapContainer,
@@ -10,8 +11,10 @@ import {
 import {
   getJurisdictions,
   getRegionOverview,
+  getRegionSpeciesTracking,
 } from "../services/api";
 import { REGIONS } from "../config/geography";
+import { BASEMAP } from "../config/basemap";
 
 const REGION = REGIONS.caribbean;
 
@@ -26,15 +29,20 @@ function getRegionalViewFromUrl() {
 }
 
 const number = (value) => Number(value || 0).toLocaleString();
+const TRACKER_COLORS = ["#0f9488", "#d97706", "#7c3aed", "#0284c7", "#be185d", "#4d7c0f"];
 
-function RegionalStatusBar({ region, observations, operational, scientific, summaries }) {
+// Kept as a reusable unit for relocation outside the public overview.
+export function RegionalOverviewPanels({ region, observations, operational, scientific, summaries }) {
   return (
     <div className="regional-status-bar">
       <div className="regional-status-bar__heading">
         <p className="regional-status-bar__eyebrow">Caribbean regional monitoring</p>
         <h1 className="regional-status-bar__title">{region?.name || REGION.name} Overview</h1>
         <p className="regional-status-bar__subtitle">
-          Operational monitoring activity across configured Caribbean jurisdictions.
+          Governed marine observations, human verification, and jurisdiction-scoped scientific intelligence across the Caribbean.
+        </p>
+        <p className="mt-2 text-xs font-semibold text-teal-800">
+          Report → Identify → Verify → Govern → Map → Assess → Review
         </p>
       </div>
       <div className="regional-status-bar__kpis">
@@ -128,12 +136,21 @@ export default function RegionalMapPage({
   onOpenJurisdiction,
   onGeographicContextChange,
 }) {
+  const navigate = useNavigate();
   const [overview, setOverview] = useState(null);
   const [jurisdictions, setJurisdictions] = useState([]);
   const [overviewState, setOverviewState] = useState("loading");
   const [overviewError, setOverviewError] = useState(null);
   const [jurisdictionState, setJurisdictionState] = useState("loading");
   const [initialView] = useState(getRegionalViewFromUrl);
+  const [tracking, setTracking] = useState({ items: [] });
+  const [trackingState, setTrackingState] = useState("loading");
+  const [activeTaxa, setActiveTaxa] = useState(() => {
+    const taxon = Number(new URLSearchParams(window.location.search).get("trackTaxon"));
+    return Number.isFinite(taxon) && taxon > 0 ? [taxon] : [];
+  });
+  const [trackingOpen, setTrackingOpen] = useState(false);
+  const [mapView, setMapView] = useState(initialView || { lat: 17.5, lng: -72, zoom: 4 });
 
   useEffect(() => {
     let active = true;
@@ -162,6 +179,14 @@ export default function RegionalMapPage({
         setJurisdictionState("ready");
       })
       .catch(() => active && setJurisdictionState("error"));
+    getRegionSpeciesTracking("caribbean")
+      .then((data) => {
+        if (!active) return;
+        setTracking(data);
+        setTrackingState("ready");
+        setActiveTaxa((current) => current.length ? current : (data.items || []).slice(0, 2).map((item) => item.taxon.id));
+      })
+      .catch(() => active && setTrackingState("error"));
     return () => {
       active = false;
     };
@@ -182,10 +207,18 @@ export default function RegionalMapPage({
       });
   };
 
-  const showMap = overviewState === "ready";
-  const showStatusBar = overviewState === "ready";
-  const showJurisdictionPins = overviewState === "ready" && jurisdictions.length > 0;
-
+  // The map and its jurisdiction entry points depend on geographic data, not
+  // the separately loaded overview/statistics payload.
+  const showMap = jurisdictionState === "ready";
+  const showJurisdictionPins = jurisdictionState === "ready" && jurisdictions.length > 0;
+  const trackedSpecies = useMemo(() => tracking.items || [], [tracking.items]);
+  const selectedTracking = useMemo(
+    () => trackedSpecies.filter((item) => activeTaxa.includes(item.taxon.id)),
+    [trackedSpecies, activeTaxa],
+  );
+  const toggleTaxon = (taxonId) => setActiveTaxa((current) => (
+    current.includes(taxonId) ? current.filter((id) => id !== taxonId) : [...current, taxonId]
+  ));
   return (
     <div className="regional-explorer">
       {overviewState === "loading" && <LoadingState />}
@@ -193,15 +226,6 @@ export default function RegionalMapPage({
         <ErrorState message={overviewError} onRetry={loadOverview} />
       )}
       {overviewState === "empty" && <EmptyRegionState />}
-      {showStatusBar && (
-        <RegionalStatusBar
-          region={overview?.jurisdictions}
-          observations={overview?.observations}
-          operational={overview?.operational_activity}
-          scientific={overview?.scientific_deployments}
-          summaries={overview?.jurisdiction_summaries}
-        />
-      )}
       {showMap && (
         <div className="regional-map-wrap">
           <MapContainer
@@ -214,11 +238,12 @@ export default function RegionalMapPage({
             className="regional-map"
           >
             <TileLayer
-              attribution="&copy; OpenStreetMap contributors &copy; CARTO"
-              url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+              attribution={BASEMAP.attribution}
+              url={BASEMAP.url}
             />
             <RegionalMapState
               onChange={(view) => {
+                setMapView(view);
                 onGeographicContextChange?.(null);
                 const params = new URLSearchParams(window.location.search);
                 params.set("lat", view.lat.toFixed(4));
@@ -233,6 +258,37 @@ export default function RegionalMapPage({
                 sessionStorage.setItem("caribbeanRegionalUrl", regionalUrl);
               }}
             />
+            {selectedTracking.flatMap((item) => item.observations.map((observation) => (
+              <CircleMarker
+                key={`tracking-${observation.id}`}
+                center={[observation.latitude, observation.longitude]}
+                radius={8}
+                pathOptions={{
+                  color: "#ffffff",
+                  fillColor: TRACKER_COLORS[trackedSpecies.findIndex((entry) => entry.taxon.id === item.taxon.id) % TRACKER_COLORS.length],
+                  fillOpacity: 1,
+                  weight: 3,
+                }}
+              >
+                <Tooltip direction="top">{item.taxon.common_name || item.taxon.scientific_name}</Tooltip>
+                <Popup minWidth={285}>
+                  <ObservationTrackingPopup
+                    item={item}
+                    observation={observation}
+                    onSpecies={() => {
+                      const params = new URLSearchParams({
+                        taxon: item.taxon.id,
+                        returnLat: observation.latitude,
+                        returnLng: observation.longitude,
+                        returnZoom: mapView.zoom,
+                        observation: observation.id,
+                      });
+                      navigate(`/region/caribbean/species?${params}`);
+                    }}
+                  />
+                </Popup>
+              </CircleMarker>
+            )))}
             {showJurisdictionPins && jurisdictions.map((jurisdiction) => (
               <CircleMarker
                 key={jurisdiction.id}
@@ -261,6 +317,19 @@ export default function RegionalMapPage({
               </CircleMarker>
             ))}
           </MapContainer>
+          <button className="species-tracking-launcher" type="button" onClick={() => setTrackingOpen(true)}>
+            Species tracking <span>{activeTaxa.length}</span>
+          </button>
+          <SpeciesTrackingPanel
+            items={trackedSpecies}
+            activeTaxa={activeTaxa}
+            state={trackingState}
+            open={trackingOpen}
+            onClose={() => setTrackingOpen(false)}
+            onToggle={toggleTaxon}
+            onSpecies={(taxonId) => navigate(`/region/caribbean/species?taxon=${taxonId}`)}
+            onReset={() => setActiveTaxa([])}
+          />
           <div className="regional-map-legend">
             <strong>Caribbean jurisdictions</strong>
             <span>
@@ -272,9 +341,64 @@ export default function RegionalMapPage({
           </div>
         </div>
       )}
-      {overviewState === "ready" && jurisdictionState === "error" && (
+      {jurisdictionState === "error" && (
         <p className="regional-warnings">Jurisdiction boundary metadata could not be loaded. The map may be missing jurisdiction pins.</p>
       )}
+    </div>
+  );
+}
+
+export function SpeciesTrackingPanel({ items, activeTaxa, state, open, onClose, onToggle, onSpecies, onReset }) {
+  return (
+    <aside className={`species-tracking-panel ${open ? "species-tracking-panel--open" : ""}`} aria-label="Species tracking">
+      <div className="species-tracking-panel__head">
+        <div><span className="tracker-dot" /><strong>Species tracking</strong></div>
+        <span className="species-tracking-panel__active">{activeTaxa.length} Active</span>
+        <button type="button" className="species-tracking-panel__close" onClick={onClose} aria-label="Close species tracking">×</button>
+      </div>
+      <p>Toggle species layers to display confirmed field sightings.</p>
+      {state === "loading" && <p className="species-tracking-panel__state">Loading confirmed locations…</p>}
+      {state === "error" && <p className="species-tracking-panel__state" role="alert">Tracking data is temporarily unavailable.</p>}
+      {state === "ready" && items.length === 0 && <p className="species-tracking-panel__state">No confirmed tracked observations are available.</p>}
+      <ul>
+        {items.map((item, index) => {
+          const active = activeTaxa.includes(item.taxon.id);
+          return (
+            <li key={item.taxon.id} className={active ? "is-active" : ""} style={{ "--tracker-color": TRACKER_COLORS[index % TRACKER_COLORS.length] }}>
+              <label>
+                <input type="checkbox" checked={active} onChange={() => onToggle(item.taxon.id)} />
+                <span className="species-tracking-panel__marker" />
+                <span className="species-tracking-panel__identity">
+                  <button type="button" onClick={(event) => { event.preventDefault(); onSpecies(item.taxon.id); }}>
+                    {item.taxon.common_name || item.taxon.scientific_name}
+                  </button>
+                  <em>{item.taxon.scientific_name}</em>
+                </span>
+                <span className="species-tracking-panel__count">{number(item.confirmed_location_count)} confirmed</span>
+              </label>
+            </li>
+          );
+        })}
+      </ul>
+      {items.length > 0 && <button type="button" className="species-tracking-panel__reset" onClick={onReset}>Reset layers</button>}
+    </aside>
+  );
+}
+
+function ObservationTrackingPopup({ item, observation, onSpecies }) {
+  const observedAt = observation.observed_at ? new Date(observation.observed_at).toLocaleString() : "Not recorded";
+  return (
+    <div className="tracking-popup">
+      <span className="tracking-popup__verified">✓ Expert {observation.verification_status === "CORRECTED" ? "corrected" : "confirmed"}</span>
+      <h2>{item.taxon.common_name || item.taxon.scientific_name}</h2>
+      <em>{item.taxon.scientific_name}</em>
+      <dl>
+        <div><dt>Observed</dt><dd>{observedAt}</dd></div>
+        <div><dt>Coordinates</dt><dd>{observation.latitude.toFixed(4)}, {observation.longitude.toFixed(4)}</dd></div>
+        <div><dt>Jurisdiction</dt><dd>{observation.jurisdiction?.name || "Not available"}</dd></div>
+      </dl>
+      <a href={`/region/caribbean/observations?observation=${observation.id}`}>View full observation record →</a>
+      <button type="button" onClick={onSpecies}>Open species intelligence</button>
     </div>
   );
 }

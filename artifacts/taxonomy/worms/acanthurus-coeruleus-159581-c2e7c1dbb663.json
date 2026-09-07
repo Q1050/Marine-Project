@@ -1,0 +1,109 @@
+{
+  "canonical_content_fingerprint": "c2e7c1dbb663bfe6f6c1587adbf1e319d61f52a6e116f849f6460e7ee6058d4c",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=159581",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1821,
+          "child": {
+            "AphiaID": 146419,
+            "child": {
+              "AphiaID": 1828,
+              "child": {
+                "AphiaID": 152352,
+                "child": {
+                  "AphiaID": 10194,
+                  "child": {
+                    "AphiaID": 843664,
+                    "child": {
+                      "AphiaID": 293496,
+                      "child": {
+                        "AphiaID": 1517548,
+                        "child": {
+                          "AphiaID": 125515,
+                          "child": {
+                            "AphiaID": 125908,
+                            "child": {
+                              "AphiaID": 159581,
+                              "child": null,
+                              "rank": "Species",
+                              "scientificname": "Acanthurus coeruleus"
+                            },
+                            "rank": "Genus",
+                            "scientificname": "Acanthurus"
+                          },
+                          "rank": "Family",
+                          "scientificname": "Acanthuridae"
+                        },
+                        "rank": "Order",
+                        "scientificname": "Acanthuriformes"
+                      },
+                      "rank": "Class",
+                      "scientificname": "Teleostei"
+                    },
+                    "rank": "Superclass",
+                    "scientificname": "Actinopteri"
+                  },
+                  "rank": "Gigaclass",
+                  "scientificname": "Actinopterygii"
+                },
+                "rank": "Parvphylum",
+                "scientificname": "Osteichthyes"
+              },
+              "rank": "Infraphylum",
+              "scientificname": "Gnathostomata"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Vertebrata"
+          },
+          "rank": "Phylum",
+          "scientificname": "Chordata"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 159581,
+      "authority": "Bloch & Schneider, 1801",
+      "citation": "Froese, R. and D. Pauly. Editors. (2026). FishBase. Acanthurus coeruleus Bloch & Schneider, 1801. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=159581 on 2026-09-04",
+      "class": "Teleostei",
+      "family": "Acanthuridae",
+      "genus": "Acanthurus",
+      "isBrackish": 0,
+      "isExtinct": null,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:159581",
+      "match_type": "exact",
+      "modified": "2008-01-15T17:27:08.177Z",
+      "order": "Acanthuriformes",
+      "originalNameUsageID": 159581,
+      "parentNameUsageID": 125908,
+      "phylum": "Chordata",
+      "rank": "Species",
+      "scientificname": "Acanthurus coeruleus",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=159581",
+      "valid_AphiaID": 159581,
+      "valid_authority": "Bloch & Schneider, 1801",
+      "valid_name": "Acanthurus coeruleus"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "159581",
+    "scientific_name": "Acanthurus coeruleus"
+  },
+  "retrieved_at": "2026-09-04T19:04:00.938627+00:00"
+}

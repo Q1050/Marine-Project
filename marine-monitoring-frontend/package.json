@@ -8,9 +8,9 @@
     "build": "vite build",
     "lint": "eslint src test",
     "test:location": "node --test test/sightingLocation.test.js",
-    "test:admin": "node --test test/adminOnboarding.test.js test/scientificScaling.test.js",
+    "test:admin": "node --test test/adminOnboarding.test.js test/scientificScaling.test.js test/visualCorpusReviewState.test.js test/buildathonReadiness.test.js",
     "test:pilot": "node --test test/pilotAuthorization.test.js",
-    "test": "npm run test:location && npm run test:admin && npm run test:pilot && node --test test/milestone14.test.js",
+    "test": "npm run test:location && npm run test:admin && npm run test:pilot && node --test test/milestone14.test.js test/speciesTracking.test.js test/submitWorkflow.test.js test/regionalSubmitRouting.test.js test/globalLightTheme.test.js test/observationMedia.test.js",
     "preview": "vite preview"
   },
   "dependencies": {

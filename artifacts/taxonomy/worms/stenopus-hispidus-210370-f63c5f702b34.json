@@ -1,0 +1,114 @@
+{
+  "canonical_content_fingerprint": "f63c5f702b3472832aa93385d3e07d3497f05af23c8ee2f437dcd6ef68bedd29",
+  "provider": "World Register of Marine Species (WoRMS)",
+  "provider_reference": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=210370",
+  "provider_response": {
+    "classification": {
+      "AphiaID": 1,
+      "child": {
+        "AphiaID": 2,
+        "child": {
+          "AphiaID": 1065,
+          "child": {
+            "AphiaID": 1066,
+            "child": {
+              "AphiaID": 845959,
+              "child": {
+                "AphiaID": 1071,
+                "child": {
+                  "AphiaID": 1086,
+                  "child": {
+                    "AphiaID": 1089,
+                    "child": {
+                      "AphiaID": 1130,
+                      "child": {
+                        "AphiaID": 106670,
+                        "child": {
+                          "AphiaID": 106676,
+                          "child": {
+                            "AphiaID": 106797,
+                            "child": {
+                              "AphiaID": 107066,
+                              "child": {
+                                "AphiaID": 210370,
+                                "child": null,
+                                "rank": "Species",
+                                "scientificname": "Stenopus hispidus"
+                              },
+                              "rank": "Genus",
+                              "scientificname": "Stenopus"
+                            },
+                            "rank": "Family",
+                            "scientificname": "Stenopodidae"
+                          },
+                          "rank": "Infraorder",
+                          "scientificname": "Stenopodidea"
+                        },
+                        "rank": "Suborder",
+                        "scientificname": "Pleocyemata"
+                      },
+                      "rank": "Order",
+                      "scientificname": "Decapoda"
+                    },
+                    "rank": "Superorder",
+                    "scientificname": "Eucarida"
+                  },
+                  "rank": "Subclass",
+                  "scientificname": "Eumalacostraca"
+                },
+                "rank": "Class",
+                "scientificname": "Malacostraca"
+              },
+              "rank": "Superclass",
+              "scientificname": "Multicrustacea"
+            },
+            "rank": "Subphylum",
+            "scientificname": "Crustacea"
+          },
+          "rank": "Phylum",
+          "scientificname": "Arthropoda"
+        },
+        "rank": "Kingdom",
+        "scientificname": "Animalia"
+      },
+      "rank": "Superdomain",
+      "scientificname": "Biota"
+    },
+    "record": {
+      "AphiaID": 210370,
+      "authority": "(Olivier, 1811)",
+      "citation": "DecaNet eds. (2026). DecaNet. Stenopus hispidus (Olivier, 1811). Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=210370 on 2026-09-04",
+      "class": "Malacostraca",
+      "family": "Stenopodidae",
+      "genus": "Stenopus",
+      "isBrackish": 0,
+      "isExtinct": 0,
+      "isFreshwater": 0,
+      "isMarine": 1,
+      "isTerrestrial": 0,
+      "kingdom": "Animalia",
+      "lsid": "urn:lsid:marinespecies.org:taxname:210370",
+      "match_type": "exact",
+      "modified": "2022-01-28T09:45:54.373Z",
+      "order": "Decapoda",
+      "originalNameUsageID": 585660,
+      "parentNameUsageID": 107066,
+      "phylum": "Arthropoda",
+      "rank": "Species",
+      "scientificname": "Stenopus hispidus",
+      "status": "accepted",
+      "taxonRankID": 220,
+      "unacceptreason": null,
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=210370",
+      "valid_AphiaID": 210370,
+      "valid_authority": "(Olivier, 1811)",
+      "valid_name": "Stenopus hispidus"
+    }
+  },
+  "provider_version": "live-rest-v1",
+  "request": {
+    "aphia_id": "210370",
+    "scientific_name": "Stenopus hispidus"
+  },
+  "retrieved_at": "2026-09-04T19:04:10.195138+00:00"
+}

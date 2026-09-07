@@ -6,6 +6,7 @@ import {
   verifyObservation,
 } from "../services/api";
 import { useJurisdiction } from "../geography/JurisdictionContext";
+import { useObservationImage } from "../hooks/useObservationImage";
 
 const DECISION_LABELS = {
   KNOWN_INVASIVE_RECORD: "Known invasive report requiring verification",
@@ -382,7 +383,7 @@ function ReviewWorkspace({
         </Badge>
       </div>
       <section className="grid items-start gap-4 xl:grid-cols-[minmax(0,1.55fr)_minmax(280px,.7fr)]">
-        <LargeImage url={record.image_url} species={identification.species} />
+        <LargeImage observationId={record.id} url={record.image_url} species={identification.species} />
         <div className="rounded-xl border border-teal-200 bg-teal-50/40 p-4 xl:sticky xl:top-4">
           <SectionLabel>AI identification</SectionLabel>
           <h3 className="mt-2 text-xl font-bold">
@@ -595,12 +596,16 @@ function Thumbnail({ url }) {
     </span>
   );
 }
-function LargeImage({ url, species }) {
+function LargeImage({ observationId, url, species }) {
   const [failed, setFailed] = useState(false);
-  const source = getImageUrl(url);
+  const { source, loading, unavailable } = useObservationImage(observationId, url);
   return (
     <div className="grid min-h-[420px] place-items-center overflow-hidden rounded-xl border border-app-border bg-slate-900 lg:min-h-[500px]">
-      {source && !failed ? (
+      {loading ? (
+        <div className="text-center text-slate-300" role="status">
+          <strong className="block">Loading submitted image</strong>
+        </div>
+      ) : source && !unavailable && !failed ? (
         <img
           src={source}
           onError={() => setFailed(true)}
